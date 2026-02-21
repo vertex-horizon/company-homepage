@@ -12,5 +12,5 @@ const repositoryName =
 
 export default defineConfig({
   plugins: [react()],
-  base: env.NODE_ENV === 'production' ? `/${repositoryName}/` : '/',
+  base: '/',
 })
