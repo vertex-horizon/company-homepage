@@ -23,7 +23,15 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // Capital-led identifiers are usually JSX components or constants
+      // — but the basic no-unused-vars rule can't see <Tag> in JSX without
+      // the eslint-plugin-react `jsx-uses-vars` rule. Treat them as
+      // intentional in BOTH variable and parameter positions to keep the
+      // common destructure-rename pattern (e.g., `tag: Tag = 'span'`).
+      'no-unused-vars': ['error', {
+        varsIgnorePattern: '^[A-Z_]',
+        argsIgnorePattern: '^[A-Z_]',
+      }],
     },
   },
 ])
