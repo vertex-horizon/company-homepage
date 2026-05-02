@@ -2,10 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Vertex Horizon — Research-driven studio at the frontier of AI and human-computer interaction." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#06080f" />
+
+    <!--
+      Favicons
+      Default to Charted's icon (the more visible product). VH home is the
+      parent brand but Charted is the public-facing product on this site.
+    -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/charted/icon/icon-32.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/charted/icon/icon-64.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/charted/icon/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/charted/icon/icon-180.png" />
+    <link rel="manifest" href="/charted/manifest.webmanifest" />
+
+    <!-- Default meta — Charted sub-routes override these at runtime via JS -->
+    <meta name="description" content="Vertex Horizon — Research-driven studio at the frontier of AI and human-computer interaction." />
+
+    <!-- Open Graph / Twitter (per-route updates handled in JS) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Vertex Horizon" />
+    <meta property="og:image" content="/charted/icon/icon-512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/charted/icon/icon-512.png" />
+
     <title>Vertex Horizon | AI + Human Interaction Studio</title>
   </head>
   <body>

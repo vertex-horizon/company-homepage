@@ -1,0 +1,28 @@
+{
+  "name": "Charted — Chart how far you've come.",
+  "short_name": "Charted",
+  "description": "Your photos already remember every place you've been. Charted turns them into a 3D globe — privately, on your iPhone.",
+  "start_url": "/charted",
+  "scope": "/charted",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "icons": [
+    {
+      "src": "/charted/icon/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/charted/icon/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/charted/icon/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
