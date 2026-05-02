@@ -180,12 +180,14 @@
   position: relative;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* Slightly favor the text column so "Where intelligence" doesn't
+   * have to wrap awkwardly at common laptop widths. */
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   align-items: center;
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 var(--gutter);
-  gap: 2rem;
+  gap: clamp(1.5rem, 4vw, 3rem);
 }
 
 .hero-content {
@@ -225,11 +227,14 @@
 
 .hero-title {
   font-family: 'Sora', sans-serif;
-  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+  font-size: clamp(2.5rem, 4.6vw, 4rem);
   font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.035em;
+  line-height: 1.04;
+  letter-spacing: -0.038em;
   color: var(--text);
+  /* Reserve enough vertical space so the second line never collapses
+   * even if its words start invisible during the stagger. */
+  min-height: 2.2em;
 }
 
 .gradient-text {
@@ -261,13 +266,13 @@
   gap: 0.75rem;
 }
 
-/* ── Hero Visual (Rings) ───────────────────────────── */
+/* ── Hero Visual (Rings + Core) ───────────────────────────── */
 .hero-visual {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 480px;
+  height: clamp(360px, 42vw, 540px);
 }
 
 .hero-ring {
@@ -277,24 +282,24 @@
 }
 
 .hero-ring--1 {
-  width: 340px;
-  height: 340px;
-  border-color: rgba(99, 102, 241, 0.12);
+  width: clamp(300px, 36vw, 480px);
+  height: clamp(300px, 36vw, 480px);
+  border-color: rgba(99, 102, 241, 0.14);
   animation: spin-cw 40s linear infinite;
   border-style: dashed;
 }
 
 .hero-ring--2 {
-  width: 240px;
-  height: 240px;
-  border-color: rgba(34, 211, 238, 0.10);
+  width: clamp(220px, 26vw, 340px);
+  height: clamp(220px, 26vw, 340px);
+  border-color: rgba(34, 211, 238, 0.12);
   animation: spin-ccw 30s linear infinite;
 }
 
 .hero-ring--3 {
-  width: 140px;
-  height: 140px;
-  border-color: rgba(168, 85, 247, 0.15);
+  width: clamp(140px, 16vw, 200px);
+  height: clamp(140px, 16vw, 200px);
+  border-color: rgba(168, 85, 247, 0.18);
   animation: spin-cw 20s linear infinite;
 }
 
@@ -637,18 +642,331 @@
   margin-bottom: 2rem;
 }
 
+/* ── Hero — product teaser pill (links to Charted) ─── */
+.hero-product-teaser {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.75rem;
+  padding: 0.5rem 0.95rem 0.5rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+  transition: all 0.25s var(--ease);
+}
+
+.hero-product-teaser:hover {
+  border-color: rgba(245, 158, 11, 0.3);
+  background: rgba(245, 158, 11, 0.04);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.hero-product-teaser:hover .hero-product-teaser-name {
+  color: #FCD34D;
+}
+
+.hero-product-teaser-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #F59E0B;
+  box-shadow: 0 0 8px #F59E0B;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.hero-product-teaser-label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.hero-product-teaser-name {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--text);
+  transition: color 0.25s var(--ease);
+}
+
+.hero-product-teaser-tag {
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.hero-product-teaser .btn-arrow {
+  width: 13px;
+  height: 13px;
+  margin-left: 0.15rem;
+  transition: transform 0.25s var(--ease);
+}
+
+.hero-product-teaser:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+@media (max-width: 600px) {
+  .hero-product-teaser-tag { display: none; }
+}
+
+/* ── Our Work section — Featured product card ─────── */
+.work-section .section-header {
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.product-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(245, 158, 11, 0.05), transparent 50%),
+    radial-gradient(ellipse at 0% 100%, rgba(99, 102, 241, 0.06), transparent 50%),
+    var(--surface);
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s var(--ease);
+}
+
+.product-card:hover {
+  border-color: rgba(245, 158, 11, 0.22);
+  transform: translateY(-2px);
+}
+
+.product-card-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.45;
+  transition: opacity 0.5s ease;
+}
+
+.product-card-glow--blue {
+  width: 320px;
+  height: 320px;
+  top: -10%;
+  left: -8%;
+  background: rgba(99, 102, 241, 0.35);
+}
+
+.product-card-glow--gold {
+  width: 280px;
+  height: 280px;
+  bottom: -15%;
+  right: -10%;
+  background: rgba(245, 158, 11, 0.25);
+}
+
+.product-card:hover .product-card-glow--gold {
+  opacity: 0.7;
+}
+
+.product-card-meta {
+  position: relative;
+  z-index: 1;
+}
+
+.product-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-card-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 12px 30px rgba(0, 0, 0, 0.5),
+    0 0 24px rgba(245, 158, 11, 0.18);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s ease;
+}
+
+.product-card:hover .product-card-icon {
+  transform: scale(1.04);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.12) inset,
+    0 14px 36px rgba(0, 0, 0, 0.55),
+    0 0 32px rgba(245, 158, 11, 0.32);
+}
+
+.product-card-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.product-card-header h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.25rem;
+}
+
+.product-card-header h3 a {
+  background: linear-gradient(120deg, #FFFFFF 0%, #FCD34D 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.2s ease;
+}
+
+.product-card-header h3 a:hover { opacity: 0.85; }
+
+.product-card-tagline {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.product-card-desc {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem;
+  max-width: 50ch;
+}
+
+.product-card-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.75rem;
+  padding: 0;
+}
+
+.product-card-tags li {
+  font-size: 0.7125rem;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  padding: 0.32rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  white-space: nowrap;
+}
+
+.product-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.product-card-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.product-card-phone {
+  position: relative;
+  width: clamp(200px, 28vw, 300px);
+  aspect-ratio: 852 / 1847;
+  border-radius: 32px;
+  padding: 6px;
+  background: linear-gradient(160deg, #1d1d28 0%, #0a0a14 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 24px 64px rgba(0, 0, 0, 0.55),
+    0 0 48px rgba(245, 158, 11, 0.15);
+  overflow: hidden;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s ease;
+  display: block;
+}
+
+.product-card:hover .product-card-phone {
+  transform: translateY(-4px) rotate(-1deg);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(245, 158, 11, 0.22);
+}
+
+.product-card-phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 26px;
+  display: block;
+}
+
+.work-future {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+.work-future a {
+  color: var(--accent-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease;
+}
+
+.work-future a:hover { color: var(--text); }
+
+@media (max-width: 880px) {
+  .product-card {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  .product-card-header {
+    justify-content: center;
+  }
+  .product-card-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .product-card-tags {
+    justify-content: center;
+  }
+  .product-card-actions {
+    justify-content: center;
+  }
+  .product-card-visual {
+    order: -1;
+  }
+}
+
 /* ── Footer ─────────────────────────────────────────── */
 .footer {
   border-top: 1px solid var(--border);
-  padding: 2rem var(--gutter);
+  padding: 3rem var(--gutter) 2rem;
 }
 
 .footer-inner {
   max-width: var(--container);
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 2rem;
 }
 
 .footer-brand {
@@ -667,9 +985,54 @@
   border-radius: 6px;
 }
 
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(110px, auto));
+  gap: 2.5rem;
+}
+
+.footer-col h4 {
+  font-family: 'Sora', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin: 0 0 0.85rem;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 0.8125rem;
+  line-height: 1.95;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--text);
+}
+
 .footer-copy {
   font-size: 0.75rem;
   color: var(--text-tertiary);
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-cols {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .footer-copy {
+    text-align: center;
+  }
 }
 
 /* ── Scroll Reveal ──────────────────────────────────── */
@@ -684,6 +1047,181 @@
 .reveal.revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ── Word-stagger reveal (Hero title) ──────────────────────────────
+ *   Per-word fade+lift. Each .word-reveal-word has --i (its index).
+ *   The animation itself (~0.95s) does the fade/lift; animation-delay
+ *   does the stagger (base + stagger * i).
+ *
+ *   Why animation, not transition? — On mount, there's no property
+ *   *change*, so transitions never fire. Only animations run.
+ *   ─────────────────────────────────────────── */
+.word-reveal {
+  display: inline-block;
+}
+
+.word-reveal-word {
+  display: inline-block;
+  /* IMPORTANT: write each animation-* longhand explicitly.
+   * The shorthand `animation: name 0.95s var(--ease) both` silently fails
+   * in some browsers because the shorthand parser can't resolve which
+   * tokens go to which longhand when one of them is a var(). Empty
+   * longhands result, animation never runs. */
+  animation-name: word-reveal-anim;
+  animation-duration: 0.95s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: both;
+  animation-delay: calc(var(--c-base-delay, 0ms) + var(--c-stagger, 60ms) * var(--i));
+  will-change: transform, opacity;
+}
+
+@keyframes word-reveal-anim {
+  from { opacity: 0; transform: translateY(0.5em); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Critical: gradient text containers paint the gradient on themselves,
+ * but `background-image` doesn't inherit to descendants by default —
+ * AND `inherit` only pulls from the *direct parent*. Because the
+ * stagger wraps each line in <span.word-reveal> > <span.word-reveal-word>,
+ * the gradient must be re-declared at each level for the chain to
+ * reach the leaf word spans. Otherwise inner words stay transparent
+ * (text-fill-color inherited) with no background → invisible. */
+.gradient-text .word-reveal,
+.gradient-text .word-reveal-word {
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .word-reveal-word {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Cursor-tracked card glow (capabilities) ────────────────────────
+ *   Hooks set --c-mx, --c-my; CSS positions a radial gradient there.
+ *   ─────────────────────────────────────── */
+.cap-card-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    420px circle at var(--c-mx, 50%) var(--c-my, 0%),
+    rgba(99, 102, 241, 0.10),
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cap-card:hover .cap-card-glow {
+  opacity: 1;
+}
+
+.cap-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card lift + accent border on hover */
+.cap-card {
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s var(--ease);
+}
+
+.cap-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+/* Magnetic button — transform handled in JS, CSS just smooths transitions */
+.btn--magnetic {
+  transition: transform 0.35s var(--ease), box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+.btn--magnetic:hover {
+  /* Override the default translateY hover so JS-driven transform takes over */
+  transform: translate(0, 0);
+}
+
+/* ── Hero visual enhancements (data nodes + core pulse) ─────────────── */
+.hero-ring--1 {
+  position: relative;
+}
+
+.hero-ring-node--idle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(168, 85, 247, 0.7);
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
+  animation: node-pulse 3s ease-in-out infinite;
+}
+
+.hero-ring-node--idle:nth-child(2) {
+  background: rgba(34, 211, 238, 0.7);
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.6);
+  animation-delay: -1s;
+}
+
+.hero-ring-node--idle:nth-child(3) {
+  background: rgba(252, 211, 77, 0.6);
+  box-shadow: 0 0 8px rgba(252, 211, 77, 0.5);
+  animation-delay: -2s;
+}
+
+.hero-ring-node--idle:nth-child(4) {
+  background: rgba(129, 140, 248, 0.7);
+  box-shadow: 0 0 8px rgba(129, 140, 248, 0.6);
+  animation-delay: -1.5s;
+}
+
+@keyframes node-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%      { opacity: 1; transform: scale(1.3); }
+}
+
+.hero-core {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(129, 140, 248, 0.8) 30%,
+    rgba(99, 102, 241, 0.4) 60%,
+    transparent 100%);
+  filter: blur(2px);
+  z-index: 2;
+}
+
+.hero-core-pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(255, 255, 255, 0.6),
+    transparent 70%);
+  animation: core-breathe 4s ease-in-out infinite;
+}
+
+@keyframes core-breathe {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50%      { transform: scale(1.4); opacity: 1; }
 }
 
 /* ── Responsive ─────────────────────────────────────── */
