@@ -99,7 +99,7 @@ function Hero() {
 
           <div className="c-hero-trust c-reveal is-revealed">
             <span className="c-hero-trust-dot" aria-hidden="true" />
-            <span>100% on-device · No accounts · No uploads</span>
+            <span>Runs on-device · No sign-up · No photo uploads</span>
           </div>
         </div>
 
@@ -339,41 +339,42 @@ function PrivacyManifesto() {
       <div className="c-privacy c-reveal">
         <span className="c-eyebrow">Privacy, by design</span>
         <h2 className="c-privacy-headline" style={{ marginTop: '1.25rem' }}>
-          We don't have a server. <em>That's not a slogan.</em>
+          We don't touch your data. <em>That's the deal.</em>
         </h2>
         <p className="c-privacy-lede">
           Most travel apps want you tracked, all day. Charted does the opposite.
           We read GPS data <strong style={{ color: 'var(--c-text)' }}>already inside the photos you've already taken</strong> —
-          no live tracking, no cloud uploads, no accounts. Your travels stay where they belong: in your hands.
+          we don't track your location, we don't upload your photos, and we don't tie your trips to a personal account on our side.
+          Your travels stay where they belong: on your iPhone.
         </p>
 
         <div className="c-privacy-grid">
           <div className="c-privacy-row">
             <span className="c-privacy-icon"><LockIcon /></span>
             <div>
-              <h4>No account, ever.</h4>
-              <p>Open the app and start. There's nothing to sign up for, nothing to forget.</p>
+              <h4>No sign-up to use Charted.</h4>
+              <p>Open the app and start. Subscriptions, if any, are handled by Apple — we don't see your Apple ID.</p>
             </div>
           </div>
           <div className="c-privacy-row">
             <span className="c-privacy-icon"><DeviceIcon /></span>
             <div>
-              <h4>Nothing leaves your iPhone.</h4>
-              <p>Photos, locations, journeys, AI narratives — all processed on-device.</p>
+              <h4>Your photos stay on your iPhone.</h4>
+              <p>Charted reads photo metadata locally. We don't upload your photos, locations, or trips to our servers.</p>
             </div>
           </div>
           <div className="c-privacy-row">
             <span className="c-privacy-icon"><AIChipIcon /></span>
             <div>
               <h4>On-device intelligence.</h4>
-              <p>Apple Foundation Models writes your trip stories without sending them anywhere.</p>
+              <p>Apple Foundation Models writes your trip stories on your iPhone — prompts and outputs aren't transmitted to us or third parties.</p>
             </div>
           </div>
           <div className="c-privacy-row">
             <span className="c-privacy-icon"><EyeOffIcon /></span>
             <div>
               <h4>No tracking, no advertisers.</h4>
-              <p>The only network calls are anonymized crash reports — and you can turn those off.</p>
+              <p>We don't track you across apps or websites. The only network calls are anonymized crash and usage reports — you can turn those off in Settings.</p>
             </div>
           </div>
         </div>
@@ -470,13 +471,13 @@ function Pricing() {
  * ──────────────────────────────────────────────────────────── */
 const FAQS = [
   {
-    q: 'Is Charted really 100% on-device?',
+    q: 'Does Charted keep my data on my iPhone?',
     a: (
       <>
         Yes. Photo metadata, locations, trip detection, and AI narratives all run on your iPhone.
-        The only network calls Charted makes are anonymized crash reports (which you can disable
-        in Settings) and StoreKit checks for your subscription status. No photos, no locations,
-        no journeys leave your device.
+        The only network calls Charted makes are anonymized crash and usage reports (which you can
+        disable in Settings) and StoreKit checks for your subscription status. We don't upload your
+        photos, locations, or trips, and we don't store them on our servers.
       </>
     ),
   },

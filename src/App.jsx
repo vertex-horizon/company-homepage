@@ -118,7 +118,7 @@ const capabilities = [
       </svg>
     ),
     title: 'On-Device Intelligence',
-    desc: 'Apple Foundation Models, Vision, Core ML. We build AI that runs on the phone — never on someone else\'s server. Private by default, instant by nature.',
+    desc: 'Apple Foundation Models, Vision, Core ML. We build AI that runs on the user\'s phone — prompts and outputs aren\'t sent to OpenAI, Google, or to us. Private by default, instant by nature.',
   },
   {
     icon: (
@@ -168,7 +168,7 @@ const capabilities = [
       </svg>
     ),
     title: 'Privacy by Design',
-    desc: 'No accounts. No servers. No tracking. We build with what users already have, on the device they already trust. The kind of privacy that needs no policy to explain.',
+    desc: "We don't store users' photos or trip data on our servers, and we don't track them across apps. We build with what users already have, on the device they already trust — privacy as the foundation, not a marketing line.",
   },
 ]
 
@@ -358,7 +358,7 @@ function App() {
                 in photos already on your device and turns them into a 3D globe of
                 every place you've been — with on-device AI narratives, automatic
                 journey detection, and a digital passport that fills as you travel.
-                Nothing leaves your iPhone.
+                Your photos and trip data stay on your iPhone.
               </p>
 
               <ul className="product-card-tags">

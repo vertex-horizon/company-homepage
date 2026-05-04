@@ -31,9 +31,10 @@ export default function Privacy({ navigate }) {
 
       <div className="c-doc-summary">
         <strong>The short version:</strong> Charted is a privacy-first app.
-        Your photos, locations, and journey data stay on your iPhone. We don't have a server
-        that stores your travels. The only data leaving your device is anonymized crash and
-        performance reports — and you can disable those in Settings.
+        Your photos, locations, and journey data stay on your iPhone, and we don't store them
+        on our servers. The only data leaving your device is anonymized crash and performance
+        reports — and you can disable those in Settings. Subscriptions, if any, are processed
+        by Apple — we don't see your Apple ID or payment details.
       </div>
 
       <h2>1. Information We Process On-Device</h2>
@@ -200,9 +201,9 @@ export default function Privacy({ navigate }) {
 
       <h2>8. Data Security</h2>
       <ul>
-        <li>All data is stored on your device, protected by iOS sandbox.</li>
-        <li>Network traffic uses HTTPS/TLS.</li>
-        <li>We do not have a server that holds your data, so there is no breach risk for content you create.</li>
+        <li>Your photos, locations, and journey data are stored on your device, protected by iOS sandbox isolation.</li>
+        <li>Any network traffic Charted does make uses HTTPS/TLS.</li>
+        <li>Because the content you create in Charted (journeys, narratives, archetypes) is stored on your device and not on our servers, a breach of our infrastructure cannot expose that content.</li>
       </ul>
 
       <h2>9. Changes to This Policy</h2>
