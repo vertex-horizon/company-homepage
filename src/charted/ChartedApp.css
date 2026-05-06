@@ -963,6 +963,10 @@
   position: absolute;
   top: -10px;
   left: 24px;
+  /* z-index above the .is-best ::after shimmer (which paints over
+   * the entire card surface) so the BEST VALUE pill stays solid
+   * and is never washed out by the shimmer pass. */
+  z-index: 2;
   font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -971,6 +975,10 @@
   color: #fff;
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
+  /* Subtle glow so the pill reads as a "label" rather than something
+   * the layout forgot to clip. */
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.28);
+  white-space: nowrap;
 }
 
 .c-price-name {
@@ -1822,34 +1830,46 @@
 
 /* ════════════════════════════════════════════════════════════════
  * PRICING best-value shimmer + magnetic-feel hover
+ *
+ * IMPORTANT: do NOT add `overflow: hidden` to .c-price-card here.
+ * The "BEST VALUE" pill (`.c-price-tag`) sits on top of the card
+ * with `top: -10px` — overflow:hidden would clip the pill in half
+ * (the bug fixed on 2026-05-06). Instead, the shimmer ::after below
+ * uses `clip-path: inset(0 round var(--c-radius-xl))` to self-clip
+ * to the card's rounded rectangle. That way the shimmer stays
+ * contained and the pill stays whole.
  * ════════════════════════════════════════════════════════════════ */
 .c-price-card {
   position: relative;
-  overflow: hidden;
 }
 
 .c-price-card.is-best::after {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -100%;
-  width: 60%;
-  height: 200%;
-  background: linear-gradient(
+  inset: 0;
+  background-image: linear-gradient(
     105deg,
     transparent 0%,
     rgba(56, 189, 248, 0.10) 45%,
     rgba(252, 211, 77, 0.10) 55%,
     transparent 100%
   );
+  background-size: 220% 100%;
+  background-position: -120% 0;
+  background-repeat: no-repeat;
+  /* Self-clip to the card's rounded rectangle, so we don't have to
+   * set overflow:hidden on the parent (which would also clip the
+   * .c-price-tag pill). */
+  clip-path: inset(0 round var(--c-radius-xl));
   animation: charted-shimmer 4.5s ease-in-out infinite;
   pointer-events: none;
+  border-radius: var(--c-radius-xl);
 }
 
 @keyframes charted-shimmer {
-  0%   { left: -100%; }
-  60%  { left: 200%; }
-  100% { left: 200%; }
+  0%   { background-position: -120% 0; }
+  60%  { background-position: 220% 0; }
+  100% { background-position: 220% 0; }
 }
 
 /* ════════════════════════════════════════════════════════════════
