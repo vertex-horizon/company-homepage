@@ -240,29 +240,50 @@
   font-size: 0.8125rem !important;
 }
 
-/* `.c-nav-cta` — bright pill button in the top nav.
- * Uses semantic --c-on-bright token so the dark ink stays dark
- * regardless of theme, AND uses double-class selector to keep its
- * specificity (0,2,0) > any global `a` rule (see :where() block
- * earlier). */
+/* `.c-nav-cta` — glass ghost pill in the top nav.
+ *
+ * Earlier this was a bright white pill with dark ink (the "Download"
+ * button users saw as a stark white blob against the night-sky
+ * hero). The visual jolt was wrong: the rest of the nav is hairline
+ * borders + soft white text on a transparent backdrop, and a solid
+ * white pill broke that quiet, premium tone.
+ *
+ * New look: a translucent glass pill that belongs to the night —
+ * subtle white surface (~6% alpha), 1px hairline border, soft white
+ * text. On hover the surface lifts slightly and a faint Chart Blue
+ * glow forms behind the pill, giving the "Download" CTA real
+ * affordance without breaking the palette.
+ *
+ * Specificity note: double-class selector to stay above the
+ * :where(a) global rule (see specificity comment near top of file).
+ * Color is therefore governed here, not by the global rule.
+ * ──────────────────────────────────────────────────────────── */
 .charted-app .c-nav-cta {
   display: inline-flex;
   align-items: center;
   height: 38px;
-  padding: 0 1.05rem;
+  padding: 0 1.1rem;
   border-radius: 999px;
-  background: #f5f7fb;
-  color: var(--c-on-bright);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--c-text);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.01em;
-  transition: transform 0.2s var(--c-ease), box-shadow 0.2s ease, background 0.2s ease;
+  transition:
+    background 0.25s var(--c-ease),
+    border-color 0.25s var(--c-ease),
+    box-shadow 0.25s var(--c-ease),
+    transform 0.2s var(--c-ease);
 }
 
 .charted-app .c-nav-cta:hover {
-  background: #fff;
-  color: var(--c-on-bright);
-  box-shadow: 0 6px 22px rgba(56, 189, 248, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: var(--c-text);
+  box-shadow:
+    0 4px 18px rgba(56, 189, 248, 0.18),
+    0 0 0 1px rgba(56, 189, 248, 0.10) inset;
   transform: translateY(-1px);
 }
 
@@ -324,20 +345,28 @@
 
 /* ════════════════════════════════════════════════════════════════
  * BUTTONS
+ *
+ * Visual contract:
+ *   • All hero/CTA buttons share the same vertical rhythm (54px tall,
+ *     12px corner radius) so the App Store badge — whose shape is
+ *     fixed by Apple brand guidelines — sits flush next to ghost
+ *     siblings without one looking taller or rounder than the other.
+ *   • Border, shadow, font-weight tuned so the App Store badge stays
+ *     primary and ghost reads as the secondary action.
  * ════════════════════════════════════════════════════════════════ */
 .c-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  height: 48px;
+  gap: 0.55rem;
+  height: 54px;
   padding: 0 1.5rem;
-  border-radius: 999px;
+  border-radius: 12px;
   font-size: 0.9375rem;
   font-weight: 600;
   letter-spacing: -0.005em;
   cursor: pointer;
-  transition: transform 0.25s var(--c-ease), box-shadow 0.25s ease, background 0.25s ease;
-  border: none;
+  transition: transform 0.25s var(--c-ease), box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+  border: 1px solid transparent;
   white-space: nowrap;
 }
 
@@ -360,29 +389,34 @@
     0 1px 0 rgba(255, 255, 255, 0.16) inset;
 }
 
+/* Ghost — secondary action. Lives next to the App Store badge in
+ * the hero, so it inherits .c-btn's 54px / radius 12px / 0.9375rem
+ * to align baseline-for-baseline with the badge text. The translucent
+ * surface + hairline border match the .c-nav-cta glass treatment. */
 .charted-app .c-btn--ghost {
-  background: var(--c-surface);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--c-text);
-  border: 1px solid var(--c-border-hover);
+  border-color: rgba(255, 255, 255, 0.14);
+  font-weight: 500;
 }
 .charted-app .c-btn--ghost:hover {
-  background: var(--c-surface-hover);
+  background: rgba(255, 255, 255, 0.10);
   color: var(--c-text);
-  border-color: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
 }
 
-/* Apple "Download on the App Store" badge replica (textual variant — link-like).
- * Double-class selector to stay above the :where(a) global rule. */
+/* Apple "Download on the App Store" badge replica (textual variant
+ * — link-like). Inherits height/radius/padding from the base .c-btn
+ * (54px / 12px / 0 1.5rem) so it aligns flush with .c-btn--ghost.
+ * Only deviates on the dark gradient surface and the wider gap to
+ * fit the Apple logo + the two-line label. */
 .charted-app .c-btn--appstore {
-  height: 54px;
-  padding: 0 1.4rem;
   background: linear-gradient(180deg, #1f1f28 0%, #0f0f16 100%);
   color: #fff;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  display: inline-flex;
-  align-items: center;
+  border-color: rgba(255, 255, 255, 0.14);
   gap: 0.85rem;
+  padding: 0 1.4rem;
 }
 .c-btn--appstore .c-as-eyebrow {
   font-size: 0.625rem;
