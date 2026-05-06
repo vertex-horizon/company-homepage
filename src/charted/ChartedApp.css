@@ -26,6 +26,17 @@
   --c-text-soft:    rgba(245, 247, 251, 0.66);
   --c-text-mute:    rgba(245, 247, 251, 0.42);
 
+  /* ── Semantic foreground tokens ───────────────────────────────
+   * Used by buttons / surfaces that flip the polarity of the page.
+   * Naming the intent (vs. reusing --c-bg) makes the contract
+   * explicit: a button with a bright background needs ink, not
+   * "the same color as the page background by coincidence".
+   * If the page background ever becomes light, --c-bg flips but
+   * --c-on-bright stays dark — exactly what you want.
+   * ──────────────────────────────────────────────────────────── */
+  --c-on-bright:    #0a0a0f;   /* dark ink for use on white/cream surfaces */
+  --c-on-dark:      #f5f7fb;   /* bright ink for use on dark surfaces */
+
   /* Brand colors (Charted v1.0 — see docs/branding) */
   --c-chart-blue:   #0EA5E9;
   --c-chart-blue-l: #38BDF8;
@@ -101,8 +112,24 @@
   z-index: 1;
 }
 
-/* ── Reset overrides scoped to Charted ────────────────────────── */
-.charted-app a {
+/* ── Reset overrides scoped to Charted ──────────────────────────
+ *
+ * SPECIFICITY TRAP — read before touching this block.
+ *
+ * `.charted-app a` would have specificity (0,1,1) because `a` is
+ * an element selector. A bare class like `.c-nav-cta` is only
+ * (0,1,0), so the global `color: inherit` would SILENTLY WIN over
+ * any per-button `color` declaration, turning `<a class="c-nav-cta">`
+ * button text into whatever the parent's text color happens to be —
+ * white-on-white on a dark page (the bug fixed on 2026-05-06).
+ *
+ * Fix: wrap the scope in `:where()` so the entire selector counts
+ * as specificity (0,0,1) — guaranteed lower than any `.c-foo`
+ * single-class button rule below. Lets us keep the convenience of
+ * "all `<a>` inside the Charted app inherits color and has no
+ * underline" without poisoning button styles.
+ * ──────────────────────────────────────────────────────────── */
+:where(.charted-app) a {
   color: inherit;
   text-decoration: none;
 }
@@ -213,22 +240,28 @@
   font-size: 0.8125rem !important;
 }
 
-.c-nav-cta {
+/* `.c-nav-cta` — bright pill button in the top nav.
+ * Uses semantic --c-on-bright token so the dark ink stays dark
+ * regardless of theme, AND uses double-class selector to keep its
+ * specificity (0,2,0) > any global `a` rule (see :where() block
+ * earlier). */
+.charted-app .c-nav-cta {
   display: inline-flex;
   align-items: center;
   height: 38px;
   padding: 0 1.05rem;
   border-radius: 999px;
-  background: var(--c-text);
-  color: var(--c-bg);
+  background: #f5f7fb;
+  color: var(--c-on-bright);
   font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   transition: transform 0.2s var(--c-ease), box-shadow 0.2s ease, background 0.2s ease;
 }
 
-.c-nav-cta:hover {
+.charted-app .c-nav-cta:hover {
   background: #fff;
+  color: var(--c-on-bright);
   box-shadow: 0 6px 22px rgba(56, 189, 248, 0.25);
   transform: translateY(-1px);
 }
@@ -308,32 +341,39 @@
   white-space: nowrap;
 }
 
-.c-btn--primary {
-  background: var(--c-text);
-  color: var(--c-bg);
+/* Bright primary CTA — dark ink on light pill.
+ * Double-class selector (`.charted-app .c-btn--primary`) so the
+ * `color` declaration here outweighs any future global `a` rule. */
+.charted-app .c-btn--primary {
+  background: #f5f7fb;
+  color: var(--c-on-bright);
   box-shadow:
     0 6px 28px rgba(56, 189, 248, 0.16),
     0 1px 0 rgba(255, 255, 255, 0.12) inset;
 }
-.c-btn--primary:hover {
+.charted-app .c-btn--primary:hover {
+  background: #fff;
+  color: var(--c-on-bright);
   transform: translateY(-1px);
   box-shadow:
     0 10px 38px rgba(56, 189, 248, 0.28),
     0 1px 0 rgba(255, 255, 255, 0.16) inset;
 }
 
-.c-btn--ghost {
+.charted-app .c-btn--ghost {
   background: var(--c-surface);
   color: var(--c-text);
   border: 1px solid var(--c-border-hover);
 }
-.c-btn--ghost:hover {
+.charted-app .c-btn--ghost:hover {
   background: var(--c-surface-hover);
+  color: var(--c-text);
   border-color: rgba(255, 255, 255, 0.24);
 }
 
-/* Apple "Download on the App Store" badge replica (textual variant — link-like) */
-.c-btn--appstore {
+/* Apple "Download on the App Store" badge replica (textual variant — link-like).
+ * Double-class selector to stay above the :where(a) global rule. */
+.charted-app .c-btn--appstore {
   height: 54px;
   padding: 0 1.4rem;
   background: linear-gradient(180deg, #1f1f28 0%, #0f0f16 100%);
@@ -428,15 +468,11 @@
   max-width: 60ch;
 }
 
-.c-gradient-text {
-  background: var(--c-grad-voyage);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: charted-grad-shift 8s ease-in-out infinite;
-}
-
+/* ── First definition of .c-gradient-text ──────────────────────
+ * Note: this block is overridden by the more cinematic version
+ * defined further down (search for "more cinematic gradient").
+ * Keeping the @keyframes animation definition here — both the
+ * short and long gradient definitions share these keyframes. */
 @keyframes charted-grad-shift {
   0%, 100% { background-position: 0% 50%; }
   50%      { background-position: 100% 50%; }
@@ -553,13 +589,33 @@
   margin: 0 auto;
 }
 
+/* `<strong>` inside the quiet-truth paragraph is the gradient
+ * accent on "seen it as a map." It wraps a <TextReveal> which
+ * splits the text into per-character spans, so we apply the same
+ * inherit-the-gradient pattern as `.c-gradient-text`. Longhands
+ * only — see comments on `.c-gradient-text`. */
 .c-quiet-text strong {
   font-style: normal;
   font-weight: 600;
-  background: var(--c-grad-voyage);
+  background-image: var(--c-grad-voyage);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.c-quiet-text strong :is(.c-text-reveal, .c-tr-char, .c-tr-space, span) {
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .c-quiet-divider {
@@ -1036,12 +1092,18 @@
   margin-bottom: 1.25rem;
 }
 
-.c-cta-tagline span {
-  background: var(--c-grad-voyage);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+/* (Removed 2026-05-06)
+ *
+ * `.c-cta-tagline span` was a descendant selector — it matched
+ * EVERY <span> inside .c-cta-tagline, including the per-character
+ * spans that <TextReveal> emits. That painted "Chart how far " in
+ * gradient-transparent ink (i.e. invisible) because each char
+ * inherited `-webkit-text-fill-color: transparent` but had no
+ * background image of its own.
+ *
+ * The gradient styling is now consolidated on the `.c-gradient-text`
+ * class (further up). The CTA <h2> applies that class on its inner
+ * <span>, so the visual stays the same — just without the leak. */
 
 .c-cta-sub {
   font-size: 1.0625rem;
@@ -1446,9 +1508,33 @@
   display: block;
 }
 
-/* A larger, more cinematic gradient that shifts hues slowly */
+/* A larger, more cinematic gradient that shifts hues slowly.
+ *
+ * IMPLEMENTATION TRAP — read before "simplifying" this block.
+ *
+ * `background-clip: text` only paints text TRANSPARENT for the
+ * element that directly OWNS the background. Its children, even
+ * `display: inline-block` ones, do NOT inherit a usable gradient:
+ *  - `background` (shorthand) is non-inheriting by default.
+ *  - `background-clip` is non-inheriting.
+ *  - `-webkit-text-fill-color` IS inheriting → children get
+ *    `transparent` text color but no gradient under it → invisible.
+ *
+ * TextReveal wraps the gradient line in <span class="c-text-reveal">
+ * with per-character <span class="c-tr-char" style="inline-block">.
+ * Both extra layers BREAK the gradient unless we re-apply it.
+ *
+ * Fix: explicitly `inherit` each background longhand on every
+ * descendant level. We cannot use the `background: inherit`
+ * shorthand because CSS shorthand parsing fails silently when ANY
+ * sub-property has an issue, leaving everything blank — the exact
+ * bug we hit on VH home in 2026-04 and on Charted today.
+ *
+ * If you add a new wrapper element between `.c-gradient-text` and
+ * the rendered text, add it to the descendant selector list below.
+ * ──────────────────────────────────────────────────────────── */
 .c-gradient-text {
-  background:
+  background-image:
     linear-gradient(
       120deg,
       #38BDF8 0%,
@@ -1457,10 +1543,27 @@
       #38BDF8 100%
     );
   background-size: 280% 280%;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
   animation: charted-grad-shift 12s ease-in-out infinite;
+}
+
+/* Restore the gradient for every descendant level the text might
+ * pass through — TextReveal wrapper, char span, space span,
+ * <strong> tag (inside QuietTruth), etc. Use longhand explicitly. */
+.c-gradient-text :is(.c-text-reveal, .c-tr-char, .c-tr-space, strong, em, span) {
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -1807,8 +1910,9 @@
     transform: none;
     transition: none;
   }
-  .c-cta-tagline span,
+  /* All gradient-text variants share the same hue-cycle animation. */
   .c-gradient-text,
+  .c-quiet-text strong,
   .c-quiet::before,
   .c-cta::before,
   .c-moment-num,
