@@ -344,8 +344,8 @@ function PrivacyManifesto() {
         <p className="c-privacy-lede">
           Most travel apps want you tracked, all day. Charted does the opposite.
           We read GPS data <strong style={{ color: 'var(--c-text)' }}>already inside the photos you've already taken</strong> —
-          we don't track your location, we don't upload your photos, and we don't tie your trips to a personal account on our side.
-          Your travels stay where they belong: on your iPhone.
+          we don't track your location, we don't upload your photo library or local trip database, and we don't require a personal account.
+          Your saved trips stay on your iPhone; Apple services handle requested maps and addresses.
         </p>
 
         <div className="c-privacy-grid">
@@ -360,7 +360,7 @@ function PrivacyManifesto() {
             <span className="c-privacy-icon"><DeviceIcon /></span>
             <div>
               <h4>Your photos stay on your iPhone.</h4>
-              <p>Charted reads photo metadata locally. We don't upload your photos, locations, or trips to our servers.</p>
+              <p>Charted reads photo metadata locally. We don't upload your photo library or local trip database to our servers.</p>
             </div>
           </div>
           <div className="c-privacy-row">
@@ -374,7 +374,7 @@ function PrivacyManifesto() {
             <span className="c-privacy-icon"><EyeOffIcon /></span>
             <div>
               <h4>No tracking, no advertisers.</h4>
-              <p>We don't track you across apps or websites. The only network calls are anonymized crash and usage reports — you can turn those off in Settings.</p>
+              <p>We don't track you across apps or websites. Network services support purchases, app configuration, maps, diagnostics, and optional usage analytics. See our Privacy Policy for details and controls.</p>
             </div>
           </div>
         </div>

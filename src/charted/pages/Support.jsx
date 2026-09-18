@@ -59,8 +59,7 @@ export default function Support({ navigate }) {
       <h3>Does Charted keep my data on my iPhone?</h3>
       <p>
         Yes. Photo metadata, locations, journey detection, and AI narratives all run on your iPhone.
-        The only network calls Charted makes are anonymized crash and usage reports (which you can disable in Settings)
-        and StoreKit checks for your subscription status. We don't upload your photos, locations, or trips, and we don't store them on our servers.
+        Apple and RevenueCat support purchases; Apple services process map and address requests. Firebase and Sentry support diagnostics, app configuration, and optional usage analytics. See our Privacy Policy for the data involved and sharing controls. We don't upload your photo library or local trip database to our servers.
       </p>
 
       <h3>Will Charted track my live location?</h3>
