@@ -59,7 +59,7 @@ function Hero() {
       <div className="c-hero-inner">
         <div className="c-hero-content">
           <span className="c-eyebrow c-hero-eyebrow c-reveal is-revealed">
-            For iPhone · iOS 26+
+            For iPhone · iOS 17+
           </span>
 
           <h1 className="c-hero-title">
@@ -502,11 +502,11 @@ const FAQS = [
     ),
   },
   {
-    q: 'Does Charted require iOS 26?',
+    q: 'Which iOS versions does Charted support?',
     a: (
       <>
-        Yes. Charted v1.0 is built for iOS 26+ to use the latest Liquid Glass design language and
-        on-device AI (Apple Foundation Models). Older iOS versions aren't supported in this release.
+        Charted supports iOS 17 and later. Some features, including Apple Foundation Models,
+        require newer iOS versions and compatible devices.
       </>
     ),
   },
@@ -603,4 +603,3 @@ function CTA() {
     </section>
   )
 }
-

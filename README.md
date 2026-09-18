@@ -27,11 +27,13 @@ A GitHub Actions workflow is included at `/.github/workflows/deploy.yml`.
 3. Under `Build and deployment`, select `Source: GitHub Actions`.
 4. Every subsequent push to `main` will trigger an automatic deployment.
 
-The published URL typically follows this format:
+The production site uses the custom domain in `public/CNAME`:
 
-`https://<your-github-username>.github.io/<repository-name>/`
+`https://www.vertex-horizon.com/`
 
 ## Notes
 
-- Vite's `base` path is automatically generated from the repository name during production builds (reads `GITHUB_REPOSITORY` from GitHub Actions environment).
-- To deploy locally to a custom path, manually adjust `base` in `vite.config.js`.
+- Vite uses `base: '/'` for the production custom domain.
+- The build generates directory `index.html` entries for `/charted`, `/charted/support`, `/charted/privacy`, and `/charted/terms`. GitHub Pages can redirect to the trailing-slash URL and serve HTTP 200 while the existing client router selects the page.
+- `404.html` remains the SPA fallback for unknown paths; public support and legal links use the generated entries.
+- Verify direct requests after deployment, including refreshes of the support, privacy, and terms pages. `vite preview` alone is insufficient for this check because its SPA fallback can hide missing static files.

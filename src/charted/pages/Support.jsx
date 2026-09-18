@@ -157,9 +157,9 @@ export default function Support({ navigate }) {
 
       <h2>Requirements</h2>
       <ul>
-        <li>iPhone running <strong>iOS 26 or later</strong></li>
+        <li>iPhone 12 or newer running <strong>iOS 17 or later</strong></li>
         <li>A photo library with location metadata (most modern iPhone photos include this automatically)</li>
-        <li>iPhone 12 or newer is recommended for the best 3D globe performance</li>
+        <li>Some features, including Apple Foundation Models, require newer iOS versions and compatible devices</li>
       </ul>
 
       <h2>Contact</h2>
