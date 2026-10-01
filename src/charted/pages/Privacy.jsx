@@ -7,6 +7,8 @@ import { SUPPORT_EMAIL } from '../config.js'
  * 本网页是公开政策的完整正文；AppStore/04_privacy/privacy_policy_en.md 记录发布对应口径，
  * 不是本网页的完整正文来源。事实需与源码、PrivacyInfo.xcprivacy 和 ASC 隐私问卷一致。
  *
+ * 本候选稿对应 life-footprints 的合规整改分支，须与最终发行包一起验收后发布。
+ *
  * App Store hard requirements:
  *   - HTTPS, public, HTML (not PDF)
  *   - Mobile-friendly
@@ -92,16 +94,16 @@ export default function Privacy({ navigate }) {
         <li><strong>What:</strong> Crash traces, non-fatal errors, app hangs, app and operating-system versions, device information, installation identifiers, and technical context such as the current screen and network-request diagnostics.</li>
         <li><strong>Why:</strong> To diagnose failures and improve reliability. Reports can be associated with an installation or device.</li>
         <li><strong>Control:</strong> In the currently released version 1.1, crash reporting is on by default, subject to your saved preference. In the pending version 1.1.1, App Store crash reporting defaults to off and sharing requires your explicit opt-in. You can change Share Crash Reports in Settings → Privacy &amp; Security. Turning it off stops future corresponding sharing; it does not delete reports already received.</li>
-        <li><strong>Pending 1.1.1 behavior:</strong> An older default-on setting is not treated as consent. Firebase services start only when crash sharing has been explicitly enabled and the App is next launched. Turning on usage analytics alone does not start Firebase. Local diagnostic records are not automatically uploaded merely because they exist on your device.</li>
+        <li><strong>Pending 1.1.1 behavior:</strong> An older default-on setting is not treated as consent. Firebase initializes with analytics and crash collection disabled; the respective explicit sharing choice and pending-data cleanup control collection. SDK initialization is not a promise of zero service traffic. Local diagnostic records are not automatically uploaded merely because they exist on your device.</li>
         <li><strong>Images:</strong> Session Replay is disabled in the App Store version. Charted does not attach photo-library images to these reports.</li>
         <li><strong>Providers:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noreferrer">Firebase</a> and <a href="https://sentry.io/privacy/" target="_blank" rel="noreferrer">Sentry</a>.</li>
       </ul>
 
       <h3>2.2 Performance Diagnostics</h3>
       <ul>
-        <li><strong>What:</strong> Launch and operation timings, network latency, resource use, and device/app information. Firebase Performance may use the connection IP address for approximate geographic segmentation.</li>
-        <li><strong>Providers:</strong> Firebase Performance and, when crash reporting is also enabled, sampled Sentry performance traces. Apple MetricKit diagnostics are also processed on device.</li>
-        <li><strong>Control:</strong> Usage analytics and performance sharing are off by default in App Store versions 1.1 and the pending 1.1.1, subject to explicit saved preferences. You can change Share Usage Analytics in Settings → Privacy &amp; Security. In pending 1.1.1, Firebase sharing also requires Firebase to have started as described in §2.1; Sentry performance traces require crash sharing too.</li>
+        <li><strong>What:</strong> Launch and operation timings, network latency, resource use, and device/app information. Version 1.1 may use Firebase Performance, including connection-IP-based approximate geographic segmentation. In the pending compliance update, Firebase Performance automatic collection and instrumentation are permanently disabled.</li>
+        <li><strong>Providers:</strong> Version 1.1 may use Firebase Performance and sampled Sentry performance traces. In the pending compliance update, Sentry automatic tracing and Session Replay are disabled. Apple MetricKit diagnostics and local performance records are processed on device; selected technical performance summaries use the optional analytics channel.</li>
+        <li><strong>Control:</strong> Usage analytics and performance sharing are off by default in App Store versions 1.1 and the pending compliance update, subject to explicit saved preferences. You can change Share Usage Analytics in Settings → Privacy &amp; Security. Turning it off stops the corresponding future sharing and discards pending app events; it does not delete data already received by a provider or recall requests already delivered.</li>
       </ul>
 
       <h3>2.3 Usage Analytics (Firebase Analytics)</h3>
@@ -123,8 +125,8 @@ export default function Privacy({ navigate }) {
         Firebase Remote Config receives app, operating-system, language, country/region and installation
         information to deliver feature settings and experiments. In the currently released version 1.1,
         configuration requests can occur even when optional analytics is off. In pending 1.1.1, remote
-        fetching and live configuration updates require usage-analytics consent and Firebase to have
-        started as described in §2.1. With usage analytics disabled or withdrawn, the App uses local/default
+        fetching and live configuration updates require usage-analytics consent. Pending-data cleanup and current consent control collection;
+        initialization itself is not a promise of zero SDK service traffic. With usage analytics disabled or withdrawn, the App uses local/default
         feature settings and stops these requests. No photo library or trip database is included.
       </p>
 
