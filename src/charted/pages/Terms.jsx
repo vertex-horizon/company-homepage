@@ -4,7 +4,8 @@ import { SUPPORT_EMAIL } from '../config.js'
 /**
  * Terms of Use.
  *
- * Source: AppStore/04_privacy/terms_of_service_en.md
+ * 本网页是公开条款的完整正文；AppStore/04_privacy/terms_of_service_en.md 记录发布对应口径，
+ * 不是本网页的完整正文来源。
  *
  * Required by Apple for any app with In-App Purchases (subscriptions).
  * Must be reachable from:
@@ -18,14 +19,16 @@ export default function Terms({ navigate }) {
       <header>
         <h1>Terms of Use</h1>
         <div className="c-doc-meta">
-          <span><strong>Last Updated:</strong> April 27, 2026</span>
-          <span><strong>Effective Date:</strong> April 27, 2026</span>
+          <span><strong>Last Updated:</strong> October 1, 2026</span>
+          <span><strong>Effective Date:</strong> October 1, 2026</span>
         </div>
       </header>
 
+      <p><NavLink to="/charted/terms/fr" navigate={navigate} hrefLang="fr-CA" lang="fr-CA">Français (Canada)</NavLink></p>
+
       <p>
         These Terms of Use ("<strong>Terms</strong>") govern your use of Charted ("the <strong>App</strong>"),
-        provided by <strong>Vertex Horizon</strong> ("we", "us", "our"). By downloading or using Charted,
+        provided by <strong>Vertex Horizon Inc.</strong> ("we", "us", "our"). By downloading or using Charted,
         you agree to these Terms.
       </p>
 
@@ -37,7 +40,7 @@ export default function Terms({ navigate }) {
       <h2>2. Your Use of the App</h2>
       <p>You agree to use Charted only for lawful purposes. You will not:</p>
       <ul>
-        <li>Reverse engineer, decompile, or disassemble the App</li>
+        <li>Reverse engineer, decompile, or disassemble the App except where applicable law permits it</li>
         <li>Use the App to violate any law or third-party rights</li>
         <li>Resell, sublicense, or redistribute the App</li>
         <li>Use the App in any way that could damage, disable, or impair our services</li>
@@ -45,9 +48,31 @@ export default function Terms({ navigate }) {
 
       <h2>3. Your Content</h2>
       <p>
-        Charted operates entirely on your device. The App reads metadata from photos in your Photos library
-        to generate maps, journeys, and stories. <strong>You retain all rights</strong> to your photos,
+        Charted processes photo dates, GPS metadata, and image content on your device to generate maps,
+        journeys, highlights, and stories. Apple Photos may download iCloud photos when needed.
+        Apple Maps and address lookup may send coordinates or map regions to Apple. Purchases, app
+        configuration, diagnostics, optional analytics, and Apple speech recognition use the services
+        described in our Privacy Policy, including the version-specific speech-processing limits.
+        Charted does not upload your photo library or local trip database to our servers or a cloud AI service.
+        We do not operate a backend that stores them or hold a remote copy; you manage these records
+        on your device, and we cannot delete local records from a server. Requests about records
+        actually held by us or processed for us by providers are handled as described in our Privacy Policy.
+        <strong>You retain all rights</strong> to your photos,
         journeys, narratives, and any content created through the App. We do not claim any ownership of your content.
+      </p>
+      <p>
+        Generative journey text requires iOS 26 or later and Apple Intelligence available on a supported
+        device, language, and region with its models ready. Otherwise, Charted uses local template summaries.
+        Buying Pro does not enable Apple Intelligence. Generated text and inferred trips may contain errors;
+        review them before relying on or sharing them. Maps and boundaries are for travel memories, not
+        navigation, legal boundaries, or claims of sovereignty.
+      </p>
+      <p>
+        Sharing or exporting sends the content you choose to the destination app or service.
+        JSON, CSV, and GPX exports contain selected data and may include sensitive location history;
+        they do not include photo files or a complete record of all edits and settings, and cannot be
+        imported as a full Charted backup. Any separate Backup &amp; Restore feature has its own scope
+        and cannot restore missing original photos. Keep exports and backups secure.
       </p>
 
       <h2>4. In-App Purchases (Charted Pro)</h2>
@@ -58,16 +83,25 @@ export default function Terms({ navigate }) {
         available in the following options:
       </p>
       <ul>
-        <li><strong>Monthly subscription</strong> — $2.99/month, auto-renews monthly until canceled</li>
-        <li><strong>Annual subscription</strong> — $29.99/year, with a 7-day free trial for new subscribers, auto-renews annually until canceled</li>
-        <li><strong>Lifetime</strong> — $79.99 one-time purchase, no recurring billing</li>
+        <li><strong>Monthly subscription</strong> — auto-renews monthly until canceled</li>
+        <li><strong>Annual subscription</strong> — auto-renews annually until canceled; an eligible introductory offer may be available</li>
       </ul>
-      <p>Pricing is displayed inside the App at the time of purchase, in your local currency where supported.</p>
+      <p>
+        Apple displays the price, currency, billing period, taxes, and applicable offer in your App Store
+        storefront at purchase confirmation. Current catalog prices may differ from an existing subscriber's
+        renewal price; use Apple's subscription management screen to check your next charge.
+        Lifetime access is available only through a valid gift offer code where offered, and is not a public
+        direct-purchase plan. Lifetime membership does not renew, but any separate monthly or annual
+        subscription must be managed separately. Redeeming a discounted or free subscription offer does
+        not necessarily disable its automatic renewal.
+      </p>
 
       <h3>4.2 Free Trial</h3>
       <p>
-        A 7-day free trial is available to new subscribers of the Annual plan. If you do not cancel before
-        the trial ends, your selected subscription will begin and you will be charged.
+        Trial eligibility, duration, and availability are determined by Apple and shown before purchase.
+        A trial is not guaranteed to every new installation or subscriber. If your eligible offer includes
+        a free trial, cancel within the deadline Apple shows to avoid the next charge. After the trial,
+        the subscription renews at the terms shown by Apple unless canceled.
       </p>
 
       <h3>4.3 Payment &amp; Billing</h3>
@@ -93,13 +127,15 @@ export default function Terms({ navigate }) {
       <p>
         Refunds are handled by Apple, not by us. To request a refund, visit{' '}
         <a href="https://reportaproblem.apple.com" target="_blank" rel="noreferrer">reportaproblem.apple.com</a>.
-        Refund decisions are at Apple's discretion.
+        Apple's process does not limit any refund, cancellation, or other remedy you have under applicable
+        consumer law. Contact us if you need help with an issue with the App.
       </p>
 
       <h3>4.6 Price Changes</h3>
       <p>
-        We may change subscription prices. If we do, we will notify you in advance and you will have the
-        option to cancel before the new price takes effect.
+        We may change subscription prices. Apple provides the notices and obtains any consent required
+        for your subscription and storefront. You can review the change and cancel before it takes effect.
+        Your mandatory consumer rights remain unaffected.
       </p>
 
       <h2>5. Intellectual Property</h2>
@@ -130,7 +166,15 @@ export default function Terms({ navigate }) {
 
       <h2>8. Disclaimer of Warranties</h2>
       <p>
-        THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR
+        Nothing in these Terms excludes or restricts rights or remedies that applicable law does not
+        permit us to exclude. This includes guarantees under the Australian Consumer Law and New
+        Zealand Consumer Guarantees Act, and statutory digital-content and service rights in the UK
+        and Ireland. Where the App fails to meet a mandatory guarantee, you retain the remedies the
+        applicable law provides, including repair, replacement, refund, or cancellation where available.
+      </p>
+      <p>
+        SUBJECT TO THOSE MANDATORY RIGHTS, THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT
+        ADDITIONAL WARRANTIES OF ANY KIND, EITHER EXPRESS OR
         IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
         WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED OR ERROR-FREE.
       </p>
@@ -140,32 +184,39 @@ export default function Terms({ navigate }) {
         TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT WILL VERTEX HORIZON BE LIABLE FOR ANY INDIRECT,
         INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF YOUR USE OF THE APP. OUR TOTAL LIABILITY
         WILL NOT EXCEED THE AMOUNT YOU PAID FOR THE APP IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
+        THESE LIMITS DO NOT APPLY TO LIABILITY THAT CANNOT LAWFULLY BE EXCLUDED OR LIMITED,
+        INCLUDING APPLICABLE CONSUMER GUARANTEES, FRAUD, OR DEATH OR PERSONAL INJURY CAUSED BY NEGLIGENCE.
       </p>
 
       <h2>10. Termination</h2>
       <p>
         We may suspend or terminate your access to the App if you violate these Terms. You may stop using
-        the App at any time by uninstalling it.
+        the App at any time by removing it. Removing the App does not cancel an Apple subscription;
+        cancel through Apple separately. Termination does not remove mandatory statutory remedies.
       </p>
 
       <h2>11. Changes to These Terms</h2>
       <p>
         We may update these Terms from time to time. The "Last Updated" date will reflect the most recent
-        change. Continued use of the App after a change constitutes acceptance of the new Terms.
+        change. We will give notice of material changes and obtain agreement where required by law.
+        Changes do not retrospectively remove accrued rights or mandatory consumer protection.
       </p>
 
       <h2>12. Governing Law</h2>
       <p>
         These Terms are governed by the laws of the State of California, USA, without regard to conflict
-        of laws principles. Any dispute arising from these Terms will be resolved in the state and federal
-        courts located in California.
+        of laws principles, subject to mandatory protections under the law of your country of residence.
+        You retain any right applicable law gives you to bring proceedings in your local courts or use
+        a statutory dispute-resolution process. California courts are available where legally appropriate;
+        this clause does not require a consumer to waive a mandatory local forum or remedy.
       </p>
 
       <h2>13. Apple-Specific Terms</h2>
       <p>
         You acknowledge that these Terms are between you and Vertex Horizon, not Apple. Apple is not
-        responsible for the App or its content. In the event of a conflict between these Terms and the
-        Apple Standard EULA, the more restrictive terms apply.
+        responsible for the App or its content except for responsibilities Apple has under its own terms
+        or applicable law. Apple's applicable licensed-application terms and App Store terms also apply.
+        A conflict does not override mandatory consumer rights, or responsibilities we have as the App provider.
       </p>
       <p>
         Apple is a third-party beneficiary of these Terms and may enforce them against you.
@@ -175,7 +226,8 @@ export default function Terms({ navigate }) {
       <p>For questions about these Terms:</p>
       <p>
         <strong>Email:</strong> <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a><br />
-        <strong>Mailing Address:</strong> Vertex Horizon Inc. — please contact us by email for postal correspondence.
+        <strong>Mailing Address:</strong> 3405 Montgomery Dr Apt 255, Santa Clara, CA 95054-3080, United States<br />
+        <strong>Business Phone:</strong> <a href="tel:+16088951157">+1 608-895-1157</a>
       </p>
 
       <div className="c-doc-footer">

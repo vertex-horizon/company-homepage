@@ -4,9 +4,12 @@ import './ChartedApp.css'
 import Home from './pages/Home.jsx'
 import Privacy from './pages/Privacy.jsx'
 import Terms from './pages/Terms.jsx'
+import PrivacyFr from './pages/PrivacyFr.jsx'
+import TermsFr from './pages/TermsFr.jsx'
 import Support from './pages/Support.jsx'
 import { Stars, CursorGlow } from './effects.jsx'
 import { APP_STORE_URL, SUPPORT_EMAIL, PARENT_SITE } from './config.js'
+import { CHARTED_ROUTE_META, routeLanguageAlternates } from './routeMetadata.js'
 
 /**
  * Charted sub-brand site.
@@ -18,16 +21,16 @@ import { APP_STORE_URL, SUPPORT_EMAIL, PARENT_SITE } from './config.js'
  *   /charted            → <Home />
  *   /charted/privacy    → <Privacy />
  *   /charted/terms      → <Terms />
+ *   /charted/privacy/fr → <PrivacyFr />
+ *   /charted/terms/fr   → <TermsFr />
  *   /charted/support    → <Support />
  */
 
 function getRoute() {
   const path = window.location.pathname.replace(/\/+$/, '') // strip trailing slash
-  if (path === '/charted') return 'home'
-  if (path === '/charted/privacy') return 'privacy'
-  if (path === '/charted/terms') return 'terms'
-  if (path === '/charted/support') return 'support'
-  return 'home' // unknown sub-route → home
+  return Object.keys(CHARTED_ROUTE_META).find(
+    (key) => CHARTED_ROUTE_META[key].path === path,
+  ) ?? 'home' // unknown sub-route → home
 }
 
 export default function ChartedApp() {
@@ -52,9 +55,10 @@ export default function ChartedApp() {
 
   // Update <title> + meta tags per page (SEO + social share previews)
   useEffect(() => {
-    const meta = META[route]
+    const meta = CHARTED_ROUTE_META[route]
     if (!meta) return
     document.title = meta.title
+    document.documentElement.lang = meta.lang
 
     // Set or create a meta tag, by either name= or property=
     const setMeta = (key, attr, value) => {
@@ -72,6 +76,25 @@ export default function ChartedApp() {
     setMeta('og:description', 'property', meta.description)
     setMeta('twitter:title', 'name', meta.title)
     setMeta('twitter:description', 'name', meta.description)
+    setMeta('og:url', 'property', `${PARENT_SITE}${meta.path}`)
+
+    let canonical = document.querySelector('link[rel="canonical"]')
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.rel = 'canonical'
+      document.head.appendChild(canonical)
+    }
+    canonical.href = `${PARENT_SITE}${meta.path}`
+    // SPA 切换必须清理上一页语言链接，避免隐私页导航后仍指向条款的法语替代页。
+    document.querySelectorAll('link[data-charted-language]').forEach((tag) => tag.remove())
+    routeLanguageAlternates(meta).forEach((alternate) => {
+      const tag = document.createElement('link')
+      tag.rel = 'alternate'
+      tag.hreflang = alternate.lang
+      tag.href = `${PARENT_SITE}${alternate.path}`
+      tag.setAttribute('data-charted-language', '')
+      document.head.appendChild(tag)
+    })
   }, [route])
 
   // Global ambient effects — only on Home (legal pages stay distraction-free)
@@ -86,35 +109,13 @@ export default function ChartedApp() {
         {route === 'home' && <Home navigate={navigate} />}
         {route === 'privacy' && <Privacy navigate={navigate} />}
         {route === 'terms' && <Terms navigate={navigate} />}
+        {route === 'privacyFr' && <PrivacyFr navigate={navigate} />}
+        {route === 'termsFr' && <TermsFr navigate={navigate} />}
         {route === 'support' && <Support navigate={navigate} />}
       </main>
       <Footer navigate={navigate} />
     </div>
   )
-}
-
-/* ────────────────────────────────────────────────────────────
- * SEO meta per route
- * ──────────────────────────────────────────────────────────── */
-const META = {
-  home: {
-    title: 'Charted — Chart how far you\'ve come.',
-    description:
-      'Your photos already remember every place you\'ve been. Charted turns them into a beautiful 3D globe — automatically, privately, on your iPhone.',
-  },
-  privacy: {
-    title: 'Privacy Policy — Charted',
-    description:
-      'Charted is a privacy-first travel memory app. Your photos and locations stay on your device. We don\'t have a server.',
-  },
-  terms: {
-    title: 'Terms of Use — Charted',
-    description: 'Charted Terms of Use. Subscription terms, your content, and how Charted Pro works.',
-  },
-  support: {
-    title: 'Support — Charted',
-    description: 'Help, FAQs, and contact for Charted — the photo travel mapping app.',
-  },
 }
 
 /* ────────────────────────────────────────────────────────────
@@ -183,7 +184,7 @@ function Nav({ navigate }) {
   )
 
   return (
-    <nav className={`c-nav${scrolled ? ' is-scrolled' : ''}`} ref={navRef}>
+    <nav className={`c-nav${scrolled ? ' is-scrolled' : ''}`} ref={navRef} lang="en">
       <div className="c-nav-inner">
         <NavLink to="/charted" navigate={navigateAndClose} className="c-nav-brand">
           <ChartedMark />
@@ -228,7 +229,7 @@ function Nav({ navigate }) {
  * ──────────────────────────────────────────────────────────── */
 function Footer({ navigate }) {
   return (
-    <footer className="c-footer">
+    <footer className="c-footer" lang="en">
       <div className="c-footer-inner">
         <div className="c-footer-brand">
           <ChartedMark size={24} />

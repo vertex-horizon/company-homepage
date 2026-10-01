@@ -4,8 +4,8 @@ import { SUPPORT_EMAIL } from '../config.js'
 /**
  * Privacy Policy.
  *
- * Source: AppStore/04_privacy/privacy_policy_en.md
- * Must stay in sync with PrivacyInfo.xcprivacy and ASC App Privacy questionnaire.
+ * 本网页是公开政策的完整正文；AppStore/04_privacy/privacy_policy_en.md 记录发布对应口径，
+ * 不是本网页的完整正文来源。事实需与源码、PrivacyInfo.xcprivacy 和 ASC 隐私问卷一致。
  *
  * App Store hard requirements:
  *   - HTTPS, public, HTML (not PDF)
@@ -18,20 +18,29 @@ export default function Privacy({ navigate }) {
       <header>
         <h1>Privacy Policy</h1>
         <div className="c-doc-meta">
-          <span><strong>Last Updated:</strong> September 18, 2026</span>
-          <span><strong>Effective Date:</strong> September 18, 2026</span>
+          <span><strong>Last Updated:</strong> October 1, 2026</span>
+          <span><strong>Effective Date:</strong> October 1, 2026</span>
         </div>
       </header>
 
+      <p><NavLink to="/charted/privacy/fr" navigate={navigate} hrefLang="fr-CA" lang="fr-CA">Français (Canada)</NavLink></p>
+
       <p>
-        Charted is built by <strong>Vertex Horizon</strong> ("we", "us", "our").
+        Charted is built by <strong>Vertex Horizon Inc.</strong> ("we", "us", "our").
         This Privacy Policy explains what data Charted collects, how it is used,
         and the choices you have.
+      </p>
+      <p>
+        <strong>Version note:</strong> The changes identified below for version 1.1.1 are prepared for
+        that release and are pending App Store availability. Version 1.1 remains the currently released
+        version until the update is available. Review your installed version and sharing settings;
+        a policy update does not change the behavior of an older installed app.
       </p>
 
       <div className="c-doc-summary">
         <strong>The short version:</strong> Charted is a privacy-first app.
-        Your photo library and local trip database are not uploaded to our servers. Apple services
+        We do not operate a backend that stores your photo library or local trip database, and do not
+        hold remote copies of them. Apple services
         process map and address requests. We use Apple and RevenueCat for purchases, Firebase and
         Sentry for diagnostics, and optional usage analytics. These services receive technical
         identifiers and the information described below. We do not receive your Apple ID or payment details.
@@ -48,31 +57,32 @@ export default function Privacy({ navigate }) {
         <li><strong>What:</strong> GPS coordinates (latitude/longitude), timestamps, and camera information embedded in your photos (EXIF metadata).</li>
         <li><strong>Why:</strong> To plot your photos on the globe and detect your trips automatically.</li>
         <li><strong>Storage and requests:</strong> Photo metadata is stored in Charted's local database. When you request place details or maps, Apple geocoding and map services may receive the coordinates or map region needed to answer the request.</li>
-        <li><strong>How long:</strong> As long as the app is installed. Uninstalling Charted deletes all of this data.</li>
-        <li><strong>Image data:</strong> Charted accesses photos through Apple's PhotoKit for browsing and local features. We do not upload your photo library to our servers. You control any export or sharing you initiate.</li>
+        <li><strong>How long:</strong> Until you delete local records or remove the App. Offloading the App preserves its documents and data. Removing it does not erase Apple Photos originals, exports you saved elsewhere, or copies in device/system backups; manage those separately through Apple or your chosen storage provider.</li>
+        <li><strong>Image data:</strong> Charted accesses photos through Apple's PhotoKit for browsing, local scene/quality analysis, and highlights. Apple Photos may download iCloud photos when needed. Limited Access restricts the photos available to the App. We do not upload your photo library to our servers. You control any export or sharing you initiate.</li>
       </ul>
 
-      <h3>1.2 Approximate Device Location</h3>
+      <h3>1.2 Device Location</h3>
       <ul>
-        <li><strong>What:</strong> Your current location, only when you choose features like "show me on the map" or check-in.</li>
+        <li><strong>What:</strong> Your current location when you use location features such as showing your position on the map. It may be precise if you enable Precise Location in iOS; otherwise iOS provides an approximate location.</li>
         <li><strong>Why:</strong> To display your current position on the globe.</li>
         <li><strong>Processing:</strong> The app uses location locally; Apple map and geocoding services may process a location or map-region request when you use those features.</li>
-        <li><strong>Permission:</strong> Charted requests "When In Use" permission only. We do not request "Always" or background location.</li>
+        <li><strong>Permission:</strong> Charted requests "When In Use" permission only. We do not request "Always" or background location. You can change location permission and precision in iOS Settings.</li>
       </ul>
 
       <h3>1.3 Microphone &amp; Speech Recognition (Optional)</h3>
       <ul>
         <li><strong>What:</strong> Voice input for journey search.</li>
         <li><strong>Why:</strong> To convert your spoken queries into search.</li>
-        <li><strong>Where it stays:</strong> Apple's on-device speech recognition is used. Audio is processed locally and discarded after recognition.</li>
+        <li><strong>Processing and version boundary:</strong> The currently released version 1.1 uses Apple speech recognition without requiring on-device recognition; Apple may process your audio on its servers. In the pending version 1.1.1, voice search requires Apple's on-device recognition support for the current language and processes audio locally. If it is unavailable, use keyboard search; the App does not fall back to server recognition. Apple's privacy terms apply to its speech service.</li>
         <li><strong>Permission:</strong> Only requested if you tap the microphone button.</li>
       </ul>
 
       <h3>1.4 AI-Generated Content (Apple Foundation Models)</h3>
       <ul>
-        <li><strong>What:</strong> Charted uses Apple's on-device large language models (Apple Foundation Models) to generate journey narratives.</li>
+        <li><strong>What:</strong> Where available, Charted uses Apple's on-device Foundation Models to generate journey narratives from local trip information.</li>
         <li><strong>Why:</strong> To write a poetic summary of each trip.</li>
-        <li><strong>Where it stays:</strong> Prompts and outputs are processed entirely on your device. They are never sent to OpenAI, Anthropic, Google, or any server, including ours.</li>
+        <li><strong>Where it stays:</strong> This generation runs on your device. Charted does not send your prompts, photos, or trip database to a cloud AI service. You can choose to share generated text or exported content with other apps.</li>
+        <li><strong>Availability:</strong> Generative text requires iOS 26 or later, a supported device, and Apple Intelligence available for your language and region with models ready. Otherwise Charted uses local template summaries. Pro does not enable Apple Intelligence.</li>
       </ul>
 
       <h2>2. Information Sent Off-Device (Limited)</h2>
@@ -81,7 +91,8 @@ export default function Privacy({ navigate }) {
       <ul>
         <li><strong>What:</strong> Crash traces, non-fatal errors, app hangs, app and operating-system versions, device information, installation identifiers, and technical context such as the current screen and network-request diagnostics.</li>
         <li><strong>Why:</strong> To diagnose failures and improve reliability. Reports can be associated with an installation or device.</li>
-        <li><strong>Control:</strong> Crash reporting is on by default. You can turn off Share Crash Reports in Settings → Privacy &amp; Security.</li>
+        <li><strong>Control:</strong> In the currently released version 1.1, crash reporting is on by default, subject to your saved preference. In the pending version 1.1.1, App Store crash reporting defaults to off and sharing requires your explicit opt-in. You can change Share Crash Reports in Settings → Privacy &amp; Security. Turning it off stops future corresponding sharing; it does not delete reports already received.</li>
+        <li><strong>Pending 1.1.1 behavior:</strong> An older default-on setting is not treated as consent. Firebase services start only when crash sharing has been explicitly enabled and the App is next launched. Turning on usage analytics alone does not start Firebase. Local diagnostic records are not automatically uploaded merely because they exist on your device.</li>
         <li><strong>Images:</strong> Session Replay is disabled in the App Store version. Charted does not attach photo-library images to these reports.</li>
         <li><strong>Providers:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noreferrer">Firebase</a> and <a href="https://sentry.io/privacy/" target="_blank" rel="noreferrer">Sentry</a>.</li>
       </ul>
@@ -90,7 +101,7 @@ export default function Privacy({ navigate }) {
       <ul>
         <li><strong>What:</strong> Launch and operation timings, network latency, resource use, and device/app information. Firebase Performance may use the connection IP address for approximate geographic segmentation.</li>
         <li><strong>Providers:</strong> Firebase Performance and, when crash reporting is also enabled, sampled Sentry performance traces. Apple MetricKit diagnostics are also processed on device.</li>
-        <li><strong>Control:</strong> In version 1.1, usage analytics and performance sharing are off by default in the App Store version, subject to your saved preferences. You can change Share Usage Analytics in Settings → Privacy &amp; Security.</li>
+        <li><strong>Control:</strong> Usage analytics and performance sharing are off by default in App Store versions 1.1 and the pending 1.1.1, subject to explicit saved preferences. You can change Share Usage Analytics in Settings → Privacy &amp; Security. In pending 1.1.1, Firebase sharing also requires Firebase to have started as described in §2.1; Sentry performance traces require crash sharing too.</li>
       </ul>
 
       <h3>2.3 Usage Analytics (Firebase Analytics)</h3>
@@ -102,7 +113,7 @@ export default function Privacy({ navigate }) {
 
       <h3>2.4 Purchases (Apple and RevenueCat)</h3>
       <ul>
-        <li><strong>What:</strong> Apple processes payments. RevenueCat receives purchase/transaction history and subscription status, a randomly generated persistent app user ID also used as the StoreKit app account token, and build variant, broad user region, and diagnostic cohort attributes.</li>
+        <li><strong>What:</strong> Apple processes payments. RevenueCat receives purchase/transaction history and subscription status, and a randomly generated persistent app user ID also used as the StoreKit app account token. Version 1.1 also sends build-variant, broad-region, and diagnostic-cohort subscriber attributes; the pending version 1.1.1 removes these Charted-defined subscriber attributes. RevenueCat and Apple's SDKs may still receive ordinary app, device, storefront/country, and connection information needed to operate their services.</li>
         <li><strong>Why:</strong> Purchase validation, purchase restoration, subscription management, and subscription analytics.</li>
         <li><strong>Control:</strong> Purchase services operate separately from the optional usage-analytics switch. We do not receive your Apple ID, payment-card details, or billing address.</li>
       </ul>
@@ -110,8 +121,11 @@ export default function Privacy({ navigate }) {
       <h3>2.5 App Configuration (Firebase Remote Config)</h3>
       <p>
         Firebase Remote Config receives app, operating-system, language, country/region and installation
-        information to deliver feature settings. Configuration requests can occur even when optional
-        analytics is off. No photo library or trip database is included in these requests.
+        information to deliver feature settings and experiments. In the currently released version 1.1,
+        configuration requests can occur even when optional analytics is off. In pending 1.1.1, remote
+        fetching and live configuration updates require usage-analytics consent and Firebase to have
+        started as described in §2.1. With usage analytics disabled or withdrawn, the App uses local/default
+        feature settings and stops these requests. No photo library or trip database is included.
       </p>
 
       <h2>3. Information We Do Not Collect</h2>
@@ -121,13 +135,19 @@ export default function Privacy({ navigate }) {
         <li>A user account (Charted does not require sign-in)</li>
         <li>Your contacts or social network data</li>
         <li>Your browsing history or other apps you use</li>
-        <li>Your full-resolution photos</li>
+        <li>Your photo library on our servers (photos are accessed and processed locally)</li>
         <li>Cross-app or cross-website tracking identifiers (IDFA)</li>
         <li>Your precise location continuously in the background</li>
       </ul>
 
       <h2>4. Third-Party Services</h2>
-      <p>Charted uses the following third-party services. Their privacy policies govern their data handling:</p>
+      <p>
+        Charted uses the services below. We remain responsible for the purposes and handling of personal
+        data we determine, including requests relating to processors acting for us. Some providers, such
+        as Apple for payments and its account services, also determine their own processing purposes;
+        their policies explain that processing. Listing a provider does not transfer our responsibilities
+        or limit your rights.
+      </p>
 
       <table>
         <thead>
@@ -181,6 +201,44 @@ export default function Privacy({ navigate }) {
         </tbody>
       </table>
 
+      <h3>4.1 Purposes and Legal Bases</h3>
+      <p>
+        Where EU or UK data-protection law applies, the following bases apply to the purposes we
+        determine. An iOS permission controls device access; it does not itself replace the legal
+        basis or the separate sharing choices described above.
+      </p>
+      <ul>
+        <li><strong>Requested app features:</strong> Processing local photo/trip data, requested maps, and selected exports is necessary to provide the features you ask for under our contract with you.</li>
+        <li><strong>Purchases and restoration:</strong> Transaction identifiers and entitlement information are processed to perform our contract and deliver or restore Pro. Records required by applicable accounting or other laws are processed to meet those legal obligations. Apple determines its own payment and account-processing bases.</li>
+        <li><strong>Optional analytics, performance sharing, and configuration experiments in pending 1.1.1:</strong> Your consent. You can withdraw it in Settings without losing local core features; withdrawal does not affect processing that was lawful before withdrawal.</li>
+        <li><strong>Crash/error sharing:</strong> The pending version 1.1.1 uses your explicit consent. Version 1.1 uses a default-on, opt-out setting for our legitimate interest in diagnosing failures and maintaining app reliability; you may object and turn it off. This older default is not described as consent.</li>
+        <li><strong>Older configuration and security:</strong> Version 1.1 configuration uses our legitimate interest in delivering feature settings. Protecting the App and addressing abuse relies on our legitimate interests, balanced against your rights. Pending 1.1.1 remote configuration and experiments are optional and use consent as stated above; we do not classify them as necessary to use the App.</li>
+        <li><strong>Support:</strong> Responding to your app or subscription request is necessary to assist you under our contract; other correspondence uses our legitimate interest in responding to questions. We retain records where needed to comply with legal obligations or handle legal claims.</li>
+      </ul>
+
+      <h3>4.2 Processing Locations</h3>
+      <p>
+        The providers described above may process information outside your country, including in the
+        United States. Local photo and trip processing is not a promise that all service information
+        stays in your country. Provider policies describe their processing locations and transfer
+        arrangements. You can contact us for information about the providers and applicable safeguards
+        for processing on our behalf; this policy does not assert EU/UK-only hosting.
+      </p>
+
+      <h3>4.3 Retention</h3>
+      <ul>
+        <li><strong>Local content:</strong> Stored until you delete the relevant local data or remove the App, subject to separate exports, device backups, and offloading as described in §1.1. Cached images may be evicted earlier.</li>
+        <li><strong>Diagnostics and analytics:</strong> Retention depends on the deployed provider settings and the time needed to investigate failures or evaluate the relevant feature use. We delete or anonymize records when no longer needed for those purposes, unless a legal obligation or active claim requires retention. Turning off sharing stops future corresponding sharing; it is not a deletion request for earlier records.</li>
+        <li><strong>Purchase records:</strong> Kept as necessary to provide and restore entitlements and handle refunds or disputes, and for any applicable statutory recordkeeping period. Apple's own payment-record retention is determined by Apple.</li>
+        <li><strong>Support:</strong> Kept while resolving your request and any necessary follow-up, then deleted when no longer needed, except records required for legal obligations or claims.</li>
+      </ul>
+      <p>
+        We do not promise a single retention period for all provider systems. Contact us for the
+        current settings or to request deletion of records relating to you. Copies in provider backup
+        systems may remain until those systems' normal deletion cycles complete; legal retention
+        exceptions will be explained when they apply to your request.
+      </p>
+
       <h2>5. In-App Purchases (Charted Pro)</h2>
       <p>
         Charted offers subscription products ("Charted Pro"). Subscription transactions are handled by Apple.
@@ -195,7 +253,8 @@ export default function Privacy({ navigate }) {
         <li>Select Charted</li>
       </ol>
       <p>
-        Apple's refund policy applies. See <a href="https://support.apple.com/HT202039" target="_blank" rel="noreferrer">Apple Subscriptions</a>.
+        Apple's refund process applies without limiting mandatory consumer rights.
+        See <a href="https://support.apple.com/HT202039" target="_blank" rel="noreferrer">Apple Subscriptions</a>.
       </p>
 
       <h2>6. Children's Privacy</h2>
@@ -207,14 +266,32 @@ export default function Privacy({ navigate }) {
       <h2>7. Your Rights</h2>
       <p>
         You can manage local app data and sharing preferences on your device. For questions or requests
-        about information processed by our service providers, contact us at the address below.
+        about information we process or providers process for us, contact us at the address below.
+        Depending on applicable law, you may request access, correction, deletion, restriction, or
+        portability, object to legitimate-interest processing, and withdraw consent without affecting
+        the lawfulness of earlier processing. These rights have legal limits, which we will explain
+        if they apply. We do not make decisions about you with legal or similarly significant effects
+        solely through automated processing.
       </p>
       <ul>
-        <li><strong>Local data:</strong> Your saved trips are available inside Charted.</li>
-        <li><strong>Deletion:</strong> Removing Charted deletes its local app data. It does not automatically delete purchase records or diagnostics already held by Apple or other service providers. Contact us about those records.</li>
-        <li><strong>Right to portability:</strong> Settings → Export → "Export all data as JSON".</li>
+        <li><strong>Local data:</strong> Your saved trips are available inside Charted. We do not hold a remote copy of your photo library or trip database and cannot delete these local records from a server. Manage them on your device using the controls below.</li>
+        <li><strong>Deletion:</strong> Use Settings → Data Controls for local controls, or remove the App. Offloading preserves data. Neither action deletes photos, external exports/backups, Apple subscriptions, purchase records, or diagnostics already received by providers. Requests to us concern only records we actually hold or providers process for us, such as support correspondence, purchase records, or diagnostics. We address them according to applicable rights and retention duties; we will explain if no matching record is held or a legal retention requirement applies. Apple account/payment requests can also be directed to Apple.</li>
+        <li><strong>Export:</strong> Settings → Data Controls → Export Data offers selected JSON, CSV, or GPX data. These files are not a complete restorable backup and do not include original photo files or all edits/settings. In the pending version 1.1.1, the separate Backup &amp; Restore feature preserves its supported personal records; it does not copy original Photos files or every preference.</li>
         <li><strong>Sharing controls:</strong> Settings → Privacy &amp; Security → Share Usage Analytics / Share Crash Reports. Turning these off stops the corresponding sharing; it does not erase reports previously received.</li>
       </ul>
+      <p>
+        For EU/UK rights requests, we respond without undue delay and ordinarily within one calendar
+        month. Where the law permits an extension for complexity or multiple requests, we may extend
+        by up to two further months and will explain the reason within the initial month. We may ask
+        for proportionate information to verify your identity or identify the relevant installation
+        records. Please do not email your photo library or full location history just to make a request.
+      </p>
+      <p>
+        You may complain to your local data-protection authority or seek a judicial remedy. In the UK,
+        contact the <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noreferrer">Information Commissioner's Office</a>;
+        in Ireland, contact the <a href="https://www.dataprotection.ie/en/individuals/exercising-your-rights/complaints-handling-investigations-and-enforcement-individuals" target="_blank" rel="noreferrer">Data Protection Commission</a>.
+        You do not have to waive those rights to contact us first.
+      </p>
       <p>
         For questions: <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
       </p>
@@ -223,7 +300,7 @@ export default function Privacy({ navigate }) {
       <ul>
         <li>Your photos, locations, and journey data are stored on your device, protected by iOS sandbox isolation.</li>
         <li>Any network traffic Charted does make uses HTTPS/TLS.</li>
-        <li>Because the content you create in Charted (journeys, narratives, archetypes) is stored on your device and not on our servers, a breach of our infrastructure cannot expose that content.</li>
+        <li>We limit off-device sharing to the purposes described above. No storage or transmission method is risk-free. Keep your device, backups, and exported location records secure, and review the destination before sharing.</li>
       </ul>
 
       <h2>9. Changes to This Policy</h2>
@@ -235,7 +312,9 @@ export default function Privacy({ navigate }) {
       <h2>10. Contact</h2>
       <p>
         <strong>Email:</strong> <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a><br />
-        <strong>Mailing Address:</strong> Vertex Horizon Inc. — please contact us by email for postal correspondence.
+        <strong>Controller:</strong> Vertex Horizon Inc.<br />
+        <strong>Mailing Address:</strong> 3405 Montgomery Dr Apt 255, Santa Clara, CA 95054-3080, United States<br />
+        <strong>Business Phone:</strong> <a href="tel:+16088951157">+1 608-895-1157</a>
       </p>
 
       <div className="c-doc-footer">
