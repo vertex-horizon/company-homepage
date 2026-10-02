@@ -33,8 +33,8 @@ export default function Privacy({ navigate }) {
         and the choices you have.
       </p>
       <p>
-        <strong>Version note:</strong> The changes identified below for version 1.1.1 are prepared for
-        that release and are pending App Store availability. Version 1.1 remains the currently released
+        <strong>Version note:</strong> The changes identified below as a pending compliance update are being prepared
+        and are not all included in version 1.1.1 submitted for App Store review. Version 1.1 remains the currently released
         version until the update is available. Review your installed version and sharing settings;
         a policy update does not change the behavior of an older installed app.
       </p>
@@ -75,7 +75,7 @@ export default function Privacy({ navigate }) {
       <ul>
         <li><strong>What:</strong> Voice input for journey search.</li>
         <li><strong>Why:</strong> To convert your spoken queries into search.</li>
-        <li><strong>Processing and version boundary:</strong> The currently released version 1.1 uses Apple speech recognition without requiring on-device recognition; Apple may process your audio on its servers. In the pending version 1.1.1, voice search requires Apple's on-device recognition support for the current language and processes audio locally. If it is unavailable, use keyboard search; the App does not fall back to server recognition. Apple's privacy terms apply to its speech service.</li>
+        <li><strong>Processing and version boundary:</strong> The currently released version 1.1 uses Apple speech recognition without requiring on-device recognition; Apple may process your audio on its servers. In the pending compliance update, voice search requires Apple's on-device recognition support for the current language and processes audio locally. If it is unavailable, use keyboard search; the App does not fall back to server recognition. Apple's privacy terms apply to its speech service.</li>
         <li><strong>Permission:</strong> Only requested if you tap the microphone button.</li>
       </ul>
 
@@ -93,8 +93,8 @@ export default function Privacy({ navigate }) {
       <ul>
         <li><strong>What:</strong> Crash traces, non-fatal errors, app hangs, app and operating-system versions, device information, installation identifiers, and technical context such as the current screen and network-request diagnostics.</li>
         <li><strong>Why:</strong> To diagnose failures and improve reliability. Reports can be associated with an installation or device.</li>
-        <li><strong>Control:</strong> In the currently released version 1.1, crash reporting is on by default, subject to your saved preference. In the pending version 1.1.1, App Store crash reporting defaults to off and sharing requires your explicit opt-in. You can change Share Crash Reports in Settings → Privacy &amp; Security. Turning it off stops future corresponding sharing; it does not delete reports already received.</li>
-        <li><strong>Pending 1.1.1 behavior:</strong> An older default-on setting is not treated as consent. Firebase initializes with analytics and crash collection disabled; the respective explicit sharing choice and pending-data cleanup control collection. SDK initialization is not a promise of zero service traffic. Local diagnostic records are not automatically uploaded merely because they exist on your device.</li>
+        <li><strong>Control:</strong> In the currently released version 1.1, crash reporting is on by default, subject to your saved preference. In the pending compliance update, App Store crash reporting defaults to off and sharing requires your explicit opt-in. You can change Share Crash Reports in Settings → Privacy &amp; Security. Turning it off stops future corresponding sharing; it does not delete reports already received.</li>
+        <li><strong>Pending compliance update behavior:</strong> An older default-on setting is not treated as consent. Firebase initializes with analytics and crash collection disabled; the respective explicit sharing choice and pending-data cleanup control collection. SDK initialization is not a promise of zero service traffic. Local diagnostic records are not automatically uploaded merely because they exist on your device.</li>
         <li><strong>Images:</strong> Session Replay is disabled in the App Store version. Charted does not attach photo-library images to these reports.</li>
         <li><strong>Providers:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noreferrer">Firebase</a> and <a href="https://sentry.io/privacy/" target="_blank" rel="noreferrer">Sentry</a>.</li>
       </ul>
@@ -115,7 +115,7 @@ export default function Privacy({ navigate }) {
 
       <h3>2.4 Purchases (Apple and RevenueCat)</h3>
       <ul>
-        <li><strong>What:</strong> Apple processes payments. RevenueCat receives purchase/transaction history and subscription status, and a randomly generated persistent app user ID also used as the StoreKit app account token. Version 1.1 also sends build-variant, broad-region, and diagnostic-cohort subscriber attributes; the pending version 1.1.1 removes these Charted-defined subscriber attributes. RevenueCat and Apple's SDKs may still receive ordinary app, device, storefront/country, and connection information needed to operate their services.</li>
+        <li><strong>What:</strong> Apple processes payments. RevenueCat receives purchase/transaction history and subscription status, and a randomly generated persistent app user ID also used as the StoreKit app account token. Version 1.1 also sends build-variant, broad-region, and diagnostic-cohort subscriber attributes; the pending compliance update removes these Charted-defined subscriber attributes. RevenueCat and Apple's SDKs may still receive ordinary app, device, storefront/country, and connection information needed to operate their services.</li>
         <li><strong>Why:</strong> Purchase validation, purchase restoration, subscription management, and subscription analytics.</li>
         <li><strong>Control:</strong> Purchase services operate separately from the optional usage-analytics switch. We do not receive your Apple ID, payment-card details, or billing address.</li>
       </ul>
@@ -124,7 +124,7 @@ export default function Privacy({ navigate }) {
       <p>
         Firebase Remote Config receives app, operating-system, language, country/region and installation
         information to deliver feature settings and experiments. In the currently released version 1.1,
-        configuration requests can occur even when optional analytics is off. In pending 1.1.1, remote
+        configuration requests can occur even when optional analytics is off. In the pending compliance update, remote
         fetching and live configuration updates require usage-analytics consent. Pending-data cleanup and current consent control collection;
         initialization itself is not a promise of zero SDK service traffic. With usage analytics disabled or withdrawn, the App uses local/default
         feature settings and stops new fetches and live updates. Requests already in flight may still reach the provider; results received after withdrawal are ignored. No photo library or trip database is included.
@@ -212,9 +212,9 @@ export default function Privacy({ navigate }) {
       <ul>
         <li><strong>Requested app features:</strong> Processing local photo/trip data, requested maps, and selected exports is necessary to provide the features you ask for under our contract with you.</li>
         <li><strong>Purchases and restoration:</strong> Transaction identifiers and entitlement information are processed to perform our contract and deliver or restore Pro. Records required by applicable accounting or other laws are processed to meet those legal obligations. Apple determines its own payment and account-processing bases.</li>
-        <li><strong>Optional analytics, performance sharing, and configuration experiments in pending 1.1.1:</strong> Your consent. You can withdraw it in Settings without losing local core features; withdrawal does not affect processing that was lawful before withdrawal.</li>
-        <li><strong>Crash/error sharing:</strong> The pending version 1.1.1 uses your explicit consent. Version 1.1 uses a default-on, opt-out setting for our legitimate interest in diagnosing failures and maintaining app reliability; you may object and turn it off. This older default is not described as consent.</li>
-        <li><strong>Older configuration and security:</strong> Version 1.1 configuration uses our legitimate interest in delivering feature settings. Protecting the App and addressing abuse relies on our legitimate interests, balanced against your rights. Pending 1.1.1 remote configuration and experiments are optional and use consent as stated above; we do not classify them as necessary to use the App.</li>
+        <li><strong>Optional analytics, performance sharing, and configuration experiments in the pending compliance update:</strong> Your consent. You can withdraw it in Settings without losing local core features; withdrawal does not affect processing that was lawful before withdrawal.</li>
+        <li><strong>Crash/error sharing:</strong> The pending compliance update uses your explicit consent. Version 1.1 uses a default-on, opt-out setting for our legitimate interest in diagnosing failures and maintaining app reliability; you may object and turn it off. This older default is not described as consent.</li>
+        <li><strong>Older configuration and security:</strong> Version 1.1 configuration uses our legitimate interest in delivering feature settings. Protecting the App and addressing abuse relies on our legitimate interests, balanced against your rights. Pending compliance update remote configuration and experiments are optional and use consent as stated above; we do not classify them as necessary to use the App.</li>
         <li><strong>Support:</strong> Responding to your app or subscription request is necessary to assist you under our contract; other correspondence uses our legitimate interest in responding to questions. We retain records where needed to comply with legal obligations or handle legal claims.</li>
       </ul>
 
@@ -279,7 +279,7 @@ export default function Privacy({ navigate }) {
       <ul>
         <li><strong>Local data:</strong> Your saved trips are available inside Charted. We do not hold a remote copy of your photo library or trip database and cannot delete these local records from a server. Manage them on your device using the controls below.</li>
         <li><strong>Deletion:</strong> Use Settings → Data Controls for local controls, or remove the App. Offloading preserves data. Neither action deletes photos, external exports/backups, Apple subscriptions, purchase records, or diagnostics already received by providers. Requests to us concern only records we actually hold or providers process for us, such as support correspondence, purchase records, or diagnostics. We address them according to applicable rights and retention duties; we will explain if no matching record is held or a legal retention requirement applies. Apple account/payment requests can also be directed to Apple.</li>
-        <li><strong>Export:</strong> Settings → Data Controls → Export Data offers selected JSON, CSV, or GPX data. These files are not a complete restorable backup and do not include original photo files or all edits/settings. In the pending version 1.1.1, the separate Backup &amp; Restore feature preserves its supported personal records; it does not copy original Photos files or every preference.</li>
+        <li><strong>Export:</strong> Settings → Data Controls → Export Data offers selected JSON, CSV, or GPX data. These files are not a complete restorable backup and do not include original photo files or all edits/settings. In the pending compliance update, the separate Backup &amp; Restore feature preserves its supported personal records; it does not copy original Photos files or every preference.</li>
         <li><strong>Sharing controls:</strong> Settings → Privacy &amp; Security → Share Usage Analytics / Share Crash Reports. Turning these off stops the corresponding sharing; it does not erase reports previously received.</li>
       </ul>
       <p>
