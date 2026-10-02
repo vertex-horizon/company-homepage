@@ -1,7 +1,9 @@
 import { NavLink } from '../ChartedApp.jsx'
 import { SUPPORT_EMAIL } from '../config.js'
 
-// 英文 Terms.jsx 是事实与义务的权威来源；法语逐项保留其范围，不新增免责或承诺。
+// 与英文补充条款逐项对齐，软件许可继续由 Apple Standard EULA 规定。
+// 不新增 personal/non-commercial 限制、全面免责、12 个月责任上限或 Apple 受益人条款。
+// 保留各地强制权利及 1.1.1 待上架边界；法语页面不表示 App 已完成法语本地化或魁北克准入。
 export default function TermsFr({ navigate }) {
   return (
     <article className="c-doc" lang="fr-CA">
@@ -15,194 +17,176 @@ export default function TermsFr({ navigate }) {
       <p><NavLink to="/charted/terms" navigate={navigate} hrefLang="en" lang="en">English</NavLink></p>
       <p><strong>Langue de l’application :</strong> l’interface actuelle de Charted est en anglais. Cette page fournit les conditions en français.</p>
       <p>
-        Les présentes conditions d’utilisation (« <strong>Conditions</strong> ») régissent votre utilisation
-        de Charted (« l’<strong>Application</strong> »), fournie par <strong>Vertex Horizon Inc.</strong>
-        (« nous », « notre », « nos »). En téléchargeant ou en utilisant Charted, vous acceptez ces Conditions.
+        Charted est fournie par <strong>Vertex Horizon Inc.</strong> Ces conditions décrivent notre
+        application et les modalités d’achat et d’assistance. Votre licence d’utilisation de
+        l’Application est régie par le{' '}
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noreferrer">contrat de licence standard d’Apple (Standard EULA)</a>.
+        Cette page est un avis complémentaire, et non une licence logicielle distincte ni un contrat
+        de licence personnalisé. Aucune disposition ne supprime les droits ou recours que la loi
+        applicable nous interdit d’exclure.
+      </p>
+      <p>
+        <strong>Note sur la version :</strong> les changements de l’Application décrits pour la
+        version 1.1.1 sont préparés pour cette version, dont la disponibilité sur l’App Store est
+        encore en attente. La version 1.1 reste la version actuellement publiée jusqu’à la
+        disponibilité de la mise à jour. La publication de ces conditions ne modifie pas le
+        fonctionnement d’une ancienne installation ni rétroactivement un achat existant.
       </p>
 
-      <h2>1. Admissibilité</h2>
-      <p>Vous devez avoir au moins 13 ans pour utiliser Charted. Si vous avez moins de 18 ans, vous devez avoir l’autorisation d’un parent.</p>
-
-      <h2>2. Votre utilisation de l’Application</h2>
-      <p>Vous acceptez d’utiliser Charted uniquement à des fins légales. Vous ne devez pas :</p>
-      <ul>
-        <li>Faire de l’ingénierie inverse, décompiler ou désassembler l’Application, sauf si la loi applicable le permet</li>
-        <li>Utiliser l’Application pour enfreindre une loi ou les droits d’un tiers</li>
-        <li>Revendre l’Application, accorder des sous-licences ou la redistribuer</li>
-        <li>Utiliser l’Application d’une manière susceptible d’endommager, de désactiver ou de compromettre nos services</li>
-      </ul>
-
-      <h2>3. Votre contenu</h2>
+      <h2>1. Admissibilité et utilisation responsable</h2>
       <p>
-        Charted traite sur votre appareil les dates des photos, leurs métadonnées GPS et leur contenu visuel
-        pour créer des cartes, des voyages, des moments marquants et des récits. Photos d’Apple peut télécharger
-        des photos iCloud au besoin. Cartes d’Apple et la recherche d’adresses peuvent envoyer des coordonnées
-        ou des régions cartographiques à Apple. Les achats, la configuration, les diagnostics, les analyses
-        facultatives et la reconnaissance vocale d’Apple utilisent les services décrits dans notre
-        Politique de confidentialité, y compris les limites du traitement vocal selon la version. Charted ne
-        téléverse pas votre photothèque ni votre base de données locale de voyages vers nos serveurs ou un
-        service d’IA infonuagique. Nous n’exploitons pas de serveur qui les conserve et n’en détenons
-        pas de copie distante; vous gérez ces données sur votre appareil et nous ne pouvons pas les
-        supprimer depuis un serveur. Les demandes concernant les documents effectivement détenus par
-        nous ou traités pour nous par des fournisseurs sont traitées selon notre Politique de
-        confidentialité. <strong>Vous conservez tous les droits</strong> sur vos photos, voyages,
-        récits et contenus créés avec l’Application. Nous n’en revendiquons pas la propriété.
+        Charted est destinée aux personnes de 13 ans et plus. Si vous n’avez pas l’âge requis pour
+        conclure un contrat ou effectuer un achat dans votre lieu de résidence, demandez
+        l’autorisation et l’aide de votre parent ou tuteur. Cette déclaration d’âge ne constitue
+        ni une vérification de l’âge ni un service de consentement parental. Charted n’est pas
+        conçue comme un service pour enfants. Un parent ou tuteur peut nous contacter au sujet des
+        renseignements d’un enfant, comme l’explique notre Politique de confidentialité.
       </p>
       <p>
-        La génération de récits nécessite iOS 26 ou une version ultérieure et Apple Intelligence disponible
-        sur un appareil compatible, dans une langue et une région prises en charge, avec des modèles prêts
-        à fonctionner. Sinon, Charted utilise des résumés basés sur des modèles locaux. L’achat de Pro
-        n’active pas Apple Intelligence. Les textes générés et les voyages déduits peuvent contenir des
-        erreurs; vérifiez-les avant de vous y fier ou de les partager. Les cartes et les frontières servent
-        à représenter des souvenirs de voyage, et non à la navigation, à délimiter des frontières juridiques
-        ou à formuler des revendications de souveraineté.
-      </p>
-      <p>
-        Le partage ou l’exportation envoie le contenu choisi à l’application ou au service de destination.
-        Les exports JSON, CSV et GPX contiennent des données sélectionnées et peuvent comprendre un historique
-        de localisation sensible. Ils ne comprennent pas les fichiers photo ni un relevé complet de toutes
-        les modifications et préférences, et ne peuvent pas être importés comme sauvegarde complète de Charted.
-        Toute fonction distincte de sauvegarde et de restauration a son propre périmètre et ne peut pas
-        restaurer des photos originales manquantes. Conservez vos exports et sauvegardes en lieu sûr.
+        Utilisez Charted légalement et respectez les droits d’autrui lorsque vous importez,
+        exportez ou partagez du contenu. L’utilisation du logiciel et les restrictions de licence
+        sont prévues par le Standard EULA, sous réserve de la loi applicable et des licences des
+        composants tiers inclus.
       </p>
 
-      <h2>4. Achats intégrés (Charted Pro)</h2>
-      <h3>4.1 Description des abonnements</h3>
-      <p>Charted propose des fonctions premium au moyen d’un abonnement appelé <strong>Charted Pro</strong>, selon les options suivantes :</p>
-      <ul>
-        <li><strong>Abonnement mensuel</strong> — renouvelé automatiquement chaque mois jusqu’à son annulation</li>
-        <li><strong>Abonnement annuel</strong> — renouvelé automatiquement chaque année jusqu’à son annulation; une offre de lancement admissible peut être proposée</li>
-      </ul>
+      <h2>2. Votre contenu et les limites de l’Application</h2>
       <p>
-        Apple affiche le prix, la devise, la période de facturation, les taxes et l’offre applicable dans
-        votre boutique App Store lors de la confirmation de l’achat. Le prix actuel du catalogue peut
-        différer du prix de renouvellement d’un abonnement existant; consultez l’écran de gestion des
-        abonnements d’Apple pour connaître le prochain prélèvement. L’accès à vie est offert uniquement
-        au moyen d’un code d’offre cadeau valide, là où il est proposé, et ne constitue pas une formule
-        publique d’achat direct. L’accès à vie n’est pas renouvelé, mais tout abonnement mensuel ou annuel
-        distinct doit être géré séparément. L’utilisation d’une offre d’abonnement gratuite ou réduite
-        ne désactive pas nécessairement son renouvellement automatique.
+        Vous conservez les droits que vous détenez sur vos photos et vos autres contenus. Nous
+        n’acquérons pas la propriété de vos contenus locaux du seul fait de votre utilisation de
+        Charted. Charted lit les dates et les lieux des photos, affiche les images et les analyse
+        sur votre appareil pour organiser vos souvenirs de voyage. Elle ne modifie pas les
+        originaux dans Photos d’Apple et ne téléverse pas votre photothèque ni votre base de
+        données locale de voyages vers nos serveurs ou un service d’IA infonuagique. Photos
+        d’Apple peut télécharger des images iCloud au besoin. Des services réseau prennent en
+        charge les achats, les cartes et adresses demandées, la configuration et le partage de
+        renseignements techniques, comme l’explique notre{' '}
+        <NavLink to="/charted/privacy/fr" navigate={navigate}>Politique de confidentialité</NavLink>,
+        y compris les choix et limites de la version installée. Vous contrôlez les exportations
+        et les partages que vous lancez. Les demandes concernant les renseignements effectivement
+        détenus par nous ou traités pour nous par des fournisseurs sont traitées selon cette politique.
       </p>
-      <h3>4.2 Essai gratuit</h3>
       <p>
-        Apple détermine l’admissibilité, la durée et la disponibilité des essais et les affiche avant
-        l’achat. Un essai n’est pas garanti pour chaque nouvelle installation ou chaque abonné. Si votre
-        offre admissible comprend un essai gratuit, annulez-le avant l’échéance indiquée par Apple pour
-        éviter le prochain prélèvement. Après l’essai, l’abonnement est renouvelé selon les conditions
-        affichées par Apple, sauf annulation.
+        Les enregistrements, les lieux détectés, les estimations de distance en ligne droite, les
+        frontières cartographiques et les textes générés peuvent être incomplets ou inexacts.
+        Ils ne prouvent pas un itinéraire mesuré, l’entrée dans un lieu ni une frontière politique
+        ou juridique. Vérifiez les contenus générés avant de les partager. Charted n’est pas
+        destinée à la navigation, aux interventions d’urgence, au franchissement de frontières
+        ni à la détermination de la compétence juridique.
       </p>
-      <h3>4.3 Paiement et facturation</h3>
-      <ul>
-        <li>Le paiement est débité de votre compte Apple lors de la confirmation de l’achat.</li>
-        <li>Les abonnements sont renouvelés automatiquement, sauf annulation au moins 24 heures avant la fin de la période en cours.</li>
-        <li>Le renouvellement est débité de votre compte dans les 24 heures précédant la fin de la période en cours.</li>
-        <li>Après l’achat, vous pouvez gérer et annuler votre abonnement dans les <strong>réglages de votre compte Apple</strong>.</li>
-      </ul>
-      <h3>4.4 Comment annuler</h3>
-      <p>Pour annuler :</p>
-      <ol>
-        <li>Ouvrez l’application <strong>Réglages</strong> sur votre iPhone</li>
-        <li>Touchez votre <strong>nom</strong> en haut de l’écran</li>
-        <li>Touchez <strong>Abonnements</strong></li>
-        <li>Sélectionnez <strong>Charted</strong></li>
-        <li>Touchez <strong>Annuler l’abonnement</strong></li>
-      </ol>
-      <p>Vous conservez les fonctions Pro jusqu’à la fin de la période de facturation en cours.</p>
-      <h3>4.5 Remboursements</h3>
       <p>
-        Les remboursements sont traités par Apple, et non par nous. Pour demander un remboursement,
-        consultez <a href="https://reportaproblem.apple.com" target="_blank" rel="noreferrer">reportaproblem.apple.com</a>.
-        La procédure d’Apple ne limite aucun droit au remboursement, à l’annulation ou à une autre
-        mesure de réparation prévu par le droit de la consommation applicable. Contactez-nous si
-        vous avez besoin d’aide pour un problème avec l’Application.
+        La génération de récits nécessite iOS 26 ou une version ultérieure et Apple Intelligence
+        disponible sur votre appareil, notamment un appareil, une langue et une région compatibles
+        ainsi que des modèles prêts. À défaut, Charted utilise des résumés basés sur des modèles
+        locaux. L’achat de Pro n’active pas Apple Intelligence.
       </p>
-      <h3>4.6 Changements de prix</h3>
       <p>
-        Nous pouvons modifier les prix des abonnements. Apple fournit les avis et recueille tout
-        consentement requis pour votre abonnement et votre boutique. Vous pouvez examiner le changement
-        et annuler avant son entrée en vigueur. Vos droits impératifs de consommateur restent inchangés.
+        Data Export produit des enregistrements sélectionnés en JSON, CSV ou GPX. Elle ne comprend
+        pas les photos originales ni toutes les modifications ou préférences, et ses fichiers ne
+        peuvent pas être importés pour restaurer Charted. La fonction distincte Backup &amp;
+        Restore conserve les données personnelles qu’elle énumère dans un fichier JSON non
+        chiffré et exige une bibliothèque Charted vide pour la restauration. Elle ne récupère
+        pas les photos originales, toutes les préférences ni les achats. Conservez les fichiers
+        exportés dans un lieu fiable. La suppression des données locales ou de l’Application ne
+        supprime pas les exports ou sauvegardes enregistrés ailleurs, les originaux dans Photos
+        d’Apple, les relevés d’achat ni les rapports déjà reçus par des fournisseurs.
       </p>
 
-      <h2>5. Propriété intellectuelle</h2>
+      <h2>3. Achats Charted Pro</h2>
       <p>
-        L’Application, y compris sa conception, son code, ses contenus et ses marques, appartient à
-        Vertex Horizon et est protégée par les lois sur la propriété intellectuelle. Nous vous accordons
-        une licence limitée, non exclusive et non transférable pour utiliser l’Application à des fins
-        personnelles et non commerciales.
-      </p>
-      <h2>6. Contenus de tiers</h2>
-      <p>Charted utilise des images et des données provenant de tiers :</p>
-      <ul>
-        <li><strong>NASA Visible Earth</strong> — images de la Terre (domaine public)</li>
-        <li><strong>Solar System Scope</strong> — textures de la Terre (CC BY 4.0)</li>
-        <li><strong>Natural Earth</strong> — frontières des pays (domaine public)</li>
-      </ul>
-      <p>Ces ressources n’impliquent aucune approbation de leurs créateurs. Les attributions complètes se trouvent dans l’Application : <strong>Settings → About → Third-Party Notices</strong>.</p>
-      <h2>7. Confidentialité</h2>
-      <p>Votre utilisation de Charted est également régie par notre <NavLink to="/charted/privacy/fr" navigate={navigate}>Politique de confidentialité</NavLink>, qui décrit le traitement de vos données.</p>
-      <h2>8. Exclusion de garanties</h2>
-      <p>
-        Aucune disposition des présentes Conditions n’exclut ni ne restreint les droits ou recours
-        que la loi applicable nous interdit d’exclure. Cela comprend les garanties de l’Australian
-        Consumer Law et du Consumer Guarantees Act de la Nouvelle-Zélande, ainsi que les droits légaux
-        relatifs aux contenus numériques et aux services au Royaume-Uni et en Irlande. Si l’Application
-        ne respecte pas une garantie impérative, vous conservez les recours prévus par la loi applicable,
-        notamment la réparation, le remplacement, le remboursement ou l’annulation, selon le cas.
+        Les formules mensuelle et annuelle sont des abonnements renouvelés automatiquement.
+        La version 1.1.1 affiche les prix renvoyés par l’App Store dans la devise de votre boutique,
+        sans leur substituer un prix fixe en dollars américains lorsque le prix est indisponible.
+        La confirmation d’achat d’Apple indique le montant, la période de facturation et l’offre
+        applicables. Un montant annuel divisé par douze sert uniquement de comparaison :
+        l’abonnement annuel est facturé annuellement.
       </p>
       <p>
-        SOUS RÉSERVE DE CES DROITS IMPÉRATIFS, L’APPLICATION EST FOURNIE « EN L’ÉTAT » ET « SELON SA
-        DISPONIBILITÉ », SANS GARANTIES SUPPLÉMENTAIRES, EXPRESSES OU IMPLICITES, NOTAMMENT DE QUALITÉ
-        MARCHANDE, D’ADAPTATION À UN USAGE PARTICULIER OU D’ABSENCE DE CONTREFAÇON. NOUS NE GARANTISSONS
-        PAS UN FONCTIONNEMENT ININTERROMPU OU EXEMPT D’ERREURS.
+        Les prix actuels du catalogue et les comparaisons d’économies peuvent différer des
+        conditions réelles de renouvellement d’un abonné existant. Consultez les réglages des
+        abonnements d’Apple pour connaître votre prochain prélèvement. Les changements de prix
+        suivent les exigences d’Apple en matière d’avis et de consentement pour votre abonnement
+        et votre boutique.
       </p>
-      <h2>9. Limitation de responsabilité</h2>
       <p>
-        DANS TOUTE LA MESURE PERMISE PAR LA LOI, VERTEX HORIZON NE SERA PAS RESPONSABLE DES DOMMAGES
-        INDIRECTS, ACCESSOIRES, CONSÉCUTIFS OU PUNITIFS LIÉS À VOTRE UTILISATION DE L’APPLICATION.
-        NOTRE RESPONSABILITÉ TOTALE NE DÉPASSERA PAS LE MONTANT PAYÉ POUR L’APPLICATION AU COURS DES
-        DOUZE (12) MOIS PRÉCÉDANT LA RÉCLAMATION. CES LIMITES NE S’APPLIQUENT PAS À UNE RESPONSABILITÉ
-        QUI NE PEUT ÊTRE LÉGALEMENT EXCLUE OU LIMITÉE, NOTAMMENT AUX GARANTIES DE CONSOMMATION
-        APPLICABLES, À LA FRAUDE OU AU DÉCÈS OU PRÉJUDICE CORPOREL CAUSÉ PAR NÉGLIGENCE.
+        Un essai gratuit de lancement n’est disponible que si StoreKit vous identifie comme
+        admissible à l’offre affichée. Un essai n’est pas promis à chaque nouvel utilisateur.
+        Examinez la confirmation et la date limite d’annulation indiquées par Apple. Apple
+        recommande d’annuler un essai au moins 24 heures avant sa fin si vous ne souhaitez pas
+        son renouvellement. Après une offre, l’abonnement est renouvelé selon les conditions
+        affichées par Apple, sauf annulation. Les règles d’annulation propres à chaque pays et
+        les droits impératifs restent applicables.
       </p>
-      <h2>10. Résiliation</h2>
       <p>
-        Nous pouvons suspendre ou résilier votre accès à l’Application si vous enfreignez les présentes
-        Conditions. Vous pouvez cesser de l’utiliser en la supprimant. La suppression de l’Application
-        n’annule pas un abonnement Apple; annulez-le séparément auprès d’Apple. La résiliation ne
-        supprime pas les recours légaux impératifs.
+        L’accès à vie n’est pas proposé comme formule publique d’achat direct. Des codes d’offre
+        cadeau valides peuvent accorder un accès à vie ou un autre accès Pro là où ils sont
+        proposés. La confirmation d’utilisation du code détermine l’offre, les frais éventuels
+        et sa durée. L’accès à vie n’est pas renouvelé. Son activation n’annule pas un abonnement
+        mensuel ou annuel distinct déjà existant.
       </p>
-      <h2>11. Modification des Conditions</h2>
+
+      <h2>4. Gestion, annulation, restauration et remboursement</h2>
       <p>
-        Nous pouvons mettre à jour les présentes Conditions. La date de dernière mise à jour indiquera
-        le changement le plus récent. Nous vous informerons des changements importants et recueillerons
-        votre accord lorsque la loi l’exige. Les changements ne suppriment pas rétroactivement les droits
-        acquis ni les protections impératives des consommateurs.
+        Dans la version 1.1.1, ouvrez Settings → Profile → Your Charted Pro → Manage or Cancel
+        Subscription pour accéder directement au panneau de gestion d’Apple. Vous pouvez aussi
+        ouvrir Réglages sur votre iPhone → votre nom → Abonnements → Charted et suivre les
+        instructions d’Apple. Utilisez le compte Apple associé à l’achat. Apple indique la fin
+        de l’accès, qui peut dépendre de l’offre et de votre région. Supprimer ou décharger
+        Charted, supprimer les données locales ou utiliser un cadeau n’annule pas un abonnement
+        existant. Consultez les{' '}
+        <a href="https://support.apple.com/fr-ca/118428" target="_blank" rel="noreferrer">instructions d’annulation d’Apple</a>.
       </p>
-      <h2>12. Droit applicable</h2>
       <p>
-        Les présentes Conditions sont régies par les lois de l’État de Californie, aux États-Unis,
-        sans tenir compte des règles de conflit de lois, sous réserve des protections impératives
-        du droit de votre pays de résidence. Vous conservez tout droit prévu par la loi applicable
-        de saisir vos tribunaux locaux ou d’utiliser une procédure légale de règlement des différends.
-        Les tribunaux californiens restent disponibles lorsque cela est juridiquement approprié;
-        cette clause ne vous oblige pas à renoncer à un tribunal local ou à un recours impératif.
+        Utilisez Restore Purchases dans l’Application pour récupérer les droits disponibles
+        associés à votre achat Apple. La restauration des achats ne restaure pas votre base
+        de données locale de voyages ni vos fichiers de sauvegarde externes.
       </p>
-      <h2>13. Conditions propres à Apple</h2>
       <p>
-        Vous reconnaissez que les présentes Conditions lient Vertex Horizon et vous, et non Apple.
-        Apple n’est pas responsable de l’Application ou de son contenu, sauf pour les responsabilités
-        qui lui incombent selon ses propres conditions ou la loi applicable. Les conditions applicables
-        d’Apple relatives aux applications sous licence et à l’App Store s’appliquent également. Un
-        conflit ne prévaut pas sur les droits impératifs des consommateurs ni sur nos responsabilités
-        en tant que fournisseur de l’Application.
+        Pour un achat facturé par Apple, demandez un remboursement sur{' '}
+        <a href="https://reportaproblem.apple.com" target="_blank" rel="noreferrer">reportaproblem.apple.com</a>.
+        La procédure de remboursement d’Apple ne remplace ni ne limite aucun droit légal de
+        rétractation, d’annulation, de remboursement ou autre recours. Contactez-nous si vous
+        avez besoin d’aide concernant l’Application ou une demande liée à vos droits de
+        consommateur. Nous ne garantissons pas que toute demande donne droit à un remboursement.
+        Consultez les{' '}
+        <a href="https://support.apple.com/fr-ca/118223" target="_blank" rel="noreferrer">renseignements d’Apple sur les remboursements</a>.
       </p>
-      <p>Apple est un tiers bénéficiaire des présentes Conditions et peut les faire appliquer à votre égard.</p>
-      <h2>14. Contact</h2>
-      <p>Pour toute question concernant ces Conditions :</p>
+
+      <h2>5. Droits impératifs et modifications</h2>
+      <p>
+        Les protections, garanties et recours impératifs des consommateurs s’appliquent. Cela
+        comprend les droits prévus par les lois applicables de l’UE et du Royaume-Uni et les
+        lois de protection des consommateurs de l’Australie et de la Nouvelle-Zélande lorsqu’elles
+        sont pertinentes, ainsi que les droits qui ne peuvent être légalement exclus ailleurs.
+        Aucune disposition n’impose un tribunal californien exclusif, ne renonce à ces droits ni
+        ne supprime le droit de saisir les tribunaux locaux compétents ou d’utiliser une
+        procédure légale de règlement des différends.
+      </p>
+      <p>
+        Nous visons à maintenir l’Application, sans pouvoir promettre que les textes générés,
+        les données cartographiques de tiers ou toutes les fonctions seront toujours disponibles
+        ou exempts d’erreurs. Les garanties et obligations applicables restent en vigueur.
+        Les dispositions de licence du Standard EULA restent soumises à ses conditions et au
+        droit local impératif. Cet avis complémentaire ne crée aucune exclusion générale
+        supplémentaire de garantie ni aucun plafond de responsabilité.
+      </p>
+      <p>
+        Si les conditions ou les fonctions payantes changent de manière importante, nous
+        fournirons un avis approprié et obtiendrons un accord lorsque cela est requis.
+        Une date de publication ne modifie pas à elle seule les conditions d’achat existantes
+        et ne constitue pas un consentement à un traitement supplémentaire de données personnelles.
+      </p>
+
+      <h2>6. Contact et avis relatifs aux tiers</h2>
+      <p><strong>Vertex Horizon Inc.</strong></p>
       <p>
         <strong>Courriel :</strong> <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a><br />
-        <strong>Adresse postale :</strong> Vertex Horizon Inc., 3405 Montgomery Dr Apt 255, Santa Clara, CA 95054-3080, United States<br />
+        <strong>Adresse postale :</strong> 3405 Montgomery Dr Apt 255, Santa Clara, CA 95054-3080, United States<br />
         <strong>Téléphone professionnel :</strong> <a href="tel:+16088951157">+1 608-895-1157</a>
+      </p>
+      <p>
+        Consultez Settings → About → Third-Party Notices dans l’Application pour les licences
+        et attributions des composants et ressources inclus. L’utilisation de ces ressources
+        n’implique aucune approbation de leurs créateurs.
       </p>
       <div className="c-doc-footer">
         <span>© {new Date().getFullYear()} Vertex Horizon Inc.</span>
