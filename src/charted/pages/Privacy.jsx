@@ -102,7 +102,7 @@ export default function Privacy({ navigate }) {
       <h3>2.2 Performance Diagnostics</h3>
       <ul>
         <li><strong>What:</strong> Launch and operation timings, network latency, resource use, and device/app information. Version 1.1 may use Firebase Performance, including connection-IP-based approximate geographic segmentation. In the pending compliance update, Firebase Performance automatic collection and instrumentation are permanently disabled.</li>
-        <li><strong>Providers:</strong> Version 1.1 may use Firebase Performance and sampled Sentry performance traces. In the pending compliance update, Sentry automatic tracing and Session Replay are disabled. Apple MetricKit diagnostics and local performance records are processed on device; selected technical performance summaries use the optional analytics channel.</li>
+        <li><strong>Providers:</strong> Version 1.1 may use Firebase Performance and sampled Sentry performance traces. In the pending compliance update, Sentry automatic and app-created performance tracing and Session Replay are disabled. Apple MetricKit diagnostics and local performance records are processed on device; selected technical performance summaries use the optional analytics channel.</li>
         <li><strong>Control:</strong> Usage analytics and performance sharing are off by default in App Store versions 1.1 and the pending compliance update, subject to explicit saved preferences. You can change Share Usage Analytics in Settings → Privacy &amp; Security. Turning it off stops the corresponding future sharing and discards pending app events; it does not delete data already received by a provider or recall requests already delivered.</li>
       </ul>
 
@@ -127,7 +127,7 @@ export default function Privacy({ navigate }) {
         configuration requests can occur even when optional analytics is off. In pending 1.1.1, remote
         fetching and live configuration updates require usage-analytics consent. Pending-data cleanup and current consent control collection;
         initialization itself is not a promise of zero SDK service traffic. With usage analytics disabled or withdrawn, the App uses local/default
-        feature settings and stops these requests. No photo library or trip database is included.
+        feature settings and stops new fetches and live updates. Requests already in flight may still reach the provider; results received after withdrawal are ignored. No photo library or trip database is included.
       </p>
 
       <h2>3. Information We Do Not Collect</h2>
@@ -231,6 +231,7 @@ export default function Privacy({ navigate }) {
       <ul>
         <li><strong>Local content:</strong> Stored until you delete the relevant local data or remove the App, subject to separate exports, device backups, and offloading as described in §1.1. Cached images may be evicted earlier.</li>
         <li><strong>Diagnostics and analytics:</strong> Retention depends on the deployed provider settings and the time needed to investigate failures or evaluate the relevant feature use. We delete or anonymize records when no longer needed for those purposes, unless a legal obligation or active claim requires retention. Turning off sharing stops future corresponding sharing; it is not a deletion request for earlier records.</li>
+        <li><strong>Google Analytics settings:</strong> As verified on October 1, 2026, user and event data retention is set to 14 months. The user-data timer resets on new activity, so data associated with an active user identifier may remain longer. This setting does not limit most standard aggregate reports or independent copies in other services. <a href="https://support.google.com/analytics/answer/7667196?hl=en" target="_blank" rel="noreferrer">Google explains these limits</a>. Changing a sharing preference does not itself delete these earlier records.</li>
         <li><strong>Purchase records:</strong> Kept as necessary to provide and restore entitlements and handle refunds or disputes, and for any applicable statutory recordkeeping period. Apple's own payment-record retention is determined by Apple.</li>
         <li><strong>Support:</strong> Kept while resolving your request and any necessary follow-up, then deleted when no longer needed, except records required for legal obligations or claims.</li>
       </ul>

@@ -92,7 +92,7 @@ export default function PrivacyFr({ navigate }) {
       <h3>2.2 Diagnostics de performance</h3>
       <ul>
         <li><strong>Données :</strong> temps de lancement et d’exécution, latence réseau, utilisation des ressources et renseignements sur l’appareil et l’application. La version 1.1 peut utiliser Firebase Performance, y compris une segmentation géographique approximative fondée sur l’adresse IP de connexion. Dans la mise à jour de conformité en attente, la collecte et l’instrumentation automatiques de Firebase Performance sont désactivées de façon permanente.</li>
-        <li><strong>Fournisseurs :</strong> la version 1.1 peut utiliser Firebase Performance et des traces de performance échantillonnées de Sentry. Dans la mise à jour de conformité en attente, les traces automatiques et Session Replay de Sentry sont désactivés. Les diagnostics Apple MetricKit et les mesures locales sont traités sur l’appareil; certains résumés techniques de performance utilisent le canal facultatif d’analyses.</li>
+        <li><strong>Fournisseurs :</strong> la version 1.1 peut utiliser Firebase Performance et des traces de performance échantillonnées de Sentry. Dans la mise à jour de conformité en attente, les traces de performance automatiques et créées par l’application ainsi que Session Replay de Sentry sont désactivés. Les diagnostics Apple MetricKit et les mesures locales sont traités sur l’appareil; certains résumés techniques de performance utilisent le canal facultatif d’analyses.</li>
         <li><strong>Contrôle :</strong> les analyses d’utilisation et le partage des performances sont désactivés par défaut dans les versions App Store 1.1 et la mise à jour de conformité en attente, sous réserve des préférences explicites enregistrées. Vous pouvez modifier Share Usage Analytics dans Settings → Privacy &amp; Security. La désactivation arrête les futurs partages correspondants et supprime les événements locaux en attente; elle ne supprime pas les données déjà reçues par un fournisseur et ne rappelle pas les requêtes déjà livrées.</li>
       </ul>
       <h3>2.3 Analyses d’utilisation (Firebase Analytics)</h3>
@@ -115,8 +115,9 @@ export default function PrivacyFr({ navigate }) {
         facultatives sont désactivées. Dans 1.1.1 en attente, la récupération distante et les mises à jour
         en direct nécessitent le consentement aux analyses d’utilisation. Le nettoyage des données en attente
         et le consentement actuel contrôlent la collecte; l’initialisation ne garantit pas l’absence de trafic avec le SDK. Lorsque le consentement aux analyses d’utilisation est désactivé ou retiré, l’Application utilise ses réglages
-        locaux ou par défaut et arrête ces requêtes. Ni la photothèque ni la base de données de voyages
-        ne sont incluses.
+        locaux ou par défaut et arrête les nouvelles requêtes et mises à jour en direct. Une requête déjà
+        en cours peut encore parvenir au fournisseur; les résultats reçus après le retrait sont ignorés.
+        Ni la photothèque ni la base de données de voyages ne sont incluses.
       </p>
 
       <h2>3. Renseignements que nous ne recueillons pas</h2>
@@ -172,6 +173,7 @@ export default function PrivacyFr({ navigate }) {
       <ul>
         <li><strong>Contenu local :</strong> conservé jusqu’à la suppression des données concernées ou de l’Application, sous réserve des exports, sauvegardes et du déchargement décrits au §1.1. Les images en cache peuvent être supprimées plus tôt.</li>
         <li><strong>Diagnostics et analyses :</strong> la conservation dépend des réglages déployés chez les fournisseurs et du temps nécessaire pour enquêter sur les défaillances ou évaluer l’utilisation des fonctions concernées. Nous supprimons ou anonymisons les documents lorsqu’ils ne sont plus nécessaires à ces fins, sauf obligation légale ou réclamation en cours. Désactiver le partage arrête les futurs partages concernés; ce n’est pas une demande de suppression des documents antérieurs.</li>
+        <li><strong>Réglages de Google Analytics :</strong> au 1er octobre 2026, la conservation des données d’utilisateur et d’événement est réglée à 14 mois. Le délai des données d’utilisateur est réinitialisé lors d’une nouvelle activité; les données associées à un identifiant actif peuvent donc être conservées plus longtemps. Ce réglage ne limite pas la plupart des rapports agrégés standards ni les copies indépendantes dans d’autres services. <a href="https://support.google.com/analytics/answer/7667196?hl=fr" target="_blank" rel="noreferrer">Google explique ces limites</a>. Modifier un choix de partage ne supprime pas en soi les documents antérieurs.</li>
         <li><strong>Documents d’achat :</strong> conservés selon les besoins de fourniture et de restauration des droits, de traitement des remboursements ou litiges, ainsi que pour toute durée légale de conservation applicable. Apple détermine la conservation de ses propres documents de paiement.</li>
         <li><strong>Assistance :</strong> conservée pendant le traitement de la demande et tout suivi nécessaire, puis supprimée lorsqu’elle n’est plus nécessaire, sauf documents requis pour des obligations légales ou des réclamations.</li>
       </ul>
