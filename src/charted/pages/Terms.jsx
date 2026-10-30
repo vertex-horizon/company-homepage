@@ -16,7 +16,7 @@ export default function Terms({ navigate }) {
       <header>
         <h1>Terms of Use</h1>
         <div className="c-doc-meta">
-          <span><strong>Last Updated:</strong> October 29, 2026</span>
+          <span><strong>Last Updated:</strong> October 30, 2026</span>
           <span><strong>Effective Date:</strong> October 1, 2026</span>
         </div>
       </header>
@@ -31,10 +31,9 @@ export default function Terms({ navigate }) {
         Nothing here removes rights or remedies that applicable law does not allow us to exclude.
       </p>
       <p>
-        <strong>Version note:</strong> The App changes described for version 1.1.1 are prepared for
-        that release and are pending App Store availability. Version 1.1 remains the currently released
-        version until the update is available. Publishing these terms does not change the behavior of
-        an older installed App or retrospectively change an existing purchase.
+        <strong>Version note:</strong> Features and privacy controls may differ between installed versions. Refer to the
+        information for your installed app version and the Privacy Policy. Publishing these terms does
+        not change the behavior of an older installed app or retrospectively change an existing purchase.
       </p>
 
       <h2>1. Eligibility and Responsible Use</h2>
@@ -79,7 +78,7 @@ export default function Terms({ navigate }) {
       </p>
       <p>
         Data Export produces selected JSON, CSV, or GPX records. It does not include photo originals
-        or all edits/settings and cannot be imported to restore Mapvoy. The separate Backup &amp;
+        or all edits/settings and cannot be imported to restore Mapvoy. Where available in your installed version, the separate Backup &amp;
         Restore feature preserves its listed personal records in an unencrypted JSON file and
         requires an empty Mapvoy library for restoration; it does not recover photo originals,
         every preference, or purchases. Keep exported files in a trusted location. Removing local

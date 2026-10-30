@@ -20,7 +20,7 @@ export default function PrivacyFr({ navigate }) {
       <header>
         <h1>Politique de confidentialité</h1>
         <div className="c-doc-meta">
-          <span><strong>Dernière mise à jour :</strong> 29 octobre 2026</span>
+          <span><strong>Dernière mise à jour :</strong> 30 octobre 2026</span>
           <span><strong>Date d’entrée en vigueur :</strong> 1er octobre 2026</span>
         </div>
       </header>
@@ -33,11 +33,11 @@ export default function PrivacyFr({ navigate }) {
         sont utilisées et quels choix vous avez.
       </p>
       <p>
-        <strong>Note sur les versions :</strong> les changements indiqués ci-dessous comme mise à jour de conformité en attente sont en préparation
-        et ne sont pas tous inclus dans la version 1.1.1 soumise à l’examen de l’App Store.
-        La version 1.1 reste la version publiée jusqu’à la disponibilité de la mise à jour. Vérifiez
-        votre version installée et vos réglages de partage; une mise à jour de cette politique ne
-        change pas le comportement d’une ancienne version de l’application.
+        <strong>Note sur les versions :</strong> les contrôles de confidentialité et les réglages de partage par défaut peuvent
+        varier selon la version installée. Les indications ci-dessous distinguent le comportement de
+        l’ancienne version 1.1 de celui des versions comprenant la mise à jour de confidentialité.
+        Vérifiez votre version installée et vos réglages de partage. La publication de cet avis ne
+        modifie pas le comportement d’une ancienne version de l’application.
       </p>
       <div className="c-doc-summary">
         <strong>En bref :</strong> Mapvoy est conçue pour respecter votre vie privée. Nous ne conservons pas
@@ -70,7 +70,7 @@ export default function PrivacyFr({ navigate }) {
       <ul>
         <li><strong>Données :</strong> saisie vocale pour rechercher des voyages.</li>
         <li><strong>Finalité :</strong> convertir vos demandes vocales en recherches.</li>
-        <li><strong>Traitement et limite selon la version :</strong> la version 1.1 actuellement publiée utilise la reconnaissance vocale d’Apple sans exiger un traitement sur l’appareil; Apple peut traiter le son sur ses serveurs. Dans la mise à jour de conformité en attente, la recherche vocale nécessite la prise en charge de la reconnaissance sur l’appareil d’Apple pour la langue actuelle et traite le son localement. Si elle est indisponible, utilisez la saisie au clavier; l’Application ne passe pas à une reconnaissance sur serveur. Les conditions de confidentialité d’Apple s’appliquent à son service vocal.</li>
+        <li><strong>Traitement et limite selon la version :</strong> l’ancienne version 1.1 utilise la reconnaissance vocale d’Apple sans exiger un traitement sur l’appareil; Apple peut traiter le son sur ses serveurs. Dans les versions comprenant la mise à jour de confidentialité, la recherche vocale nécessite la prise en charge de la reconnaissance sur l’appareil d’Apple pour la langue actuelle et traite le son localement. Si elle est indisponible, utilisez la saisie au clavier; l’Application ne passe pas à une reconnaissance sur serveur. Les conditions de confidentialité d’Apple s’appliquent à son service vocal.</li>
         <li><strong>Autorisation :</strong> demandée uniquement si vous touchez le bouton du microphone.</li>
       </ul>
       <h3>1.4 Contenu généré par IA (Apple Foundation Models)</h3>
@@ -86,16 +86,16 @@ export default function PrivacyFr({ navigate }) {
       <ul>
         <li><strong>Données :</strong> traces de plantage, erreurs non fatales, blocages, versions de l’application et du système, renseignements sur l’appareil, identifiants d’installation et contexte technique, comme l’écran actuel et les diagnostics des requêtes réseau.</li>
         <li><strong>Finalité :</strong> diagnostiquer les défaillances et améliorer la fiabilité. Les rapports peuvent être associés à une installation ou à un appareil.</li>
-        <li><strong>Contrôle :</strong> dans la version 1.1 actuellement publiée, les rapports de plantage sont activés par défaut, sous réserve de votre préférence enregistrée. Dans la mise à jour de conformité en attente, ils sont désactivés par défaut pour les installations App Store et le partage nécessite votre consentement explicite. Vous pouvez modifier Share Crash Reports dans Settings → Privacy &amp; Security. La désactivation arrête les futurs partages correspondants, mais ne supprime pas les rapports déjà reçus.</li>
-        <li><strong>Comportement prévu pour la mise à jour de conformité :</strong> un ancien réglage activé par défaut n’est pas considéré comme un consentement. Firebase s’initialise avec les collectes d’analyses et de plantages désactivées; le choix explicite correspondant et le nettoyage des données en attente contrôlent la collecte. L’initialisation du SDK ne garantit pas l’absence de trafic avec le service. Les diagnostics locaux ne sont pas téléversés automatiquement simplement parce qu’ils existent sur votre appareil.</li>
+        <li><strong>Contrôle :</strong> dans l’ancienne version 1.1, les rapports de plantage sont activés par défaut, sous réserve de votre préférence enregistrée. Dans les versions comprenant la mise à jour de confidentialité, ils sont désactivés par défaut pour les installations App Store et le partage nécessite votre consentement explicite. Vous pouvez modifier Share Crash Reports dans Settings → Privacy &amp; Security. La désactivation arrête les futurs partages correspondants, mais ne supprime pas les rapports déjà reçus.</li>
+        <li><strong>Comportement après la mise à jour de confidentialité :</strong> un ancien réglage activé par défaut n’est pas considéré comme un consentement. Firebase s’initialise avec les collectes d’analyses et de plantages désactivées; le choix explicite correspondant et le nettoyage des données en attente contrôlent la collecte. L’initialisation du SDK ne garantit pas l’absence de trafic avec le service. Les diagnostics locaux ne sont pas téléversés automatiquement simplement parce qu’ils existent sur votre appareil.</li>
         <li><strong>Images :</strong> Session Replay est désactivé dans la version App Store. Mapvoy ne joint pas d’images de la photothèque à ces rapports.</li>
         <li><strong>Fournisseurs :</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noreferrer">Firebase</a> et <a href="https://sentry.io/privacy/" target="_blank" rel="noreferrer">Sentry</a>.</li>
       </ul>
       <h3>2.2 Diagnostics de performance</h3>
       <ul>
-        <li><strong>Données :</strong> temps de lancement et d’exécution, latence réseau, utilisation des ressources et renseignements sur l’appareil et l’application. La version 1.1 peut utiliser Firebase Performance, y compris une segmentation géographique approximative fondée sur l’adresse IP de connexion. Dans la mise à jour de conformité en attente, la collecte et l’instrumentation automatiques de Firebase Performance sont désactivées de façon permanente.</li>
-        <li><strong>Fournisseurs :</strong> la version 1.1 peut utiliser Firebase Performance et des traces de performance échantillonnées de Sentry. Dans la mise à jour de conformité en attente, les traces de performance automatiques et créées par l’application ainsi que Session Replay de Sentry sont désactivés. Les diagnostics Apple MetricKit et les mesures locales sont traités sur l’appareil; certains résumés techniques de performance utilisent le canal facultatif d’analyses.</li>
-        <li><strong>Contrôle :</strong> les analyses d’utilisation et le partage des performances sont désactivés par défaut dans les versions App Store 1.1 et la mise à jour de conformité en attente, sous réserve des préférences explicites enregistrées. Vous pouvez modifier Share Usage Analytics dans Settings → Privacy &amp; Security. La désactivation arrête les futurs partages correspondants et supprime les événements locaux en attente; elle ne supprime pas les données déjà reçues par un fournisseur et ne rappelle pas les requêtes déjà livrées.</li>
+        <li><strong>Données :</strong> temps de lancement et d’exécution, latence réseau, utilisation des ressources et renseignements sur l’appareil et l’application. La version 1.1 peut utiliser Firebase Performance, y compris une segmentation géographique approximative fondée sur l’adresse IP de connexion. Dans les versions comprenant la mise à jour de confidentialité, la collecte et l’instrumentation automatiques de Firebase Performance sont désactivées de façon permanente.</li>
+        <li><strong>Fournisseurs :</strong> la version 1.1 peut utiliser Firebase Performance et des traces de performance échantillonnées de Sentry. Dans les versions comprenant la mise à jour de confidentialité, les traces de performance automatiques et créées par l’application ainsi que Session Replay de Sentry sont désactivés. Les diagnostics Apple MetricKit et les mesures locales sont traités sur l’appareil; certains résumés techniques de performance utilisent le canal facultatif d’analyses.</li>
+        <li><strong>Contrôle :</strong> les analyses d’utilisation et le partage des performances sont désactivés par défaut dans l’ancienne version App Store 1.1 et les versions comprenant la mise à jour de confidentialité, sous réserve des préférences explicites enregistrées. Vous pouvez modifier Share Usage Analytics dans Settings → Privacy &amp; Security. La désactivation arrête les futurs partages correspondants et supprime les événements locaux en attente; elle ne supprime pas les données déjà reçues par un fournisseur et ne rappelle pas les requêtes déjà livrées.</li>
       </ul>
       <h3>2.3 Analyses d’utilisation (Firebase Analytics)</h3>
       <ul>
@@ -105,7 +105,7 @@ export default function PrivacyFr({ navigate }) {
       </ul>
       <h3>2.4 Achats (Apple et RevenueCat)</h3>
       <ul>
-        <li><strong>Données :</strong> Apple traite les paiements. RevenueCat reçoit l’historique d’achats et de transactions, l’état de l’abonnement et un identifiant utilisateur persistant aléatoire également utilisé comme jeton de compte StoreKit. La version 1.1 transmet aussi des attributs d’abonné sur la variante de distribution, la région générale et la cohorte de diagnostic; la mise à jour de conformité en attente supprime ces attributs définis par Mapvoy. Les trousses logicielles de RevenueCat et d’Apple peuvent toujours recevoir les renseignements usuels sur l’application, l’appareil, la boutique ou le pays et la connexion nécessaires à leurs services.</li>
+        <li><strong>Données :</strong> Apple traite les paiements. RevenueCat reçoit l’historique d’achats et de transactions, l’état de l’abonnement et un identifiant utilisateur persistant aléatoire également utilisé comme jeton de compte StoreKit. La version 1.1 transmet aussi des attributs d’abonné sur la variante de distribution, la région générale et la cohorte de diagnostic; les versions comprenant la mise à jour de confidentialité suppriment ces attributs définis par Mapvoy. Les trousses logicielles de RevenueCat et d’Apple peuvent toujours recevoir les renseignements usuels sur l’application, l’appareil, la boutique ou le pays et la connexion nécessaires à leurs services.</li>
         <li><strong>Finalité :</strong> validation et restauration des achats, gestion des abonnements et analyses des abonnements.</li>
         <li><strong>Contrôle :</strong> les services d’achat fonctionnent séparément du réglage des analyses d’utilisation facultatives. Nous ne recevons pas votre identifiant Apple, vos détails de carte ni votre adresse de facturation.</li>
       </ul>
@@ -113,8 +113,8 @@ export default function PrivacyFr({ navigate }) {
       <p>
         Firebase Remote Config reçoit des renseignements sur l’application, le système, la langue,
         le pays ou la région et l’installation pour fournir des réglages et des expériences de fonctions.
-        Dans la version 1.1 actuellement publiée, ces requêtes peuvent se produire même si les analyses
-        facultatives sont désactivées. Dans la mise à jour de conformité en attente, la récupération distante et les mises à jour
+        Dans l’ancienne version 1.1, ces requêtes peuvent se produire même si les analyses
+        facultatives sont désactivées. Dans les versions comprenant la mise à jour de confidentialité, la récupération distante et les mises à jour
         en direct nécessitent le consentement aux analyses d’utilisation. Le nettoyage des données en attente
         et le consentement actuel contrôlent la collecte; l’initialisation ne garantit pas l’absence de trafic avec le SDK. Lorsque le consentement aux analyses d’utilisation est désactivé ou retiré, l’Application utilise ses réglages
         locaux ou par défaut et arrête les nouvelles requêtes et mises à jour en direct. Une requête déjà
@@ -157,9 +157,9 @@ export default function PrivacyFr({ navigate }) {
       <ul>
         <li><strong>Fonctions demandées :</strong> le traitement local des photos et voyages, les cartes demandées et les exports sélectionnés sont nécessaires à la fourniture des fonctions que vous demandez dans le cadre de notre contrat avec vous.</li>
         <li><strong>Achats et restauration :</strong> les identifiants de transaction et les renseignements sur les droits d’accès servent à exécuter notre contrat et à fournir ou restaurer Pro. Les documents exigés par le droit comptable ou d’autres lois sont traités pour respecter ces obligations. Apple détermine ses propres bases pour les paiements et les comptes.</li>
-        <li><strong>Analyses, performances et expériences de configuration facultatives dans la mise à jour de conformité en attente :</strong> votre consentement. Vous pouvez le retirer dans Settings sans perdre les fonctions locales essentielles; le retrait ne modifie pas la licéité du traitement antérieur.</li>
-        <li><strong>Partage des plantages et erreurs :</strong> la mise à jour de conformité en attente utilise votre consentement explicite. La version 1.1 utilise un réglage activé par défaut avec possibilité de refus, pour notre intérêt légitime à diagnostiquer les défaillances et maintenir la fiabilité; vous pouvez vous y opposer et le désactiver. Cet ancien réglage par défaut n’est pas présenté comme un consentement.</li>
-        <li><strong>Ancienne configuration et sécurité :</strong> la configuration de 1.1 repose sur notre intérêt légitime à fournir des réglages de fonctions. La protection de l’application et la lutte contre les abus reposent sur nos intérêts légitimes, mis en balance avec vos droits. Dans la mise à jour de conformité en attente, la configuration distante et les expériences sont facultatives et fondées sur le consentement; nous ne les qualifions pas de nécessaires à l’utilisation.</li>
+        <li><strong>Analyses, performances et expériences de configuration facultatives dans les versions comprenant la mise à jour de confidentialité :</strong> votre consentement. Vous pouvez le retirer dans Settings sans perdre les fonctions locales essentielles; le retrait ne modifie pas la licéité du traitement antérieur.</li>
+        <li><strong>Partage des plantages et erreurs :</strong> les versions comprenant la mise à jour de confidentialité utilisent votre consentement explicite. La version 1.1 utilise un réglage activé par défaut avec possibilité de refus, pour notre intérêt légitime à diagnostiquer les défaillances et maintenir la fiabilité; vous pouvez vous y opposer et le désactiver. Cet ancien réglage par défaut n’est pas présenté comme un consentement.</li>
+        <li><strong>Ancienne configuration et sécurité :</strong> la configuration de 1.1 repose sur notre intérêt légitime à fournir des réglages de fonctions. La protection de l’application et la lutte contre les abus reposent sur nos intérêts légitimes, mis en balance avec vos droits. Dans les versions comprenant la mise à jour de confidentialité, la configuration distante et les expériences sont facultatives et fondées sur le consentement; nous ne les qualifions pas de nécessaires à l’utilisation.</li>
         <li><strong>Assistance :</strong> répondre à votre demande concernant l’application ou un abonnement est nécessaire pour vous assister dans le cadre du contrat; les autres échanges reposent sur notre intérêt légitime à répondre aux questions. Nous conservons des documents si nécessaire pour respecter des obligations légales ou traiter des réclamations.</li>
       </ul>
       <h3>4.2 Lieux de traitement</h3>
@@ -214,7 +214,7 @@ export default function PrivacyFr({ navigate }) {
       <ul>
         <li><strong>Données locales :</strong> vos voyages enregistrés sont accessibles dans Mapvoy. Nous ne détenons pas de copie distante de votre photothèque ou de votre base de données de voyages et ne pouvons pas supprimer ces données locales depuis un serveur. Gérez-les sur votre appareil à l’aide des contrôles ci-dessous.</li>
         <li><strong>Suppression :</strong> utilisez Settings → Data Controls pour les contrôles locaux, ou supprimez l’Application. Le déchargement conserve les données. Aucune de ces actions ne supprime les photos, exports ou sauvegardes externes, abonnements Apple, documents d’achat ou diagnostics déjà reçus par les fournisseurs. Les demandes qui nous sont adressées concernent uniquement les documents que nous détenons effectivement ou que des fournisseurs traitent pour nous, comme les échanges avec l’assistance, les documents d’achat ou les diagnostics. Nous les traitons selon les droits et obligations de conservation applicables; nous expliquerons si aucun document correspondant n’est détenu ou si une obligation légale de conservation s’applique. Les demandes sur les comptes ou paiements Apple peuvent aussi être adressées à Apple.</li>
-        <li><strong>Exportation :</strong> Settings → Data Controls → Export Data propose des données sélectionnées en JSON, CSV ou GPX. Ces fichiers ne sont pas une sauvegarde complète restaurable et ne comprennent pas les photos originales ni toutes les modifications et préférences. Dans la mise à jour de conformité en attente, la fonction distincte Backup &amp; Restore conserve les documents personnels qu’elle prend en charge; elle ne copie pas les originaux de Photos ni toutes les préférences.</li>
+        <li><strong>Exportation :</strong> Settings → Data Controls → Export Data propose des données sélectionnées en JSON, CSV ou GPX. Ces fichiers ne sont pas une sauvegarde complète restaurable et ne comprennent pas les photos originales ni toutes les modifications et préférences. Dans les versions comprenant la mise à jour de confidentialité, la fonction distincte Backup &amp; Restore conserve les documents personnels qu’elle prend en charge; elle ne copie pas les originaux de Photos ni toutes les préférences.</li>
         <li><strong>Contrôles du partage :</strong> Settings → Privacy &amp; Security → Share Usage Analytics / Share Crash Reports. Les désactiver arrête les partages correspondants, mais n’efface pas les rapports déjà reçus.</li>
       </ul>
       <p>
@@ -232,6 +232,14 @@ export default function PrivacyFr({ navigate }) {
         Vous n’avez pas à renoncer à ces droits pour nous contacter d’abord.
       </p>
       <p>Pour toute question : <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a></p>
+      <p>
+        Pour les demandes d’accès ou de rectification relevant de la loi néo-zélandaise sur la
+        protection de la vie privée, nous prendrons une décision et vous en informerons dès que
+        raisonnablement possible, dans un délai de 20 jours ouvrables, sauf prolongation autorisée
+        par la loi. En cas de prolongation, nous vous en informerons dans ce délai de 20 jours ouvrables,
+        en précisant le motif, le nouveau délai et la façon de porter plainte auprès du{' '}
+        <a href="https://www.privacy.org.nz/your-rights/making-a-complaint/" target="_blank" rel="noreferrer">Commissaire à la protection de la vie privée de la Nouvelle-Zélande</a>.
+      </p>
       <h2>8. Sécurité des données</h2>
       <ul>
         <li>Vos photos, positions et données de voyages sont conservées sur votre appareil, protégées par l’isolation des applications d’iOS.</li>
@@ -241,6 +249,12 @@ export default function PrivacyFr({ navigate }) {
       <h2>9. Modification de cette politique</h2>
       <p>Nous pouvons mettre à jour cette Politique de confidentialité. La date de dernière mise à jour indiquera le changement le plus récent. Les changements importants seront communiqués par un avis dans l’application.</p>
       <h2>10. Contact</h2>
+      <p>
+        Notre responsable de la protection des renseignements personnels traite les questions et
+        les demandes relatives à la protection des données, y compris celles provenant de Singapour.
+        Vous pouvez le contacter à <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
+      </p>
+
       <p>
         <strong>Courriel :</strong> <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a><br />
         <strong>Responsable du traitement :</strong> Vertex Horizon Inc.<br />
