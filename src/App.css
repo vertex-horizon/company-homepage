@@ -1319,3 +1319,12 @@
   object-fit: contain;
   border-radius: 12px;
 }
+
+/* 公司站也用独立宽幅地球，不再把商店竖版海报缩进产品卡。 */
+.product-card-landscape { display: block; width: 100%; min-width: 0; }
+.product-card-landscape img { display: block; width: 100%; height: auto; min-height: 320px; object-fit: cover; object-position: 75% 50%; mask-image: linear-gradient(90deg, transparent, #000 12%, #000 90%, transparent); }
+.product-card-visual:has(.product-card-landscape) { align-self: stretch; margin-right: -3rem; }
+@media (max-width: 880px) {
+  .product-card-visual:has(.product-card-landscape) { margin: 0 -1rem; }
+  .product-card-landscape img { min-height: 240px; }
+}
