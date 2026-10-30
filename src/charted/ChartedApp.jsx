@@ -8,7 +8,7 @@ import PrivacyFr from './pages/PrivacyFr.jsx'
 import TermsFr from './pages/TermsFr.jsx'
 import Support from './pages/Support.jsx'
 import { Stars, CursorGlow } from './effects.jsx'
-import { APP_STORE_URL, SUPPORT_EMAIL, PARENT_SITE } from './config.js'
+import { APP_STORE_URL, SUPPORT_EMAIL, PARENT_SITE, PRODUCT_ORIGIN, productPath } from './config.js'
 import { CHARTED_ROUTE_META, routeLanguageAlternates } from './routeMetadata.js'
 
 /**
@@ -28,7 +28,7 @@ import { CHARTED_ROUTE_META, routeLanguageAlternates } from './routeMetadata.js'
  */
 
 function getRoute() {
-  const path = window.location.pathname.replace(/\/+$/, '') // strip trailing slash
+  const path = window.location.pathname.replace(/\/+$/, '') || '/' // strip trailing slash
   return Object.keys(CHARTED_ROUTE_META).find(
     (key) => CHARTED_ROUTE_META[key].path === path,
   ) ?? 'home' // unknown sub-route → home
@@ -78,7 +78,7 @@ export default function ChartedApp() {
     setMeta('og:description', 'property', meta.description)
     setMeta('twitter:title', 'name', meta.title)
     setMeta('twitter:description', 'name', meta.description)
-    setMeta('og:url', 'property', `${PARENT_SITE}${meta.path}`)
+    setMeta('og:url', 'property', `${PRODUCT_ORIGIN}${meta.path}`)
 
     let canonical = document.querySelector('link[rel="canonical"]')
     if (!canonical) {
@@ -86,14 +86,14 @@ export default function ChartedApp() {
       canonical.rel = 'canonical'
       document.head.appendChild(canonical)
     }
-    canonical.href = `${PARENT_SITE}${meta.path}`
+    canonical.href = `${PRODUCT_ORIGIN}${meta.path}`
     // SPA 切换必须清理上一页语言链接，避免隐私页导航后仍指向条款的法语替代页。
     document.querySelectorAll('link[data-charted-language]').forEach((tag) => tag.remove())
     routeLanguageAlternates(meta).forEach((alternate) => {
       const tag = document.createElement('link')
       tag.rel = 'alternate'
       tag.hreflang = alternate.lang
-      tag.href = `${PARENT_SITE}${alternate.path}`
+      tag.href = `${PRODUCT_ORIGIN}${alternate.path}`
       tag.setAttribute('data-charted-language', '')
       document.head.appendChild(tag)
     })
@@ -188,16 +188,16 @@ function Nav({ navigate }) {
   return (
     <nav className={`c-nav${scrolled ? ' is-scrolled' : ''}`} ref={navRef} lang="en">
       <div className="c-nav-inner">
-        <NavLink to="/charted" navigate={navigateAndClose} className="c-nav-brand">
+        <NavLink to={productPath('')} navigate={navigateAndClose} className="c-nav-brand">
           <ChartedMark />
           <span>Mapvoy</span>
         </NavLink>
 
         <div className={`c-nav-links${open ? ' is-open' : ''}`}>
-          <NavLink to="/charted" navigate={navigateAndClose}>Overview</NavLink>
-          <NavLink to="/charted/support" navigate={navigateAndClose}>Support</NavLink>
-          <NavLink to="/charted/privacy" navigate={navigateAndClose}>Privacy</NavLink>
-          <a href="/" className="c-nav-link-vh" title="Vertex Horizon">
+          <NavLink to={productPath('')} navigate={navigateAndClose}>Overview</NavLink>
+          <NavLink to={productPath('/support')} navigate={navigateAndClose}>Support</NavLink>
+          <NavLink to={productPath('/privacy')} navigate={navigateAndClose}>Privacy</NavLink>
+          <a href={PARENT_SITE} className="c-nav-link-vh" title="Vertex Horizon">
             By Vertex Horizon →
           </a>
         </div>
@@ -241,22 +241,22 @@ function Footer({ navigate }) {
         <div className="c-footer-cols">
           <div className="c-footer-col">
             <h4>Mapvoy</h4>
-            <NavLink to="/charted" navigate={navigate}>Overview</NavLink>
+            <NavLink to={productPath('')} navigate={navigate}>Overview</NavLink>
             <a href={APP_STORE_URL} target="_blank" rel="noreferrer">
               App Store
             </a>
-            <NavLink to="/charted/support" navigate={navigate}>Support</NavLink>
+            <NavLink to={productPath('/support')} navigate={navigate}>Support</NavLink>
           </div>
 
           <div className="c-footer-col">
             <h4>Legal</h4>
-            <NavLink to="/charted/privacy" navigate={navigate}>Privacy Policy</NavLink>
-            <NavLink to="/charted/terms" navigate={navigate}>Terms of Use</NavLink>
+            <NavLink to={productPath('/privacy')} navigate={navigate}>Privacy Policy</NavLink>
+            <NavLink to={productPath('/terms')} navigate={navigate}>Terms of Use</NavLink>
           </div>
 
           <div className="c-footer-col">
             <h4>Company</h4>
-            <a href="/">Vertex Horizon</a>
+            <a href={PARENT_SITE}>Vertex Horizon</a>
             <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
           </div>
         </div>

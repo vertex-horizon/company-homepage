@@ -1,6 +1,7 @@
 import { Component, StrictMode, lazy, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import { IS_PRODUCT_SITE } from './charted/config.js'
 
 /**
  * Top-level Error Boundary.
@@ -91,7 +92,7 @@ const path = window.location.pathname
 const VHApp = lazy(() => import('./App.jsx'))
 const ChartedApp = lazy(() => import('./charted/ChartedApp.jsx'))
 
-const isCharted = path === '/charted' || path.startsWith('/charted/')
+const isCharted = IS_PRODUCT_SITE || path === '/charted' || path.startsWith('/charted/')
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

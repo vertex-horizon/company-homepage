@@ -1,3 +1,4 @@
+import { productPath } from '../config.js'
 import { useState } from 'react'
 import { APP_STORE_URL, SUPPORT_EMAIL } from '../config.js'
 import { TextReveal, Magnetic, useReveal } from '../effects.jsx'
@@ -39,7 +40,7 @@ function PrivacyManifesto() {
         </p>
         <p className="c-lede">
           You choose what to export or share. For information about photo access, connected services
-          and diagnostic controls, read our <a href="/charted/privacy">Privacy Policy</a>.
+          and diagnostic controls, read our <a href={productPath('/privacy')}>Privacy Policy</a>.
         </p>
       </div>
     </section>
@@ -75,8 +76,8 @@ function Pricing() {
       </div>
       <p className="c-pricing-foot">
         Current prices, eligibility and renewal terms are shown in the app before purchase.
-        Manage subscriptions in your Apple ID settings. <a href="/charted/terms">Terms of Use</a>
-        {' · '}<a href="/charted/privacy">Privacy Policy</a>
+        Manage subscriptions in your Apple ID settings. <a href={productPath('/terms')}>Terms of Use</a>
+        {' · '}<a href={productPath('/privacy')}>Privacy Policy</a>
       </p>
     </section>
   )
@@ -92,7 +93,7 @@ const FAQS = [
       <>
         Mapvoy reads photo dates and locations and builds your map and trips on your iPhone.
         Services also support purchases, maps, app configuration and optional diagnostics.
-        See our <a href="/charted/privacy">Privacy Policy</a> for details and your choices.
+        See our <a href={productPath('/privacy')}>Privacy Policy</a> for details and your choices.
       </>
     ),
   },
