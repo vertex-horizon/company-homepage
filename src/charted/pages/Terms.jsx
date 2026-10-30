@@ -146,6 +146,19 @@ export default function Terms({ navigate }) {
         <a href="https://support.apple.com/en-us/118223" target="_blank" rel="noreferrer">refund information</a>.
       </p>
 
+      <p>
+        <strong>Germany and Austria — statutory withdrawal:</strong> For Apple-billed purchases,
+        Apple&apos;s current terms describe a transaction-withdrawal option in your Apple Account
+        purchase history. Where a withdrawal right applies, select the order, choose that option
+        and follow the confirmation steps; Apple states that it sends an acknowledgement by email.
+        This is separate from cancelling subscription renewal. Applicable deadlines and conditions,
+        including any valid loss of the right for immediate digital delivery, are explained in Apple&apos;s{' '}
+        <a href="https://www.apple.com/legal/internet-services/itunes/de/terms.html" target="_blank" rel="noreferrer">German terms</a>{' '}
+        and{' '}
+        <a href="https://www.apple.com/legal/internet-services/itunes/at/terms.html" target="_blank" rel="noreferrer">Austrian terms</a>.
+        Contact us for App support or questions about your mandatory rights.
+      </p>
+
       <h2>5. Mandatory Rights and Changes</h2>
       <p>
         Mandatory consumer protections, guarantees, and remedies apply. This includes rights under
