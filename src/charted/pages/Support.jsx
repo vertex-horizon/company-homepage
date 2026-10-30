@@ -21,7 +21,7 @@ export default function Support({ navigate }) {
         <p className="c-doc-summary">
           Need help, have feedback, or found a bug?{' '}
           Email <a href={`mailto:${SUPPORT_EMAIL}`}><strong>{SUPPORT_EMAIL}</strong></a>{' '}
-          — we respond within 48 hours, usually faster.
+          — we aim to reply promptly.
         </p>
       </header>
 
@@ -69,15 +69,18 @@ export default function Support({ navigate }) {
 
       <h3>How do I delete my data?</h3>
       <p>
-        Uninstall Mapvoy from your iPhone. All journey data, AI narratives, and settings are stored inside
-        Mapvoy's app sandbox, which iOS deletes when you remove the app. Your photos in the Photos app are
-        not affected.
+        Use Mapvoy&apos;s local data controls or remove the app to delete its local records.
+        Offloading preserves app data. This does not delete Apple Photos originals, exports or backups
+        saved elsewhere, purchase records, or reports already received by providers, and it does not
+        cancel a subscription. Contact us about information we or providers acting for us actually hold;
+        see our <NavLink to={productPath('/privacy')} navigate={navigate}>Privacy Policy</NavLink> for details.
       </p>
 
       <h3>Can I export my data?</h3>
       <p>
-        Yes. Inside Mapvoy: <strong>Settings → Export → Export all data as JSON</strong>. You'll get a file
-        with all your journeys, places, and metadata in a portable format.
+        Use Export Data in Mapvoy to save supported travel records in the available formats.
+        Ordinary exports do not include photo originals and are not a complete restorable backup.
+        See our <NavLink to={productPath('/privacy')} navigate={navigate}>Privacy Policy</NavLink> for details.
       </p>
 
       <h2>Subscriptions &amp; Mapvoy Pro</h2>
@@ -109,9 +112,11 @@ export default function Support({ navigate }) {
 
       <h3>How do I get a refund?</h3>
       <p>
-        Refunds are handled by Apple. Visit{' '}
+        Apple handles billing and refund requests. Visit{' '}
         <a href="https://reportaproblem.apple.com" target="_blank" rel="noreferrer">reportaproblem.apple.com</a>{' '}
-        and find your Mapvoy purchase (older receipts may say Charted). Refund decisions are at Apple's discretion.
+        and select your Mapvoy purchase; older receipts may say Charted. This process does not limit
+        any consumer rights or remedies that applicable law does not allow us to exclude. Contact us
+        if you need help with the App or a consumer-rights request.
       </p>
 
       <h3>How do I restore a previous purchase?</h3>
@@ -161,7 +166,7 @@ export default function Support({ navigate }) {
       <p>
         For anything we haven't covered, email{' '}
         <a href={`mailto:${SUPPORT_EMAIL}`}><strong>{SUPPORT_EMAIL}</strong></a>.
-        We're a small team — usually you'll hear back within 48 hours, often the same day.
+        We're a small team and aim to reply promptly.
       </p>
       <p>
         Press inquiries: same email, please put <strong>"Press"</strong> in the subject.

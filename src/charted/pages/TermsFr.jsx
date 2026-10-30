@@ -11,7 +11,7 @@ export default function TermsFr({ navigate }) {
       <header>
         <h1>Conditions d’utilisation</h1>
         <div className="c-doc-meta">
-          <span><strong>Dernière mise à jour :</strong> 29 octobre 2026</span>
+          <span><strong>Dernière mise à jour :</strong> 30 octobre 2026</span>
           <span><strong>Date d’entrée en vigueur :</strong> 1er octobre 2026</span>
         </div>
       </header>
@@ -28,11 +28,10 @@ export default function TermsFr({ navigate }) {
         applicable nous interdit d’exclure.
       </p>
       <p>
-        <strong>Note sur la version :</strong> les changements de l’Application décrits pour la
-        version 1.1.1 sont préparés pour cette version, dont la disponibilité sur l’App Store est
-        encore en attente. La version 1.1 reste la version actuellement publiée jusqu’à la
-        disponibilité de la mise à jour. La publication de ces conditions ne modifie pas le
-        fonctionnement d’une ancienne installation ni rétroactivement un achat existant.
+        <strong>Note sur la version :</strong> les fonctions et les contrôles de confidentialité peuvent varier selon la version
+        installée. Consultez les renseignements relatifs à votre version et la Politique de confidentialité.
+        La publication de ces conditions ne modifie pas le comportement d’une ancienne version de
+        l’Application ni rétroactivement les conditions d’un achat existant.
       </p>
 
       <h2>1. Admissibilité et utilisation responsable</h2>
@@ -84,7 +83,7 @@ export default function TermsFr({ navigate }) {
       <p>
         Data Export produit des enregistrements sélectionnés en JSON, CSV ou GPX. Elle ne comprend
         pas les photos originales ni toutes les modifications ou préférences, et ses fichiers ne
-        peuvent pas être importés pour restaurer Mapvoy. La fonction distincte Backup &amp;
+        peuvent pas être importés pour restaurer Mapvoy. Lorsqu’elle est disponible dans votre version installée, la fonction distincte Backup &amp;
         Restore conserve les données personnelles qu’elle énumère dans un fichier JSON non
         chiffré et exige une bibliothèque Mapvoy vide pour la restauration. Elle ne récupère
         pas les photos originales, toutes les préférences ni les achats. Conservez les fichiers
