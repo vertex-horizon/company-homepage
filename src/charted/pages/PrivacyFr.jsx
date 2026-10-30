@@ -1,3 +1,4 @@
+import { productPath } from '../config.js'
 import { NavLink } from '../ChartedApp.jsx'
 import { SUPPORT_EMAIL } from '../config.js'
 
@@ -24,7 +25,7 @@ export default function PrivacyFr({ navigate }) {
         </div>
       </header>
       <p><strong>Nom de l’application :</strong> Charted devient Mapvoy. Le fournisseur reste Vertex Horizon Inc.</p>
-      <p><NavLink to="/charted/privacy" navigate={navigate} hrefLang="en" lang="en">English</NavLink></p>
+      <p><NavLink to={productPath('/privacy')} navigate={navigate} hrefLang="en" lang="en">English</NavLink></p>
       <p><strong>Langue de l’application :</strong> l’interface actuelle de Mapvoy est en anglais. Cette page fournit les renseignements de confidentialité en français.</p>
       <p>
         Mapvoy est créée par <strong>Vertex Horizon Inc.</strong> (« nous », « notre », « nos »).
@@ -248,7 +249,7 @@ export default function PrivacyFr({ navigate }) {
       </p>
       <div className="c-doc-footer">
         <span>© {new Date().getFullYear()} Vertex Horizon Inc.</span>
-        <span><NavLink to="/charted/terms/fr" navigate={navigate}>Conditions d’utilisation</NavLink>{' · '}<NavLink to="/charted/support" navigate={navigate}>Assistance (anglais)</NavLink></span>
+        <span><NavLink to={productPath('/terms/fr')} navigate={navigate}>Conditions d’utilisation</NavLink>{' · '}<NavLink to={productPath('/support')} navigate={navigate}>Assistance (anglais)</NavLink></span>
       </div>
     </article>
   )

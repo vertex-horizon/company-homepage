@@ -1,3 +1,4 @@
+import { productPath } from '../config.js'
 import { NavLink } from '../ChartedApp.jsx'
 import { SUPPORT_EMAIL } from '../config.js'
 
@@ -15,7 +16,7 @@ export default function TermsFr({ navigate }) {
         </div>
       </header>
       <p><strong>Nom de l’application :</strong> Charted devient Mapvoy. Le fournisseur reste Vertex Horizon Inc.</p>
-      <p><NavLink to="/charted/terms" navigate={navigate} hrefLang="en" lang="en">English</NavLink></p>
+      <p><NavLink to={productPath('/terms')} navigate={navigate} hrefLang="en" lang="en">English</NavLink></p>
       <p><strong>Langue de l’application :</strong> l’interface actuelle de Mapvoy est en anglais. Cette page fournit les conditions en français.</p>
       <p>
         Mapvoy est fournie par <strong>Vertex Horizon Inc.</strong> Ces conditions décrivent notre
@@ -61,7 +62,7 @@ export default function TermsFr({ navigate }) {
         d’Apple peut télécharger des images iCloud au besoin. Des services réseau prennent en
         charge les achats, les cartes et adresses demandées, la configuration et le partage de
         renseignements techniques, comme l’explique notre{' '}
-        <NavLink to="/charted/privacy/fr" navigate={navigate}>Politique de confidentialité</NavLink>,
+        <NavLink to={productPath('/privacy/fr')} navigate={navigate}>Politique de confidentialité</NavLink>,
         y compris les choix et limites de la version installée. Vous contrôlez les exportations
         et les partages que vous lancez. Les demandes concernant les renseignements effectivement
         détenus par nous ou traités pour nous par des fournisseurs sont traitées selon cette politique.
@@ -191,7 +192,7 @@ export default function TermsFr({ navigate }) {
       </p>
       <div className="c-doc-footer">
         <span>© {new Date().getFullYear()} Vertex Horizon Inc.</span>
-        <span><NavLink to="/charted/privacy/fr" navigate={navigate}>Confidentialité</NavLink>{' · '}<NavLink to="/charted/support" navigate={navigate}>Assistance (anglais)</NavLink></span>
+        <span><NavLink to={productPath('/privacy/fr')} navigate={navigate}>Confidentialité</NavLink>{' · '}<NavLink to={productPath('/support')} navigate={navigate}>Assistance (anglais)</NavLink></span>
       </div>
     </article>
   )

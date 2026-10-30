@@ -1,3 +1,4 @@
+import { productPath } from '../config.js'
 import { NavLink } from '../ChartedApp.jsx'
 import { SUPPORT_EMAIL } from '../config.js'
 
@@ -21,7 +22,7 @@ export default function Terms({ navigate }) {
       </header>
       <p><strong>App name:</strong> Charted is now Mapvoy. The provider remains Vertex Horizon Inc.</p>
 
-      <p><NavLink to="/charted/terms/fr" navigate={navigate} hrefLang="fr-CA" lang="fr-CA">Français (Canada)</NavLink></p>
+      <p><NavLink to={productPath('/terms/fr')} navigate={navigate} hrefLang="fr-CA" lang="fr-CA">Français (Canada)</NavLink></p>
       <p>
         Mapvoy is provided by <strong>Vertex Horizon Inc.</strong> These terms describe our App and
         its purchasing and support arrangements. Your license to the App is governed by Apple&apos;s{' '}
@@ -59,7 +60,7 @@ export default function Terms({ navigate }) {
         our servers or a cloud AI service. Apple Photos may download iCloud images when needed.
         Network services support purchases, requested maps and addresses, App configuration, and
         technical sharing as described in our{' '}
-        <NavLink to="/charted/privacy" navigate={navigate}>Privacy Policy</NavLink>,
+        <NavLink to={productPath('/privacy')} navigate={navigate}>Privacy Policy</NavLink>,
         including the choices and limits of the installed version. You control exports and sharing
         you initiate. Requests about records actually held by us or processed for us by providers
         are handled as described in the Privacy Policy.
@@ -176,9 +177,9 @@ export default function Terms({ navigate }) {
       <div className="c-doc-footer">
         <span>© {new Date().getFullYear()} Vertex Horizon Inc.</span>
         <span>
-          <NavLink to="/charted/privacy" navigate={navigate}>Privacy Policy</NavLink>
+          <NavLink to={productPath('/privacy')} navigate={navigate}>Privacy Policy</NavLink>
           {' · '}
-          <NavLink to="/charted/support" navigate={navigate}>Support</NavLink>
+          <NavLink to={productPath('/support')} navigate={navigate}>Support</NavLink>
         </span>
       </div>
     </article>

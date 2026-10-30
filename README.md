@@ -53,3 +53,15 @@ Current artwork comes from **Charted Product V2 → 10 · 商店与上线物料*
 - `mapvoy.app` is a separate domain rollout. This repository continues to publish at `www.vertex-horizon.com` until that hosting and redirect setup is verified.
 
 Build output contains real static entries for `/charted/`, `/charted/support/`, `/charted/privacy/`, `/charted/privacy/fr/`, `/charted/terms/`, and `/charted/terms/fr/`, each with its own canonical URL, language, title and social metadata. Use a plain static HTTP server for direct-link verification; do not rely on a preview server’s SPA fallback.
+
+## Product domain deployment
+
+`npm run build:mapvoy` exports the same product UI at `/`, with direct `/support/`, `/privacy/`, `/privacy/fr/`, `/terms/`, and `/terms/fr/` entries and `https://mapvoy.app` canonical metadata. Output is isolated in ignored `dist-mapvoy/`; the normal company build remains in `dist/`.
+
+The deployment-only repository [mapvoy-homepage](https://github.com/vertex-horizon/mapvoy-homepage) builds this source from a verified mainline commit and hosts the product domain. After merging source changes, run:
+
+```sh
+gh workflow run deploy.yml --repo vertex-horizon/mapvoy-homepage -f source_ref=<full-main-SHA>
+```
+
+No copied product source or cross-repository deployment token is required.

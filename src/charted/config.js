@@ -18,3 +18,9 @@
 export const APP_STORE_URL = 'https://apps.apple.com/app/id6761878521'
 export const SUPPORT_EMAIL = 'contact@vertex-horizon.com'
 export const PARENT_SITE = 'https://www.vertex-horizon.com'
+
+// 同一份源码分别部署公司站与产品站；产品站的导航从域名根路径开始。
+export const IS_PRODUCT_SITE = import.meta.env?.VITE_SITE === 'mapvoy'
+export const PRODUCT_ORIGIN = IS_PRODUCT_SITE ? 'https://mapvoy.app' : PARENT_SITE
+export const PRODUCT_BASE = IS_PRODUCT_SITE ? '' : '/charted'
+export const productPath = (suffix = '') => `${PRODUCT_BASE}${suffix}` || '/'

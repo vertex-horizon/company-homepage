@@ -1,3 +1,4 @@
+import { productPath } from '../config.js'
 import { NavLink } from '../ChartedApp.jsx'
 import { SUPPORT_EMAIL, APP_STORE_URL } from '../config.js'
 
@@ -169,8 +170,8 @@ export default function Support({ navigate }) {
       <h2>Quick Links</h2>
       <ul>
         <li><a href={APP_STORE_URL} target="_blank" rel="noreferrer">Mapvoy on the App Store</a></li>
-        <li><NavLink to="/charted/privacy" navigate={navigate}>Privacy Policy</NavLink></li>
-        <li><NavLink to="/charted/terms" navigate={navigate}>Terms of Use</NavLink></li>
+        <li><NavLink to={productPath('/privacy')} navigate={navigate}>Privacy Policy</NavLink></li>
+        <li><NavLink to={productPath('/terms')} navigate={navigate}>Terms of Use</NavLink></li>
         <li><a href="/">Vertex Horizon (parent company)</a></li>
       </ul>
 
