@@ -1,12 +1,11 @@
 /* ================================================================
-   Charted — Sub-brand Design System
+   Mapvoy — Product Website
    ----------------------------------------------------------------
    Inherits base reset + typography from /src/index.css, but
-   overrides design tokens with the Charted v1.0 brand palette
-   (Chart Blue / Memory Gold / Constellation / Narrative / Trust).
+   retains the existing interaction tokens; V2 launch typography and
+   imagery overrides are defined at the end of this file.
 
-   Source of truth for tokens:
-     docs/branding/04_BRAND_UPGRADE_FINAL_PLAN.md §3.2
+   Current source: Product V2 → 10 · 商店与上线物料; see launch-assets.json.
    ================================================================ */
 
 .charted-app {
@@ -1983,4 +1982,73 @@
     transform: none;
     transition: none;
   }
+}
+
+/* V2 上线物料：正文排版沿用现有结构，完整呈现登记画板，不再套第二层手机壳或裁切成品。
+ * 标题采用物料的衬线字形；强调色保持冰蓝，金色仍只用于 Pro。 */
+.charted-app {
+  --c-bg: #080d19;
+  --c-bg-deep: #060b17;
+  --c-bg-soft: #101a2e;
+}
+.c-hero-title,
+.c-h2,
+.c-moment-text h3,
+.c-privacy-headline,
+.c-cta-tagline {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 500;
+}
+.c-hero-title {
+  font-size: clamp(2.75rem, 4.4vw, 4.5rem);
+  line-height: 1.08;
+}
+.c-gradient-text {
+  background-image: linear-gradient(110deg, #f5f7fb, #b5d9f3);
+  background-size: 100% 100%;
+  animation: none;
+}
+.c-hero-phone,
+.c-moment-phone {
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  aspect-ratio: auto;
+  overflow: hidden;
+}
+.c-hero-phone img,
+.c-moment-phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.c-style-poster {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+}
+.c-globe-card-tag { color: var(--c-chart-blue); }
+.c-pricing { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.c-artwork-note {
+  padding: 0 var(--c-gutter);
+  text-align: center;
+  color: var(--c-text-mute);
+  font-size: 0.75rem;
+}
+@media (max-width: 880px) {
+  .c-pricing { grid-template-columns: 1fr; }
+  .c-style-poster { max-width: 380px; margin-inline: auto; }
+}
+
+@media (max-width: 880px) {
+  /* 长幅物料排在口号与下载动作之后，手机首屏仍能直接找到下载入口。 */
+  .c-hero-content { order: 0; }
+  .c-hero-phone-stage { order: 1; }
+  /* TextReveal 按字母包裹；按可用宽度缩放并锁住语义行，避免窄屏把 further 从词中间折开。 */
+  .c-hero-title, .c-cta-tagline { font-size: clamp(1.65rem, 8vw, 2.75rem); }
+  .c-hero-title-line, .c-cta-tagline .c-text-reveal { white-space: nowrap; }
 }

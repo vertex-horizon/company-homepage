@@ -8,28 +8,12 @@ import {
   useReveal,
 } from '../effects.jsx'
 
-/* Screenshot imports — copied from AppStore/02_screenshots/final/7.0.2/ */
-import shot01 from '../assets/01.png'
-import shot02 from '../assets/02.png'
-import shot03 from '../assets/03.png'
-import shot04 from '../assets/04.png'
-import shot05 from '../assets/05.png'
+import LaunchImage from '../LaunchImage.jsx'
 
 /**
- * Charted marketing landing page (v2 — visually upgraded).
- *
- * Visual upgrades over v1:
- *   • Hero: Canvas-rendered rotating Globe (replaces static phone shot)
- *   • Hero: scroll-driven settle (Globe + content fade as you scroll)
- *   • Title: char-by-char reveal with stagger
- *   • Five Moments: 3D PhoneTilt on hover + accent glow pulse + float
- *   • Buttons: shimmer pass on hover + magnetic primary CTA
- *   • Quiet Truth: light-beam scan animation
- *   • Pricing: best-value shimmer
- *   • CTA: tagline reveal + radial glow backdrop
- *   • Global: starfield + cursor glow (mounted in ChartedApp.jsx)
- *
- * All animations honor `prefers-reduced-motion`.
+ * Mapvoy 官网：保留原有导航与渐入交互，文案和整幅宣传图来自 Product V2 上线物料。
+ * 图像中的旅行数字是示例人物，不是当前用户数据或运行验收证据。
+ * 动画沿用 prefers-reduced-motion 降级。
  */
 export default function Home({ navigate }) {
   return (
@@ -37,6 +21,7 @@ export default function Home({ navigate }) {
       <Hero />
       <QuietTruth />
       <FiveMoments />
+      <p className="c-artwork-note">Launch illustrations use sample travel data.</p>
       <GlobeStyles />
       <PrivacyManifesto />
       <Pricing />
@@ -50,7 +35,7 @@ export default function Home({ navigate }) {
  * 1. HERO
  *
  * Layout (≥880px): two columns, content left, Globe right.
- * Globe is real Canvas — rotates, has arcs and glowing pins.
+ * The exported launch illustration preserves the source composition.
  * On scroll, both content + globe gracefully settle/fade.
  * ──────────────────────────────────────────────────────────── */
 function Hero() {
@@ -64,16 +49,15 @@ function Hero() {
 
           <h1 className="c-hero-title">
             <span className="c-hero-title-line">
-              <TextReveal text="Chart how far" stagger={26} />
+              <TextReveal text="You've been further" stagger={26} />
             </span>
             <span className="c-hero-title-line c-gradient-text">
-              <TextReveal text="you've come." stagger={26} delay={420} />
+              <TextReveal text="than you think." stagger={26} delay={420} />
             </span>
           </h1>
 
           <p className="c-hero-sub c-reveal is-revealed">
-            Your photos already remember every place you've been.
-            Charted turns them into a 3D globe — privately, on your iPhone.
+            Every place in your photos, on a 3D globe.
           </p>
 
           <div className="c-hero-actions c-reveal is-revealed">
@@ -83,7 +67,7 @@ function Hero() {
                 href={APP_STORE_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Download Charted on the App Store"
+                aria-label="Download Mapvoy on the App Store"
               >
                 <AppleIcon />
                 <span>
@@ -99,7 +83,7 @@ function Hero() {
 
           <div className="c-hero-trust c-reveal is-revealed">
             <span className="c-hero-trust-dot" aria-hidden="true" />
-            <span>Runs on-device · No sign-up · No photo uploads</span>
+            <span>Built on your iPhone · No account to create</span>
           </div>
         </div>
 
@@ -112,7 +96,7 @@ function Hero() {
           {/* Phone with 3D cursor-tracking tilt */}
           <PhoneTilt max={11}>
             <div className="c-hero-phone">
-              <img src={shot01} alt="Charted home — your travels on a 3D globe" />
+              <LaunchImage name="01-further" alt="Mapvoy launch illustration: a globe of sample travels across North America and Europe" priority />
             </div>
           </PhoneTilt>
         </div>
@@ -159,46 +143,32 @@ function QuietTruth() {
  *   • subtle vertical float
  *   • accent radial glow that pulses (different color each)
  * ──────────────────────────────────────────────────────────── */
+// 文案与画面来自同一套 V2 上线物料；示例数字不作为用户或运行验收数据。
 const MOMENTS = [
   {
-    n: '01',
-    title: 'Your photos already drew this map.',
-    desc:
-      'Charted reads the GPS quietly tucked into every photo and lights up your globe — every city, every coastline, every mountain pass you\'ve been to.',
-    img: shot01,
-    glow: 'blue',
+    n: '01', title: 'It found the trip you forgot.',
+    desc: 'Mapvoy reads when and where your photos were taken and groups them into trips, from a day out to a chapter of your life.',
+    image: '02-trips', alt: 'Rome and Athens trip, with photo highlights and a San Francisco life chapter', glow: 'blue',
   },
   {
-    n: '02',
-    title: "Trips you'd forgotten. Charted found them all.",
-    desc:
-      'Photo timestamps and locations are enough. Charted detects your journeys automatically — from a long weekend in Kyoto to a six-month sabbatical across Europe.',
-    img: shot02,
-    glow: 'gold',
+    n: '02', title: 'Your countries, stamped in.',
+    desc: 'Countries and regions fill in your Passport from the places in your photos. See where you have been, one place at a time.',
+    image: '03-countries', alt: 'Passport map and country stamps, with an enlarged Europe summary card', glow: 'cyan',
   },
   {
-    n: '03',
-    title: 'Tap a place. Find a memory.',
-    desc:
-      'Memory Pins reveal the photos you took there — without scrolling, without searching. Spain becomes Barcelona. Barcelona becomes that summer.',
-    img: shot03,
-    glow: 'cyan',
+    n: '03', title: 'Your travel, in numbers.',
+    desc: 'Atlas keeps your numbers year by year. Look back through the countries, regions and places that make up your travels.',
+    image: '10-numbers', alt: 'Atlas Europe view with a map, visited countries and travel statistics', glow: 'blue',
   },
   {
-    n: '04',
-    title: 'Charted sees the explorer in you.',
-    desc:
-      "Your travel personality, drawn from real journeys — not a quiz. Coastal Nomad. City Wanderer. Culture Sponge. A mirror, made of where you've actually been.",
-    img: shot04,
-    glow: 'purple',
+    n: '04', title: 'Your Logbook. It wrote itself.',
+    desc: 'A free Year in Review for each year’s travels. Look back through the places and photos that shaped your year.',
+    image: '07-logbook', alt: 'Sample 2025 Year in Review, with a Rome cover and annual travel summary', glow: 'cyan',
   },
   {
-    n: '05',
-    title: 'Made for sharing. Not for posting.',
-    desc:
-      'Animated globe videos, journey maps, stamp collages — beautiful enough to keep, generous enough to give. Your story, made shareable, on your terms.',
-    img: shot05,
-    glow: 'pink',
+    n: '05', title: 'Your year, ready to post.',
+    desc: 'Cards and globe videos from your trips and your globe. Make a card to keep, or a video to share.',
+    image: '08-share', alt: 'Mapvoy share cards featuring Europe, California, annual numbers and Greece', glow: 'blue',
   },
 ]
 
@@ -229,7 +199,7 @@ function FiveMoments() {
               <div className={`c-moment-glow c-moment-glow--${m.glow}`} aria-hidden="true" />
               <PhoneTilt max={9}>
                 <div className="c-moment-phone">
-                  <img src={m.img} alt={m.title} loading="lazy" />
+                  <LaunchImage name={m.image} alt={m.alt} />
                 </div>
               </PhoneTilt>
             </div>
@@ -246,48 +216,9 @@ function FiveMoments() {
  * Cards also have a cursor-following radial glow.
  * ──────────────────────────────────────────────────────────── */
 const GLOBE_STYLES = [
-  {
-    name: 'Terra',
-    tag: 'Free',
-    style: 'terra',
-    desc: 'A photoreal Earth, rendered with Apple Metal. Real continents, real coastlines, with your trips lighting up like cities at night.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-        <circle cx="11" cy="11" r="8.5" stroke="#38BDF8" strokeWidth="1.5"/>
-        <path d="M3 9 Q11 5 19 9 M3 13 Q11 17 19 13" stroke="#38BDF8" strokeWidth="1.2" fill="none"/>
-      </svg>
-    ),
-  },
-  {
-    name: 'Tessera',
-    tag: 'Free',
-    style: 'tessera',
-    desc: "A glass-edged region map. Watch every country and state you've touched fill in — like an honest, more beautiful version of a scratch-off map.",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-        <path d="M5 4 L13 4 L17 10 L13 16 L5 16 L9 10 Z" stroke="#22D3EE" strokeWidth="1.5" fill="none"/>
-      </svg>
-    ),
-  },
-  {
-    name: 'Lumina',
-    tag: 'Pro',
-    style: 'lumina',
-    desc: 'A particle Earth, alive with light. Designed for sharing — stunning enough to print, intricate enough to lose yourself in.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-        <circle cx="6" cy="11" r="1.5" fill="#A78BFA"/>
-        <circle cx="11" cy="6" r="1.5" fill="#A78BFA"/>
-        <circle cx="16" cy="11" r="1.5" fill="#A78BFA"/>
-        <circle cx="11" cy="16" r="1.5" fill="#A78BFA"/>
-        <circle cx="11" cy="11" r="1.2" fill="#A78BFA" opacity="0.6"/>
-        <circle cx="8" cy="8" r="0.9" fill="#A78BFA" opacity="0.5"/>
-        <circle cx="14" cy="14" r="0.9" fill="#A78BFA" opacity="0.5"/>
-        <circle cx="8" cy="14" r="0.9" fill="#A78BFA" opacity="0.5"/>
-        <circle cx="14" cy="8" r="0.9" fill="#A78BFA" opacity="0.5"/>
-      </svg>
-    ),
-  },
+  { name: 'Earth', image: '04-sunlight', desc: "Real terrain. Real sunlight. Your places. See the planet under today's sunlight, with city lights on the night side and real stars beyond.", alt: 'Earth style: two views of Europe at twilight and at night' },
+  { name: 'Ink', image: '05-ink', desc: 'Your places, in pen on paper. A paper globe with ink marks for the places you have visited.', alt: 'Ink style: a paper globe of Europe, with an enlarged map detail' },
+  { name: 'Paint', image: '06-paint', desc: 'Color in where you have been. Paint fills in the countries and regions you have visited.', alt: 'Paint style: Paris and Rome, with a closer terrain view of Chamonix' },
 ]
 
 function GlobeStyles() {
@@ -311,14 +242,14 @@ function GlobeStyles() {
           <div
             className="c-globe-card"
             key={g.name}
-            data-style={g.style}
+            data-style={g.name.toLowerCase()}
             onMouseMove={onMove}
           >
-            <span className="c-globe-card-icon">{g.icon}</span>
+            <LaunchImage name={g.image} alt={g.alt} className="c-style-poster" sizes="(max-width: 880px) 82vw, 320px" />
             <h3>
               {g.name}
-              <span className={`c-globe-card-tag${g.tag === 'Pro' ? ' is-pro' : ''}`}>
-                {g.tag}
+              <span className="c-globe-card-tag">
+                Free
               </span>
             </h3>
             <p>{g.desc}</p>
@@ -337,78 +268,20 @@ function PrivacyManifesto() {
   return (
     <section className="c-section c-privacy-section" ref={ref}>
       <div className="c-privacy c-reveal">
-        <span className="c-eyebrow">Privacy, by design</span>
-        <h2 className="c-privacy-headline" style={{ marginTop: '1.25rem' }}>
-          We don't touch your data. <em>That's the deal.</em>
-        </h2>
+        <span className="c-eyebrow">Built on your iPhone</span>
+        <h2 className="c-privacy-headline" style={{ marginTop: '1.25rem' }}>There’s nothing to log.</h2>
         <p className="c-privacy-lede">
-          Most travel apps want you tracked, all day. Charted does the opposite.
-          We read GPS data <strong style={{ color: 'var(--c-text)' }}>already inside the photos you've already taken</strong> —
-          we don't track your location, we don't upload your photo library or local trip database, and we don't require a personal account.
-          Your saved trips stay on your iPhone; Apple services handle requested maps and addresses.
+          Mapvoy starts with the photos already on your iPhone. It reads their dates and places
+          and builds your travel map on the device. There’s no account to create.
         </p>
-
-        <div className="c-privacy-grid">
-          <div className="c-privacy-row">
-            <span className="c-privacy-icon"><LockIcon /></span>
-            <div>
-              <h4>No sign-up to use Charted.</h4>
-              <p>Open the app and start. Subscriptions, if any, are handled by Apple — we don't see your Apple ID.</p>
-            </div>
-          </div>
-          <div className="c-privacy-row">
-            <span className="c-privacy-icon"><DeviceIcon /></span>
-            <div>
-              <h4>Your photos stay on your iPhone.</h4>
-              <p>Charted reads photo metadata locally. We don't upload your photo library or local trip database to our servers.</p>
-            </div>
-          </div>
-          <div className="c-privacy-row">
-            <span className="c-privacy-icon"><AIChipIcon /></span>
-            <div>
-              <h4>On-device intelligence.</h4>
-              <p>Apple Foundation Models writes your trip stories on your iPhone — prompts and outputs aren't transmitted to us or third parties.</p>
-            </div>
-          </div>
-          <div className="c-privacy-row">
-            <span className="c-privacy-icon"><EyeOffIcon /></span>
-            <div>
-              <h4>No tracking, no advertisers.</h4>
-              <p>We don't track you across apps or websites. Network services support purchases, app configuration, maps, diagnostics, and optional usage analytics. See our Privacy Policy for details and controls.</p>
-            </div>
-          </div>
-        </div>
+        <p className="c-lede">
+          You choose what to export or share. For information about photo access, connected services
+          and diagnostic controls, read our <a href="/charted/privacy">Privacy Policy</a>.
+        </p>
       </div>
     </section>
   )
 }
-
-const LockIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-    <rect x="5" y="9" width="12" height="9" rx="2" stroke="#34D399" strokeWidth="1.5"/>
-    <path d="M8 9 V6 a3 3 0 0 1 6 0 V9" stroke="#34D399" strokeWidth="1.5" fill="none"/>
-  </svg>
-)
-const DeviceIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-    <rect x="6" y="3" width="10" height="16" rx="2" stroke="#38BDF8" strokeWidth="1.5"/>
-    <circle cx="11" cy="16" r="0.8" fill="#38BDF8"/>
-  </svg>
-)
-const AIChipIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-    <rect x="5" y="5" width="12" height="12" rx="2" stroke="#A78BFA" strokeWidth="1.5"/>
-    <rect x="8" y="8" width="6" height="6" rx="1" fill="#A78BFA" opacity="0.4"/>
-    <path d="M3 8 H5 M3 14 H5 M17 8 H19 M17 14 H19 M8 3 V5 M14 3 V5 M8 17 V19 M14 17 V19" stroke="#A78BFA" strokeWidth="1.2"/>
-  </svg>
-)
-const EyeOffIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-    <path d="M3 11 c2-3 5-5 8-5 s6 2 8 5" stroke="#F59E0B" strokeWidth="1.5" fill="none"/>
-    <circle cx="11" cy="11" r="2.5" stroke="#F59E0B" strokeWidth="1.5"/>
-    <line x1="4" y1="4" x2="18" y2="18" stroke="#F59E0B" strokeWidth="1.5" strokeLinecap="round"/>
-  </svg>
-)
 
 /* ────────────────────────────────────────────────────────────
  * 6. PRICING
@@ -418,49 +291,29 @@ function Pricing() {
   return (
     <section className="c-section" ref={ref} id="pricing">
       <div className="c-section-head c-reveal" style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
-        <span className="c-eyebrow" style={{ justifyContent: 'center' }}>Charted Pro</span>
-        <h2 className="c-h2" style={{ marginTop: '1rem' }}>
-          Pro adds more — when you're ready.
-        </h2>
+        <span className="c-eyebrow" style={{ justifyContent: 'center' }}>Mapvoy Pro</span>
+        <h2 className="c-h2" style={{ marginTop: '1rem' }}>Go deeper into your travels.</h2>
         <p className="c-lede" style={{ margin: '1rem auto 0' }}>
-          The free version is a complete travel map. Pro adds Lumina (the particle globe),
-          extra share templates, advanced AI insights, and unlimited journey storage.
-          Cancel any time, in your Apple ID settings.
+          Pro adds deeper trip reviews, more discoveries and collections, and more ways to share.
+          Explore the available plans and included features in Mapvoy before you subscribe.
         </p>
       </div>
-
       <div className="c-pricing c-reveal">
         <div className="c-price-card">
-          <div className="c-price-name">Monthly</div>
-          <div className="c-price-amount">
-            $2.99<span className="c-price-amount-sub">/mo</span>
-          </div>
-          <p className="c-price-meta">Try Pro by the month. Cancel anytime.</p>
+          <div className="c-price-name">A closer look back</div>
+          <h3 className="c-price-amount">More depth.</h3>
+          <p className="c-price-meta">Deep Review, the full Discoveries, and more themed collections.</p>
         </div>
-
-        <div className="c-price-card is-best">
-          <span className="c-price-tag">Best Value</span>
-          <div className="c-price-name">Yearly</div>
-          <div className="c-price-amount">
-            $29.99<span className="c-price-amount-sub">/yr</span>
-          </div>
-          <p className="c-price-meta">7-day free trial. Save ~16% vs monthly.</p>
-        </div>
-
         <div className="c-price-card">
-          <div className="c-price-name">Lifetime</div>
-          <div className="c-price-amount">
-            $79.99<span className="c-price-amount-sub"> once</span>
-          </div>
-          <p className="c-price-meta">One-time. Yours forever, no renewals.</p>
+          <div className="c-price-name">Your work, ready to share</div>
+          <h3 className="c-price-amount">More detail.</h3>
+          <p className="c-price-meta">Premium share templates, 2× images and 4K video on supported iPhones.</p>
         </div>
       </div>
-
       <p className="c-pricing-foot">
-        Subscriptions auto-renew unless canceled at least 24 hours before the end of the current period.
-        Manage or cancel in your Apple ID settings. <a href="/charted/terms">Terms of Use</a>
-        {' · '}
-        <a href="/charted/privacy">Privacy Policy</a>
+        Current prices, eligibility and renewal terms are shown in the app before purchase.
+        Manage subscriptions in your Apple ID settings. <a href="/charted/terms">Terms of Use</a>
+        {' · '}<a href="/charted/privacy">Privacy Policy</a>
       </p>
     </section>
   )
@@ -471,21 +324,20 @@ function Pricing() {
  * ──────────────────────────────────────────────────────────── */
 const FAQS = [
   {
-    q: 'Does Charted keep my data on my iPhone?',
+    q: 'How does Mapvoy use my photos?',
     a: (
       <>
-        Yes. Photo metadata, locations, trip detection, and AI narratives all run on your iPhone.
-        The only network calls Charted makes are anonymized crash and usage reports (which you can
-        disable in Settings) and StoreKit checks for your subscription status. We don't upload your
-        photos, locations, or trips, and we don't store them on our servers.
+        Mapvoy reads photo dates and locations and builds your map and trips on your iPhone.
+        Services also support purchases, maps, app configuration and optional diagnostics.
+        See our <a href="/charted/privacy">Privacy Policy</a> for details and your choices.
       </>
     ),
   },
   {
-    q: 'Will Charted track my location?',
+    q: 'Will Mapvoy track my location?',
     a: (
       <>
-        No. Charted does not request always-on location tracking. It reads GPS data already saved
+        No. Mapvoy does not request always-on location tracking. It reads GPS data already saved
         inside your photos (EXIF metadata). The only time it might use your live location is if you
         tap a feature like "show me on the map" — and that's processed on-device too.
       </>
@@ -496,17 +348,17 @@ const FAQS = [
     a: (
       <>
         Most modern iPhone photos include GPS metadata automatically when location services are on.
-        For photos without GPS (older photos, or photos with location stripped), Charted will simply
+        For photos without GPS (older photos, or photos with location stripped), Mapvoy will simply
         skip them — no error. You can also add places manually for trips you want to keep.
       </>
     ),
   },
   {
-    q: 'Which iOS versions does Charted support?',
+    q: 'Which iOS versions does Mapvoy support?',
     a: (
       <>
-        Charted supports iOS 17 and later. Some features, including Apple Foundation Models,
-        require newer iOS versions and compatible devices.
+        Mapvoy supports iPhone 12 and newer with iOS 17 or later. Trip writing with Apple Intelligence
+        requires a compatible iPhone and iOS 26 or later.
       </>
     ),
   },
@@ -515,7 +367,7 @@ const FAQS = [
     a: (
       <>
         Open the Settings app on your iPhone, tap your name at the top, then tap{' '}
-        <strong>Subscriptions</strong>, find Charted, and tap <strong>Cancel Subscription</strong>.
+        <strong>Subscriptions</strong>, find Mapvoy, and tap <strong>Cancel Subscription</strong>.
         You'll keep Pro features until the end of your current billing period.
       </>
     ),
@@ -575,13 +427,13 @@ function CTA() {
     <section className="c-section" ref={ref}>
       <div className="c-cta c-reveal">
         <h2 className="c-cta-tagline">
-          <TextReveal text="Chart how far " stagger={26} />
+          <TextReveal text="You've been further " stagger={26} />
           <span className="c-gradient-text">
-            <TextReveal text="you've come." stagger={26} delay={500} />
+            <TextReveal text="than you think." stagger={26} delay={500} />
           </span>
         </h2>
         <p className="c-cta-sub">
-          Your photos already have the story. Let Charted draw the map.
+          Every place in your photos, on a 3D globe.
         </p>
         <div className="c-cta-actions">
           <Magnetic strength={0.18}>

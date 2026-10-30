@@ -1,3 +1,4 @@
+import LaunchImage from './charted/LaunchImage.jsx'
 import { useEffect, useRef } from 'react'
 import './App.css'
 
@@ -275,8 +276,8 @@ function App() {
             <a className="hero-product-teaser" href="/charted">
               <span className="hero-product-teaser-dot" aria-hidden="true" />
               <span className="hero-product-teaser-label">Now shipping</span>
-              <span className="hero-product-teaser-name">Charted</span>
-              <span className="hero-product-teaser-tag">— Chart how far you've come.</span>
+              <span className="hero-product-teaser-name">Mapvoy</span>
+              <span className="hero-product-teaser-tag">— You've been further than you think.</span>
               <ArrowRight />
             </a>
           </div>
@@ -325,7 +326,7 @@ function App() {
           </div>
         </section>
 
-        {/* ── Our Work — featured product (Charted) ─── */}
+        {/* ── Our Work — featured product (Mapvoy) ─── */}
         <section className="section work-section" id="work">
           <div className="section-header reveal">
             <span className="section-label">Our Work</span>
@@ -342,35 +343,34 @@ function App() {
 
             <div className="product-card-meta">
               <header className="product-card-header">
-                <a href="/charted" className="product-card-icon" aria-label="Visit Charted">
-                  <img src="/charted/icon/icon-180.png" alt="" width="64" height="64" />
+                <a href="/charted" className="product-card-icon" aria-label="Visit Mapvoy">
+                  <img src="/mapvoy/icon/icon-180.png" alt="" width="64" height="64" />
                 </a>
                 <div>
                   <h3>
-                    <a href="/charted">Charted</a>
+                    <a href="/charted">Mapvoy</a>
                   </h3>
-                  <p className="product-card-tagline">Chart how far you've come.</p>
+                  <p className="product-card-tagline">You've been further than you think.</p>
                 </div>
               </header>
 
               <p className="product-card-desc">
-                A privacy-first travel memory app for iPhone. Charted reads the GPS
-                in photos already on your device and turns them into a 3D globe of
-                every place you've been — with on-device AI narratives, automatic
-                journey detection, and a digital passport that fills as you travel.
-                Your photos and trip data stay on your iPhone.
+                Every place in your photos, on a 3D globe. Mapvoy builds a travel map
+                from the photos already on your iPhone, groups them into trips,
+                and keeps your country and region counts in a digital Passport.
+                Built on your iPhone, with no account to create.
               </p>
 
               <ul className="product-card-tags">
-                <li>iPhone · iOS 26+</li>
-                <li>On-device AI</li>
+                <li>iPhone 12+ · iOS 17+</li>
+                <li>Photo travel map</li>
                 <li>Privacy-first</li>
-                <li>Apple Foundation Models</li>
+                <li>Map + voyage</li>
               </ul>
 
               <div className="product-card-actions">
                 <a href="/charted" className="btn btn--primary">
-                  <span>Visit Charted</span>
+                  <span>Visit Mapvoy</span>
                   <ArrowRight />
                 </a>
                 <a
@@ -388,8 +388,8 @@ function App() {
             </div>
 
             <div className="product-card-visual">
-              <a href="/charted" className="product-card-phone" aria-label="Visit Charted">
-                <img src="/charted/screenshots/01.png" alt="Charted on iPhone" loading="lazy" />
+              <a href="/charted" className="product-card-phone" aria-label="Visit Mapvoy">
+                <LaunchImage name="01-further" alt="Mapvoy launch illustration: sample travels on a globe" sizes="(max-width: 880px) 74vw, 300px" />
               </a>
             </div>
           </article>
@@ -437,7 +437,7 @@ function App() {
               attention, and privacy isn't a footnote — it's the foundation.
               <br />
               <br />
-              <strong>Charted</strong> is our first product. There are more on the way.
+              <strong>Mapvoy</strong> is our first product. There are more on the way.
             </p>
             <div className="about-stats">
               <div className="stat">
@@ -492,7 +492,7 @@ function App() {
             <div className="footer-cols">
               <div className="footer-col">
                 <h4>Products</h4>
-                <a href="/charted">Charted</a>
+                <a href="/charted">Mapvoy</a>
                 <a
                   href="https://apps.apple.com/app/id6761878521"
                   target="_blank"

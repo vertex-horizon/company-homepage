@@ -1306,3 +1306,16 @@
     padding: 0 1.25rem;
   }
 }
+
+/* 与产品站共用 V2 官网物料；保持整幅比例，不裁去文字、图标或示例数字。 */
+.product-card-phone {
+  aspect-ratio: auto;
+  padding: 0;
+  border-radius: 12px;
+  background: transparent;
+}
+.product-card-phone img {
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}

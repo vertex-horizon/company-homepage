@@ -15,14 +15,15 @@ export default function Terms({ navigate }) {
       <header>
         <h1>Terms of Use</h1>
         <div className="c-doc-meta">
-          <span><strong>Last Updated:</strong> October 1, 2026</span>
+          <span><strong>Last Updated:</strong> October 29, 2026</span>
           <span><strong>Effective Date:</strong> October 1, 2026</span>
         </div>
       </header>
+      <p><strong>App name:</strong> Charted is now Mapvoy. The provider remains Vertex Horizon Inc.</p>
 
       <p><NavLink to="/charted/terms/fr" navigate={navigate} hrefLang="fr-CA" lang="fr-CA">Français (Canada)</NavLink></p>
       <p>
-        Charted is provided by <strong>Vertex Horizon Inc.</strong> These terms describe our App and
+        Mapvoy is provided by <strong>Vertex Horizon Inc.</strong> These terms describe our App and
         its purchasing and support arrangements. Your license to the App is governed by Apple&apos;s{' '}
         <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noreferrer">Standard EULA</a>.
         This page is a supplementary notice, not a separate software license or a Custom EULA.
@@ -37,14 +38,14 @@ export default function Terms({ navigate }) {
 
       <h2>1. Eligibility and Responsible Use</h2>
       <p>
-        Charted is intended for people aged 13 and over. If you are under the age required to enter
+        Mapvoy is intended for people aged 13 and over. If you are under the age required to enter
         into a contract or make a purchase where you live, obtain your parent&apos;s or guardian&apos;s
         permission and assistance. This age statement is not age verification or a parental-consent
-        service. Charted is not designed as a children&apos;s service. A parent or guardian can contact
+        service. Mapvoy is not designed as a children&apos;s service. A parent or guardian can contact
         us about a child&apos;s information as explained in our Privacy Policy.
       </p>
       <p>
-        Use Charted lawfully and respect the rights of others when importing, exporting, or sharing
+        Use Mapvoy lawfully and respect the rights of others when importing, exporting, or sharing
         content. Use and restrictions on the software license are set out in the Standard EULA,
         subject to applicable law and the licenses of included third-party components.
       </p>
@@ -52,7 +53,7 @@ export default function Terms({ navigate }) {
       <h2>2. Your Content and the App&apos;s Limits</h2>
       <p>
         You retain the rights you have in your photos and other content. We do not acquire ownership
-        of your local content merely because you use Charted. Charted reads photo dates and locations,
+        of your local content merely because you use Mapvoy. Mapvoy reads photo dates and locations,
         displays images, and analyzes them on your device to organize travel records. It does not
         modify your Apple Photos originals or upload your photo library or local trip database to
         our servers or a cloud AI service. Apple Photos may download iCloud images when needed.
@@ -67,25 +68,25 @@ export default function Terms({ navigate }) {
         Records, detected places, straight-line distance estimates, map boundaries, and generated
         text may be incomplete or inaccurate. They are not proof of a measured route, entry into a
         place, or a political or legal boundary. Review generated content before sharing it.
-        Charted is not intended for navigation, emergency response, border crossing, or determining
+        Mapvoy is not intended for navigation, emergency response, border crossing, or determining
         legal jurisdiction.
       </p>
       <p>
         Generative journey text requires iOS 26 or later and Apple Intelligence available on your
         device, including supported device, language, region, and ready models. When unavailable,
-        Charted uses local template summaries. Buying Pro does not enable Apple Intelligence.
+        Mapvoy uses local template summaries. Buying Pro does not enable Apple Intelligence.
       </p>
       <p>
         Data Export produces selected JSON, CSV, or GPX records. It does not include photo originals
-        or all edits/settings and cannot be imported to restore Charted. The separate Backup &amp;
+        or all edits/settings and cannot be imported to restore Mapvoy. The separate Backup &amp;
         Restore feature preserves its listed personal records in an unencrypted JSON file and
-        requires an empty Charted library for restoration; it does not recover photo originals,
+        requires an empty Mapvoy library for restoration; it does not recover photo originals,
         every preference, or purchases. Keep exported files in a trusted location. Removing local
         records or the App does not remove exports or backups saved elsewhere, Apple Photos
         originals, purchase records, or reports already received by providers.
       </p>
 
-      <h2>3. Charted Pro Purchases</h2>
+      <h2>3. Mapvoy Pro Purchases</h2>
       <p>
         Monthly and yearly plans are auto-renewable subscriptions. Version 1.1.1 displays prices
         returned by the App Store in your storefront&apos;s currency, without substituting a fixed
@@ -115,11 +116,11 @@ export default function Terms({ navigate }) {
 
       <h2>4. Manage, Cancel, Restore, or Request a Refund</h2>
       <p>
-        In version 1.1.1, open Settings → Profile → Your Charted Pro → Manage or Cancel Subscription
+        In version 1.1.1, open Settings → Profile → Your Mapvoy Pro → Manage or Cancel Subscription
         to open Apple&apos;s management panel directly. You can also open iPhone Settings → your
-        name → Subscriptions → Charted and follow Apple&apos;s cancellation instructions. Use the
+        name → Subscriptions → Mapvoy and follow Apple&apos;s cancellation instructions. Use the
         Apple Account associated with the purchase. The end of access is shown by Apple and may
-        depend on the offer and your region. Removing or offloading Charted, deleting local data,
+        depend on the offer and your region. Removing or offloading Mapvoy, deleting local data,
         or redeeming a gift does not cancel an existing subscription. See Apple&apos;s{' '}
         <a href="https://support.apple.com/en-us/118428" target="_blank" rel="noreferrer">cancellation instructions</a>.
       </p>

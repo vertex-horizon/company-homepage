@@ -19,15 +19,16 @@ export default function PrivacyFr({ navigate }) {
       <header>
         <h1>Politique de confidentialité</h1>
         <div className="c-doc-meta">
-          <span><strong>Dernière mise à jour :</strong> 1er octobre 2026</span>
+          <span><strong>Dernière mise à jour :</strong> 29 octobre 2026</span>
           <span><strong>Date d’entrée en vigueur :</strong> 1er octobre 2026</span>
         </div>
       </header>
+      <p><strong>Nom de l’application :</strong> Charted devient Mapvoy. Le fournisseur reste Vertex Horizon Inc.</p>
       <p><NavLink to="/charted/privacy" navigate={navigate} hrefLang="en" lang="en">English</NavLink></p>
-      <p><strong>Langue de l’application :</strong> l’interface actuelle de Charted est en anglais. Cette page fournit les renseignements de confidentialité en français.</p>
+      <p><strong>Langue de l’application :</strong> l’interface actuelle de Mapvoy est en anglais. Cette page fournit les renseignements de confidentialité en français.</p>
       <p>
-        Charted est créée par <strong>Vertex Horizon Inc.</strong> (« nous », « notre », « nos »).
-        Cette Politique de confidentialité explique quelles données Charted traite, comment elles
+        Mapvoy est créée par <strong>Vertex Horizon Inc.</strong> (« nous », « notre », « nos »).
+        Cette Politique de confidentialité explique quelles données Mapvoy traite, comment elles
         sont utilisées et quels choix vous avez.
       </p>
       <p>
@@ -38,7 +39,7 @@ export default function PrivacyFr({ navigate }) {
         change pas le comportement d’une ancienne version de l’application.
       </p>
       <div className="c-doc-summary">
-        <strong>En bref :</strong> Charted est conçue pour respecter votre vie privée. Nous ne conservons pas
+        <strong>En bref :</strong> Mapvoy est conçue pour respecter votre vie privée. Nous ne conservons pas
         votre photothèque ni votre base de données locale de voyages sur nos serveurs et n’en détenons
         pas de copies distantes. Les
         services Apple traitent les requêtes de carte et d’adresse. Nous utilisons Apple et RevenueCat
@@ -48,21 +49,21 @@ export default function PrivacyFr({ navigate }) {
       </div>
 
       <h2>1. Renseignements traités sur votre appareil</h2>
-      <p>Lorsque vous utilisez Charted, l’application lit les données suivantes sur votre appareil. <strong>Votre photothèque et votre base de données de voyages sont conservées localement</strong> :</p>
+      <p>Lorsque vous utilisez Mapvoy, l’application lit les données suivantes sur votre appareil. <strong>Votre photothèque et votre base de données de voyages sont conservées localement</strong> :</p>
       <h3>1.1 Métadonnées de la photothèque</h3>
       <ul>
         <li><strong>Données :</strong> coordonnées GPS (latitude et longitude), horodatages et renseignements sur l’appareil photo intégrés aux photos (métadonnées EXIF).</li>
         <li><strong>Finalité :</strong> placer vos photos sur le globe et détecter automatiquement vos voyages.</li>
-        <li><strong>Stockage et requêtes :</strong> les métadonnées sont conservées dans la base de données locale de Charted. Lorsque vous demandez des détails sur un lieu ou une carte, les services Apple de géocodage et de cartographie peuvent recevoir les coordonnées ou la région nécessaires pour répondre.</li>
+        <li><strong>Stockage et requêtes :</strong> les métadonnées sont conservées dans la base de données locale de Mapvoy. Lorsque vous demandez des détails sur un lieu ou une carte, les services Apple de géocodage et de cartographie peuvent recevoir les coordonnées ou la région nécessaires pour répondre.</li>
         <li><strong>Durée :</strong> jusqu’à la suppression des données locales concernées ou de l’Application. Décharger l’Application conserve ses documents et données. La supprimer n’efface pas les photos originales d’Apple Photos, les exports enregistrés ailleurs ni les copies dans les sauvegardes de l’appareil ou du système; gérez-les séparément auprès d’Apple ou du fournisseur de stockage choisi.</li>
-        <li><strong>Images :</strong> Charted accède aux photos avec PhotoKit d’Apple pour les consulter, analyser localement les scènes et la qualité, et trouver des moments marquants. Photos d’Apple peut télécharger des photos iCloud au besoin. L’accès limité restreint les photos disponibles pour l’Application. Nous ne téléversons pas votre photothèque vers nos serveurs. Vous choisissez les exports et partages que vous lancez.</li>
+        <li><strong>Images :</strong> Mapvoy accède aux photos avec PhotoKit d’Apple pour les consulter, analyser localement les scènes et la qualité, et trouver des moments marquants. Photos d’Apple peut télécharger des photos iCloud au besoin. L’accès limité restreint les photos disponibles pour l’Application. Nous ne téléversons pas votre photothèque vers nos serveurs. Vous choisissez les exports et partages que vous lancez.</li>
       </ul>
       <h3>1.2 Localisation de l’appareil</h3>
       <ul>
         <li><strong>Données :</strong> votre position actuelle lorsque vous utilisez une fonction de localisation, par exemple afficher votre position sur la carte. Elle peut être précise si vous activez Position exacte dans iOS; sinon iOS fournit une position approximative.</li>
         <li><strong>Finalité :</strong> afficher votre position actuelle sur le globe.</li>
         <li><strong>Traitement :</strong> l’application utilise la localisation localement; les services Apple de cartographie et de géocodage peuvent traiter une requête de position ou de région cartographique lorsque vous utilisez ces fonctions.</li>
-        <li><strong>Autorisation :</strong> Charted demande uniquement l’accès pendant l’utilisation. Nous ne demandons pas l’accès permanent ni la localisation en arrière-plan. Vous pouvez modifier l’autorisation et la précision dans les Réglages iOS.</li>
+        <li><strong>Autorisation :</strong> Mapvoy demande uniquement l’accès pendant l’utilisation. Nous ne demandons pas l’accès permanent ni la localisation en arrière-plan. Vous pouvez modifier l’autorisation et la précision dans les Réglages iOS.</li>
       </ul>
       <h3>1.3 Microphone et reconnaissance vocale (facultatifs)</h3>
       <ul>
@@ -73,10 +74,10 @@ export default function PrivacyFr({ navigate }) {
       </ul>
       <h3>1.4 Contenu généré par IA (Apple Foundation Models)</h3>
       <ul>
-        <li><strong>Données :</strong> lorsque cette fonction est disponible, Charted utilise Foundation Models d’Apple sur l’appareil pour créer des récits à partir des renseignements locaux sur les voyages.</li>
+        <li><strong>Données :</strong> lorsque cette fonction est disponible, Mapvoy utilise Foundation Models d’Apple sur l’appareil pour créer des récits à partir des renseignements locaux sur les voyages.</li>
         <li><strong>Finalité :</strong> rédiger un résumé poétique de chaque voyage.</li>
-        <li><strong>Lieu du traitement :</strong> cette génération s’exécute sur votre appareil. Charted n’envoie pas vos instructions, photos ni votre base de données de voyages à un service d’IA infonuagique. Vous pouvez choisir de partager les textes générés ou le contenu exporté avec d’autres applications.</li>
-        <li><strong>Disponibilité :</strong> les textes génératifs nécessitent iOS 26 ou une version ultérieure, un appareil compatible et Apple Intelligence disponible pour votre langue et votre région, avec des modèles prêts à fonctionner. Sinon, Charted utilise des résumés basés sur des modèles locaux. Pro n’active pas Apple Intelligence.</li>
+        <li><strong>Lieu du traitement :</strong> cette génération s’exécute sur votre appareil. Mapvoy n’envoie pas vos instructions, photos ni votre base de données de voyages à un service d’IA infonuagique. Vous pouvez choisir de partager les textes générés ou le contenu exporté avec d’autres applications.</li>
+        <li><strong>Disponibilité :</strong> les textes génératifs nécessitent iOS 26 ou une version ultérieure, un appareil compatible et Apple Intelligence disponible pour votre langue et votre région, avec des modèles prêts à fonctionner. Sinon, Mapvoy utilise des résumés basés sur des modèles locaux. Pro n’active pas Apple Intelligence.</li>
       </ul>
 
       <h2>2. Renseignements envoyés hors de l’appareil (limités)</h2>
@@ -86,7 +87,7 @@ export default function PrivacyFr({ navigate }) {
         <li><strong>Finalité :</strong> diagnostiquer les défaillances et améliorer la fiabilité. Les rapports peuvent être associés à une installation ou à un appareil.</li>
         <li><strong>Contrôle :</strong> dans la version 1.1 actuellement publiée, les rapports de plantage sont activés par défaut, sous réserve de votre préférence enregistrée. Dans la mise à jour de conformité en attente, ils sont désactivés par défaut pour les installations App Store et le partage nécessite votre consentement explicite. Vous pouvez modifier Share Crash Reports dans Settings → Privacy &amp; Security. La désactivation arrête les futurs partages correspondants, mais ne supprime pas les rapports déjà reçus.</li>
         <li><strong>Comportement prévu pour la mise à jour de conformité :</strong> un ancien réglage activé par défaut n’est pas considéré comme un consentement. Firebase s’initialise avec les collectes d’analyses et de plantages désactivées; le choix explicite correspondant et le nettoyage des données en attente contrôlent la collecte. L’initialisation du SDK ne garantit pas l’absence de trafic avec le service. Les diagnostics locaux ne sont pas téléversés automatiquement simplement parce qu’ils existent sur votre appareil.</li>
-        <li><strong>Images :</strong> Session Replay est désactivé dans la version App Store. Charted ne joint pas d’images de la photothèque à ces rapports.</li>
+        <li><strong>Images :</strong> Session Replay est désactivé dans la version App Store. Mapvoy ne joint pas d’images de la photothèque à ces rapports.</li>
         <li><strong>Fournisseurs :</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noreferrer">Firebase</a> et <a href="https://sentry.io/privacy/" target="_blank" rel="noreferrer">Sentry</a>.</li>
       </ul>
       <h3>2.2 Diagnostics de performance</h3>
@@ -103,7 +104,7 @@ export default function PrivacyFr({ navigate }) {
       </ul>
       <h3>2.4 Achats (Apple et RevenueCat)</h3>
       <ul>
-        <li><strong>Données :</strong> Apple traite les paiements. RevenueCat reçoit l’historique d’achats et de transactions, l’état de l’abonnement et un identifiant utilisateur persistant aléatoire également utilisé comme jeton de compte StoreKit. La version 1.1 transmet aussi des attributs d’abonné sur la variante de distribution, la région générale et la cohorte de diagnostic; la mise à jour de conformité en attente supprime ces attributs définis par Charted. Les trousses logicielles de RevenueCat et d’Apple peuvent toujours recevoir les renseignements usuels sur l’application, l’appareil, la boutique ou le pays et la connexion nécessaires à leurs services.</li>
+        <li><strong>Données :</strong> Apple traite les paiements. RevenueCat reçoit l’historique d’achats et de transactions, l’état de l’abonnement et un identifiant utilisateur persistant aléatoire également utilisé comme jeton de compte StoreKit. La version 1.1 transmet aussi des attributs d’abonné sur la variante de distribution, la région générale et la cohorte de diagnostic; la mise à jour de conformité en attente supprime ces attributs définis par Mapvoy. Les trousses logicielles de RevenueCat et d’Apple peuvent toujours recevoir les renseignements usuels sur l’application, l’appareil, la boutique ou le pays et la connexion nécessaires à leurs services.</li>
         <li><strong>Finalité :</strong> validation et restauration des achats, gestion des abonnements et analyses des abonnements.</li>
         <li><strong>Contrôle :</strong> les services d’achat fonctionnent séparément du réglage des analyses d’utilisation facultatives. Nous ne recevons pas votre identifiant Apple, vos détails de carte ni votre adresse de facturation.</li>
       </ul>
@@ -124,7 +125,7 @@ export default function PrivacyFr({ navigate }) {
       <p>Nous ne recueillons pas :</p>
       <ul>
         <li>Votre nom, adresse courriel ou numéro de téléphone pour utiliser l’application; si vous écrivez à l’assistance, nous recevons votre adresse et les renseignements que vous choisissez d’envoyer</li>
-        <li>Un compte utilisateur (Charted n’exige aucune connexion)</li>
+        <li>Un compte utilisateur (Mapvoy n’exige aucune connexion)</li>
         <li>Vos contacts ou vos données de réseaux sociaux</li>
         <li>Votre historique de navigation ou les autres applications utilisées</li>
         <li>Votre photothèque sur nos serveurs (les photos sont consultées et traitées localement)</li>
@@ -133,7 +134,7 @@ export default function PrivacyFr({ navigate }) {
       </ul>
       <h2>4. Services de tiers</h2>
       <p>
-        Charted utilise les services ci-dessous. Nous restons responsables des finalités et du traitement
+        Mapvoy utilise les services ci-dessous. Nous restons responsables des finalités et du traitement
         des données personnelles que nous déterminons, y compris des demandes concernant nos sous-traitants.
         Certains fournisseurs, comme Apple pour les paiements et ses services de compte, déterminent aussi
         leurs propres finalités; leurs politiques décrivent ces traitements. Nommer un fournisseur ne
@@ -184,20 +185,20 @@ export default function PrivacyFr({ navigate }) {
         normaux de suppression; les exceptions légales de conservation seront expliquées si elles s’appliquent.
       </p>
 
-      <h2>5. Achats intégrés (Charted Pro)</h2>
+      <h2>5. Achats intégrés (Mapvoy Pro)</h2>
       <p>
-        Charted propose des abonnements (« Charted Pro »). Apple traite les transactions. RevenueCat
+        Mapvoy propose des abonnements (« Mapvoy Pro »). Apple traite les transactions. RevenueCat
         traite l’historique des transactions, l’état de l’abonnement et les identifiants décrits au §2.4.
         Nous ne voyons pas votre identifiant Apple, votre moyen de paiement ni votre adresse de facturation.
       </p>
       <p>Pour gérer ou annuler votre abonnement :</p>
       <ol>
         <li>Ouvrez Réglages sur votre iPhone</li><li>Touchez votre nom en haut de l’écran</li>
-        <li>Touchez <strong>Abonnements</strong></li><li>Sélectionnez Charted</li>
+        <li>Touchez <strong>Abonnements</strong></li><li>Sélectionnez Mapvoy</li>
       </ol>
       <p>La procédure de remboursement d’Apple s’applique sans limiter les droits impératifs des consommateurs. Consultez <a href="https://support.apple.com/HT202039" target="_blank" rel="noreferrer">Abonnements Apple</a>.</p>
       <h2>6. Confidentialité des enfants</h2>
-      <p>Charted ne s’adresse pas aux enfants de moins de 13 ans. Si vous pensez qu’un enfant nous a transmis des renseignements personnels, contactez-nous pour que nous puissions examiner et traiter la demande.</p>
+      <p>Mapvoy ne s’adresse pas aux enfants de moins de 13 ans. Si vous pensez qu’un enfant nous a transmis des renseignements personnels, contactez-nous pour que nous puissions examiner et traiter la demande.</p>
       <h2>7. Vos droits</h2>
       <p>
         Vous pouvez gérer vos données locales et préférences de partage sur votre appareil. Pour toute
@@ -210,7 +211,7 @@ export default function PrivacyFr({ navigate }) {
         sur la seule base d’un traitement automatisé.
       </p>
       <ul>
-        <li><strong>Données locales :</strong> vos voyages enregistrés sont accessibles dans Charted. Nous ne détenons pas de copie distante de votre photothèque ou de votre base de données de voyages et ne pouvons pas supprimer ces données locales depuis un serveur. Gérez-les sur votre appareil à l’aide des contrôles ci-dessous.</li>
+        <li><strong>Données locales :</strong> vos voyages enregistrés sont accessibles dans Mapvoy. Nous ne détenons pas de copie distante de votre photothèque ou de votre base de données de voyages et ne pouvons pas supprimer ces données locales depuis un serveur. Gérez-les sur votre appareil à l’aide des contrôles ci-dessous.</li>
         <li><strong>Suppression :</strong> utilisez Settings → Data Controls pour les contrôles locaux, ou supprimez l’Application. Le déchargement conserve les données. Aucune de ces actions ne supprime les photos, exports ou sauvegardes externes, abonnements Apple, documents d’achat ou diagnostics déjà reçus par les fournisseurs. Les demandes qui nous sont adressées concernent uniquement les documents que nous détenons effectivement ou que des fournisseurs traitent pour nous, comme les échanges avec l’assistance, les documents d’achat ou les diagnostics. Nous les traitons selon les droits et obligations de conservation applicables; nous expliquerons si aucun document correspondant n’est détenu ou si une obligation légale de conservation s’applique. Les demandes sur les comptes ou paiements Apple peuvent aussi être adressées à Apple.</li>
         <li><strong>Exportation :</strong> Settings → Data Controls → Export Data propose des données sélectionnées en JSON, CSV ou GPX. Ces fichiers ne sont pas une sauvegarde complète restaurable et ne comprennent pas les photos originales ni toutes les modifications et préférences. Dans la mise à jour de conformité en attente, la fonction distincte Backup &amp; Restore conserve les documents personnels qu’elle prend en charge; elle ne copie pas les originaux de Photos ni toutes les préférences.</li>
         <li><strong>Contrôles du partage :</strong> Settings → Privacy &amp; Security → Share Usage Analytics / Share Crash Reports. Les désactiver arrête les partages correspondants, mais n’efface pas les rapports déjà reçus.</li>
@@ -233,7 +234,7 @@ export default function PrivacyFr({ navigate }) {
       <h2>8. Sécurité des données</h2>
       <ul>
         <li>Vos photos, positions et données de voyages sont conservées sur votre appareil, protégées par l’isolation des applications d’iOS.</li>
-        <li>Le trafic réseau de Charted utilise HTTPS/TLS.</li>
+        <li>Le trafic réseau de Mapvoy utilise HTTPS/TLS.</li>
         <li>Nous limitons le partage hors de l’appareil aux finalités décrites ci-dessus. Aucun stockage ou mode de transmission n’est sans risque. Protégez votre appareil, vos sauvegardes et vos exports de localisation, et vérifiez la destination avant de partager.</li>
       </ul>
       <h2>9. Modification de cette politique</h2>

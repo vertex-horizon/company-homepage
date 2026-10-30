@@ -2,33 +2,33 @@
 export const CHARTED_ROUTE_META = {
   home: {
     path: '/charted', lang: 'en',
-    title: 'Charted — Chart how far you\'ve come.',
-    description: 'Your photos already remember every place you\'ve been. Charted turns them into a beautiful 3D globe — automatically, privately, on your iPhone.',
+    title: 'Mapvoy — You\'ve been further than you think.',
+    description: 'Every place in your photos, on a 3D globe. Mapvoy builds a travel map from the photos already on your iPhone, with your trips found and your countries counted.',
   },
   privacy: {
     path: '/charted/privacy', lang: 'en', alternate: 'privacyFr',
-    title: 'Privacy Policy — Charted',
-    description: 'How Charted processes your photo library locally, uses Apple and other service providers, and lets you control diagnostics and optional analytics.',
+    title: 'Privacy Policy — Mapvoy',
+    description: 'How Mapvoy processes your photo library locally, uses Apple and other service providers, and lets you control diagnostics and optional analytics.',
   },
   privacyFr: {
     path: '/charted/privacy/fr', lang: 'fr-CA', alternate: 'privacy',
-    title: 'Politique de confidentialité — Charted',
-    description: 'Traitement local des photos, services Apple et autres fournisseurs, diagnostics et analyses facultatives : vos renseignements et vos choix dans Charted.',
+    title: 'Politique de confidentialité — Mapvoy',
+    description: 'Traitement local des photos, services Apple et autres fournisseurs, diagnostics et analyses facultatives : vos renseignements et vos choix dans Mapvoy.',
   },
   terms: {
     path: '/charted/terms', lang: 'en', alternate: 'termsFr',
-    title: 'Terms of Use — Charted',
-    description: 'Charted Terms of Use. Subscription terms, your content, and how Charted Pro works.',
+    title: 'Terms of Use — Mapvoy',
+    description: 'Mapvoy Terms of Use. Subscription terms, your content, and how Mapvoy Pro works.',
   },
   termsFr: {
     path: '/charted/terms/fr', lang: 'fr-CA', alternate: 'terms',
-    title: 'Conditions d’utilisation — Charted',
-    description: 'Conditions d’utilisation de Charted : abonnements, contenu personnel, Charted Pro et droits des consommateurs.',
+    title: 'Conditions d’utilisation — Mapvoy',
+    description: 'Conditions d’utilisation de Mapvoy : abonnements, contenu personnel, Mapvoy Pro et droits des consommateurs.',
   },
   support: {
     path: '/charted/support', lang: 'en',
-    title: 'Support — Charted',
-    description: 'Help, FAQs, and contact for Charted — the photo travel mapping app.',
+    title: 'Support — Mapvoy',
+    description: 'Help, FAQs, and contact for Mapvoy — the photo travel mapping app.',
   },
 }
 
