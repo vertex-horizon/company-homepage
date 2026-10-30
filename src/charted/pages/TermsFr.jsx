@@ -185,6 +185,87 @@ export default function TermsFr({ navigate }) {
         et ne constitue pas un consentement à un traitement supplémentaire de données personnelles.
       </p>
 
+      <h3 id="fr-guarantee">5.1 Garantie légale de conformité — abonnements mensuels et annuels</h3>
+      <p>
+        Cet encadré concerne les abonnements mensuels et annuels Mapvoy Pro lorsque le droit
+        français de la consommation s’applique. Les durées indiquées s’appliquent à chaque période
+        initiale ou renouvelée de fourniture de l’abonnement. Cet encadré ne détermine ni ne réduit
+        la durée d’accès accordée au titre d’un code cadeau. Les droits impératifs applicables aux
+        autres offres restent préservés. Pour une demande concernant l’Application, contactez
+        Vertex Horizon Inc. aux coordonnées de la section 6.
+      </p>
+      {/* 按 D211-4 官方持续提供模板保留法定全文，仅将两处 X 填为实际月/年期间。
+          一次兑换不证明 Gift 属于一次性供应；本框不缩短赠送权益或承诺新的永久服务。 */}
+      <div className="c-doc-summary">
+        <p>
+          Le consommateur a droit à la mise en œuvre de la garantie légale de conformité en cas
+          d’apparition d’un défaut de conformité durant un délai de 1 mois pour un abonnement
+          mensuel ou de 1 an pour un abonnement annuel à compter de la fourniture du contenu
+          numérique ou du service numérique. Durant ce délai, le consommateur n’est tenu d’établir
+          que l’existence du défaut de conformité et non la date d’apparition de celui-ci.
+        </p>
+        <p>
+          La garantie légale de conformité emporte obligation de fournir toutes les mises à jour
+          nécessaires au maintien de la conformité du contenu numérique ou du service numérique
+          durant 1 mois pour un abonnement mensuel ou 1 an pour un abonnement annuel.
+        </p>
+        <p>
+          La garantie légale de conformité donne au consommateur droit à la mise en conformité du
+          contenu numérique ou du service numérique sans retard injustifié suivant sa demande,
+          sans frais et sans inconvénient majeur pour lui.
+        </p>
+        <p>
+          Le consommateur peut obtenir une réduction du prix en conservant le contenu numérique
+          ou le service numérique, ou il peut mettre fin au contrat en se faisant rembourser
+          intégralement contre renoncement au contenu numérique ou au service numérique, si :
+        </p>
+        <ol>
+          <li>Le professionnel refuse de mettre le contenu numérique ou le service numérique en conformité ;</li>
+          <li>La mise en conformité du contenu numérique ou du service numérique est retardée de manière injustifiée ;</li>
+          <li>La mise en conformité du contenu numérique ou du service numérique ne peut intervenir sans frais imposés au consommateur ;</li>
+          <li>La mise en conformité du contenu numérique ou du service numérique occasionne un inconvénient majeur pour le consommateur ;</li>
+          <li>La non-conformité du contenu numérique ou du service numérique persiste en dépit de la tentative de mise en conformité du professionnel restée infructueuse.</li>
+        </ol>
+        <p>
+          Le consommateur a également droit à une réduction du prix ou à la résolution du contrat
+          lorsque le défaut de conformité est si grave qu’il justifie que la réduction du prix
+          ou la résolution du contrat soit immédiate. Le consommateur n’est alors pas tenu de
+          demander la mise en conformité du contenu numérique ou du service numérique au préalable.
+        </p>
+        <p>
+          Dans les cas où le défaut de conformité est mineur, le consommateur n’a droit à
+          l’annulation du contrat que si le contrat ne prévoit pas le paiement d’un prix.
+        </p>
+        <p>
+          Toute période d’indisponibilité du contenu numérique ou du service numérique en vue de
+          sa remise en conformité suspend la garantie qui restait à courir jusqu’à la fourniture
+          du contenu numérique ou du service numérique de nouveau conforme.
+        </p>
+        <p>
+          Ces droits résultent de l’application des articles L. 224-25-1 à L. 224-25-31 du code
+          de la consommation.
+        </p>
+        <p>
+          Le professionnel qui fait obstacle de mauvaise foi à la mise en œuvre de la garantie
+          légale de conformité encourt une amende civile d’un montant maximal de 300 000 euros,
+          qui peut être porté jusqu’à 10 % du chiffre d’affaires moyen annuel (article L. 242-18-1
+          du code de la consommation).
+        </p>
+        <p>
+          Le consommateur bénéficie également de la garantie légale des vices cachés en application
+          des articles 1641 à 1649 du code civil, pendant une durée de deux ans à compter de la
+          découverte du défaut. Cette garantie donne droit à une réduction de prix si le contenu
+          numérique ou le service numérique est conservé, ou à un remboursement intégral contre
+          renonciation au contenu numérique ou au service numérique.
+        </p>
+      </div>
+      <p>
+        Modèle prévu par l’{' '}
+        <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045981322" target="_blank" rel="noreferrer">annexe à l’article D. 211-4 du code de la consommation</a>.
+        Les achats, annulations et remboursements facturés par Apple continuent d’utiliser les
+        procédures décrites à la section 4, sans limiter ces garanties.
+      </p>
+
       <h2>6. Contact et avis relatifs aux tiers</h2>
       <p><strong>Vertex Horizon Inc.</strong></p>
       <p>

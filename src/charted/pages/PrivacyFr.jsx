@@ -12,6 +12,8 @@ const PROVIDERS = [
   ['RevenueCat', 'Gestion et analyse des achats et abonnements', 'https://www.revenuecat.com/privacy/', 'Confidentialité RevenueCat'],
   ['Cartes d’Apple et géocodage', 'Requêtes de carte et d’adresse', 'https://www.apple.com/legal/privacy/', 'Confidentialité Apple'],
   ['Backblaze B2', 'Téléchargements publics de terrain et d’imagerie (§2.6)', 'https://www.backblaze.com/company/policy/privacy', 'Confidentialité Backblaze'],
+  ['GitHub Pages', 'Hébergement web et journaux de sécurité (§2.6)', 'https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement', 'Confidentialité GitHub'],
+  ['Messagerie Google', 'Acheminement des échanges avec l’assistance (§2.6)', 'https://policies.google.com/privacy', 'Confidentialité Google'],
   ['Apple MetricKit', 'Mesures de performance (§2.2)', 'https://www.apple.com/legal/privacy/', 'Confidentialité Apple'],
 ]
 
@@ -111,11 +113,15 @@ export default function PrivacyFr({ navigate }) {
         <li><strong>Contrôle :</strong> les services d’achat fonctionnent séparément du réglage des analyses d’utilisation facultatives. Nous ne recevons pas votre identifiant Apple, vos détails de carte ni votre adresse de facturation.</li>
       </ul>
       <p>
-        Les services d’achat sont initialisés au démarrage de Mapvoy. RevenueCat peut alors recevoir
+        Dans les versions antérieures à la mise à jour de synchronisation des achats à la demande,
+        les services d’achat sont initialisés au démarrage de Mapvoy. RevenueCat peut alors recevoir
         l’identifiant utilisateur persistant et des renseignements techniques sur l’application,
-        l’appareil et la connexion, même si vous n’avez pas acheté Mapvoy Pro. Ce fonctionnement est
-        distinct des analyses d’utilisation facultatives et ne transmet ni votre photothèque ni
-        votre base de données locale de voyages à RevenueCat.
+        l’appareil et la connexion, même si vous n’avez pas acheté Mapvoy Pro. Dans les versions comprenant
+        cette mise à jour, StoreKit vérifie les droits locaux et RevenueCat s’initialise lorsqu’une
+        transaction vérifiée est enregistrée ou que vous restaurez explicitement vos achats. Cela peut
+        aussi se produire au démarrage lors de la remise d’une transaction vérifiée non terminée.
+        Ces services sont distincts des analyses d’utilisation facultatives et ne transmettent ni
+        votre photothèque ni votre base de données locale de voyages à RevenueCat.
       </p>
 
       <h3>2.5 Configuration (Firebase Remote Config)</h3>
@@ -133,12 +139,20 @@ export default function PrivacyFr({ navigate }) {
 
       <h3>2.6 Ressources cartographiques publiques et assistance</h3>
       <p>
-        Mapvoy télécharge des fichiers publics de terrain et d’imagerie depuis Backblaze B2.
+        Mapvoy télécharge des fichiers publics de terrain et d’imagerie depuis le stockage Backblaze B2
+        aux États-Unis (région US East).
         Ces requêtes communiquent au fournisseur d’hébergement votre adresse IP, la ressource demandée
         et des renseignements ordinaires de connexion. Le téléchargement d’un fichier cartographique
         ne téléverse ni votre photothèque ni votre base de données locale de voyages. Si vous nous
         écrivez, nous recevons votre adresse courriel, votre message et les pièces jointes que vous
         choisissez d’envoyer; transmettez uniquement ce qui est nécessaire à votre demande.
+      </p>
+      <p>
+        Les sites web de notre société et de notre produit sont hébergés sur GitHub Pages, qui consigne
+        les adresses IP des visiteurs à des fins de sécurité. Les messages envoyés à notre adresse
+        d’assistance sont acheminés par la messagerie Google. Ces fournisseurs peuvent traiter les
+        renseignements de service aux États-Unis et dans leurs autres pays d’activité; le lieu de
+        notre personne de contact ne détermine pas tous les lieux de traitement.
       </p>
 
       <h2>3. Renseignements que nous ne recueillons pas</h2>
@@ -199,11 +213,28 @@ export default function PrivacyFr({ navigate }) {
         droit suisse, à titre subsidiaire lorsque ce cadre ne couvre pas un transfert.
       </p>
       <p>
-        Firebase et Google Analytics sont des services mondiaux; leur traitement et leur assistance
-        peuvent avoir lieu hors de votre pays. Les fournisseurs de ressources publiques et de courrier
-        décrits dans cette politique peuvent aussi traiter des informations de connexion ou des
-        messages hors de votre pays. Cet avis ne promet pas que tous les renseignements de service
-        restent aux États-Unis, dans l’UE, au Royaume-Uni ou en Suisse. Vous pouvez nous demander
+        Les transferts couverts depuis la Suisse vers{' '}
+        <a href="https://www.dataprivacyframework.gov/participant/5780" target="_blank" rel="noreferrer">Google LLC</a> et{' '}
+        <a href="https://www.dataprivacyframework.gov/participant/6408" target="_blank" rel="noreferrer">Backblaze, Inc.</a> aux États-Unis reposent sur le cadre de protection des données Suisse–États-Unis.
+        Les transferts restreints suisses vers RevenueCat, Inc. sont soumis aux clauses contractuelles
+        types de la Commission européenne, adaptées au droit suisse et intégrées à{' '}
+        <a href="https://www.revenuecat.com/dpa" target="_blank" rel="noreferrer">l’avenant de RevenueCat relatif au traitement des données</a>.
+        Ces dispositifs ne signifient pas que tous les lieux de traitement sont couverts par le cadre
+        américain ni que Vertex Horizon Inc. est elle-même certifiée.
+      </p>
+      <p>
+        Les services Google font intervenir Google LLC aux États-Unis et peuvent entraîner des
+        traitements dans d’autres pays ou territoires. Google publie des informations propres à chaque
+        service sur{' '}
+        <a href="https://business.safety.google/adssubprocessors/" target="_blank" rel="noreferrer">les lieux d’établissement des prestataires Analytics</a>,{' '}
+        <a href="https://firebase.google.com/support/privacy#data_storage_and_processing_locations" target="_blank" rel="noreferrer">les lieux de traitement mondiaux de Firebase</a> et{' '}
+        <a href="https://firebase.google.com/terms/subprocessors" target="_blank" rel="noreferrer">ses prestataires d’assistance</a>, ainsi que{' '}
+        <a href="https://workspace.google.com/terms/subprocessors/" target="_blank" rel="noreferrer">les pays de traitement et d’assistance de Workspace</a>.
+        Ces listes décrivent des lieux potentiels; vos données ne sont pas nécessairement traitées
+        dans chacun d’eux. Les lieux d’établissement des prestataires Analytics ne sont pas des lieux
+        fixes de stockage des données. Les autres fournisseurs de ressources et d’hébergement web
+        décrits dans cette politique peuvent aussi traiter des informations de connexion hors de votre pays.
+        Vous pouvez nous demander
         les lieux de traitement et les garanties propres aux services concernant vos informations,
         ainsi qu’une copie des garanties applicables lorsqu’elle est disponible, sous réserve des
         occultations nécessaires pour protéger les informations d’autrui et les clauses confidentielles.
@@ -238,6 +269,17 @@ export default function PrivacyFr({ navigate }) {
       <p>La procédure de remboursement d’Apple s’applique sans limiter les droits impératifs des consommateurs. Consultez <a href="https://support.apple.com/HT202039" target="_blank" rel="noreferrer">Abonnements Apple</a>.</p>
       <h2>6. Confidentialité des enfants</h2>
       <p>Mapvoy ne s’adresse pas aux enfants de moins de 13 ans. Si vous pensez qu’un enfant nous a transmis des renseignements personnels, contactez-nous pour que nous puissions examiner et traiter la demande.</p>
+      <p>
+        Les règles locales peuvent fixer un âge plus élevé pour consentir seul au partage facultatif
+        de données. Dans les versions comprenant la confirmation régionale du partage, l’activation
+        des analyses d’utilisation ou des rapports de plantage vous demande de confirmer que vous
+        pouvez consentir vous-même selon les règles de votre lieu de résidence. Sinon, laissez ce
+        partage désactivé; les fonctions locales essentielles restent disponibles. La déclaration
+        enregistre uniquement la version de l’avis et l’heure sur votre appareil. Elle ne recueille
+        ni votre date de naissance ni votre pays et n’est pas envoyée à un service d’analyses. Elle ne
+        constitue pas une preuve vérifiée de l’âge ou d’une autorisation parentale. Un ancien réglage
+        de partage n’est pas considéré comme une nouvelle déclaration.
+      </p>
       <h2>7. Vos droits</h2>
       <p>
         Vous pouvez gérer vos données locales et préférences de partage sur votre appareil. Pour toute
@@ -271,11 +313,11 @@ export default function PrivacyFr({ navigate }) {
         l’autorise et si nous donnons l’avis requis. Vous pouvez nous écrire en français ou en anglais.
       </p>
       <p>
-        Pour une plainte relative à la protection des données au Royaume-Uni, écrivez à notre
-        responsable à l’adresse ci-dessous et décrivez votre préoccupation. Nous accusons réception
-        dans les 30 jours, effectuons les vérifications appropriées, vous tenons au courant et
-        communiquons le résultat sans retard injustifié. Aucun formulaire particulier ni service
-        payant n’est nécessaire pour porter plainte.
+        Pour toute plainte relative à la protection des renseignements personnels, notamment au
+        Québec, écrivez à notre responsable à l’adresse ci-dessous et décrivez votre préoccupation.
+        Nous effectuons les vérifications appropriées, vous tenons au courant et communiquons le
+        résultat sans retard injustifié. Pour les plaintes relevant du Royaume-Uni, nous accusons
+        réception dans les 30 jours. Aucun formulaire particulier ni service payant n’est requis.
       </p>
       <p>
         Vous pouvez porter plainte auprès de votre autorité locale de protection des données ou demander

@@ -123,10 +123,14 @@ export default function Privacy({ navigate }) {
       </ul>
 
       <p>
-        Purchase services initialize when Mapvoy starts. RevenueCat may then receive the persistent
+        In versions before the on-demand purchase-sync update, purchase services initialize when
+        Mapvoy starts. RevenueCat may then receive the persistent
         app user ID and technical information about the app, device and connection, even if you have
-        not purchased Mapvoy Pro. This operates separately from optional usage analytics and does
-        not send your photo library or local trip database to RevenueCat.
+        not purchased Mapvoy Pro. In versions containing that update, StoreKit checks local entitlements
+        and RevenueCat initializes when a verified transaction is recorded or you explicitly restore
+        purchases. This can also happen at launch when an unfinished verified transaction is delivered.
+        These services operate separately from optional usage analytics and do not send your photo
+        library or local trip database to RevenueCat.
       </p>
 
       <h3>2.5 App Configuration (Firebase Remote Config)</h3>
@@ -141,11 +145,19 @@ export default function Privacy({ navigate }) {
 
       <h3>2.6 Public Map Resources and Support</h3>
       <p>
-        Mapvoy downloads public terrain and imagery files from Backblaze B2. These requests expose
+        Mapvoy downloads public terrain and imagery files from Backblaze B2 storage in the
+        United States (US East). These requests expose
         your IP address, the requested resource and ordinary connection information to the hosting
         provider. Downloading a map file does not upload your photo library or local trip database.
         If you email us, we receive your email address, message and any attachments you choose to send;
         please send only what is needed to resolve your request.
+      </p>
+      <p>
+        Our company and product websites are hosted on GitHub Pages, which records visitors’ IP
+        addresses for security. Messages sent to our support email are delivered through Google’s
+        email services. These providers may process service information in the United States and
+        other countries where they operate; the location of our contact person does not determine
+        every processing location.
       </p>
 
       <h2>3. Information We Do Not Collect</h2>
@@ -219,6 +231,16 @@ export default function Privacy({ navigate }) {
             <td><a href="https://www.backblaze.com/company/policy/privacy" target="_blank" rel="noreferrer">Backblaze Privacy</a></td>
           </tr>
           <tr>
+            <td><strong>GitHub Pages</strong></td>
+            <td>Website hosting and security logs (see §2.6)</td>
+            <td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noreferrer">GitHub Privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Google email services</strong></td>
+            <td>Delivery of support correspondence (see §2.6)</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google Privacy</a></td>
+          </tr>
+          <tr>
             <td><strong>Apple MetricKit</strong></td>
             <td>Performance metrics (see §2.2)</td>
             <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noreferrer">Apple Privacy</a></td>
@@ -258,10 +280,26 @@ export default function Privacy({ navigate }) {
         law as a fallback when that framework does not cover a transfer.
       </p>
       <p>
-        Firebase and Google Analytics are global services; their processing and support can take
-        place outside your country. The public-resource and email providers described in this policy
-        may also process connection or message information outside your country. This notice does not
-        promise that all service information stays in the United States, the EU, the UK or Switzerland.
+        Covered transfers from Switzerland to{' '}
+        <a href="https://www.dataprivacyframework.gov/participant/5780" target="_blank" rel="noreferrer">Google LLC</a> and{' '}
+        <a href="https://www.dataprivacyframework.gov/participant/6408" target="_blank" rel="noreferrer">Backblaze, Inc.</a> in the United States rely on the Swiss–U.S. Data Privacy Framework.
+        Swiss restricted transfers to RevenueCat, Inc. are subject to the European Commission’s
+        standard contractual clauses, with Swiss adaptations, incorporated into{' '}
+        <a href="https://www.revenuecat.com/dpa" target="_blank" rel="noreferrer">RevenueCat’s data-processing addendum</a>.
+        These arrangements do not mean every processing location is covered by the U.S. framework
+        or that Vertex Horizon Inc. is itself certified.
+      </p>
+      <p>
+        Google services involve Google LLC in the United States and may involve processing in other
+        countries or territories. Google publishes service-specific information about{' '}
+        <a href="https://business.safety.google/adssubprocessors/" target="_blank" rel="noreferrer">Analytics providers’ locations</a>,{' '}
+        <a href="https://firebase.google.com/support/privacy#data_storage_and_processing_locations" target="_blank" rel="noreferrer">Firebase’s global processing locations</a> and{' '}
+        <a href="https://firebase.google.com/terms/subprocessors" target="_blank" rel="noreferrer">support providers</a>, and{' '}
+        <a href="https://workspace.google.com/terms/subprocessors/" target="_blank" rel="noreferrer">Workspace processing and support countries</a>.
+        These describe potential service locations; your data is not necessarily processed in every
+        listed location. Analytics providers’ corporate locations are not fixed data-storage locations.
+        The other resource and website providers described in this policy may also process connection
+        information outside your country.
         You can contact us for the service-specific processing locations and safeguards relevant to
         your information, and request a copy of applicable safeguards where available, subject to
         necessary redactions protecting other people’s information and confidential terms.
@@ -305,6 +343,15 @@ export default function Privacy({ navigate }) {
         Mapvoy is not directed to children under 13. If you believe a child has provided personal
         information to us, please contact us so we can investigate and address the request.
       </p>
+      <p>
+        Local rules may set a higher age for independently consenting to optional data sharing.
+        In versions containing the regional-sharing confirmation, turning on usage analytics or
+        crash reports asks you to confirm that you can consent for yourself under the rules where
+        you live. If you cannot confirm, keep that sharing off; local core features remain available.
+        The declaration records only its notice version and time on your device. It does not collect
+        your birthday or country, is not sent to an analytics service, and is not verified proof of age
+        or parental permission. An older saved sharing preference is not treated as a new declaration.
+      </p>
 
       <h2>7. Your Rights</h2>
       <p>
@@ -337,10 +384,10 @@ export default function Privacy({ navigate }) {
         the required notice. You may contact us in English or French.
       </p>
       <p>
-        To make a UK data-protection complaint, email our privacy officer using the contact address
-        below and describe your concern. We acknowledge receipt within 30 days, make appropriate
-        enquiries, keep you informed of progress and communicate the outcome without undue delay.
-        You do not need a special form or a paid service to complain.
+        To raise a privacy complaint, including from Québec, email our privacy officer at the
+        address below and describe your concern. We investigate appropriately, keep you informed
+        of progress and communicate the outcome without undue delay. For UK data-protection
+        complaints, we acknowledge receipt within 30 days. No special form or paid service is required.
       </p>
       <p>
         You may complain to your local data-protection authority or seek a judicial remedy. In the UK,
