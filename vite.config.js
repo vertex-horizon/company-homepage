@@ -36,7 +36,9 @@ function spaFallback() {
     closeBundle() {
       const dist = path.resolve('dist')
       copyFileSync(path.join(dist, 'index.html'), path.join(dist, '404.html'))
+      // 公司首页与产品页共享 shell，但爬虫通常采用首个标签；导出产品入口前移除公司身份，避免双 canonical / OG。
       const shell = readFileSync(path.join(dist, 'index.html'), 'utf-8')
+        .replace(/^\s*<(?:link rel="canonical"|meta (?:property="og:(?:title|description|url|site_name)"|name="twitter:(?:title|description)"))[^>]*\/>\s*$/gm, '')
       const escapeHTML = (value) => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
       for (const meta of Object.values(CHARTED_ROUTE_META)) {
         const directory = path.join(dist, meta.path.slice(1))
@@ -46,10 +48,12 @@ function spaFallback() {
           `<link rel="canonical" href="${escapeHTML(`${PARENT_SITE}${meta.path}`)}" />`,
           ...routeLanguageAlternates(meta).map((alternate) => `<link rel="alternate" hreflang="${alternate.lang}" href="${escapeHTML(`${PARENT_SITE}${alternate.path}`)}" data-charted-language />`),
           `<meta property="og:title" content="${escapeHTML(meta.title)}" />`,
+          '<meta property="og:site_name" content="Mapvoy" />',
           `<meta property="og:description" content="${escapeHTML(meta.description)}" />`,
           `<meta property="og:url" content="${escapeHTML(`${PARENT_SITE}${meta.path}`)}" />`,
           `<meta name="twitter:title" content="${escapeHTML(meta.title)}" />`,
           `<meta name="twitter:description" content="${escapeHTML(meta.description)}" />`,
+          '<meta name="apple-itunes-app" content="app-id=6761878521" />',
         ].join('\n    ')
         const html = shell
           .replace(/<html lang="[^"]*">/, `<html lang="${meta.lang}">`)

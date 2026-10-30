@@ -16,7 +16,7 @@ export default function Support({ navigate }) {
   return (
     <article className="c-doc">
       <header>
-        <h1>Charted Support</h1>
+        <h1>Mapvoy Support</h1>
         <p className="c-doc-summary">
           Need help, have feedback, or found a bug?{' '}
           Email <a href={`mailto:${SUPPORT_EMAIL}`}><strong>{SUPPORT_EMAIL}</strong></a>{' '}
@@ -26,23 +26,21 @@ export default function Support({ navigate }) {
 
       <h2>Getting Started</h2>
 
-      <h3>How does Charted know where I've been?</h3>
+      <h3>How does Mapvoy know where I've been?</h3>
       <p>
         When location services are turned on for the Camera app, every photo you take saves a small piece
-        of GPS metadata (latitude, longitude, timestamp). Charted reads that metadata — never the photo
-        content itself — and turns it into a map of your travels. None of this leaves your iPhone.
+        of GPS metadata (latitude, longitude, timestamp). Mapvoy reads photo dates and locations
+        and turns them into a map of your travels on your iPhone.
       </p>
 
       <h3>What happens during the first import?</h3>
       <p>
-        Charted scans your Photos library for photos with embedded GPS. The first scan can take a minute
-        or two if you have tens of thousands of photos. After that, new photos are imported automatically
-        and incrementally — no waiting.
+        Mapvoy scans your Photos library for photos with embedded GPS. The time needed depends on your library and device. After that, new photos are imported incrementally.
       </p>
 
       <h3>Why do some of my photos not show up?</h3>
       <p>
-        Charted only imports photos that include GPS metadata. Photos without GPS are skipped. Common reasons
+        Mapvoy only imports photos that include GPS metadata. Photos without GPS are skipped. Common reasons
         photos don't have GPS:
       </p>
       <ul>
@@ -56,55 +54,52 @@ export default function Support({ navigate }) {
 
       <h2>Privacy &amp; Data</h2>
 
-      <h3>Does Charted keep my data on my iPhone?</h3>
+      <h3>Does Mapvoy keep my data on my iPhone?</h3>
       <p>
         Yes. Photo metadata, locations, journey detection, and AI narratives all run on your iPhone.
         Apple and RevenueCat support purchases; Apple services process map and address requests. Firebase and Sentry support diagnostics, app configuration, and optional usage analytics. See our Privacy Policy for the data involved and sharing controls. We don't upload your photo library or local trip database to our servers.
       </p>
 
-      <h3>Will Charted track my live location?</h3>
+      <h3>Will Mapvoy track my live location?</h3>
       <p>
-        No. Charted does not request always-on location tracking. If you tap a feature like "show me on the map,"
+        No. Mapvoy does not request always-on location tracking. If you tap a feature like "show me on the map,"
         the app uses your current location once — and that's processed on-device too.
       </p>
 
       <h3>How do I delete my data?</h3>
       <p>
-        Uninstall Charted from your iPhone. All journey data, AI narratives, and settings are stored inside
-        Charted's app sandbox, which iOS deletes when you remove the app. Your photos in the Photos app are
+        Uninstall Mapvoy from your iPhone. All journey data, AI narratives, and settings are stored inside
+        Mapvoy's app sandbox, which iOS deletes when you remove the app. Your photos in the Photos app are
         not affected.
       </p>
 
       <h3>Can I export my data?</h3>
       <p>
-        Yes. Inside Charted: <strong>Settings → Export → Export all data as JSON</strong>. You'll get a file
+        Yes. Inside Mapvoy: <strong>Settings → Export → Export all data as JSON</strong>. You'll get a file
         with all your journeys, places, and metadata in a portable format.
       </p>
 
-      <h2>Subscriptions &amp; Charted Pro</h2>
+      <h2>Subscriptions &amp; Mapvoy Pro</h2>
 
-      <h3>What does Charted Pro include?</h3>
-      <ul>
-        <li>Unlimited journey storage (Free is capped at 50)</li>
-        <li>Lumina globe style — the particle Earth, Pro-only</li>
-        <li>Advanced AI insights and longer narratives</li>
-        <li>Exclusive share templates</li>
-        <li>5 alternate app icons</li>
-      </ul>
+      <h3>What does Mapvoy Pro include?</h3>
+      <p>
+        Pro offers deeper trip reviews, more discoveries and collections, and additional sharing options.
+        The app shows the features included in each available plan before you subscribe.
+      </p>
 
       <h3>How much does Pro cost?</h3>
-      <ul>
-        <li><strong>Monthly:</strong> $2.99/month</li>
-        <li><strong>Yearly:</strong> $29.99/year, with a 7-day free trial for new subscribers</li>
-        <li><strong>Lifetime:</strong> $79.99 one-time, no recurring billing</li>
-      </ul>
+      <p>
+        Open Mapvoy Pro in the app to see available plans, current prices in your region,
+        and any eligible introductory offers. Apple displays the price and renewal terms before purchase.
+        Existing subscribers can check their next charge in Apple’s subscription settings.
+      </p>
 
       <h3>How do I cancel my subscription?</h3>
       <ol>
         <li>Open the <strong>Settings</strong> app on your iPhone</li>
         <li>Tap your <strong>name</strong> at the top</li>
         <li>Tap <strong>Subscriptions</strong></li>
-        <li>Select <strong>Charted</strong></li>
+        <li>Select <strong>Mapvoy</strong> (it may still appear as Charted on older receipts)</li>
         <li>Tap <strong>Cancel Subscription</strong></li>
       </ol>
       <p>
@@ -115,12 +110,12 @@ export default function Support({ navigate }) {
       <p>
         Refunds are handled by Apple. Visit{' '}
         <a href="https://reportaproblem.apple.com" target="_blank" rel="noreferrer">reportaproblem.apple.com</a>{' '}
-        and find the Charted purchase. Refund decisions are at Apple's discretion.
+        and find your Mapvoy purchase (older receipts may say Charted). Refund decisions are at Apple's discretion.
       </p>
 
       <h3>How do I restore a previous purchase?</h3>
       <p>
-        In the app: <strong>Settings → Charted Pro → Restore Purchases</strong>. As long as you're signed into
+        In the app: <strong>Settings → Mapvoy Pro → Restore Purchases</strong>. As long as you're signed into
         the same Apple ID you originally purchased with, your subscription or lifetime unlock will return.
       </p>
 
@@ -133,17 +128,17 @@ export default function Support({ navigate }) {
       </p>
       <ul>
         <li>Your iPhone model and iOS version</li>
-        <li>Charted version (Settings → About)</li>
+        <li>Mapvoy version (Settings → About)</li>
         <li>What you were doing when it happened</li>
         <li>Approximately how many photos you have in your library</li>
       </ul>
       <p>
-        We use anonymized crash reports to find and fix crashes — your individual data is never sent.
+        Optional diagnostic reports help us investigate crashes. See the Privacy Policy for report contents and sharing controls.
       </p>
 
       <h3>The globe looks blank after import.</h3>
       <p>
-        Charted needs at least one photo with GPS metadata to show points on the globe. If your library is
+        Mapvoy needs at least one photo with GPS metadata to show points on the globe. If your library is
         small or has photos without location data, the globe may start sparse. Take a few new photos with
         location services on, and they'll appear automatically.
       </p>
@@ -158,7 +153,7 @@ export default function Support({ navigate }) {
       <ul>
         <li>iPhone 12 or newer running <strong>iOS 17 or later</strong></li>
         <li>A photo library with location metadata (most modern iPhone photos include this automatically)</li>
-        <li>Some features, including Apple Foundation Models, require newer iOS versions and compatible devices</li>
+        <li>Trip writing with Apple Intelligence requires a compatible iPhone and iOS 26 or later</li>
       </ul>
 
       <h2>Contact</h2>
@@ -173,7 +168,7 @@ export default function Support({ navigate }) {
 
       <h2>Quick Links</h2>
       <ul>
-        <li><a href={APP_STORE_URL} target="_blank" rel="noreferrer">Charted on the App Store</a></li>
+        <li><a href={APP_STORE_URL} target="_blank" rel="noreferrer">Mapvoy on the App Store</a></li>
         <li><NavLink to="/charted/privacy" navigate={navigate}>Privacy Policy</NavLink></li>
         <li><NavLink to="/charted/terms" navigate={navigate}>Terms of Use</NavLink></li>
         <li><a href="/">Vertex Horizon (parent company)</a></li>

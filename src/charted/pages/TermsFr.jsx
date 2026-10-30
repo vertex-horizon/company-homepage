@@ -10,14 +10,15 @@ export default function TermsFr({ navigate }) {
       <header>
         <h1>Conditions d’utilisation</h1>
         <div className="c-doc-meta">
-          <span><strong>Dernière mise à jour :</strong> 1er octobre 2026</span>
+          <span><strong>Dernière mise à jour :</strong> 29 octobre 2026</span>
           <span><strong>Date d’entrée en vigueur :</strong> 1er octobre 2026</span>
         </div>
       </header>
+      <p><strong>Nom de l’application :</strong> Charted devient Mapvoy. Le fournisseur reste Vertex Horizon Inc.</p>
       <p><NavLink to="/charted/terms" navigate={navigate} hrefLang="en" lang="en">English</NavLink></p>
-      <p><strong>Langue de l’application :</strong> l’interface actuelle de Charted est en anglais. Cette page fournit les conditions en français.</p>
+      <p><strong>Langue de l’application :</strong> l’interface actuelle de Mapvoy est en anglais. Cette page fournit les conditions en français.</p>
       <p>
-        Charted est fournie par <strong>Vertex Horizon Inc.</strong> Ces conditions décrivent notre
+        Mapvoy est fournie par <strong>Vertex Horizon Inc.</strong> Ces conditions décrivent notre
         application et les modalités d’achat et d’assistance. Votre licence d’utilisation de
         l’Application est régie par le{' '}
         <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noreferrer">contrat de licence standard d’Apple (Standard EULA)</a>.
@@ -35,15 +36,15 @@ export default function TermsFr({ navigate }) {
 
       <h2>1. Admissibilité et utilisation responsable</h2>
       <p>
-        Charted est destinée aux personnes de 13 ans et plus. Si vous n’avez pas l’âge requis pour
+        Mapvoy est destinée aux personnes de 13 ans et plus. Si vous n’avez pas l’âge requis pour
         conclure un contrat ou effectuer un achat dans votre lieu de résidence, demandez
         l’autorisation et l’aide de votre parent ou tuteur. Cette déclaration d’âge ne constitue
-        ni une vérification de l’âge ni un service de consentement parental. Charted n’est pas
+        ni une vérification de l’âge ni un service de consentement parental. Mapvoy n’est pas
         conçue comme un service pour enfants. Un parent ou tuteur peut nous contacter au sujet des
         renseignements d’un enfant, comme l’explique notre Politique de confidentialité.
       </p>
       <p>
-        Utilisez Charted légalement et respectez les droits d’autrui lorsque vous importez,
+        Utilisez Mapvoy légalement et respectez les droits d’autrui lorsque vous importez,
         exportez ou partagez du contenu. L’utilisation du logiciel et les restrictions de licence
         sont prévues par le Standard EULA, sous réserve de la loi applicable et des licences des
         composants tiers inclus.
@@ -53,7 +54,7 @@ export default function TermsFr({ navigate }) {
       <p>
         Vous conservez les droits que vous détenez sur vos photos et vos autres contenus. Nous
         n’acquérons pas la propriété de vos contenus locaux du seul fait de votre utilisation de
-        Charted. Charted lit les dates et les lieux des photos, affiche les images et les analyse
+        Mapvoy. Mapvoy lit les dates et les lieux des photos, affiche les images et les analyse
         sur votre appareil pour organiser vos souvenirs de voyage. Elle ne modifie pas les
         originaux dans Photos d’Apple et ne téléverse pas votre photothèque ni votre base de
         données locale de voyages vers nos serveurs ou un service d’IA infonuagique. Photos
@@ -69,29 +70,29 @@ export default function TermsFr({ navigate }) {
         Les enregistrements, les lieux détectés, les estimations de distance en ligne droite, les
         frontières cartographiques et les textes générés peuvent être incomplets ou inexacts.
         Ils ne prouvent pas un itinéraire mesuré, l’entrée dans un lieu ni une frontière politique
-        ou juridique. Vérifiez les contenus générés avant de les partager. Charted n’est pas
+        ou juridique. Vérifiez les contenus générés avant de les partager. Mapvoy n’est pas
         destinée à la navigation, aux interventions d’urgence, au franchissement de frontières
         ni à la détermination de la compétence juridique.
       </p>
       <p>
         La génération de récits nécessite iOS 26 ou une version ultérieure et Apple Intelligence
         disponible sur votre appareil, notamment un appareil, une langue et une région compatibles
-        ainsi que des modèles prêts. À défaut, Charted utilise des résumés basés sur des modèles
+        ainsi que des modèles prêts. À défaut, Mapvoy utilise des résumés basés sur des modèles
         locaux. L’achat de Pro n’active pas Apple Intelligence.
       </p>
       <p>
         Data Export produit des enregistrements sélectionnés en JSON, CSV ou GPX. Elle ne comprend
         pas les photos originales ni toutes les modifications ou préférences, et ses fichiers ne
-        peuvent pas être importés pour restaurer Charted. La fonction distincte Backup &amp;
+        peuvent pas être importés pour restaurer Mapvoy. La fonction distincte Backup &amp;
         Restore conserve les données personnelles qu’elle énumère dans un fichier JSON non
-        chiffré et exige une bibliothèque Charted vide pour la restauration. Elle ne récupère
+        chiffré et exige une bibliothèque Mapvoy vide pour la restauration. Elle ne récupère
         pas les photos originales, toutes les préférences ni les achats. Conservez les fichiers
         exportés dans un lieu fiable. La suppression des données locales ou de l’Application ne
         supprime pas les exports ou sauvegardes enregistrés ailleurs, les originaux dans Photos
         d’Apple, les relevés d’achat ni les rapports déjà reçus par des fournisseurs.
       </p>
 
-      <h2>3. Achats Charted Pro</h2>
+      <h2>3. Achats Mapvoy Pro</h2>
       <p>
         Les formules mensuelle et annuelle sont des abonnements renouvelés automatiquement.
         La version 1.1.1 affiche les prix renvoyés par l’App Store dans la devise de votre boutique,
@@ -126,12 +127,12 @@ export default function TermsFr({ navigate }) {
 
       <h2>4. Gestion, annulation, restauration et remboursement</h2>
       <p>
-        Dans la version 1.1.1, ouvrez Settings → Profile → Your Charted Pro → Manage or Cancel
+        Dans la version 1.1.1, ouvrez Settings → Profile → Your Mapvoy Pro → Manage or Cancel
         Subscription pour accéder directement au panneau de gestion d’Apple. Vous pouvez aussi
-        ouvrir Réglages sur votre iPhone → votre nom → Abonnements → Charted et suivre les
+        ouvrir Réglages sur votre iPhone → votre nom → Abonnements → Mapvoy et suivre les
         instructions d’Apple. Utilisez le compte Apple associé à l’achat. Apple indique la fin
         de l’accès, qui peut dépendre de l’offre et de votre région. Supprimer ou décharger
-        Charted, supprimer les données locales ou utiliser un cadeau n’annule pas un abonnement
+        Mapvoy, supprimer les données locales ou utiliser un cadeau n’annule pas un abonnement
         existant. Consultez les{' '}
         <a href="https://support.apple.com/fr-ca/118428" target="_blank" rel="noreferrer">instructions d’annulation d’Apple</a>.
       </p>

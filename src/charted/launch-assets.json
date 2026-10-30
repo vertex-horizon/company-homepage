@@ -1,0 +1,194 @@
+{
+  "source_file": "ir3wSrI7a6lgSj6I48afVD",
+  "source_page": "1041:2",
+  "exported_on": "2026-10-29",
+  "kind": "Figma launch illustrations with sample travel data",
+  "assets": [
+    {
+      "name": "mapvoy-og",
+      "node_id": "1050:11462",
+      "source_png_sha256": "a458bd2968bcc4f25d115ff77a6fdddc17433a9fc14060be0eb7b54fa71e2ae9",
+      "source_size": [
+        1200,
+        630
+      ],
+      "files": [
+        {
+          "path": "public/mapvoy/media/mapvoy-og.png",
+          "sha256": "a458bd2968bcc4f25d115ff77a6fdddc17433a9fc14060be0eb7b54fa71e2ae9"
+        }
+      ]
+    },
+    {
+      "name": "01-further",
+      "node_id": "1042:2",
+      "source_png_sha256": "bece7037825d6f0d449b106084a05bc846ebe8c1e0d60d75274e3c6fff2a306e",
+      "source_size": [
+        1320,
+        2868
+      ],
+      "files": [
+        {
+          "path": "public/mapvoy/media/01-further-660.webp",
+          "sha256": "40b4498e8de6a494db6d7b04c454af101f08398164036bebe2eda82b880c8a51"
+        },
+        {
+          "path": "public/mapvoy/media/01-further-1320.webp",
+          "sha256": "44965f5fcdbf32b485bc0c73f6e9d90f489f1e6d24651a64b66a4e274d1330b4"
+        }
+      ]
+    },
+    {
+      "name": "02-trips",
+      "node_id": "1044:1111",
+      "source_png_sha256": "0201781392d0d9ebacb7abb7a5789c797dc60fad5e6ff8dd431c38c96d401d97",
+      "source_size": [
+        1320,
+        2868
+      ],
+      "files": [
+        {
+          "path": "public/mapvoy/media/02-trips-660.webp",
+          "sha256": "c06d0d4c4e290a91507881a4977f50db9ed5de54457e7de16963b088a36f44f9"
+        },
+        {
+          "path": "public/mapvoy/media/02-trips-1320.webp",
+          "sha256": "308589993edafed816db8a0c58a0643ccb1fefaf001dc3061034b61cbbb8d2b2"
+        }
+      ]
+    },
+    {
+      "name": "03-countries",
+      "node_id": "1044:1495",
+      "source_png_sha256": "1dbb7d44c40d92a5986378ed97d220e472dd64f23626cbf25c7eff145932286b",
+      "source_size": [
+        1320,
+        2868
+      ],
+      "files": [
+        {
+          "path": "public/mapvoy/media/03-countries-660.webp",
+          "sha256": "bc79bea067abc392895dbb9e4d507bd636f2565694e8815ad9f5a9965d3adccd"
+        },
+        {
+          "path": "public/mapvoy/media/03-countries-1320.webp",
+          "sha256": "00e9c0332d9b76880d1981bc8e40492585d179477a87c3b7cd464e2077f4f80c"
+        }
+      ]
+    },
+    {
+      "name": "04-sunlight",
+      "node_id": "1042:225",
+      "source_png_sha256": "b5876810308c6361b18bf58de2be249a0b9cc6f134388d3a9ee5b2d457b63d54",
+      "source_size": [
+        1320,
+        2868
+      ],
+      "files": [
+        {
+          "path": "public/mapvoy/media/04-sunlight-660.webp",
+          "sha256": "f1c4d42e83bc1a18e03a427dde34e2d7b990b74c54692c25820395f0cee62a89"
+        },
+        {
+          "path": "public/mapvoy/media/04-sunlight-1320.webp",
+          "sha256": "90f1ffac245a3376b61fb3b8d5c09d1d1bfa55aeaa3fa7321e49461d5fba6f19"
+        }
+      ]
+    },
+    {
+      "name": "05-ink",
+      "node_id": "1042:362",
+      "source_png_sha256": "0b1d0e18fe3325021da95b8f726eec2fc652506d06e9ce62b648359003e2fea3",
+      "source_size": [
+        1320,
+        2868
+      ],
+      "files": [
+        {
+          "path": "public/mapvoy/media/05-ink-660.webp",
+          "sha256": "eaa22c49fdfe598fc092a71b6b7ed3c9e6afe83e0a585aa8d0e2588984abe0f9"
+        },
+        {
+          "path": "public/mapvoy/media/05-ink-1320.webp",
+          "sha256": "f87206c939e1bdab61ec8c1acd23791173203e11d5e10c2695a8429357ca7d65"
+        }
+      ]
+    },
+    {
+      "name": "06-paint",
+      "node_id": "1042:487",
+      "source_png_sha256": "0fda88a68825cf4d75035880abe0da1d8820fdb392998593bf3f161b46b68e24",
+      "source_size": [
+        1320,
+        2868
+      ],
+      "files": [
+        {
+          "path": "public/mapvoy/media/06-paint-660.webp",
+          "sha256": "17e9851e28d708f94282f13293752b43c3e6f0747266c511a5de9b8bcf3e2156"
+        },
+        {
+          "path": "public/mapvoy/media/06-paint-1320.webp",
+          "sha256": "efbb4131b3e563fdd5c2f34408791ab9da1a9dcf5b3f33789af1017e94ef8cc4"
+        }
+      ]
+    },
+    {
+      "name": "07-logbook",
+      "node_id": "1044:2166",
+      "source_png_sha256": "6608a57b4d5ce26506041c6f3c031df04ba8e8856f105004fbe2d47391226fe0",
+      "source_size": [
+        1320,
+        2868
+      ],
+      "files": [
+        {
+          "path": "public/mapvoy/media/07-logbook-660.webp",
+          "sha256": "c88ff9d6b8442d733c7249368141625298718737d30f40616af53441eb085883"
+        },
+        {
+          "path": "public/mapvoy/media/07-logbook-1320.webp",
+          "sha256": "299dd46042a14e4a54b859882012fa04bbb282b0b88490274a44eb8fbbcad04e"
+        }
+      ]
+    },
+    {
+      "name": "08-share",
+      "node_id": "1044:2328",
+      "source_png_sha256": "e76c788951d53cffd19a9e72f3b040d65e2567489a5ad0e0587eaa0348765688",
+      "source_size": [
+        1320,
+        2868
+      ],
+      "files": [
+        {
+          "path": "public/mapvoy/media/08-share-660.webp",
+          "sha256": "20adfacbbb2899ce1b30ab67768f3159361f236b93d532bc8f1053f747dc5fbf"
+        },
+        {
+          "path": "public/mapvoy/media/08-share-1320.webp",
+          "sha256": "b2effbb5b48fe8cdc729f173ca772e0785701fdf50054da00a39b61b050b6f64"
+        }
+      ]
+    },
+    {
+      "name": "10-numbers",
+      "node_id": "1044:1749",
+      "source_png_sha256": "dd1d255540be4df1a5fab5941784b599d973d7986027daa6b22cc484c51e96d8",
+      "source_size": [
+        1320,
+        2868
+      ],
+      "files": [
+        {
+          "path": "public/mapvoy/media/10-numbers-660.webp",
+          "sha256": "8113eb130132683dc8db12c030d81162a25958a7f11796a409fdf83ba91d451a"
+        },
+        {
+          "path": "public/mapvoy/media/10-numbers-1320.webp",
+          "sha256": "d76d84d84a0fad162370f53949094aa88a8c6d8adfa7a661506e2ada13682bf3"
+        }
+      ]
+    }
+  ]
+}

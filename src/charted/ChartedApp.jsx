@@ -12,7 +12,8 @@ import { APP_STORE_URL, SUPPORT_EMAIL, PARENT_SITE } from './config.js'
 import { CHARTED_ROUTE_META, routeLanguageAlternates } from './routeMetadata.js'
 
 /**
- * Charted sub-brand site.
+ * Mapvoy sub-brand site.
+ * 旧 /charted 路径仍被已发布 App 和分享链接使用；改品牌不改这些入口。
  *
  * Internal routing without react-router (kept lightweight).
  * Listens to popstate for back/forward; pushes state for in-app links.
@@ -73,6 +74,7 @@ export default function ChartedApp() {
 
     setMeta('description', 'name', meta.description)
     setMeta('og:title', 'property', meta.title)
+    setMeta('og:site_name', 'property', 'Mapvoy')
     setMeta('og:description', 'property', meta.description)
     setMeta('twitter:title', 'name', meta.title)
     setMeta('twitter:description', 'name', meta.description)
@@ -136,10 +138,10 @@ export function NavLink({ to, navigate, children, className, ...rest }) {
 }
 
 /* ────────────────────────────────────────────────────────────
- * Charted brand mark
+ * Mapvoy brand mark
  *
- * Source of truth: Charted/Assets.xcassets/AppIcon.appiconset/AppIcon-1024-light.png
- * Pre-resized to 180px in /public/charted/icon/icon-180.png so browsers
+ * Source of truth: life-footprints/Charted/AppIcon.icon (approved stamp globe)
+ * Pre-resized to 180px in /public/mapvoy/icon/icon-180.png so browsers
  * don't down-scale a 1024px PNG every render.
  *
  * The wrapping rounded square + ring matches Apple's icon presentation
@@ -152,7 +154,7 @@ function ChartedMark({ size = 28 }) {
       style={{ width: size, height: size }}
       aria-hidden="true"
     >
-      <img src="/charted/icon/icon-180.png" alt="" width={size} height={size} />
+      <img src="/mapvoy/icon/icon-180.png" alt="" width={size} height={size} />
     </span>
   )
 }
@@ -188,7 +190,7 @@ function Nav({ navigate }) {
       <div className="c-nav-inner">
         <NavLink to="/charted" navigate={navigateAndClose} className="c-nav-brand">
           <ChartedMark />
-          <span>Charted</span>
+          <span>Mapvoy</span>
         </NavLink>
 
         <div className={`c-nav-links${open ? ' is-open' : ''}`}>
@@ -233,12 +235,12 @@ function Footer({ navigate }) {
       <div className="c-footer-inner">
         <div className="c-footer-brand">
           <ChartedMark size={24} />
-          <span>Charted</span>
+          <span>Mapvoy</span>
         </div>
 
         <div className="c-footer-cols">
           <div className="c-footer-col">
-            <h4>Charted</h4>
+            <h4>Mapvoy</h4>
             <NavLink to="/charted" navigate={navigate}>Overview</NavLink>
             <a href={APP_STORE_URL} target="_blank" rel="noreferrer">
               App Store
@@ -263,13 +265,14 @@ function Footer({ navigate }) {
           <p className="c-footer-copy">
             © {new Date().getFullYear()} Vertex Horizon Inc. — Made with care, on device.
           </p>
-          <p className="c-footer-tagline">Chart how far you've come.</p>
+          <p className="c-footer-tagline">Mapvoy: map + voyage.</p>
         </div>
 
         <p className="c-footer-attribution">
           Earth imagery courtesy of NASA Visible Earth (Public Domain).
           Country boundaries from Natural Earth (Public Domain).
-          Earth textures by Solar System Scope (CC BY 4.0).
+          Earth textures by Solar System Scope (CC BY 4.0).{' '}
+          <a href="/mapvoy/credits.html">Artwork credits</a>.
         </p>
       </div>
     </footer>
