@@ -11,6 +11,7 @@ const PROVIDERS = [
   ['Sentry', 'Diagnostics de plantage, d’erreur et de performance', 'https://sentry.io/privacy/', 'Confidentialité Sentry'],
   ['RevenueCat', 'Gestion et analyse des achats et abonnements', 'https://www.revenuecat.com/privacy/', 'Confidentialité RevenueCat'],
   ['Cartes d’Apple et géocodage', 'Requêtes de carte et d’adresse', 'https://www.apple.com/legal/privacy/', 'Confidentialité Apple'],
+  ['Backblaze B2', 'Téléchargements publics de terrain et d’imagerie (§2.6)', 'https://www.backblaze.com/company/policy/privacy', 'Confidentialité Backblaze'],
   ['Apple MetricKit', 'Mesures de performance (§2.2)', 'https://www.apple.com/legal/privacy/', 'Confidentialité Apple'],
 ]
 
@@ -26,7 +27,7 @@ export default function PrivacyFr({ navigate }) {
       </header>
       <p><strong>Nom de l’application :</strong> Charted devient Mapvoy. Le fournisseur reste Vertex Horizon Inc.</p>
       <p><NavLink to={productPath('/privacy')} navigate={navigate} hrefLang="en" lang="en">English</NavLink></p>
-      <p><strong>Langue de l’application :</strong> l’interface actuelle de Mapvoy est en anglais. Cette page fournit les renseignements de confidentialité en français.</p>
+      <p><strong>Langue de l’application :</strong> les textes disponibles dépendent de la version installée et de la langue choisie dans iOS. Cette page fournit les renseignements de confidentialité en français.</p>
       <p>
         Mapvoy est créée par <strong>Vertex Horizon Inc.</strong> (« nous », « notre », « nos »).
         Cette Politique de confidentialité explique quelles données Mapvoy traite, comment elles
@@ -109,6 +110,14 @@ export default function PrivacyFr({ navigate }) {
         <li><strong>Finalité :</strong> validation et restauration des achats, gestion des abonnements et analyses des abonnements.</li>
         <li><strong>Contrôle :</strong> les services d’achat fonctionnent séparément du réglage des analyses d’utilisation facultatives. Nous ne recevons pas votre identifiant Apple, vos détails de carte ni votre adresse de facturation.</li>
       </ul>
+      <p>
+        Les services d’achat sont initialisés au démarrage de Mapvoy. RevenueCat peut alors recevoir
+        l’identifiant utilisateur persistant et des renseignements techniques sur l’application,
+        l’appareil et la connexion, même si vous n’avez pas acheté Mapvoy Pro. Ce fonctionnement est
+        distinct des analyses d’utilisation facultatives et ne transmet ni votre photothèque ni
+        votre base de données locale de voyages à RevenueCat.
+      </p>
+
       <h3>2.5 Configuration (Firebase Remote Config)</h3>
       <p>
         Firebase Remote Config reçoit des renseignements sur l’application, le système, la langue,
@@ -120,6 +129,16 @@ export default function PrivacyFr({ navigate }) {
         locaux ou par défaut et arrête les nouvelles requêtes et mises à jour en direct. Une requête déjà
         en cours peut encore parvenir au fournisseur; les résultats reçus après le retrait sont ignorés.
         Ni la photothèque ni la base de données de voyages ne sont incluses.
+      </p>
+
+      <h3>2.6 Ressources cartographiques publiques et assistance</h3>
+      <p>
+        Mapvoy télécharge des fichiers publics de terrain et d’imagerie depuis Backblaze B2.
+        Ces requêtes communiquent au fournisseur d’hébergement votre adresse IP, la ressource demandée
+        et des renseignements ordinaires de connexion. Le téléchargement d’un fichier cartographique
+        ne téléverse ni votre photothèque ni votre base de données locale de voyages. Si vous nous
+        écrivez, nous recevons votre adresse courriel, votre message et les pièces jointes que vous
+        choisissez d’envoyer; transmettez uniquement ce qui est nécessaire à votre demande.
       </p>
 
       <h2>3. Renseignements que nous ne recueillons pas</h2>
@@ -162,15 +181,33 @@ export default function PrivacyFr({ navigate }) {
         <li><strong>Ancienne configuration et sécurité :</strong> la configuration de 1.1 repose sur notre intérêt légitime à fournir des réglages de fonctions. La protection de l’application et la lutte contre les abus reposent sur nos intérêts légitimes, mis en balance avec vos droits. Dans les versions comprenant la mise à jour de confidentialité, la configuration distante et les expériences sont facultatives et fondées sur le consentement; nous ne les qualifions pas de nécessaires à l’utilisation.</li>
         <li><strong>Assistance :</strong> répondre à votre demande concernant l’application ou un abonnement est nécessaire pour vous assister dans le cadre du contrat; les autres échanges reposent sur notre intérêt légitime à répondre aux questions. Nous conservons des documents si nécessaire pour respecter des obligations légales ou traiter des réclamations.</li>
       </ul>
-      <h3>4.2 Lieux de traitement</h3>
+      <h3>4.2 Lieux de traitement et garanties de transfert</h3>
       <p>
-        Les fournisseurs décrits ci-dessus peuvent traiter des renseignements hors de votre pays,
-        notamment aux États-Unis. Le traitement local des photos et voyages n’est pas une promesse
-        que tous les renseignements de service restent dans votre pays. Les politiques des fournisseurs
-        décrivent leurs lieux de traitement et leurs mécanismes de transfert. Vous pouvez nous demander
-        des renseignements sur les fournisseurs et les garanties applicables aux traitements effectués
-        pour nous; cette politique ne prétend pas à un hébergement exclusivement dans l’UE ou au Royaume-Uni.
+        Vertex Horizon Inc. est établie aux États-Unis. Nous traitons les demandes d’assistance et
+        de protection des données depuis les États-Unis. RevenueCat, Inc. fournit nos services
+        d’achat et de gestion des droits d’accès aux États-Unis. Votre photothèque et votre base
+        locale de voyages ne nous sont pas transmises, ni à RevenueCat, dans le cadre de ces services.
       </p>
+      <p>
+        Lorsque les diagnostics Sentry sont activés, les rapports sont stockés aux États-Unis.
+        Les sociétés affiliées de Sentry peuvent également traiter les informations nécessaires au
+        service et à l’assistance technique en Autriche, au Canada et aux Pays-Bas. Functional Software,
+        Inc., qui exerce sous le nom de Sentry, participe actuellement au{' '}
+        <a href="https://www.dataprivacyframework.gov/participant/5869" target="_blank" rel="noreferrer">cadre de protection des données Suisse–États-Unis</a> pour les traitements couverts aux États-Unis.
+        Notre accord de traitement Sentry comprend des clauses contractuelles types adaptées au
+        droit suisse, à titre subsidiaire lorsque ce cadre ne couvre pas un transfert.
+      </p>
+      <p>
+        Firebase et Google Analytics sont des services mondiaux; leur traitement et leur assistance
+        peuvent avoir lieu hors de votre pays. Les fournisseurs de ressources publiques et de courrier
+        décrits dans cette politique peuvent aussi traiter des informations de connexion ou des
+        messages hors de votre pays. Cet avis ne promet pas que tous les renseignements de service
+        restent aux États-Unis, dans l’UE, au Royaume-Uni ou en Suisse. Vous pouvez nous demander
+        les lieux de traitement et les garanties propres aux services concernant vos informations,
+        ainsi qu’une copie des garanties applicables lorsqu’elle est disponible, sous réserve des
+        occultations nécessaires pour protéger les informations d’autrui et les clauses confidentielles.
+      </p>
+
       <h3>4.3 Conservation</h3>
       <ul>
         <li><strong>Contenu local :</strong> conservé jusqu’à la suppression des données concernées ou de l’Application, sous réserve des exports, sauvegardes et du déchargement décrits au §1.1. Les images en cache peuvent être supprimées plus tôt.</li>
@@ -226,9 +263,27 @@ export default function PrivacyFr({ navigate }) {
         ni votre historique complet de localisation par courriel simplement pour faire une demande.
       </p>
       <p>
+        Pour les demandes d’accès et de rectification au Canada, nous répondons dans le délai prévu
+        par la loi fédérale ou provinciale applicable, normalement 30 jours. Pour les demandes d’accès
+        et de rectification au Québec, nous répondons par écrit dans les 30 jours. Nous expliquons
+        tout refus et les recours disponibles. Une prolongation ne s’applique que si la loi concernée
+        l’autorise et si nous donnons l’avis requis. Vous pouvez nous écrire en français ou en anglais.
+      </p>
+      <p>
+        Pour une plainte relative à la protection des données au Royaume-Uni, écrivez à notre
+        responsable à l’adresse ci-dessous et décrivez votre préoccupation. Nous accusons réception
+        dans les 30 jours, effectuons les vérifications appropriées, vous tenons au courant et
+        communiquons le résultat sans retard injustifié. Aucun formulaire particulier ni service
+        payant n’est nécessaire pour porter plainte.
+      </p>
+      <p>
         Vous pouvez porter plainte auprès de votre autorité locale de protection des données ou demander
         un recours judiciaire. Au Royaume-Uni, contactez l’<a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noreferrer">Information Commissioner’s Office</a>;
         en Irlande, contactez la <a href="https://www.dataprotection.ie/en/individuals/exercising-your-rights/complaints-handling-investigations-and-enforcement-individuals" target="_blank" rel="noreferrer">Data Protection Commission</a>.
+        Vous pouvez aussi contacter la <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noreferrer">CNIL (France)</a>,{' '}
+        la <a href="https://cnpd.public.lu/fr/particuliers/faire-valoir/formulaire-plainte.html" target="_blank" rel="noreferrer">CNPD (Luxembourg)</a>,{' '}
+        l’<a href="https://idpc.org.mt/for-individuals/" target="_blank" rel="noreferrer">IDPC (Malte)</a>,{' '}
+        le <a href="https://www.edoeb.admin.ch/fr" target="_blank" rel="noreferrer">PFPDT (Suisse)</a> ou l’autorité canadienne fédérale ou provinciale compétente.
         Vous n’avez pas à renoncer à ces droits pour nous contacter d’abord.
       </p>
       <p>Pour toute question : <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a></p>

@@ -122,6 +122,13 @@ export default function Privacy({ navigate }) {
         <li><strong>Control:</strong> Purchase services operate separately from the optional usage-analytics switch. We do not receive your Apple ID, payment-card details, or billing address.</li>
       </ul>
 
+      <p>
+        Purchase services initialize when Mapvoy starts. RevenueCat may then receive the persistent
+        app user ID and technical information about the app, device and connection, even if you have
+        not purchased Mapvoy Pro. This operates separately from optional usage analytics and does
+        not send your photo library or local trip database to RevenueCat.
+      </p>
+
       <h3>2.5 App Configuration (Firebase Remote Config)</h3>
       <p>
         Firebase Remote Config receives app, operating-system, language, country/region and installation
@@ -130,6 +137,15 @@ export default function Privacy({ navigate }) {
         fetching and live configuration updates require usage-analytics consent. Pending-data cleanup and current consent control collection;
         initialization itself is not a promise of zero SDK service traffic. With usage analytics disabled or withdrawn, the App uses local/default
         feature settings and stops new fetches and live updates. Requests already in flight may still reach the provider; results received after withdrawal are ignored. No photo library or trip database is included.
+      </p>
+
+      <h3>2.6 Public Map Resources and Support</h3>
+      <p>
+        Mapvoy downloads public terrain and imagery files from Backblaze B2. These requests expose
+        your IP address, the requested resource and ordinary connection information to the hosting
+        provider. Downloading a map file does not upload your photo library or local trip database.
+        If you email us, we receive your email address, message and any attachments you choose to send;
+        please send only what is needed to resolve your request.
       </p>
 
       <h2>3. Information We Do Not Collect</h2>
@@ -198,6 +214,11 @@ export default function Privacy({ navigate }) {
             <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noreferrer">Apple Privacy</a></td>
           </tr>
           <tr>
+            <td><strong>Backblaze B2</strong></td>
+            <td>Public terrain and imagery downloads (see §2.6)</td>
+            <td><a href="https://www.backblaze.com/company/policy/privacy" target="_blank" rel="noreferrer">Backblaze Privacy</a></td>
+          </tr>
+          <tr>
             <td><strong>Apple MetricKit</strong></td>
             <td>Performance metrics (see §2.2)</td>
             <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noreferrer">Apple Privacy</a></td>
@@ -220,13 +241,29 @@ export default function Privacy({ navigate }) {
         <li><strong>Support:</strong> Responding to your app or subscription request is necessary to assist you under our contract; other correspondence uses our legitimate interest in responding to questions. We retain records where needed to comply with legal obligations or handle legal claims.</li>
       </ul>
 
-      <h3>4.2 Processing Locations</h3>
+      <h3>4.2 Processing Locations and Transfer Safeguards</h3>
       <p>
-        The providers described above may process information outside your country, including in the
-        United States. Local photo and trip processing is not a promise that all service information
-        stays in your country. Provider policies describe their processing locations and transfer
-        arrangements. You can contact us for information about the providers and applicable safeguards
-        for processing on our behalf; this policy does not assert EU/UK-only hosting.
+        Vertex Horizon Inc. is based in the United States. We handle privacy and support requests
+        from the United States. RevenueCat, Inc. provides our purchase and entitlement services in
+        the United States. Your photo library and local trip database are not uploaded to us or
+        RevenueCat as part of these services.
+      </p>
+      <p>
+        When Sentry diagnostics are enabled, reports are stored in the United States. Sentry’s
+        service and technical-support affiliates may also process relevant information in Austria,
+        Canada and the Netherlands. Functional Software, Inc., doing business as Sentry, currently
+        participates in the <a href="https://www.dataprivacyframework.gov/participant/5869" target="_blank" rel="noreferrer">Swiss–U.S. Data Privacy Framework</a> for covered U.S. processing.
+        Our Sentry data-processing agreement includes standard contractual clauses adapted to Swiss
+        law as a fallback when that framework does not cover a transfer.
+      </p>
+      <p>
+        Firebase and Google Analytics are global services; their processing and support can take
+        place outside your country. The public-resource and email providers described in this policy
+        may also process connection or message information outside your country. This notice does not
+        promise that all service information stays in the United States, the EU, the UK or Switzerland.
+        You can contact us for the service-specific processing locations and safeguards relevant to
+        your information, and request a copy of applicable safeguards where available, subject to
+        necessary redactions protecting other people’s information and confidential terms.
       </p>
 
       <h3>4.3 Retention</h3>
@@ -292,9 +329,26 @@ export default function Privacy({ navigate }) {
         records. Please do not email your photo library or full location history just to make a request.
       </p>
       <p>
+        For Canadian access and correction requests, we respond within the period required by the
+        applicable federal or provincial law, normally 30 days. For Québec access and correction
+        requests, we respond in writing within 30 days. We explain any refusal and the available
+        review process. An extension applies only where the relevant law permits it and we give
+        the required notice. You may contact us in English or French.
+      </p>
+      <p>
+        To make a UK data-protection complaint, email our privacy officer using the contact address
+        below and describe your concern. We acknowledge receipt within 30 days, make appropriate
+        enquiries, keep you informed of progress and communicate the outcome without undue delay.
+        You do not need a special form or a paid service to complain.
+      </p>
+      <p>
         You may complain to your local data-protection authority or seek a judicial remedy. In the UK,
         contact the <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noreferrer">Information Commissioner's Office</a>;
         in Ireland, contact the <a href="https://www.dataprotection.ie/en/individuals/exercising-your-rights/complaints-handling-investigations-and-enforcement-individuals" target="_blank" rel="noreferrer">Data Protection Commission</a>.
+        You may also contact <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noreferrer">CNIL (France)</a>,{' '}
+        <a href="https://cnpd.public.lu/en/particuliers/faire-valoir/formulaire-plainte.html" target="_blank" rel="noreferrer">CNPD (Luxembourg)</a>,{' '}
+        <a href="https://idpc.org.mt/for-individuals/" target="_blank" rel="noreferrer">IDPC (Malta)</a>,{' '}
+        <a href="https://www.edoeb.admin.ch/en" target="_blank" rel="noreferrer">FDPIC (Switzerland)</a>, or the competent Canadian federal or provincial authority.
         You do not have to waive those rights to contact us first.
       </p>
       <p>

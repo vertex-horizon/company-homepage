@@ -36,6 +36,13 @@ export default function Terms({ navigate }) {
         not change the behavior of an older installed app or retrospectively change an existing purchase.
       </p>
 
+      <p>
+        English and French versions of this notice and our Privacy Policy are available without
+        additional charge. You can review the French version before making a purchase. The App Store
+        presents the amount, billing period, offer and Apple transaction terms when you buy.
+        Choosing English does not waive any mandatory language right.
+      </p>
+
       <h2>1. Eligibility and Responsible Use</h2>
       <p>
         Mapvoy is intended for people aged 13 and over. If you are under the age required to enter

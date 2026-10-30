@@ -17,7 +17,7 @@ export default function TermsFr({ navigate }) {
       </header>
       <p><strong>Nom de l’application :</strong> Charted devient Mapvoy. Le fournisseur reste Vertex Horizon Inc.</p>
       <p><NavLink to={productPath('/terms')} navigate={navigate} hrefLang="en" lang="en">English</NavLink></p>
-      <p><strong>Langue de l’application :</strong> l’interface actuelle de Mapvoy est en anglais. Cette page fournit les conditions en français.</p>
+      <p><strong>Langue de l’application :</strong> les textes disponibles dépendent de la version installée et de la langue choisie dans iOS. Cette page fournit les conditions en français.</p>
       <p>
         Mapvoy est fournie par <strong>Vertex Horizon Inc.</strong> Ces conditions décrivent notre
         application et les modalités d’achat et d’assistance. Votre licence d’utilisation de
@@ -32,6 +32,14 @@ export default function TermsFr({ navigate }) {
         installée. Consultez les renseignements relatifs à votre version et la Politique de confidentialité.
         La publication de ces conditions ne modifie pas le comportement d’une ancienne version de
         l’Application ni rétroactivement les conditions d’un achat existant.
+      </p>
+
+      <p>
+        Les versions française et anglaise de cet avis et de notre Politique de confidentialité
+        sont accessibles sans frais supplémentaires. Vous pouvez consulter la version française
+        avant un achat. Le montant, la période de facturation, l’offre et les conditions de la
+        transaction Apple sont présentés par l’App Store lors de l’achat. Le choix de l’anglais
+        ne constitue pas une renonciation à un droit linguistique impératif.
       </p>
 
       <h2>1. Admissibilité et utilisation responsable</h2>
