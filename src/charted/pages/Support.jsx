@@ -23,6 +23,14 @@ export default function Support({ navigate }) {
           Email <a href={`mailto:${SUPPORT_EMAIL}`}><strong>{SUPPORT_EMAIL}</strong></a>{' '}
           — we aim to reply promptly.
         </p>
+        <p>
+          App interface languages: English and French, depending on the installed version.
+          You can write to us in either language.
+        </p>
+        <p lang="fr-CA">
+          Langues de l’interface : anglais et français, selon la version installée.
+          Vous pouvez nous écrire dans l’une ou l’autre de ces langues.
+        </p>
       </header>
 
       <h2>Getting Started</h2>
