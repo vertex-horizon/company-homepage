@@ -12,6 +12,8 @@ const PROVIDERS = [
   ['RevenueCat', 'Gestion et analyse des achats et abonnements', 'https://www.revenuecat.com/privacy/', 'Confidentialité RevenueCat'],
   ['Cartes d’Apple et géocodage', 'Requêtes de carte et d’adresse', 'https://www.apple.com/legal/privacy/', 'Confidentialité Apple'],
   ['Backblaze B2', 'Téléchargements publics de terrain et d’imagerie (§2.6)', 'https://www.backblaze.com/company/policy/privacy', 'Confidentialité Backblaze'],
+  ['GitHub Pages', 'Hébergement web et journaux de sécurité (§2.6)', 'https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement', 'Confidentialité GitHub'],
+  ['Messagerie Google', 'Acheminement des échanges avec l’assistance (§2.6)', 'https://policies.google.com/privacy', 'Confidentialité Google'],
   ['Apple MetricKit', 'Mesures de performance (§2.2)', 'https://www.apple.com/legal/privacy/', 'Confidentialité Apple'],
 ]
 
@@ -111,11 +113,15 @@ export default function PrivacyFr({ navigate }) {
         <li><strong>Contrôle :</strong> les services d’achat fonctionnent séparément du réglage des analyses d’utilisation facultatives. Nous ne recevons pas votre identifiant Apple, vos détails de carte ni votre adresse de facturation.</li>
       </ul>
       <p>
-        Les services d’achat sont initialisés au démarrage de Mapvoy. RevenueCat peut alors recevoir
+        Dans les versions antérieures à la mise à jour de synchronisation des achats à la demande,
+        les services d’achat sont initialisés au démarrage de Mapvoy. RevenueCat peut alors recevoir
         l’identifiant utilisateur persistant et des renseignements techniques sur l’application,
-        l’appareil et la connexion, même si vous n’avez pas acheté Mapvoy Pro. Ce fonctionnement est
-        distinct des analyses d’utilisation facultatives et ne transmet ni votre photothèque ni
-        votre base de données locale de voyages à RevenueCat.
+        l’appareil et la connexion, même si vous n’avez pas acheté Mapvoy Pro. Dans les versions comprenant
+        cette mise à jour, StoreKit vérifie les droits locaux et RevenueCat s’initialise lorsqu’une
+        transaction vérifiée est enregistrée ou que vous restaurez explicitement vos achats. Cela peut
+        aussi se produire au démarrage lors de la remise d’une transaction vérifiée non terminée.
+        Ces services sont distincts des analyses d’utilisation facultatives et ne transmettent ni
+        votre photothèque ni votre base de données locale de voyages à RevenueCat.
       </p>
 
       <h3>2.5 Configuration (Firebase Remote Config)</h3>
@@ -133,12 +139,20 @@ export default function PrivacyFr({ navigate }) {
 
       <h3>2.6 Ressources cartographiques publiques et assistance</h3>
       <p>
-        Mapvoy télécharge des fichiers publics de terrain et d’imagerie depuis Backblaze B2.
+        Mapvoy télécharge des fichiers publics de terrain et d’imagerie depuis le stockage Backblaze B2
+        aux États-Unis (région US East).
         Ces requêtes communiquent au fournisseur d’hébergement votre adresse IP, la ressource demandée
         et des renseignements ordinaires de connexion. Le téléchargement d’un fichier cartographique
         ne téléverse ni votre photothèque ni votre base de données locale de voyages. Si vous nous
         écrivez, nous recevons votre adresse courriel, votre message et les pièces jointes que vous
         choisissez d’envoyer; transmettez uniquement ce qui est nécessaire à votre demande.
+      </p>
+      <p>
+        Les sites web de notre société et de notre produit sont hébergés sur GitHub Pages, qui consigne
+        les adresses IP des visiteurs à des fins de sécurité. Les messages envoyés à notre adresse
+        d’assistance sont acheminés par la messagerie Google. Ces fournisseurs peuvent traiter les
+        renseignements de service aux États-Unis et dans leurs autres pays d’activité; le lieu de
+        notre personne de contact ne détermine pas tous les lieux de traitement.
       </p>
 
       <h2>3. Renseignements que nous ne recueillons pas</h2>
@@ -238,6 +252,17 @@ export default function PrivacyFr({ navigate }) {
       <p>La procédure de remboursement d’Apple s’applique sans limiter les droits impératifs des consommateurs. Consultez <a href="https://support.apple.com/HT202039" target="_blank" rel="noreferrer">Abonnements Apple</a>.</p>
       <h2>6. Confidentialité des enfants</h2>
       <p>Mapvoy ne s’adresse pas aux enfants de moins de 13 ans. Si vous pensez qu’un enfant nous a transmis des renseignements personnels, contactez-nous pour que nous puissions examiner et traiter la demande.</p>
+      <p>
+        Les règles locales peuvent fixer un âge plus élevé pour consentir seul au partage facultatif
+        de données. Dans les versions comprenant la confirmation régionale du partage, l’activation
+        des analyses d’utilisation ou des rapports de plantage vous demande de confirmer que vous
+        pouvez consentir vous-même selon les règles de votre lieu de résidence. Sinon, laissez ce
+        partage désactivé; les fonctions locales essentielles restent disponibles. La déclaration
+        enregistre uniquement la version de l’avis et l’heure sur votre appareil. Elle ne recueille
+        ni votre date de naissance ni votre pays et n’est pas envoyée à un service d’analyses. Elle ne
+        constitue pas une preuve vérifiée de l’âge ou d’une autorisation parentale. Un ancien réglage
+        de partage n’est pas considéré comme une nouvelle déclaration.
+      </p>
       <h2>7. Vos droits</h2>
       <p>
         Vous pouvez gérer vos données locales et préférences de partage sur votre appareil. Pour toute

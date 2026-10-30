@@ -123,10 +123,14 @@ export default function Privacy({ navigate }) {
       </ul>
 
       <p>
-        Purchase services initialize when Mapvoy starts. RevenueCat may then receive the persistent
+        In versions before the on-demand purchase-sync update, purchase services initialize when
+        Mapvoy starts. RevenueCat may then receive the persistent
         app user ID and technical information about the app, device and connection, even if you have
-        not purchased Mapvoy Pro. This operates separately from optional usage analytics and does
-        not send your photo library or local trip database to RevenueCat.
+        not purchased Mapvoy Pro. In versions containing that update, StoreKit checks local entitlements
+        and RevenueCat initializes when a verified transaction is recorded or you explicitly restore
+        purchases. This can also happen at launch when an unfinished verified transaction is delivered.
+        These services operate separately from optional usage analytics and do not send your photo
+        library or local trip database to RevenueCat.
       </p>
 
       <h3>2.5 App Configuration (Firebase Remote Config)</h3>
@@ -141,11 +145,19 @@ export default function Privacy({ navigate }) {
 
       <h3>2.6 Public Map Resources and Support</h3>
       <p>
-        Mapvoy downloads public terrain and imagery files from Backblaze B2. These requests expose
+        Mapvoy downloads public terrain and imagery files from Backblaze B2 storage in the
+        United States (US East). These requests expose
         your IP address, the requested resource and ordinary connection information to the hosting
         provider. Downloading a map file does not upload your photo library or local trip database.
         If you email us, we receive your email address, message and any attachments you choose to send;
         please send only what is needed to resolve your request.
+      </p>
+      <p>
+        Our company and product websites are hosted on GitHub Pages, which records visitors’ IP
+        addresses for security. Messages sent to our support email are delivered through Google’s
+        email services. These providers may process service information in the United States and
+        other countries where they operate; the location of our contact person does not determine
+        every processing location.
       </p>
 
       <h2>3. Information We Do Not Collect</h2>
@@ -217,6 +229,16 @@ export default function Privacy({ navigate }) {
             <td><strong>Backblaze B2</strong></td>
             <td>Public terrain and imagery downloads (see §2.6)</td>
             <td><a href="https://www.backblaze.com/company/policy/privacy" target="_blank" rel="noreferrer">Backblaze Privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>GitHub Pages</strong></td>
+            <td>Website hosting and security logs (see §2.6)</td>
+            <td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noreferrer">GitHub Privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Google email services</strong></td>
+            <td>Delivery of support correspondence (see §2.6)</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google Privacy</a></td>
           </tr>
           <tr>
             <td><strong>Apple MetricKit</strong></td>
@@ -304,6 +326,15 @@ export default function Privacy({ navigate }) {
       <p>
         Mapvoy is not directed to children under 13. If you believe a child has provided personal
         information to us, please contact us so we can investigate and address the request.
+      </p>
+      <p>
+        Local rules may set a higher age for independently consenting to optional data sharing.
+        In versions containing the regional-sharing confirmation, turning on usage analytics or
+        crash reports asks you to confirm that you can consent for yourself under the rules where
+        you live. If you cannot confirm, keep that sharing off; local core features remain available.
+        The declaration records only its notice version and time on your device. It does not collect
+        your birthday or country, is not sent to an analytics service, and is not verified proof of age
+        or parental permission. An older saved sharing preference is not treated as a new declaration.
       </p>
 
       <h2>7. Your Rights</h2>
