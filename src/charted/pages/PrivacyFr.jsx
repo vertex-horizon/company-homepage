@@ -213,6 +213,16 @@ export default function PrivacyFr({ navigate }) {
         droit suisse, à titre subsidiaire lorsque ce cadre ne couvre pas un transfert.
       </p>
       <p>
+        Les transferts couverts depuis la Suisse vers{' '}
+        <a href="https://www.dataprivacyframework.gov/participant/5780" target="_blank" rel="noreferrer">Google LLC</a> et{' '}
+        <a href="https://www.dataprivacyframework.gov/participant/6408" target="_blank" rel="noreferrer">Backblaze, Inc.</a> aux États-Unis reposent sur le cadre de protection des données Suisse–États-Unis.
+        Les transferts restreints suisses vers RevenueCat, Inc. sont soumis aux clauses contractuelles
+        types de la Commission européenne, adaptées au droit suisse et intégrées à{' '}
+        <a href="https://www.revenuecat.com/dpa" target="_blank" rel="noreferrer">l’avenant de RevenueCat relatif au traitement des données</a>.
+        Ces dispositifs ne signifient pas que tous les lieux de traitement sont couverts par le cadre
+        américain ni que Vertex Horizon Inc. est elle-même certifiée.
+      </p>
+      <p>
         Les services Google font intervenir Google LLC aux États-Unis et peuvent entraîner des
         traitements dans d’autres pays ou territoires. Google publie des informations propres à chaque
         service sur{' '}
@@ -303,11 +313,11 @@ export default function PrivacyFr({ navigate }) {
         l’autorise et si nous donnons l’avis requis. Vous pouvez nous écrire en français ou en anglais.
       </p>
       <p>
-        Pour une plainte relative à la protection des données au Royaume-Uni, écrivez à notre
-        responsable à l’adresse ci-dessous et décrivez votre préoccupation. Nous accusons réception
-        dans les 30 jours, effectuons les vérifications appropriées, vous tenons au courant et
-        communiquons le résultat sans retard injustifié. Aucun formulaire particulier ni service
-        payant n’est nécessaire pour porter plainte.
+        Pour toute plainte relative à la protection des renseignements personnels, notamment au
+        Québec, écrivez à notre responsable à l’adresse ci-dessous et décrivez votre préoccupation.
+        Nous effectuons les vérifications appropriées, vous tenons au courant et communiquons le
+        résultat sans retard injustifié. Pour les plaintes relevant du Royaume-Uni, nous accusons
+        réception dans les 30 jours. Aucun formulaire particulier ni service payant n’est requis.
       </p>
       <p>
         Vous pouvez porter plainte auprès de votre autorité locale de protection des données ou demander

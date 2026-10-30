@@ -280,6 +280,16 @@ export default function Privacy({ navigate }) {
         law as a fallback when that framework does not cover a transfer.
       </p>
       <p>
+        Covered transfers from Switzerland to{' '}
+        <a href="https://www.dataprivacyframework.gov/participant/5780" target="_blank" rel="noreferrer">Google LLC</a> and{' '}
+        <a href="https://www.dataprivacyframework.gov/participant/6408" target="_blank" rel="noreferrer">Backblaze, Inc.</a> in the United States rely on the Swiss–U.S. Data Privacy Framework.
+        Swiss restricted transfers to RevenueCat, Inc. are subject to the European Commission’s
+        standard contractual clauses, with Swiss adaptations, incorporated into{' '}
+        <a href="https://www.revenuecat.com/dpa" target="_blank" rel="noreferrer">RevenueCat’s data-processing addendum</a>.
+        These arrangements do not mean every processing location is covered by the U.S. framework
+        or that Vertex Horizon Inc. is itself certified.
+      </p>
+      <p>
         Google services involve Google LLC in the United States and may involve processing in other
         countries or territories. Google publishes service-specific information about{' '}
         <a href="https://business.safety.google/adssubprocessors/" target="_blank" rel="noreferrer">Analytics providers’ locations</a>,{' '}
@@ -374,10 +384,10 @@ export default function Privacy({ navigate }) {
         the required notice. You may contact us in English or French.
       </p>
       <p>
-        To make a UK data-protection complaint, email our privacy officer using the contact address
-        below and describe your concern. We acknowledge receipt within 30 days, make appropriate
-        enquiries, keep you informed of progress and communicate the outcome without undue delay.
-        You do not need a special form or a paid service to complain.
+        To raise a privacy complaint, including from Québec, email our privacy officer at the
+        address below and describe your concern. We investigate appropriately, keep you informed
+        of progress and communicate the outcome without undue delay. For UK data-protection
+        complaints, we acknowledge receipt within 30 days. No special form or paid service is required.
       </p>
       <p>
         You may complain to your local data-protection authority or seek a judicial remedy. In the UK,

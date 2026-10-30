@@ -166,6 +166,14 @@ export default function Terms({ navigate }) {
         agreement where required. A published date alone does not change existing purchase terms
         or constitute consent to additional personal-data processing.
       </p>
+      <p>
+        For monthly and annual Pro subscriptions where French consumer law applies, see the
+        statutory guarantee notice in section 5.1 of the{' '}
+        <NavLink to={productPath('/terms/fr')} navigate={navigate} hrefLang="fr" lang="fr">conditions en français</NavLink>.
+        The notice does not shorten access granted by a gift code. You can contact Vertex Horizon Inc.
+        using the details below for app-related guarantee requests; Apple-billed purchase and refund
+        procedures remain available as described in section 4.
+      </p>
 
       <h2>6. Contact and Third-Party Notices</h2>
       <p><strong>Vertex Horizon Inc.</strong></p>
