@@ -11,21 +11,7 @@ import { Stars, CursorGlow } from './effects.jsx'
 import { APP_STORE_URL, SUPPORT_EMAIL, PARENT_SITE, PRODUCT_ORIGIN, productPath } from './config.js'
 import { CHARTED_ROUTE_META, routeLanguageAlternates } from './routeMetadata.js'
 
-/**
- * Mapvoy sub-brand site.
- * 旧 /charted 路径仍被已发布 App 和分享链接使用；改品牌不改这些入口。
- *
- * Internal routing without react-router (kept lightweight).
- * Listens to popstate for back/forward; pushes state for in-app links.
- *
- * Routes (relative to /charted prefix):
- *   /charted            → <Home />
- *   /charted/privacy    → <Privacy />
- *   /charted/terms      → <Terms />
- *   /charted/privacy/fr → <PrivacyFr />
- *   /charted/terms/fr   → <TermsFr />
- *   /charted/support    → <Support />
- */
+/** Mapvoy product site. Public routes are rooted at mapvoy.app. */
 
 function getRoute() {
   const path = window.location.pathname.replace(/\/+$/, '') || '/' // strip trailing slash

@@ -273,7 +273,7 @@ function App() {
             </div>
 
             {/* Subtle teaser for our shipped product — clickable */}
-            <a className="hero-product-teaser" href="/charted">
+            <a className="hero-product-teaser" href="https://mapvoy.app/">
               <span className="hero-product-teaser-dot" aria-hidden="true" />
               <span className="hero-product-teaser-label">Now shipping</span>
               <span className="hero-product-teaser-name">Mapvoy</span>
@@ -343,12 +343,12 @@ function App() {
 
             <div className="product-card-meta">
               <header className="product-card-header">
-                <a href="/charted" className="product-card-icon" aria-label="Visit Mapvoy">
+                <a href="https://mapvoy.app/" className="product-card-icon" aria-label="Visit Mapvoy">
                   <img src="/mapvoy/icon/icon-180.png" alt="" width="64" height="64" />
                 </a>
                 <div>
                   <h3>
-                    <a href="/charted">Mapvoy</a>
+                    <a href="https://mapvoy.app/">Mapvoy</a>
                   </h3>
                   <p className="product-card-tagline">You've been further than you think.</p>
                 </div>
@@ -369,7 +369,7 @@ function App() {
               </ul>
 
               <div className="product-card-actions">
-                <a href="/charted" className="btn btn--primary">
+                <a href="https://mapvoy.app/" className="btn btn--primary">
                   <span>Visit Mapvoy</span>
                   <ArrowRight />
                 </a>
@@ -388,7 +388,7 @@ function App() {
             </div>
 
             <div className="product-card-visual">
-              <a href="/charted" className="product-card-landscape" aria-label="Visit Mapvoy">
+              <a href="https://mapvoy.app/" className="product-card-landscape" aria-label="Visit Mapvoy">
                 <ShowcaseImage name="earth-wide" alt="Mapvoy globe of sample travels, shown across a wide landscape" sizes="(max-width: 880px) 90vw, 55vw" />
               </a>
             </div>
@@ -492,7 +492,7 @@ function App() {
             <div className="footer-cols">
               <div className="footer-col">
                 <h4>Products</h4>
-                <a href="/charted">Mapvoy</a>
+                <a href="https://mapvoy.app/">Mapvoy</a>
                 <a
                   href="https://apps.apple.com/app/id6761878521"
                   target="_blank"
@@ -508,8 +508,8 @@ function App() {
               </div>
               <div className="footer-col">
                 <h4>Legal</h4>
-                <a href="/charted/privacy">Privacy</a>
-                <a href="/charted/terms">Terms</a>
+                <a href="https://mapvoy.app/privacy">Privacy</a>
+                <a href="https://mapvoy.app/terms">Terms</a>
               </div>
             </div>
           </div>

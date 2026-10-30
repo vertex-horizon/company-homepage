@@ -21,6 +21,6 @@ export const PARENT_SITE = 'https://www.vertex-horizon.com'
 
 // 同一份源码分别部署公司站与产品站；产品站的导航从域名根路径开始。
 export const IS_PRODUCT_SITE = import.meta.env?.VITE_SITE === 'mapvoy'
-export const PRODUCT_ORIGIN = IS_PRODUCT_SITE ? 'https://mapvoy.app' : PARENT_SITE
-export const PRODUCT_BASE = IS_PRODUCT_SITE ? '' : '/charted'
+export const PRODUCT_ORIGIN = 'https://mapvoy.app'
+export const PRODUCT_BASE = ''
 export const productPath = (suffix = '') => `${PRODUCT_BASE}${suffix}` || '/'
