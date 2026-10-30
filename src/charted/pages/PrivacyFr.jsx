@@ -183,8 +183,9 @@ export default function PrivacyFr({ navigate }) {
       </ul>
       <h3>4.2 Lieux de traitement et garanties de transfert</h3>
       <p>
-        Vertex Horizon Inc. est établie aux États-Unis. Nous traitons les demandes d’assistance et
-        de protection des données depuis les États-Unis. RevenueCat, Inc. fournit nos services
+        Vertex Horizon Inc. est établie aux États-Unis. Notre contact pour l’assistance et la
+        protection des données se trouve aux États-Unis; les prestataires de courrier peuvent traiter
+        les messages dans d’autres pays. RevenueCat, Inc. fournit nos services
         d’achat et de gestion des droits d’accès aux États-Unis. Votre photothèque et votre base
         locale de voyages ne nous sont pas transmises, ni à RevenueCat, dans le cadre de ces services.
       </p>

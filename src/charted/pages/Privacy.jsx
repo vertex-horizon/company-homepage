@@ -243,8 +243,9 @@ export default function Privacy({ navigate }) {
 
       <h3>4.2 Processing Locations and Transfer Safeguards</h3>
       <p>
-        Vertex Horizon Inc. is based in the United States. We handle privacy and support requests
-        from the United States. RevenueCat, Inc. provides our purchase and entitlement services in
+        Vertex Horizon Inc. is based in the United States. Our privacy and support contact is in
+        the United States; email providers may process messages in other countries.
+        RevenueCat, Inc. provides our purchase and entitlement services in
         the United States. Your photo library and local trip database are not uploaded to us or
         RevenueCat as part of these services.
       </p>
