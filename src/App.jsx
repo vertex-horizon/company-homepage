@@ -1,4 +1,4 @@
-import LaunchImage from './charted/LaunchImage.jsx'
+import { ShowcaseImage } from './charted/HomeShowcase.jsx'
 import { useEffect, useRef } from 'react'
 import './App.css'
 
@@ -388,8 +388,8 @@ function App() {
             </div>
 
             <div className="product-card-visual">
-              <a href="/charted" className="product-card-phone" aria-label="Visit Mapvoy">
-                <LaunchImage name="01-further" alt="Mapvoy launch illustration: sample travels on a globe" sizes="(max-width: 880px) 74vw, 300px" />
+              <a href="/charted" className="product-card-landscape" aria-label="Visit Mapvoy">
+                <ShowcaseImage name="earth-wide" alt="Mapvoy globe of sample travels, shown across a wide landscape" sizes="(max-width: 880px) 90vw, 55vw" />
               </a>
             </div>
           </article>

@@ -1,0 +1,197 @@
+{
+  "earth-wide": {
+    "fileKey": "ir3wSrI7a6lgSj6I48afVD",
+    "nodeId": "1068:12097",
+    "sourceWidth": 3840,
+    "sourceHeight": 1646,
+    "sourceSha256": "56cf634933633d4054a9efeeb062278c108ba60752375274c22cdb051cba3639",
+    "files": [
+      {
+        "width": 1280,
+        "src": "/mapvoy/scenes/earth-wide-1280.webp",
+        "sha256": "c6dc4794518a3912a9f3c45b55d276c8431ac977d2a13e7f94170ca094ba7a6c"
+      },
+      {
+        "width": 1920,
+        "src": "/mapvoy/scenes/earth-wide-1920.webp",
+        "sha256": "23860c1ada4900c38584cc8737cec1805bc1ff2a8fe2240c6ce33b09a04662a6"
+      },
+      {
+        "width": 3840,
+        "src": "/mapvoy/scenes/earth-wide-3840.webp",
+        "sha256": "834f501376d272c89da113e25090cf044a95278a61eaa3b38d8e4d62e83fbfbc"
+      }
+    ]
+  },
+  "paint-map": {
+    "fileKey": "ir3wSrI7a6lgSj6I48afVD",
+    "nodeId": "1063:11934",
+    "sourceWidth": 804,
+    "sourceHeight": 1748,
+    "sourceSha256": "17176f7cee524d3bee24ae090f005ffa57550ca60af0707941be71b1c8309daf",
+    "files": [
+      {
+        "width": 500,
+        "src": "/mapvoy/scenes/paint-map-500.webp",
+        "sha256": "7e8516b6e870046332fb161913ab3b04c2881bc16fa07b58991f6afd507a2330"
+      },
+      {
+        "width": 804,
+        "src": "/mapvoy/scenes/paint-map-804.webp",
+        "sha256": "d8a91e523cd4b0314e7de469ceaad580725d4c17722ac911282f195221319ed5"
+      }
+    ]
+  },
+  "ink-detail": {
+    "fileKey": "ir3wSrI7a6lgSj6I48afVD",
+    "nodeId": "1072:12863",
+    "sourceWidth": 840,
+    "sourceHeight": 900,
+    "sourceSha256": "0b9621a41864ad054353a20d1a3389f08565734ff3fa524005910126362d13f0",
+    "files": [
+      {
+        "width": 500,
+        "src": "/mapvoy/scenes/ink-detail-500.webp",
+        "sha256": "c672c1b9d6d34d44693cb16114c1f8fdffc501268700ffe7e2aa65c154671d9f"
+      },
+      {
+        "width": 840,
+        "src": "/mapvoy/scenes/ink-detail-840.webp",
+        "sha256": "06e98ffc4a71c6aedb8d359cb927ba26ed3600d450406d2bcd4a4d39f4553d45"
+      }
+    ]
+  },
+  "phone-journeys": {
+    "fileKey": "ir3wSrI7a6lgSj6I48afVD",
+    "nodeId": "1063:12066",
+    "sourceWidth": 900,
+    "sourceHeight": 1840,
+    "sourceSha256": "fda8763654d93d3603d6842607b2ce0dbcc949db8a855ffef1a343acab9fd609",
+    "files": [
+      {
+        "width": 500,
+        "src": "/mapvoy/scenes/phone-journeys-500.webp",
+        "sha256": "dc2fde6a682acab8dc8447a413c0fba99271f0d22a233f5e2a2aa1e98bcec9cf"
+      },
+      {
+        "width": 900,
+        "src": "/mapvoy/scenes/phone-journeys-900.webp",
+        "sha256": "518e45cc2377e01ca0f6bc0eae23e292fba94d90a1f64b4aa1db653432828f14"
+      }
+    ]
+  },
+  "phone-passport": {
+    "fileKey": "ir3wSrI7a6lgSj6I48afVD",
+    "nodeId": "1044:1593",
+    "sourceWidth": 900,
+    "sourceHeight": 1840,
+    "sourceSha256": "b01e9f9113a7a6fc064818bf9c0a2e94abda39a58407a90e5e1c7d432c8d7f9c",
+    "files": [
+      {
+        "width": 500,
+        "src": "/mapvoy/scenes/phone-passport-500.webp",
+        "sha256": "22bc1104c8cac3f9470e8a0a9ff1d36c1f340833223ea42a63ed5a72949c4427"
+      },
+      {
+        "width": 900,
+        "src": "/mapvoy/scenes/phone-passport-900.webp",
+        "sha256": "b9994a37346a801c29c81cf710d0ff6f955078a23fecf9b8c3c2f009ea764253"
+      }
+    ]
+  },
+  "phone-logbook": {
+    "fileKey": "ir3wSrI7a6lgSj6I48afVD",
+    "nodeId": "1044:2263",
+    "sourceWidth": 774,
+    "sourceHeight": 1583,
+    "sourceSha256": "02cf7883b2c4047d0d9019c7bdf017e816193af73123bd5b6c05c64b3b983d62",
+    "files": [
+      {
+        "width": 500,
+        "src": "/mapvoy/scenes/phone-logbook-500.webp",
+        "sha256": "226344f1a692a47bc2df56f97fd0443ac91bf5b360fd193ce31990a4bc7b37cb"
+      },
+      {
+        "width": 774,
+        "src": "/mapvoy/scenes/phone-logbook-774.webp",
+        "sha256": "72de7040cd0ef9fbfbf4ac726d548cce8703fb2c37b82b82487ed76a3ec59dbf"
+      }
+    ]
+  },
+  "share-europe": {
+    "fileKey": "ir3wSrI7a6lgSj6I48afVD",
+    "nodeId": "1063:15043",
+    "sourceWidth": 705,
+    "sourceHeight": 1129,
+    "sourceSha256": "64f3842cb638ef3061ed06f892a61d6969012690fadd7ee6b41160ec314004a8",
+    "files": [
+      {
+        "width": 500,
+        "src": "/mapvoy/scenes/share-europe-500.webp",
+        "sha256": "2f8fb275d3695bb939cba1d9e4e8fe9a1d08839d3057c5d01407237474edb39d"
+      },
+      {
+        "width": 705,
+        "src": "/mapvoy/scenes/share-europe-705.webp",
+        "sha256": "f24728249d02abec64de87a279267352cc022376a506c7b0634ba75ea7389b82"
+      }
+    ]
+  },
+  "share-california": {
+    "fileKey": "ir3wSrI7a6lgSj6I48afVD",
+    "nodeId": "1063:15044",
+    "sourceWidth": 705,
+    "sourceHeight": 1129,
+    "sourceSha256": "f1619af13172a5bab568ff6ca6bb703612c6649bc7e920dd133812b0e3118a9d",
+    "files": [
+      {
+        "width": 500,
+        "src": "/mapvoy/scenes/share-california-500.webp",
+        "sha256": "4ae3428389045304da80cf69dcd856f5bd2ab14e3246a5282d38e5874b445ea4"
+      },
+      {
+        "width": 705,
+        "src": "/mapvoy/scenes/share-california-705.webp",
+        "sha256": "3d6f8712c82e381a27cfb8276b418e6fd484f6f8ba81f1d3e386688d64bc5c02"
+      }
+    ]
+  },
+  "share-numbers": {
+    "fileKey": "ir3wSrI7a6lgSj6I48afVD",
+    "nodeId": "1063:15045",
+    "sourceWidth": 705,
+    "sourceHeight": 1129,
+    "sourceSha256": "2c8571995a19f816cfca796bebaba78ace77e0c084265ec49af989ad805a300f",
+    "files": [
+      {
+        "width": 500,
+        "src": "/mapvoy/scenes/share-numbers-500.webp",
+        "sha256": "95842d6342c7be47cb8759574f6fb2d4c280818bc56f74f7353a19d5b819d27e"
+      },
+      {
+        "width": 705,
+        "src": "/mapvoy/scenes/share-numbers-705.webp",
+        "sha256": "5e692dec04a7345ef585d32708b867a37e56552cd92233afebf7adcc075fd50b"
+      }
+    ]
+  },
+  "share-greece": {
+    "fileKey": "ir3wSrI7a6lgSj6I48afVD",
+    "nodeId": "1063:15069",
+    "sourceWidth": 705,
+    "sourceHeight": 1050,
+    "sourceSha256": "5894c635f0de078faa219eaf22e1143a5c99ec8cb8bbbc212cb1a779381ae527",
+    "files": [
+      {
+        "width": 500,
+        "src": "/mapvoy/scenes/share-greece-500.webp",
+        "sha256": "87281e7ee5ae4a269252942cd0eef14adb0c9ffbc9cce6bcd37bbd39bafd6077"
+      },
+      {
+        "width": 705,
+        "src": "/mapvoy/scenes/share-greece-705.webp",
+        "sha256": "6242744225f9ffb1a545ae83c32cbc508eb334e5122b3f9862b3608399913ef3"
+      }
+    ]
+  }
+}

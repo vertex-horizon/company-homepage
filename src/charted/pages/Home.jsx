@@ -1,107 +1,20 @@
 import { useState } from 'react'
 import { APP_STORE_URL, SUPPORT_EMAIL } from '../config.js'
-import {
-  TextReveal,
-  PhoneTilt,
-  Magnetic,
-  ScrollHero,
-  useReveal,
-} from '../effects.jsx'
+import { TextReveal, Magnetic, useReveal } from '../effects.jsx'
+import { WorldHero, GlobeExperience, PhoneStories, ShareGallery } from '../HomeShowcase.jsx'
 
-import LaunchImage from '../LaunchImage.jsx'
-
-/**
- * Mapvoy 官网：保留原有导航与渐入交互，文案和整幅宣传图来自 Product V2 上线物料。
- * 图像中的旅行数字是示例人物，不是当前用户数据或运行验收证据。
- * 动画沿用 prefers-reduced-motion 降级。
- */
-export default function Home({ navigate }) {
+export default function Home() {
   return (
     <>
-      <Hero />
-      <QuietTruth />
-      <FiveMoments />
-      <p className="c-artwork-note">Launch illustrations use sample travel data.</p>
-      <GlobeStyles />
+      <WorldHero />
+      <GlobeExperience />
+      <PhoneStories />
+      <ShareGallery />
       <PrivacyManifesto />
       <Pricing />
       <FAQ />
-      <CTA navigate={navigate} />
+      <CTA />
     </>
-  )
-}
-
-/* ────────────────────────────────────────────────────────────
- * 1. HERO
- *
- * Layout (≥880px): two columns, content left, Globe right.
- * The exported launch illustration preserves the source composition.
- * On scroll, both content + globe gracefully settle/fade.
- * ──────────────────────────────────────────────────────────── */
-function Hero() {
-  return (
-    <ScrollHero>
-      <div className="c-hero-inner">
-        <div className="c-hero-content">
-          <span className="c-eyebrow c-hero-eyebrow c-reveal is-revealed">
-            For iPhone · iOS 17+
-          </span>
-
-          <h1 className="c-hero-title">
-            <span className="c-hero-title-line">
-              <TextReveal text="You've been further" stagger={26} />
-            </span>
-            <span className="c-hero-title-line c-gradient-text">
-              <TextReveal text="than you think." stagger={26} delay={420} />
-            </span>
-          </h1>
-
-          <p className="c-hero-sub c-reveal is-revealed">
-            Every place in your photos, on a 3D globe.
-          </p>
-
-          <div className="c-hero-actions c-reveal is-revealed">
-            <Magnetic>
-              <a
-                className="c-btn c-btn--appstore"
-                href={APP_STORE_URL}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Download Mapvoy on the App Store"
-              >
-                <AppleIcon />
-                <span>
-                  <span className="c-as-eyebrow">Download on the</span>
-                  <span className="c-as-main">App Store</span>
-                </span>
-              </a>
-            </Magnetic>
-            <a className="c-btn c-btn--ghost" href="#five-moments">
-              See how it works
-            </a>
-          </div>
-
-          <div className="c-hero-trust c-reveal is-revealed">
-            <span className="c-hero-trust-dot" aria-hidden="true" />
-            <span>Built on your iPhone · No account to create</span>
-          </div>
-        </div>
-
-        <div className="c-hero-phone-stage c-reveal is-revealed">
-          {/* Two slow-rotating orbital rings — give the phone a "satellite" feel */}
-          <div className="c-hero-orbit" aria-hidden="true" />
-          <div className="c-hero-orbit c-hero-orbit--2" aria-hidden="true" />
-          {/* Memory-Gold radial glow behind the phone */}
-          <div className="c-hero-phone-glow" aria-hidden="true" />
-          {/* Phone with 3D cursor-tracking tilt */}
-          <PhoneTilt max={11}>
-            <div className="c-hero-phone">
-              <LaunchImage name="01-further" alt="Mapvoy launch illustration: a globe of sample travels across North America and Europe" priority />
-            </div>
-          </PhoneTilt>
-        </div>
-      </div>
-    </ScrollHero>
   )
 }
 
@@ -113,156 +26,6 @@ function AppleIcon() {
   )
 }
 
-/* ────────────────────────────────────────────────────────────
- * 2. QUIET TRUTH
- *
- * One italic sentence. Big. Slow char reveal.
- * Light-beam scan in background (CSS @keyframes).
- * ──────────────────────────────────────────────────────────── */
-function QuietTruth() {
-  return (
-    <section className="c-section c-quiet">
-      <p className="c-quiet-text">
-        <TextReveal text="Your camera roll already knows where you've been." stagger={18} />
-        <br />
-        <TextReveal text="You just haven't " stagger={18} delay={1200} />
-        <strong>
-          <TextReveal text="seen it as a map." stagger={18} delay={1500} />
-        </strong>
-      </p>
-      <div className="c-quiet-divider c-reveal" />
-    </section>
-  )
-}
-
-/* ────────────────────────────────────────────────────────────
- * 3. FIVE MOMENTS
- *
- * 5 sections, alternating L/R. Phone mockups have:
- *   • 3D tilt on cursor
- *   • subtle vertical float
- *   • accent radial glow that pulses (different color each)
- * ──────────────────────────────────────────────────────────── */
-// 文案与画面来自同一套 V2 上线物料；示例数字不作为用户或运行验收数据。
-const MOMENTS = [
-  {
-    n: '01', title: 'It found the trip you forgot.',
-    desc: 'Mapvoy reads when and where your photos were taken and groups them into trips, from a day out to a chapter of your life.',
-    image: '02-trips', alt: 'Rome and Athens trip, with photo highlights and a San Francisco life chapter', glow: 'blue',
-  },
-  {
-    n: '02', title: 'Your countries, stamped in.',
-    desc: 'Countries and regions fill in your Passport from the places in your photos. See where you have been, one place at a time.',
-    image: '03-countries', alt: 'Passport map and country stamps, with an enlarged Europe summary card', glow: 'cyan',
-  },
-  {
-    n: '03', title: 'Your travel, in numbers.',
-    desc: 'Atlas keeps your numbers year by year. Look back through the countries, regions and places that make up your travels.',
-    image: '10-numbers', alt: 'Atlas Europe view with a map, visited countries and travel statistics', glow: 'blue',
-  },
-  {
-    n: '04', title: 'Your Logbook. It wrote itself.',
-    desc: 'A free Year in Review for each year’s travels. Look back through the places and photos that shaped your year.',
-    image: '07-logbook', alt: 'Sample 2025 Year in Review, with a Rome cover and annual travel summary', glow: 'cyan',
-  },
-  {
-    n: '05', title: 'Your year, ready to post.',
-    desc: 'Cards and globe videos from your trips and your globe. Make a card to keep, or a video to share.',
-    image: '08-share', alt: 'Mapvoy share cards featuring Europe, California, annual numbers and Greece', glow: 'blue',
-  },
-]
-
-function FiveMoments() {
-  const ref = useReveal()
-  return (
-    <section className="c-section c-moments-section" id="five-moments" ref={ref}>
-      <div className="c-section-head c-reveal">
-        <span className="c-eyebrow">Five things you'll do</span>
-        <h2 className="c-h2">
-          A travel app shouldn't ask you<br />
-          to start over.
-        </h2>
-      </div>
-
-      <div className="c-moments">
-        {MOMENTS.map((m, i) => (
-          <article
-            key={m.n}
-            className={`c-moment c-reveal${i % 2 === 1 ? ' is-reverse' : ''}`}
-          >
-            <div className="c-moment-text">
-              <div className="c-moment-num">{m.n}</div>
-              <h3>{m.title}</h3>
-              <p>{m.desc}</p>
-            </div>
-            <div className="c-moment-visual">
-              <div className={`c-moment-glow c-moment-glow--${m.glow}`} aria-hidden="true" />
-              <PhoneTilt max={9}>
-                <div className="c-moment-phone">
-                  <LaunchImage name={m.image} alt={m.alt} />
-                </div>
-              </PhoneTilt>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  )
-}
-
-/* ────────────────────────────────────────────────────────────
- * 4. GLOBE STYLES
- * Three cards. Each card has a small SVG icon that animates on hover.
- * Cards also have a cursor-following radial glow.
- * ──────────────────────────────────────────────────────────── */
-const GLOBE_STYLES = [
-  { name: 'Earth', image: '04-sunlight', desc: "Real terrain. Real sunlight. Your places. See the planet under today's sunlight, with city lights on the night side and real stars beyond.", alt: 'Earth style: two views of Europe at twilight and at night' },
-  { name: 'Ink', image: '05-ink', desc: 'Your places, in pen on paper. A paper globe with ink marks for the places you have visited.', alt: 'Ink style: a paper globe of Europe, with an enlarged map detail' },
-  { name: 'Paint', image: '06-paint', desc: 'Color in where you have been. Paint fills in the countries and regions you have visited.', alt: 'Paint style: Paris and Rome, with a closer terrain view of Chamonix' },
-]
-
-function GlobeStyles() {
-  const ref = useReveal()
-  // Track cursor for the radial glow effect on cards
-  const onMove = (e) => {
-    const card = e.currentTarget
-    const r = card.getBoundingClientRect()
-    card.style.setProperty('--c-mx', `${e.clientX - r.left}px`)
-    card.style.setProperty('--c-my', `${e.clientY - r.top}px`)
-  }
-  return (
-    <section className="c-section" ref={ref}>
-      <div className="c-section-head c-reveal" style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
-        <span className="c-eyebrow" style={{ justifyContent: 'center' }}>One world. Three ways to see yourself in it.</span>
-        <h2 className="c-h2" style={{ marginTop: '1rem' }}>The globe, your way.</h2>
-      </div>
-
-      <div className="c-globes c-reveal">
-        {GLOBE_STYLES.map((g) => (
-          <div
-            className="c-globe-card"
-            key={g.name}
-            data-style={g.name.toLowerCase()}
-            onMouseMove={onMove}
-          >
-            <LaunchImage name={g.image} alt={g.alt} className="c-style-poster" sizes="(max-width: 880px) 82vw, 320px" />
-            <h3>
-              {g.name}
-              <span className="c-globe-card-tag">
-                Free
-              </span>
-            </h3>
-            <p>{g.desc}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  )
-}
-
-/* ────────────────────────────────────────────────────────────
- * 5. PRIVACY MANIFESTO
- * ──────────────────────────────────────────────────────────── */
 function PrivacyManifesto() {
   const ref = useReveal()
   return (

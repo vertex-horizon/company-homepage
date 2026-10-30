@@ -43,8 +43,10 @@ The production site uses the custom domain in `public/CNAME`:
 Current artwork comes from **Charted Product V2 → 10 · 商店与上线物料**, page `1041:2` in file `ir3wSrI7a6lgSj6I48afVD`. The website uses the October 29, 2026 launch compositions, not the older AppStore pipeline drafts.
 
 - [Figma source page](https://www.figma.com/design/ir3wSrI7a6lgSj6I48afVD?node-id=1041-2)
-- `src/charted/launch-assets.json` records exact source nodes, export hashes and web derivative hashes.
-- `public/mapvoy/media/` contains complete 660/1320px WebP compositions and the dedicated 1200×630 Open Graph card. Illustrations preserve their original aspect ratio and sample travel data; they do not establish release or runtime acceptance.
+- `src/charted/showcase-assets.json` records the independent scene, phone and share-card layers used by the current homepage. `launch-assets.json` retains the original launch-export provenance and Open Graph card hash.
+- `HomeShowcase.jsx` / `HomeShowcase.css` compose a viewport-filling Earth hero, a three-style scene viewer with native-dialog expansion, three complete phone views, and a wide share-card gallery. The company page also uses the independent landscape scene.
+- `public/mapvoy/scenes/` serves proportionally encoded scene, phone and card images. The Earth background has 1280/1920/3840px variants from the original 3840×1646 source. Scene artwork can bleed at the viewport edge; phone UI and share cards remain complete with their original aspect ratios.
+- `public/mapvoy/media/` retains launch-export URLs and the dedicated 1200×630 Open Graph card. All imagery uses sample travel data and does not establish release or runtime acceptance.
 - The stamp icon is exported from `life-footprints/Charted/AppIcon.icon` using Icon Composer. Current favicon URLs use `/mapvoy/icon/`; old `/charted/icon/` URLs serve the new icon for compatibility.
 - Public artwork credits are at `/mapvoy/credits.html`.
 - Product messaging follows `life-footprints/docs/growth/01-BRAND_AND_MESSAGING.md`. Prices and introductory offers are shown by the app at purchase time; the website does not hardcode them.
