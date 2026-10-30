@@ -280,10 +280,16 @@ export default function Privacy({ navigate }) {
         law as a fallback when that framework does not cover a transfer.
       </p>
       <p>
-        Firebase and Google Analytics are global services; their processing and support can take
-        place outside your country. The public-resource and email providers described in this policy
-        may also process connection or message information outside your country. This notice does not
-        promise that all service information stays in the United States, the EU, the UK or Switzerland.
+        Google services involve Google LLC in the United States and may involve processing in other
+        countries or territories. Google publishes service-specific information about{' '}
+        <a href="https://business.safety.google/adssubprocessors/" target="_blank" rel="noreferrer">Analytics providers’ locations</a>,{' '}
+        <a href="https://firebase.google.com/support/privacy#data_storage_and_processing_locations" target="_blank" rel="noreferrer">Firebase’s global processing locations</a> and{' '}
+        <a href="https://firebase.google.com/terms/subprocessors" target="_blank" rel="noreferrer">support providers</a>, and{' '}
+        <a href="https://workspace.google.com/terms/subprocessors/" target="_blank" rel="noreferrer">Workspace processing and support countries</a>.
+        These describe potential service locations; your data is not necessarily processed in every
+        listed location. Analytics providers’ corporate locations are not fixed data-storage locations.
+        The other resource and website providers described in this policy may also process connection
+        information outside your country.
         You can contact us for the service-specific processing locations and safeguards relevant to
         your information, and request a copy of applicable safeguards where available, subject to
         necessary redactions protecting other people’s information and confidential terms.

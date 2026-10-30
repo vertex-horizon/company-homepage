@@ -213,11 +213,18 @@ export default function PrivacyFr({ navigate }) {
         droit suisse, à titre subsidiaire lorsque ce cadre ne couvre pas un transfert.
       </p>
       <p>
-        Firebase et Google Analytics sont des services mondiaux; leur traitement et leur assistance
-        peuvent avoir lieu hors de votre pays. Les fournisseurs de ressources publiques et de courrier
-        décrits dans cette politique peuvent aussi traiter des informations de connexion ou des
-        messages hors de votre pays. Cet avis ne promet pas que tous les renseignements de service
-        restent aux États-Unis, dans l’UE, au Royaume-Uni ou en Suisse. Vous pouvez nous demander
+        Les services Google font intervenir Google LLC aux États-Unis et peuvent entraîner des
+        traitements dans d’autres pays ou territoires. Google publie des informations propres à chaque
+        service sur{' '}
+        <a href="https://business.safety.google/adssubprocessors/" target="_blank" rel="noreferrer">les lieux d’établissement des prestataires Analytics</a>,{' '}
+        <a href="https://firebase.google.com/support/privacy#data_storage_and_processing_locations" target="_blank" rel="noreferrer">les lieux de traitement mondiaux de Firebase</a> et{' '}
+        <a href="https://firebase.google.com/terms/subprocessors" target="_blank" rel="noreferrer">ses prestataires d’assistance</a>, ainsi que{' '}
+        <a href="https://workspace.google.com/terms/subprocessors/" target="_blank" rel="noreferrer">les pays de traitement et d’assistance de Workspace</a>.
+        Ces listes décrivent des lieux potentiels; vos données ne sont pas nécessairement traitées
+        dans chacun d’eux. Les lieux d’établissement des prestataires Analytics ne sont pas des lieux
+        fixes de stockage des données. Les autres fournisseurs de ressources et d’hébergement web
+        décrits dans cette politique peuvent aussi traiter des informations de connexion hors de votre pays.
+        Vous pouvez nous demander
         les lieux de traitement et les garanties propres aux services concernant vos informations,
         ainsi qu’une copie des garanties applicables lorsqu’elle est disponible, sous réserve des
         occultations nécessaires pour protéger les informations d’autrui et les clauses confidentielles.
