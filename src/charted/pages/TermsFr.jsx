@@ -160,6 +160,20 @@ export default function TermsFr({ navigate }) {
         <a href="https://support.apple.com/fr-ca/118223" target="_blank" rel="noreferrer">renseignements d’Apple sur les remboursements</a>.
       </p>
 
+      <p>
+        <strong>Allemagne et Autriche — droit de rétractation :</strong> pour les achats facturés
+        par Apple, les conditions actuelles d’Apple décrivent une option de rétractation dans
+        l’historique d’achats de votre compte Apple. Lorsqu’un droit de rétractation s’applique,
+        sélectionnez la commande, choisissez cette option et suivez les étapes de confirmation;
+        Apple indique envoyer un accusé de réception par courriel. Cette démarche est distincte
+        de l’arrêt du renouvellement d’un abonnement. Les délais et conditions applicables,
+        notamment la perte éventuelle du droit lors d’une livraison numérique immédiate avec
+        consentement valable, figurent dans les{' '}
+        <a href="https://www.apple.com/legal/internet-services/itunes/de/terms.html" target="_blank" rel="noreferrer">conditions allemandes</a>{' '}
+        et les{' '}
+        <a href="https://www.apple.com/legal/internet-services/itunes/at/terms.html" target="_blank" rel="noreferrer">conditions autrichiennes d’Apple</a>.
+        Contactez-nous pour l’assistance ou toute question sur vos droits impératifs.
+      </p>
       <h2>5. Droits impératifs et modifications</h2>
       <p>
         Les protections, garanties et recours impératifs des consommateurs s’appliquent. Cela
