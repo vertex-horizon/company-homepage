@@ -1,3 +1,4 @@
+import { lvRegionalInformation } from './regionalInformationLv.js'
 import { esRegionalInformation } from './regionalInformationEs.js'
 import { cyIsRegionalInformation } from './regionalInformationCyIs.js'
 import { bgRoGrRegionalInformation } from './regionalInformationBgRoGr.js'
@@ -14,6 +15,7 @@ export const regionalInformation = {
   ...bgRoGrRegionalInformation,
   ...cyIsRegionalInformation,
   ...esRegionalInformation,
+  ...lvRegionalInformation,
   de: {
     title: 'Verbraucher-, Datenschutz- und Nutzungshinweise',
     updated: 'Stand: 30. Oktober 2026',
@@ -186,6 +188,10 @@ export const regionalInformation = {
 }
 
 export const informationLinks = {
+  appleLv: ['Apple — pirkumu noteikumi Latvijā', 'https://www.apple.com/legal/internet-services/itunes/lv/terms.html'],
+  latviaAuthority: ['Datu valsts inspekcija (DVI)', 'https://www.dvi.gov.lv/lv'],
+  latviaConsumer: ['PTAC — patērētāju strīdu risināšana', 'https://www.ptac.gov.lv/lv/pateretaju-individualo-stridu-izskatisana'],
+  latviaDigital: ['PTAC — digitālā satura un pakalpojuma atbilstība', 'https://www.ptac.gov.lv/lv/neatbilstoss-digitalais-saturs-un-digitalais-pakalpojums'],
   appleEs: ['Apple — condiciones de compra en España', 'https://www.apple.com/legal/internet-services/itunes/es/terms.html'],
   spainAuthority: ['Agencia Española de Protección de Datos (AEPD)', 'https://www.aepd.es/'],
   catalanComplaintForms: ['Fulls oficials de queixa, reclamació i denúncia / Hojas oficiales', 'https://consum.gencat.cat/ca/empreses/requisits-obligatoris/descarrega-de-cartells-i-documents/'],
