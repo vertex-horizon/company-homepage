@@ -1,3 +1,4 @@
+import { RegionalLinks } from './RegionalInfo.jsx'
 import { productPath } from '../config.js'
 import { NavLink } from '../ChartedApp.jsx'
 import { SUPPORT_EMAIL, APP_STORE_URL } from '../config.js'
@@ -33,6 +34,7 @@ export default function Support({ navigate }) {
         </p>
       </header>
 
+      <RegionalLinks navigate={navigate} />
       <h2>Getting Started</h2>
 
       <h3>How does Mapvoy know where I've been?</h3>
