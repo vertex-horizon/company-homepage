@@ -269,6 +269,8 @@ function Footer({ navigate }) {
             <NavLink to={productPath('/info/ro')} navigate={navigate} lang="ro">Română</NavLink>
             <NavLink to={productPath('/info/cy')} navigate={navigate} lang="el-CY">Ελληνικά (Κύπρος)</NavLink>
             <NavLink to={productPath('/info/is')} navigate={navigate} lang="is">Íslenska</NavLink>
+            <NavLink to={productPath('/info/es')} navigate={navigate} lang="es">Español</NavLink>
+            <NavLink to={productPath('/info/ca')} navigate={navigate} lang="ca">Català</NavLink>
             <NavLink to={productPath('/privacy')} navigate={navigate}>Privacy Policy</NavLink>
             <NavLink to={productPath('/terms')} navigate={navigate}>Terms of Use</NavLink>
           </div>

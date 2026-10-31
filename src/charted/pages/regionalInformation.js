@@ -1,3 +1,4 @@
+import { esRegionalInformation } from './regionalInformationEs.js'
 import { cyIsRegionalInformation } from './regionalInformationCyIs.js'
 import { bgRoGrRegionalInformation } from './regionalInformationBgRoGr.js'
 import { plHrLtRegionalInformation } from './regionalInformationPlHrLt.js'
@@ -12,6 +13,7 @@ export const regionalInformation = {
   ...plHrLtRegionalInformation,
   ...bgRoGrRegionalInformation,
   ...cyIsRegionalInformation,
+  ...esRegionalInformation,
   de: {
     title: 'Verbraucher-, Datenschutz- und Nutzungshinweise',
     updated: 'Stand: 30. Oktober 2026',
@@ -184,6 +186,10 @@ export const regionalInformation = {
 }
 
 export const informationLinks = {
+  appleEs: ['Apple — condiciones de compra en España', 'https://www.apple.com/legal/internet-services/itunes/es/terms.html'],
+  spainAuthority: ['Agencia Española de Protección de Datos (AEPD)', 'https://www.aepd.es/'],
+  catalanComplaintForms: ['Fulls oficials de queixa, reclamació i denúncia / Hojas oficiales', 'https://consum.gencat.cat/ca/empreses/requisits-obligatoris/descarrega-de-cartells-i-documents/'],
+  catalanComplaints: ['Agència Catalana del Consum — Com reclamar', 'https://consum.gencat.cat/ca/consultes-i-reclamacions/reclamacio/'],
   appleCy: ['Apple — Cyprus transaction terms (English)', 'https://www.apple.com/legal/internet-services/itunes/cy/terms.html'],
   appleIs: ['Apple — íslenskir viðskiptaskilmálar', 'https://www.apple.com/legal/internet-services/itunes/is/terms.html'],
   appleSupport: ['Apple Support', 'https://support.apple.com/contact'],

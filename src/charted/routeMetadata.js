@@ -114,6 +114,16 @@ export function createRouteMetadata(productSite = false) {
       title: 'Upplýsingar um notkun, kaup og persónuvernd — Mapvoy',
       description: 'Nauðsynlegar upplýsingar á íslensku um notkun, kaup, áskriftir og persónuvernd. Viðmót appsins er á ensku og frönsku.',
     },
+    infoEs: {
+      path: `${base}/info/es`, lang: 'es', languageGroup: 'essentialInfo',
+      title: 'Información de uso, compras y privacidad — Mapvoy',
+      description: 'Información necesaria en castellano sobre uso, compras, suscripciones y privacidad. La interfaz sigue en inglés y francés.',
+    },
+    infoCa: {
+      path: `${base}/info/ca`, lang: 'ca', languageGroup: 'essentialInfo',
+      title: 'Informació d’ús, compres i privacitat — Mapvoy',
+      description: 'Informació necessària en català sobre ús, compres, subscripcions i privacitat. La interfície continua en anglès i francès.',
+    },
     infoSk: {
       path: `${base}/info/sk`, lang: 'sk', languageGroup: 'essentialInfo',
       title: 'Používanie, nákupy a ochrana údajov — Mapvoy',
