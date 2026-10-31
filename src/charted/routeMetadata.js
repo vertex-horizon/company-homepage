@@ -44,6 +44,21 @@ export function createRouteMetadata(productSite = false) {
       title: 'Teave kasutamise, ostude ja isikuandmete kohta — Mapvoy',
       description: 'Eestikeelne teave Mapvoy kasutamise, tellimuste, taganemise ja andmekaitse kohta. Rakenduse kasutajaliides on inglise ja prantsuse keeles.',
     },
+    infoIt: {
+      path: `${base}/info/it`, lang: 'it', languageGroup: 'essentialInfo',
+      title: 'Informazioni su utilizzo, acquisti e privacy — Mapvoy',
+      description: 'Informazioni in italiano su funzioni, utilizzo, abbonamenti, recesso e privacy. L’interfaccia di Mapvoy resta in inglese e francese.',
+    },
+    infoCs: {
+      path: `${base}/info/cs`, lang: 'cs', languageGroup: 'essentialInfo',
+      title: 'Informace o používání, nákupech a soukromí — Mapvoy',
+      description: 'České informace o funkcích, používání, předplatném, odstoupení a soukromí. Rozhraní Mapvoy zůstává v angličtině a francouzštině.',
+    },
+    infoPt: {
+      path: `${base}/info/pt`, lang: 'pt-PT', languageGroup: 'essentialInfo',
+      title: 'Informações de utilização, compras e privacidade — Mapvoy',
+      description: 'Informações em português sobre funções, utilização, assinaturas, livre resolução e privacidade. A interface mantém-se em inglês e francês.',
+    },
     support: {
       path: `${base}/support`, lang: 'en',
       title: 'Support — Mapvoy',

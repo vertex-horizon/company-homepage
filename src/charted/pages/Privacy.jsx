@@ -355,8 +355,8 @@ export default function Privacy({ navigate }) {
         or parental permission. An older saved sharing preference is not treated as a new declaration.
       </p>
       <p>
-        For this optional sharing, the age for consenting on your own is 13 in Sweden and Finland,
-        14 in Austria, 15 in Denmark, and 16 in Germany and the Netherlands. Below that age, leave optional sharing off.
+        For this optional sharing, the age for consenting on your own is 13 in Sweden, Finland and Portugal,
+        14 in Austria and Italy, 15 in Denmark and Czechia, and 16 in Germany and the Netherlands. Below that age, leave optional sharing off.
         These thresholds do not raise the age for using Mapvoy’s local features. You can always
         turn sharing off; the thresholds do not prevent you from contacting us to withdraw consent
         or ask about your privacy rights.
