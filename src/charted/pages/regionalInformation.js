@@ -1,3 +1,4 @@
+import { noRegionalInformation } from './regionalInformationNo.js'
 import { lvRegionalInformation } from './regionalInformationLv.js'
 import { esRegionalInformation } from './regionalInformationEs.js'
 import { cyIsRegionalInformation } from './regionalInformationCyIs.js'
@@ -16,6 +17,7 @@ export const regionalInformation = {
   ...cyIsRegionalInformation,
   ...esRegionalInformation,
   ...lvRegionalInformation,
+  ...noRegionalInformation,
   de: {
     title: 'Verbraucher-, Datenschutz- und Nutzungshinweise',
     updated: 'Stand: 30. Oktober 2026',
@@ -188,6 +190,10 @@ export const regionalInformation = {
 }
 
 export const informationLinks = {
+  appleNo: ['Apple — norske kjøpsvilkår', 'https://www.apple.com/legal/internet-services/itunes/no/terms.html'],
+  norwayAuthority: ['Datatilsynet', 'https://www.datatilsynet.no/'],
+  norwayConsumer: ['Forbrukerrådet — apper og programvare', 'https://www.forbrukerradet.no/forside/digitalt/apper-og-programvare/'],
+  norwayDigitalSubscriptions: ['Forbrukerrådet — løpende digitale avtaler', 'https://www.forbrukerradet.no/?p=39643'],
   appleLv: ['Apple — pirkumu noteikumi Latvijā', 'https://www.apple.com/legal/internet-services/itunes/lv/terms.html'],
   latviaAuthority: ['Datu valsts inspekcija (DVI)', 'https://www.dvi.gov.lv/lv'],
   latviaConsumer: ['PTAC — patērētāju strīdu risināšana', 'https://www.ptac.gov.lv/lv/pateretaju-individualo-stridu-izskatisana'],
