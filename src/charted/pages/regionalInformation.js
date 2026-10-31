@@ -1,9 +1,11 @@
 import { nextRegionalInformation } from './regionalInformationNext.js'
+import { followingRegionalInformation } from './regionalInformationFollowing.js'
 
 // 必要告知按同一语义键维护；不是 App UI 语言包，也不是用英文链接代替当地语的必要事实。
 // 旧版行为、撤回与续订、端侧库与供应商记录的边界必须在各语种同时保留。
 export const regionalInformation = {
   ...nextRegionalInformation,
+  ...followingRegionalInformation,
   de: {
     title: 'Verbraucher-, Datenschutz- und Nutzungshinweise',
     updated: 'Stand: 30. Oktober 2026',
@@ -176,6 +178,11 @@ export const regionalInformation = {
 }
 
 export const informationLinks = {
+  appleHu: ['Apple médiaszolgáltatási feltételek', 'https://www.apple.com/legal/internet-services/itunes/hu/terms.html'],
+  appleSk: ['Apple — slovenské transakčné podmienky', 'https://www.apple.com/legal/internet-services/itunes/sk/terms.html'],
+  hungaryAuthority: ['NAIH — adatvédelmi hatóság', 'https://www.naih.hu/'],
+  slovakAuthority: ['Úrad na ochranu osobných údajov SR', 'https://dataprotection.gov.sk/'],
+  slovakConsumer: ['Slovenská obchodná inšpekcia — informácie a riešenie sporov', 'https://www.soi.sk/'],
   cancel: ['Apple: cancel a subscription', 'https://support.apple.com/118428'],
   refund: ['Apple: refund request', 'https://reportaproblem.apple.com'],
   appleIt: ['Apple Media Services — Italia', 'https://www.apple.com/legal/internet-services/itunes/it/terms.html'],

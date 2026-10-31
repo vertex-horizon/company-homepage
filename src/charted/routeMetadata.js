@@ -64,6 +64,16 @@ export function createRouteMetadata(productSite = false) {
       title: 'Support — Mapvoy',
       description: 'Help, FAQs, and contact for Mapvoy — the photo travel mapping app.',
     },
+    infoHu: {
+      path: `${base}/info/hu`, lang: 'hu', languageGroup: 'essentialInfo',
+      title: 'Használat, vásárlások és adatvédelem — Mapvoy',
+      description: 'Magyar tájékoztató a Mapvoy funkcióiról, használatáról, előfizetéseiről, elállásról és adatvédelemről. A kezelőfelület angol és francia.',
+    },
+    infoSk: {
+      path: `${base}/info/sk`, lang: 'sk', languageGroup: 'essentialInfo',
+      title: 'Používanie, nákupy a ochrana údajov — Mapvoy',
+      description: 'Slovenské informácie o funkciách, používaní, predplatnom, odstúpení a osobných údajoch. Rozhranie Mapvoy je v angličtine a francúzštine.',
+    },
   }
 }
 
