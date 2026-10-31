@@ -104,6 +104,16 @@ export function createRouteMetadata(productSite = false) {
       title: "Informații despre utilizare, cumpărături și confidențialitate — Mapvoy",
       description: "Informații esențiale despre utilizare, cumpărături, abonamente și confidențialitate. Interfața rămâne engleză și franceză.",
     },
+    infoCy: {
+      path: `${base}/info/cy`, lang: 'el-CY', languageGroup: 'essentialInfo',
+      title: 'Πληροφορίες χρήσης, αγορών και απορρήτου — Κύπρος — Mapvoy',
+      description: 'Πληροφορίες στα ελληνικά για χρήση, αγορές και δεδομένα στην Κύπρο. Περιβάλλον εφαρμογής αγγλικά και γαλλικά.',
+    },
+    infoIs: {
+      path: `${base}/info/is`, lang: 'is', languageGroup: 'essentialInfo',
+      title: 'Upplýsingar um notkun, kaup og persónuvernd — Mapvoy',
+      description: 'Nauðsynlegar upplýsingar á íslensku um notkun, kaup, áskriftir og persónuvernd. Viðmót appsins er á ensku og frönsku.',
+    },
     infoSk: {
       path: `${base}/info/sk`, lang: 'sk', languageGroup: 'essentialInfo',
       title: 'Používanie, nákupy a ochrana údajov — Mapvoy',

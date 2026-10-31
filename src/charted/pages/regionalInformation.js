@@ -1,3 +1,4 @@
+import { cyIsRegionalInformation } from './regionalInformationCyIs.js'
 import { bgRoGrRegionalInformation } from './regionalInformationBgRoGr.js'
 import { plHrLtRegionalInformation } from './regionalInformationPlHrLt.js'
 import { nextRegionalInformation } from './regionalInformationNext.js'
@@ -10,6 +11,7 @@ export const regionalInformation = {
   ...followingRegionalInformation,
   ...plHrLtRegionalInformation,
   ...bgRoGrRegionalInformation,
+  ...cyIsRegionalInformation,
   de: {
     title: 'Verbraucher-, Datenschutz- und Nutzungshinweise',
     updated: 'Stand: 30. Oktober 2026',
@@ -182,6 +184,14 @@ export const regionalInformation = {
 }
 
 export const informationLinks = {
+  appleCy: ['Apple — Cyprus transaction terms (English)', 'https://www.apple.com/legal/internet-services/itunes/cy/terms.html'],
+  appleIs: ['Apple — íslenskir viðskiptaskilmálar', 'https://www.apple.com/legal/internet-services/itunes/is/terms.html'],
+  appleSupport: ['Apple Support', 'https://support.apple.com/contact'],
+  cyprusAuthority: ['Επίτροπος Προστασίας Δεδομένων Προσωπικού Χαρακτήρα Κύπρου', 'https://www.gov.cy/dataprotection/documents/epikoinonia/'],
+  cyprusConsumer: ['Υπηρεσία Προστασίας Καταναλωτή Κύπρου', 'https://consumer.gov.cy/'],
+  icelandAuthority: ['Persónuvernd', 'https://island.is/s/personuvernd'],
+  icelandConsumer: ['Neytendastofa — upplýsingar og eftirlit', 'https://www.neytendastofa.is/'],
+  icelandContracts: ['Lög nr. 16/2016 um neytendasamninga', 'https://www.althingi.is/lagas/nuna/2016016.html'],
   appleBg: ['Apple — условия за покупки в България', 'https://www.apple.com/legal/internet-services/itunes/bg/terms.html'],
   appleRo: ['Apple — condiții de cumpărare în România', 'https://www.apple.com/legal/internet-services/itunes/ro/terms.html'],
   appleGr: ['Apple — όροι αγορών στην Ελλάδα', 'https://www.apple.com/legal/internet-services/itunes/gr/terms.html'],
