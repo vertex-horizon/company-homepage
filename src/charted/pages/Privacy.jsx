@@ -444,6 +444,11 @@ export default function Privacy({ navigate }) {
         <strong>Mailing Address:</strong> 3405 Montgomery Dr Apt 255, Santa Clara, CA 95054-3080, United States<br />
         <strong>Business Phone:</strong> <a href="tel:+16088951157">+1 608-895-1157</a>
       </p>
+      <p>
+        Incorporated in Delaware, United States, on February 17, 2026. Registration authority:
+        Delaware Secretary of State, Division of Corporations. Delaware file number: 10514361.
+        Represented by Guikai Huang, President and Chief Executive Officer.
+      </p>
 
       <div className="c-doc-footer">
         <span>© {new Date().getFullYear()} Vertex Horizon Inc.</span>

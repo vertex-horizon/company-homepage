@@ -290,6 +290,11 @@ export default function TermsFr({ navigate }) {
         <strong>Téléphone professionnel :</strong> <a href="tel:+16088951157">+1 608-895-1157</a>
       </p>
       <p>
+        Société constituée au Delaware, États-Unis, le 17 février 2026. Autorité d’enregistrement :
+        Delaware Secretary of State, Division of Corporations. Numéro de dossier au Delaware : 10514361.
+        Représentée par Guikai Huang, President et Chief Executive Officer.
+      </p>
+      <p>
         Consultez Settings → About → Third-Party Notices dans l’Application pour les licences
         et attributions des composants et ressources inclus. L’utilisation de ces ressources
         n’implique aucune approbation de leurs créateurs.

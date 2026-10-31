@@ -198,6 +198,11 @@ export default function Terms({ navigate }) {
         <strong>Business Phone:</strong> <a href="tel:+16088951157">+1 608-895-1157</a>
       </p>
       <p>
+        Incorporated in Delaware, United States, on February 17, 2026. Registration authority:
+        Delaware Secretary of State, Division of Corporations. Delaware file number: 10514361.
+        Represented by Guikai Huang, President and Chief Executive Officer.
+      </p>
+      <p>
         See Settings → About → Third-Party Notices in the App for included component and resource
         licenses and attribution. Use of those resources does not imply endorsement by their
         creators.

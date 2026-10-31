@@ -12,6 +12,7 @@ export const regionalInformation = {
     sections: [
       { id: 'provider', title: '1. Anbieter und Kontakt', paragraphs: [
         'Anbieter und datenschutzrechtlich Verantwortlicher ist Vertex Horizon Inc., 3405 Montgomery Dr Apt 255, Santa Clara, CA 95054-3080, USA. E-Mail für Hilfe, Beschwerden und Datenschutzrechte: contact@vertex-horizon.com. Telefon: +1 608-895-1157. Dies ist unsere veröffentlichte Kontaktanschrift.',
+        'Vertex Horizon Inc. ist eine am 17. Februar 2026 in Delaware, USA, gegründete Corporation. Registrierungsbehörde: Delaware Secretary of State, Division of Corporations. Delaware-Aktennummer: 10514361. Vertreten durch Guikai Huang, President und Chief Executive Officer.',
         'Charted heißt jetzt Mapvoy. Der Anbieter bleibt derselbe. Diese Hinweise ergänzen Apples Standard-EULA, sie sind keine eigene Softwarelizenz. Für über Apple abgerechnete Käufe gelten außerdem die im Kaufvorgang angezeigten Apple-Bedingungen. Apple ist für seine Konto- und Zahlungsdienste eigenständig verantwortlich; dadurch entfallen unsere eigenen Pflichten nicht.',
       ] },
       { id: 'use', title: '2. Voraussetzungen und grundlegende Bedienung', paragraphs: [
