@@ -1,3 +1,4 @@
+import { plHrLtRegionalInformation } from './regionalInformationPlHrLt.js'
 import { nextRegionalInformation } from './regionalInformationNext.js'
 import { followingRegionalInformation } from './regionalInformationFollowing.js'
 
@@ -6,6 +7,7 @@ import { followingRegionalInformation } from './regionalInformationFollowing.js'
 export const regionalInformation = {
   ...nextRegionalInformation,
   ...followingRegionalInformation,
+  ...plHrLtRegionalInformation,
   de: {
     title: 'Verbraucher-, Datenschutz- und Nutzungshinweise',
     updated: 'Stand: 30. Oktober 2026',
@@ -178,6 +180,14 @@ export const regionalInformation = {
 }
 
 export const informationLinks = {
+  applePl: ['Apple — warunki zakupu w Polsce', 'https://www.apple.com/legal/internet-services/itunes/pl/terms.html'],
+  appleHr: ['Apple — uvjeti kupnje u Hrvatskoj', 'https://www.apple.com/legal/internet-services/itunes/hr/terms.html'],
+  appleLt: ['Apple — pirkimo sąlygos Lietuvoje', 'https://www.apple.com/legal/internet-services/itunes/lt/terms.html'],
+  polandAuthority: ['Prezes Urzędu Ochrony Danych Osobowych', 'https://uodo.gov.pl/'],
+  croatiaAuthority: ['Agencija za zaštitu osobnih podataka (AZOP)', 'https://azop.hr/'],
+  lithuaniaAuthority: ['Valstybinė duomenų apsaugos inspekcija (VDAI)', 'https://vdai.lrv.lt/'],
+  croatiaConsumer: ['Prigovori i zaštita potrošača', 'https://www.gov.hr/hr/reklamacija-proizvoda-i-usluga-s-nedostatkom/548'],
+  lithuaniaConsumer: ['Valstybinė vartotojų teisių apsaugos tarnyba (VVTAT)', 'https://vvtat.lrv.lt/lt/kaip-pateikti-prasyma/'],
   appleHu: ['Apple médiaszolgáltatási feltételek', 'https://www.apple.com/legal/internet-services/itunes/hu/terms.html'],
   appleSk: ['Apple — slovenské transakčné podmienky', 'https://www.apple.com/legal/internet-services/itunes/sk/terms.html'],
   hungaryAuthority: ['NAIH — adatvédelmi hatóság', 'https://www.naih.hu/'],

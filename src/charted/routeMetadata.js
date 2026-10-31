@@ -69,6 +69,21 @@ export function createRouteMetadata(productSite = false) {
       title: 'Használat, vásárlások és adatvédelem — Mapvoy',
       description: 'Magyar tájékoztató a Mapvoy funkcióiról, használatáról, előfizetéseiről, elállásról és adatvédelemről. A kezelőfelület angol és francia.',
     },
+    infoPl: {
+      path: `${base}/info/pl`, lang: "pl", languageGroup: 'essentialInfo',
+      title: "Informacje o użytkowaniu, zakupach i prywatności — Mapvoy",
+      description: "Informacje po polsku o funkcjach, zakupach, subskrypcjach, reklamacjach i prywatności Mapvoy. Interfejs pozostaje angielski i francuski.",
+    },
+    infoHr: {
+      path: `${base}/info/hr`, lang: "hr", languageGroup: 'essentialInfo',
+      title: "Informacije o uporabi, kupnji i privatnosti — Mapvoy",
+      description: "Bitne informacije na hrvatskom o uporabi, kupnji, pretplatama, prigovorima i privatnosti. Sučelje je englesko i francusko.",
+    },
+    infoLt: {
+      path: `${base}/info/lt`, lang: "lt", languageGroup: 'essentialInfo',
+      title: "Informacija apie naudojimą, pirkimą ir privatumą — Mapvoy",
+      description: "Esminė informacija lietuviškai apie naudojimą, pirkimą, prenumeratas, skundus ir privatumą. Sąsaja anglų ir prancūzų kalbomis.",
+    },
     infoSk: {
       path: `${base}/info/sk`, lang: 'sk', languageGroup: 'essentialInfo',
       title: 'Používanie, nákupy a ochrana údajov — Mapvoy',
