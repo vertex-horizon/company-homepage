@@ -29,6 +29,21 @@ export function createRouteMetadata(productSite = false) {
       title: 'Conditions d’utilisation — Mapvoy',
       description: 'Conditions d’utilisation de Mapvoy : abonnements, contenu personnel, Mapvoy Pro et droits des consommateurs.',
     },
+    infoDe: {
+      path: `${base}/info/de`, lang: 'de', languageGroup: 'essentialInfo',
+      title: 'Verbraucher-, Datenschutz- und Nutzungshinweise — Mapvoy',
+      description: 'Deutschsprachige Informationen zu Mapvoy, Bedienung, Abonnements, Widerruf und Datenschutz. Die App-Oberfläche bleibt Englisch und Französisch.',
+    },
+    infoNl: {
+      path: `${base}/info/nl`, lang: 'nl', languageGroup: 'essentialInfo',
+      title: 'Informatie over gebruik, aankopen en privacy — Mapvoy',
+      description: 'Nederlandstalige informatie over gebruik, abonnementen, herroeping en privacy bij Mapvoy. De app-interface is Engels en Frans.',
+    },
+    infoEt: {
+      path: `${base}/info/et`, lang: 'et', languageGroup: 'essentialInfo',
+      title: 'Teave kasutamise, ostude ja isikuandmete kohta — Mapvoy',
+      description: 'Eestikeelne teave Mapvoy kasutamise, tellimuste, taganemise ja andmekaitse kohta. Rakenduse kasutajaliides on inglise ja prantsuse keeles.',
+    },
     support: {
       path: `${base}/support`, lang: 'en',
       title: 'Support — Mapvoy',
@@ -40,5 +55,7 @@ export function createRouteMetadata(productSite = false) {
 export const CHARTED_ROUTE_META = createRouteMetadata(IS_PRODUCT_SITE)
 
 export function routeLanguageAlternates(meta, routes = CHARTED_ROUTE_META) {
+  // 必要告知互为译本；不将精简告知伪标为完整 Privacy/Terms 的语言替代。
+  if (meta.languageGroup) return Object.values(routes).filter((route) => route.languageGroup === meta.languageGroup)
   return meta.alternate ? [meta, routes[meta.alternate]] : []
 }

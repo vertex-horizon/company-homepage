@@ -1,3 +1,4 @@
+import { RegionalLinks } from './RegionalInfo.jsx'
 import { productPath } from '../config.js'
 import { NavLink } from '../ChartedApp.jsx'
 import { SUPPORT_EMAIL } from '../config.js'
@@ -25,6 +26,7 @@ export default function Privacy({ navigate }) {
           <span><strong>Effective Date:</strong> October 1, 2026</span>
         </div>
       </header>
+      <RegionalLinks navigate={navigate} />
       <p><strong>App name:</strong> Charted is now Mapvoy. The provider remains Vertex Horizon Inc.</p>
 
       <p><NavLink to={productPath('/privacy/fr')} navigate={navigate} hrefLang="fr-CA" lang="fr-CA">Français (Canada)</NavLink></p>

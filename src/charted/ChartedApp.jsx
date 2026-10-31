@@ -7,6 +7,7 @@ import Terms from './pages/Terms.jsx'
 import PrivacyFr from './pages/PrivacyFr.jsx'
 import TermsFr from './pages/TermsFr.jsx'
 import Support from './pages/Support.jsx'
+import RegionalInfo from './pages/RegionalInfo.jsx'
 import { Stars, CursorGlow } from './effects.jsx'
 import { APP_STORE_URL, SUPPORT_EMAIL, PARENT_SITE, PRODUCT_ORIGIN, productPath } from './config.js'
 import { CHARTED_ROUTE_META, routeLanguageAlternates } from './routeMetadata.js'
@@ -114,6 +115,7 @@ export default function ChartedApp() {
         {route === 'privacyFr' && <PrivacyFr navigate={navigate} />}
         {route === 'termsFr' && <TermsFr navigate={navigate} />}
         {route === 'support' && <Support navigate={navigate} />}
+        {CHARTED_ROUTE_META[route]?.languageGroup === 'essentialInfo' && <RegionalInfo language={CHARTED_ROUTE_META[route].lang} navigate={navigate} />}
       </main>
       <Footer navigate={navigate} />
     </div>
@@ -250,6 +252,9 @@ function Footer({ navigate }) {
 
           <div className="c-footer-col">
             <h4>Legal</h4>
+            <NavLink to={productPath('/info/de')} navigate={navigate} lang="de">Deutsch</NavLink>
+            <NavLink to={productPath('/info/nl')} navigate={navigate} lang="nl">Nederlands</NavLink>
+            <NavLink to={productPath('/info/et')} navigate={navigate} lang="et">Eesti</NavLink>
             <NavLink to={productPath('/privacy')} navigate={navigate}>Privacy Policy</NavLink>
             <NavLink to={productPath('/terms')} navigate={navigate}>Terms of Use</NavLink>
           </div>

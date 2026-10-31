@@ -2052,3 +2052,8 @@
   .c-hero-title, .c-cta-tagline { font-size: clamp(1.65rem, 8vw, 2.75rem); }
   .c-hero-title-line, .c-cta-tagline .c-text-reveal { white-space: nowrap; }
 }
+
+/* 必要告知沿用文档排版；移动端允许长词/地址换行，锚点避开固定导航。 */
+.c-doc section[id] { scroll-margin-top: 100px; }
+.c-doc { overflow-wrap: anywhere; }
+.c-regional-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
