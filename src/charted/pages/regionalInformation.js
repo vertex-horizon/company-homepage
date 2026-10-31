@@ -1,3 +1,4 @@
+import { jpRegionalInformation } from './regionalInformationJp.js'
 import { noRegionalInformation } from './regionalInformationNo.js'
 import { lvRegionalInformation } from './regionalInformationLv.js'
 import { esRegionalInformation } from './regionalInformationEs.js'
@@ -18,6 +19,7 @@ export const regionalInformation = {
   ...esRegionalInformation,
   ...lvRegionalInformation,
   ...noRegionalInformation,
+  ...jpRegionalInformation,
   de: {
     title: 'Verbraucher-, Datenschutz- und Nutzungshinweise',
     updated: 'Stand: 30. Oktober 2026',
@@ -190,6 +192,11 @@ export const regionalInformation = {
 }
 
 export const informationLinks = {
+  appleJp: ["Apple — 日本の購入・サブスクリプション条件", "https://www.apple.com/legal/internet-services/itunes/jp/terms.html"],
+  japanConsumer: ["消費者庁 — 相談窓口", "https://www.caa.go.jp/policies/application/inquiry/"],
+  japanAuthority: ["個人情報保護委員会 — 相談窓口", "https://www.ppc.go.jp/personalinfo/pipldial/"],
+  japanChildConsent: ["個人情報保護委員会 — 子どもの同意", "https://www.ppc.go.jp/all_faq_index/faq1-q1-62/"],
+  japanForeignLaws: ["個人情報保護委員会 — 外国の個人情報保護制度", "https://www.ppc.go.jp/enforcement/infoprovision/laws/"],
   appleNo: ['Apple — norske kjøpsvilkår', 'https://www.apple.com/legal/internet-services/itunes/no/terms.html'],
   norwayAuthority: ['Datatilsynet', 'https://www.datatilsynet.no/'],
   norwayConsumer: ['Forbrukerrådet — apper og programvare', 'https://www.forbrukerradet.no/forside/digitalt/apper-og-programvare/'],

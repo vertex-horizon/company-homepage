@@ -44,6 +44,8 @@ export function RegionalLinks({ navigate }) {
       <NavLink to={productPath('/info/lv')} navigate={navigate} lang="lv" hrefLang="lv">Latviešu</NavLink>
       {' · '}
       <NavLink to={productPath('/info/nb')} navigate={navigate} lang="nb" hrefLang="nb">Norsk bokmål</NavLink>
+      {' · '}
+      <NavLink to={productPath('/info/ja')} navigate={navigate} lang="ja" hrefLang="ja">日本語</NavLink>
     </p>
   )
 }

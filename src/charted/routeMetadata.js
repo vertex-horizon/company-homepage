@@ -129,6 +129,11 @@ export function createRouteMetadata(productSite = false) {
       title: 'Informācija par lietošanu, pirkumiem un privātumu — Mapvoy',
       description: 'Būtiskā informācija latviski par Mapvoy lietošanu, pirkumiem, abonementiem un privātumu. Saskarne ir angļu un franču valodā.',
     },
+    infoJa: {
+      path: `${base}/info/ja`, lang: 'ja', languageGroup: 'essentialInfo',
+      title: '利用・購入・個人情報に関する重要事項 — Mapvoy',
+      description: 'Mapvoyの日本語による必要な利用・取引・個人情報の説明。画面と通常のサポートは英語・フランス語です。',
+    },
     infoNb: {
       path: `${base}/info/nb`, lang: 'nb', languageGroup: 'essentialInfo',
       title: 'Informasjon om bruk, kjøp og personvern — Mapvoy',
