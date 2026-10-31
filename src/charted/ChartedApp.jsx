@@ -7,7 +7,7 @@ import Terms from './pages/Terms.jsx'
 import PrivacyFr from './pages/PrivacyFr.jsx'
 import TermsFr from './pages/TermsFr.jsx'
 import Support from './pages/Support.jsx'
-import RegionalInfo from './pages/RegionalInfo.jsx'
+import RegionalInfo, { RegionalIndex } from './pages/RegionalInfo.jsx'
 import { Stars, CursorGlow } from './effects.jsx'
 import { APP_STORE_URL, SUPPORT_EMAIL, PARENT_SITE, PRODUCT_ORIGIN, productPath } from './config.js'
 import { CHARTED_ROUTE_META, routeLanguageAlternates } from './routeMetadata.js'
@@ -115,6 +115,7 @@ export default function ChartedApp() {
         {route === 'privacyFr' && <PrivacyFr navigate={navigate} />}
         {route === 'termsFr' && <TermsFr navigate={navigate} />}
         {route === 'support' && <Support navigate={navigate} />}
+        {route === 'information' && <RegionalIndex navigate={navigate} />}
         {CHARTED_ROUTE_META[route]?.languageGroup === 'essentialInfo' && <RegionalInfo language={CHARTED_ROUTE_META[route].lang} navigate={navigate} />}
       </main>
       <Footer navigate={navigate} />
@@ -263,6 +264,9 @@ function Footer({ navigate }) {
             <NavLink to={productPath('/info/pl')} navigate={navigate} lang="pl">Polski</NavLink>
             <NavLink to={productPath('/info/hr')} navigate={navigate} lang="hr">Hrvatski</NavLink>
             <NavLink to={productPath('/info/lt')} navigate={navigate} lang="lt">Lietuvių</NavLink>
+            <NavLink to={productPath('/info/bg')} navigate={navigate} lang="bg">Български</NavLink>
+            <NavLink to={productPath('/info/el')} navigate={navigate} lang="el">Ελληνικά</NavLink>
+            <NavLink to={productPath('/info/ro')} navigate={navigate} lang="ro">Română</NavLink>
             <NavLink to={productPath('/privacy')} navigate={navigate}>Privacy Policy</NavLink>
             <NavLink to={productPath('/terms')} navigate={navigate}>Terms of Use</NavLink>
           </div>

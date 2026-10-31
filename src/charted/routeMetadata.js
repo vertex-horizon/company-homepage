@@ -84,6 +84,26 @@ export function createRouteMetadata(productSite = false) {
       title: "Informacija apie naudojimą, pirkimą ir privatumą — Mapvoy",
       description: "Esminė informacija lietuviškai apie naudojimą, pirkimą, prenumeratas, skundus ir privatumą. Sąsaja anglų ir prancūzų kalbomis.",
     },
+    information: {
+      path: `${base}/info`, lang: 'en',
+      title: 'Product information · Informations produit — Mapvoy',
+      description: 'Choose a language for essential Mapvoy use, purchase and privacy information. App interface: English and French.',
+    },
+    infoBg: {
+      path: `${base}/info/bg`, lang: "bg", languageGroup: 'essentialInfo',
+      title: "Информация за използване, покупки и поверителност — Mapvoy",
+      description: "Основна информация за използване, покупки, абонаменти и поверителност. Интерфейсът остава английски и френски.",
+    },
+    infoEl: {
+      path: `${base}/info/el`, lang: "el", languageGroup: 'essentialInfo',
+      title: "Πληροφορίες χρήσης, αγορών και απορρήτου — Mapvoy",
+      description: "Βασικές πληροφορίες για χρήση, αγορές, συνδρομές και απόρρητο. Το περιβάλλον παραμένει αγγλικό και γαλλικό.",
+    },
+    infoRo: {
+      path: `${base}/info/ro`, lang: "ro", languageGroup: 'essentialInfo',
+      title: "Informații despre utilizare, cumpărături și confidențialitate — Mapvoy",
+      description: "Informații esențiale despre utilizare, cumpărături, abonamente și confidențialitate. Interfața rămâne engleză și franceză.",
+    },
     infoSk: {
       path: `${base}/info/sk`, lang: 'sk', languageGroup: 'essentialInfo',
       title: 'Používanie, nákupy a ochrana údajov — Mapvoy',

@@ -26,7 +26,27 @@ export function RegionalLinks({ navigate }) {
       <NavLink to={productPath('/info/hr')} navigate={navigate} lang="hr" hrefLang="hr">Hrvatski</NavLink>
       {' · '}
       <NavLink to={productPath('/info/lt')} navigate={navigate} lang="lt" hrefLang="lt">Lietuvių</NavLink>
+      {' · '}
+      <NavLink to={productPath('/info/bg')} navigate={navigate} lang="bg" hrefLang="bg">Български</NavLink>
+      {' · '}
+      <NavLink to={productPath('/info/el')} navigate={navigate} lang="el" hrefLang="el">Ελληνικά</NavLink>
+      {' · '}
+      <NavLink to={productPath('/info/ro')} navigate={navigate} lang="ro" hrefLang="ro">Română</NavLink>
     </p>
+  )
+}
+
+// 累计语言链接已超过法语商店描述预算；单一索引只缩短入口，不删必要事实或伪称新增UI语言。
+export function RegionalIndex({ navigate }) {
+  return (
+    <article className="c-doc">
+      <header><h1>Product information · Informations produit</h1></header>
+      <p lang="en">Choose your language for essential use, purchase and privacy information. The App interface remains English and French.</p>
+      <p lang="fr">Choisissez votre langue pour les informations essentielles d’utilisation, d’achat et de confidentialité. L’interface de l’app reste en anglais et en français.</p>
+      <RegionalLinks navigate={navigate} />
+      <p lang="en"><NavLink to={productPath('/privacy')} navigate={navigate}>Privacy Policy (English)</NavLink>{' · '}<NavLink to={productPath('/terms')} navigate={navigate}>Terms of Use (English)</NavLink></p>
+      <p lang="fr"><NavLink to={productPath('/privacy/fr')} navigate={navigate}>Politique de confidentialité (français)</NavLink>{' · '}<NavLink to={productPath('/terms/fr')} navigate={navigate}>Conditions d’utilisation (français)</NavLink></p>
+    </article>
   )
 }
 

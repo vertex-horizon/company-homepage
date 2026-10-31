@@ -1,3 +1,4 @@
+import { bgRoGrRegionalInformation } from './regionalInformationBgRoGr.js'
 import { plHrLtRegionalInformation } from './regionalInformationPlHrLt.js'
 import { nextRegionalInformation } from './regionalInformationNext.js'
 import { followingRegionalInformation } from './regionalInformationFollowing.js'
@@ -8,6 +9,7 @@ export const regionalInformation = {
   ...nextRegionalInformation,
   ...followingRegionalInformation,
   ...plHrLtRegionalInformation,
+  ...bgRoGrRegionalInformation,
   de: {
     title: 'Verbraucher-, Datenschutz- und Nutzungshinweise',
     updated: 'Stand: 30. Oktober 2026',
@@ -180,6 +182,15 @@ export const regionalInformation = {
 }
 
 export const informationLinks = {
+  appleBg: ['Apple — условия за покупки в България', 'https://www.apple.com/legal/internet-services/itunes/bg/terms.html'],
+  appleRo: ['Apple — condiții de cumpărare în România', 'https://www.apple.com/legal/internet-services/itunes/ro/terms.html'],
+  appleGr: ['Apple — όροι αγορών στην Ελλάδα', 'https://www.apple.com/legal/internet-services/itunes/gr/terms.html'],
+  bulgariaAuthority: ['Комисия за защита на личните данни (КЗЛД)', 'https://cpdp.bg/'],
+  romaniaAuthority: ['Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal', 'https://www.dataprotection.ro/'],
+  greeceAuthority: ['Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα', 'https://www.dpa.gr/'],
+  bulgariaConsumer: ['Комисия за защита на потребителите (КЗП)', 'https://kzp.bg/'],
+  romaniaConsumer: ['Autoritatea Națională pentru Protecția Consumatorilor (ANPC)', 'https://anpc.ro/'],
+  greeceConsumer: ['Γενική Γραμματεία Εμπορίου — προστασία καταναλωτή', 'https://kataggelies.mindev.gov.gr/'],
   applePl: ['Apple — warunki zakupu w Polsce', 'https://www.apple.com/legal/internet-services/itunes/pl/terms.html'],
   appleHr: ['Apple — uvjeti kupnje u Hrvatskoj', 'https://www.apple.com/legal/internet-services/itunes/hr/terms.html'],
   appleLt: ['Apple — pirkimo sąlygos Lietuvoje', 'https://www.apple.com/legal/internet-services/itunes/lt/terms.html'],
