@@ -1,6 +1,9 @@
+import { nextRegionalInformation } from './regionalInformationNext.js'
+
 // 必要告知按同一语义键维护；不是 App UI 语言包，也不是用英文链接代替当地语的必要事实。
 // 旧版行为、撤回与续订、端侧库与供应商记录的边界必须在各语种同时保留。
 export const regionalInformation = {
+  ...nextRegionalInformation,
   de: {
     title: 'Verbraucher-, Datenschutz- und Nutzungshinweise',
     updated: 'Stand: 30. Oktober 2026',
@@ -174,6 +177,13 @@ export const regionalInformation = {
 export const informationLinks = {
   cancel: ['Apple: cancel a subscription', 'https://support.apple.com/118428'],
   refund: ['Apple: refund request', 'https://reportaproblem.apple.com'],
+  appleIt: ['Apple Media Services — Italia', 'https://www.apple.com/legal/internet-services/itunes/it/terms.html'],
+  appleCz: ['Apple Media — Česko', 'https://www.apple.com/legal/internet-services/itunes/cz/terms.html'],
+  applePt: ['Serviços Multimédia Apple — Portugal', 'https://www.apple.com/legal/internet-services/itunes/pt/terms.html'],
+  italyAuthority: ['Garante per la protezione dei dati personali', 'https://www.garanteprivacy.it/'],
+  czechAuthority: ['Úřad pro ochranu osobních údajů', 'https://uoou.gov.cz/'],
+  czechConsumer: ['Česká obchodní inspekce', 'https://coi.gov.cz/'],
+  portugalAuthority: ['Comissão Nacional de Proteção de Dados', 'https://www.cnpd.pt/'],
   appleDe: ['Apple Media Services — Deutschland', 'https://www.apple.com/legal/internet-services/itunes/de/terms.html'],
   appleAt: ['Apple Media Services — Österreich', 'https://www.apple.com/legal/internet-services/itunes/at/terms.html'],
   appleBe: ['Apple Media Services — België (Nederlands)', 'https://www.apple.com/benl/legal/internet-services/itunes/benl/terms.html'],

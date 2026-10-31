@@ -283,8 +283,8 @@ export default function PrivacyFr({ navigate }) {
         de partage n’est pas considéré comme une nouvelle déclaration.
       </p>
       <p>
-        Pour ce partage facultatif, l’âge permettant de consentir seul est de 13 ans en Suède et
-        en Finlande, de 14 ans en Autriche, de 15 ans au Danemark et de 16 ans en Allemagne et aux Pays-Bas. En dessous de cet âge,
+        Pour ce partage facultatif, l’âge permettant de consentir seul est de 13 ans en Suède,
+        en Finlande et au Portugal, de 14 ans en Autriche et en Italie, de 15 ans au Danemark et en Tchéquie et de 16 ans en Allemagne et aux Pays-Bas. En dessous de cet âge,
         laissez le partage facultatif désactivé. Ces seuils ne relèvent pas l’âge d’utilisation
         des fonctions locales de Mapvoy. Vous pouvez toujours désactiver le partage; ces seuils
         ne vous empêchent pas de nous contacter pour retirer votre consentement ou vous renseigner
