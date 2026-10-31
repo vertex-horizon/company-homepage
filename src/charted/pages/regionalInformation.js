@@ -1,3 +1,4 @@
+import { krRegionalInformation } from './regionalInformationKr.js'
 import { siRegionalInformation } from './regionalInformationSi.js'
 import { jpRegionalInformation } from './regionalInformationJp.js'
 import { noRegionalInformation } from './regionalInformationNo.js'
@@ -22,6 +23,7 @@ export const regionalInformation = {
   ...noRegionalInformation,
   ...jpRegionalInformation,
   ...siRegionalInformation,
+  ...krRegionalInformation,
   de: {
     title: 'Verbraucher-, Datenschutz- und Nutzungshinweise',
     updated: 'Stand: 30. Oktober 2026',
@@ -194,6 +196,14 @@ export const regionalInformation = {
 }
 
 export const informationLinks = {
+  appleKr: ["Apple — 한국 미디어 서비스 약관", "https://www.apple.com/legal/internet-services/itunes/kr/terms.html"],
+  appleKrSupport: ["Apple — 한국 구입·취소 지원", "https://support.apple.com/ko-kr/itunes"],
+  koreaAuthority: ["개인정보보호위원회", "https://www.pipc.go.kr/"],
+  koreaPrivacyComplaint: ["개인정보침해 신고센터", "https://privacy.kisa.or.kr/"],
+  koreaMediation: ["개인정보분쟁조정위원회", "https://www.kopico.go.kr/"],
+  koreaConsumer: ["한국소비자원", "https://www.kca.go.kr/"],
+  koreaTransfer: ["개인정보 포털 — 국외이전 안내", "https://www.privacy.go.kr/front/contents/cntntsView.do?contsNo=367"],
+
   appleSi: ["Apple — pogoji za Slovenijo", "https://www.apple.com/legal/internet-services/itunes/si/terms.html"],
   sloveniaAuthority: ["Informacijski pooblaščenec", "https://www.ip-rs.si/"],
   sloveniaConsent: ["Informacijski pooblaščenec — privolitev", "https://www.ip-rs.si/?id=102"],
