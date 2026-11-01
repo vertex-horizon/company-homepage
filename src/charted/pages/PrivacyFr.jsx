@@ -24,7 +24,7 @@ export default function PrivacyFr({ navigate }) {
       <header>
         <h1>Politique de confidentialité</h1>
         <div className="c-doc-meta">
-          <span><strong>Dernière mise à jour :</strong> 30 octobre 2026</span>
+          <span><strong>Dernière mise à jour :</strong> 1er novembre 2026</span>
           <span><strong>Date d’entrée en vigueur :</strong> 1er octobre 2026</span>
         </div>
       </header>
@@ -348,6 +348,18 @@ export default function PrivacyFr({ navigate }) {
         en précisant le motif, le nouveau délai et la façon de porter plainte auprès du{' '}
         <a href="https://www.privacy.org.nz/your-rights/making-a-complaint/" target="_blank" rel="noreferrer">Commissaire à la protection de la vie privée de la Nouvelle-Zélande</a>.
       </p>
+      <h3 id="hong-kong">Hong Kong : collecte, accès et rectification</h3>
+      <p>
+        Pour Hong Kong, les finalités, données et destinataires sont décrits aux sections 1 à 4. La fourniture des données est volontaire, mais la vérification et la restauration des achats nécessitent les renseignements de transaction et techniques correspondants, et une réponse à une demande d’assistance nécessite vos coordonnées et votre message. Les analyses et rapports de plantage facultatifs peuvent rester désactivés sans empêcher les fonctions locales essentielles ni les achats. Selon l’activité choisie, les destinataires comprennent Apple pour ses services de paiement et de cartes, RevenueCat pour les achats et leur restauration, Google/Firebase et Sentry pour le partage technique facultatif décrit ci-dessus, Backblaze pour les ressources publiques, GitHub pour l’hébergement du site et Google Workspace pour l’assistance. Ces activités peuvent entraîner un traitement hors de Hong Kong, comme expliqué à la section 4.2. Nous ne téléversons pas votre photothèque ni votre base locale de voyages vers nos serveurs.
+      </p>
+      <p>
+        Vous pouvez demander l’accès aux renseignements personnels que nous détenons ou leur rectification. Adressez ces demandes à Guikai Huang, responsable de la confidentialité, Vertex Horizon Inc., à contact@vertex-horizon.com ou à l’adresse postale de la section 10. Nous traitons les demandes d’accès et de rectification applicables dans les 40 jours civils, sous réserve des exceptions permises par l’Ordonnance. Si nous ne pouvons pas terminer dans ce délai, nous expliquons les raisons par écrit avant son expiration, exécutons la partie possible et terminons dès que possible. Nous expliquons les refus légalement justifiés et les recours disponibles. Les avis écrits légaux suivent la langue chinoise ou anglaise de la demande ; les copies suivent les règles applicables à la langue et aux documents originaux. Nous pouvons demander des éléments proportionnés d’identification ou de repérage des dossiers, pas toute votre photothèque ni votre historique de localisation. Vous pouvez déposer une plainte auprès de l’Office of the Privacy Commissioner for Personal Data, Hong Kong (PCPD).
+      </p>
+      <p>
+        Les renseignements sont utilisés pour la finalité annoncée ou une finalité directement liée. Toute nouvelle finalité nécessitant le consentement prescrit est traitée avant cette utilisation. Les protections existantes des fournisseurs et les choix de partage facultatif continuent de s’appliquer. La visite de cette page ne vaut pas consentement, et ce complément ne promet pas l’effacement à distance de dossiers locaux que nous ne détenons pas.
+      </p>
+      <p><a href="https://www.pcpd.org.hk/english/complaints/introduction/introduction.html" target="_blank" rel="noreferrer">PCPD — plaintes relatives à la confidentialité</a></p>
+
       <h2>8. Sécurité des données</h2>
       <ul>
         <li>Vos photos, positions et données de voyages sont conservées sur votre appareil, protégées par l’isolation des applications d’iOS.</li>

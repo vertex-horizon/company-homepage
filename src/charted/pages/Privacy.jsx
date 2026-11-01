@@ -22,7 +22,7 @@ export default function Privacy({ navigate }) {
       <header>
         <h1>Privacy Policy</h1>
         <div className="c-doc-meta">
-          <span><strong>Last Updated:</strong> October 30, 2026</span>
+          <span><strong>Last Updated:</strong> November 1, 2026</span>
           <span><strong>Effective Date:</strong> October 1, 2026</span>
         </div>
       </header>
@@ -419,6 +419,18 @@ export default function Privacy({ navigate }) {
         explain the reason and new timeframe, and tell you how to complain to the{' '}
         <a href="https://www.privacy.org.nz/your-rights/making-a-complaint/" target="_blank" rel="noreferrer">New Zealand Privacy Commissioner</a>.
       </p>
+      <h3 id="hong-kong">Hong Kong: collection and access or correction requests</h3>
+      <p>
+        For Hong Kong, the collection purposes, data items and recipients are described in sections 1–4. Providing data is voluntary, but purchase verification and restoration need the relevant transaction and technical records, and a support reply needs your contact and message. Optional analytics and crash reports can remain off without preventing local core features or purchases. Recipients, where relevant to the activity you choose, include Apple for its payment and map services; RevenueCat for purchase verification and restoration; Google/Firebase and Sentry for the optional technical sharing described above; Backblaze for public resource delivery; GitHub for website hosting; and Google Workspace for support. These activities can involve processing outside Hong Kong as explained in section 4.2. We do not upload your photo library or local trip database to our servers.
+      </p>
+      <p>
+        You may request access to, or correction of, personal data we hold. Address requests to Guikai Huang, Privacy Officer, Vertex Horizon Inc., at contact@vertex-horizon.com or the postal address in section 10. We handle applicable access and correction requests within 40 calendar days, subject to the Ordinance’s permitted exceptions. If unable to complete within that period, we explain the reasons in writing within it, complete any part we can, and finish as soon as practicable. We explain lawful refusals and the available complaint route. Statutory written notices follow the request’s Chinese or English language; copies follow the applicable language and original-document rules. We may ask for proportionate identity or record information, not your full photo library or location history. You may complain to the Office of the Privacy Commissioner for Personal Data, Hong Kong (PCPD).
+      </p>
+      <p>
+        Information is used for its disclosed purpose or a directly related purpose; any new purpose requiring prescribed consent will be addressed before that use. Existing service-provider protections and optional sharing choices continue to apply. Nothing in this supplement treats a webpage visit as consent or promises remote deletion of local records we do not hold.
+      </p>
+      <p><a href="https://www.pcpd.org.hk/english/complaints/introduction/introduction.html" target="_blank" rel="noreferrer">PCPD — privacy complaints</a></p>
+
       <h2>8. Data Security</h2>
       <ul>
         <li>Your photos, locations, and journey data are stored on your device, protected by iOS sandbox isolation.</li>
