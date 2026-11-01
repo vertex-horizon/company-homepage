@@ -1,9 +1,6 @@
-import { krRegionalInformation } from './regionalInformationKr.js'
 import { siRegionalInformation } from './regionalInformationSi.js'
 import { jpRegionalInformation } from './regionalInformationJp.js'
-import { noRegionalInformation } from './regionalInformationNo.js'
 import { lvRegionalInformation } from './regionalInformationLv.js'
-import { esRegionalInformation } from './regionalInformationEs.js'
 import { cyIsRegionalInformation } from './regionalInformationCyIs.js'
 import { bgRoGrRegionalInformation } from './regionalInformationBgRoGr.js'
 import { plHrLtRegionalInformation } from './regionalInformationPlHrLt.js'
@@ -17,13 +14,12 @@ export const regionalInformation = {
   ...followingRegionalInformation,
   ...plHrLtRegionalInformation,
   ...bgRoGrRegionalInformation,
-  ...cyIsRegionalInformation,
-  ...esRegionalInformation,
+  // 38国统一发行目标暂不含CY；GR沿原希语正文，IS单独复用。
+  // PT页面已经公开，保留既有入口不表示葡萄牙销售范围已开放。
+  is: cyIsRegionalInformation.is,
   ...lvRegionalInformation,
-  ...noRegionalInformation,
   ...jpRegionalInformation,
   ...siRegionalInformation,
-  ...krRegionalInformation,
   de: {
     title: 'Verbraucher-, Datenschutz- und Nutzungshinweise',
     updated: 'Stand: 30. Oktober 2026',

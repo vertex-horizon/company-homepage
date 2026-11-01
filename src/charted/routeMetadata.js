@@ -104,35 +104,15 @@ export function createRouteMetadata(productSite = false) {
       title: "Informații despre utilizare, cumpărături și confidențialitate — Mapvoy",
       description: "Informații esențiale despre utilizare, cumpărături, abonamente și confidențialitate. Interfața rămâne engleză și franceză.",
     },
-    infoCy: {
-      path: `${base}/info/cy`, lang: 'el-CY', languageGroup: 'essentialInfo',
-      title: 'Πληροφορίες χρήσης, αγορών και απορρήτου — Κύπρος — Mapvoy',
-      description: 'Πληροφορίες στα ελληνικά για χρήση, αγορές και δεδομένα στην Κύπρο. Περιβάλλον εφαρμογής αγγλικά και γαλλικά.',
-    },
     infoIs: {
       path: `${base}/info/is`, lang: 'is', languageGroup: 'essentialInfo',
       title: 'Upplýsingar um notkun, kaup og persónuvernd — Mapvoy',
       description: 'Nauðsynlegar upplýsingar á íslensku um notkun, kaup, áskriftir og persónuvernd. Viðmót appsins er á ensku og frönsku.',
     },
-    infoEs: {
-      path: `${base}/info/es`, lang: 'es', languageGroup: 'essentialInfo',
-      title: 'Información de uso, compras y privacidad — Mapvoy',
-      description: 'Información necesaria en castellano sobre uso, compras, suscripciones y privacidad. La interfaz sigue en inglés y francés.',
-    },
-    infoCa: {
-      path: `${base}/info/ca`, lang: 'ca', languageGroup: 'essentialInfo',
-      title: 'Informació d’ús, compres i privacitat — Mapvoy',
-      description: 'Informació necessària en català sobre ús, compres, subscripcions i privacitat. La interfície continua en anglès i francès.',
-    },
     infoLv: {
       path: `${base}/info/lv`, lang: 'lv', languageGroup: 'essentialInfo',
       title: 'Informācija par lietošanu, pirkumiem un privātumu — Mapvoy',
       description: 'Būtiskā informācija latviski par Mapvoy lietošanu, pirkumiem, abonementiem un privātumu. Saskarne ir angļu un franču valodā.',
-    },
-    infoKo: {
-      path: `${base}/info/ko`, lang: 'ko', languageGroup: 'essentialInfo',
-      title: 'Mapvoy 이용·구매 및 개인정보 처리 안내',
-      description: 'Mapvoy 이용 조건, 자동 갱신, 환불과 개인정보 처리에 관한 한국어 안내. 앱 화면은 영어와 프랑스어입니다.',
     },
     infoSl: {
       path: `${base}/info/sl`, lang: 'sl', languageGroup: 'essentialInfo',
@@ -143,11 +123,6 @@ export function createRouteMetadata(productSite = false) {
       path: `${base}/info/ja`, lang: 'ja', languageGroup: 'essentialInfo',
       title: '利用・購入・個人情報に関する重要事項 — Mapvoy',
       description: 'Mapvoyの日本語による必要な利用・取引・個人情報の説明。画面と通常のサポートは英語・フランス語です。',
-    },
-    infoNb: {
-      path: `${base}/info/nb`, lang: 'nb', languageGroup: 'essentialInfo',
-      title: 'Informasjon om bruk, kjøp og personvern — Mapvoy',
-      description: 'Nødvendig informasjon på norsk bokmål om Mapvoy, bruk, abonnement, angrerett og personvern. Appens grensesnitt er engelsk og fransk.',
     },
     infoSk: {
       path: `${base}/info/sk`, lang: 'sk', languageGroup: 'essentialInfo',

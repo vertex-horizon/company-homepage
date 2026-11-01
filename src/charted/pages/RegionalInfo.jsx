@@ -33,23 +33,13 @@ export function RegionalLinks({ navigate }) {
       {' · '}
       <NavLink to={productPath('/info/ro')} navigate={navigate} lang="ro" hrefLang="ro">Română</NavLink>
       {' · '}
-      <NavLink to={productPath('/info/cy')} navigate={navigate} lang="el-CY" hrefLang="el-CY">Ελληνικά (Κύπρος)</NavLink>
-      {' · '}
       <NavLink to={productPath('/info/is')} navigate={navigate} lang="is" hrefLang="is">Íslenska</NavLink>
       {' · '}
-      <NavLink to={productPath('/info/es')} navigate={navigate} lang="es" hrefLang="es">Español</NavLink>
-      {' · '}
-      <NavLink to={productPath('/info/ca')} navigate={navigate} lang="ca" hrefLang="ca">Català</NavLink>
-      {' · '}
       <NavLink to={productPath('/info/lv')} navigate={navigate} lang="lv" hrefLang="lv">Latviešu</NavLink>
-      {' · '}
-      <NavLink to={productPath('/info/nb')} navigate={navigate} lang="nb" hrefLang="nb">Norsk bokmål</NavLink>
       {' · '}
       <NavLink to={productPath('/info/ja')} navigate={navigate} lang="ja" hrefLang="ja">日本語</NavLink>
       {' · '}
       <NavLink to={productPath('/info/sl')} navigate={navigate} lang="sl" hrefLang="sl">Slovenščina</NavLink>
-      {' · '}
-      <NavLink to={productPath('/info/ko')} navigate={navigate} lang="ko" hrefLang="ko">한국어</NavLink>
     </p>
   )
 }
