@@ -84,6 +84,16 @@ export function createRouteMetadata(productSite = false) {
       title: "Informacija apie naudojimą, pirkimą ir privatumą — Mapvoy",
       description: "Esminė informacija lietuviškai apie naudojimą, pirkimą, prenumeratas, skundus ir privatumą. Sąsaja anglų ir prancūzų kalbomis.",
     },
+    infoCy: {
+      path: `${base}/info/cy`, lang: 'el-CY', languageGroup: 'essentialInfo',
+      title: 'Πληροφορίες χρήσης, αγορών και απορρήτου — Κύπρος — Mapvoy',
+      description: 'Πληροφορίες στα ελληνικά για χρήση, αγορές και δεδομένα στην Κύπρο. Περιβάλλον εφαρμογής αγγλικά και γαλλικά.',
+    },
+    infoKo: {
+      path: `${base}/info/ko`, lang: 'ko', languageGroup: 'essentialInfo',
+      title: 'Mapvoy 이용·구매 및 개인정보 처리 안내',
+      description: 'Mapvoy 이용 조건, 자동 갱신, 환불과 개인정보 처리에 관한 한국어 안내. 앱 화면은 영어와 프랑스어입니다.',
+    },
     information: {
       path: `${base}/info`, lang: 'en',
       title: 'Product information · Informations produit — Mapvoy',

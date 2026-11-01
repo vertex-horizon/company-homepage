@@ -1,3 +1,4 @@
+import OptionalTransferDetails from './OptionalTransferDetails.jsx'
 import { RegionalLinks } from './RegionalInfo.jsx'
 import { productPath } from '../config.js'
 import { NavLink } from '../ChartedApp.jsx'
@@ -22,7 +23,7 @@ export default function Privacy({ navigate }) {
       <header>
         <h1>Privacy Policy</h1>
         <div className="c-doc-meta">
-          <span><strong>Last Updated:</strong> October 30, 2026</span>
+          <span><strong>Last Updated:</strong> November 1, 2026</span>
           <span><strong>Effective Date:</strong> October 1, 2026</span>
         </div>
       </header>
@@ -321,6 +322,8 @@ export default function Privacy({ navigate }) {
         systems may remain until those systems' normal deletion cycles complete; legal retention
         exceptions will be explained when they apply to your request.
       </p>
+
+      <OptionalTransferDetails language="en" />
 
       <h2>5. In-App Purchases (Mapvoy Pro)</h2>
       <p>

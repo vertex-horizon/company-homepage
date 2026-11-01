@@ -1,3 +1,4 @@
+import OptionalTransferDetails from './OptionalTransferDetails.jsx'
 import { RegionalLinks } from './RegionalInfo.jsx'
 import { productPath } from '../config.js'
 import { NavLink } from '../ChartedApp.jsx'
@@ -24,7 +25,7 @@ export default function PrivacyFr({ navigate }) {
       <header>
         <h1>Politique de confidentialité</h1>
         <div className="c-doc-meta">
-          <span><strong>Dernière mise à jour :</strong> 30 octobre 2026</span>
+          <span><strong>Dernière mise à jour :</strong> 1er novembre 2026</span>
           <span><strong>Date d’entrée en vigueur :</strong> 1er octobre 2026</span>
         </div>
       </header>
@@ -256,6 +257,8 @@ export default function PrivacyFr({ navigate }) {
         Des copies dans les sauvegardes des fournisseurs peuvent subsister jusqu’à la fin de leurs cycles
         normaux de suppression; les exceptions légales de conservation seront expliquées si elles s’appliquent.
       </p>
+
+      <OptionalTransferDetails language="fr" />
 
       <h2>5. Achats intégrés (Mapvoy Pro)</h2>
       <p>

@@ -1,3 +1,4 @@
+import { krRegionalInformation } from './regionalInformationKr.js'
 import { siRegionalInformation } from './regionalInformationSi.js'
 import { jpRegionalInformation } from './regionalInformationJp.js'
 import { lvRegionalInformation } from './regionalInformationLv.js'
@@ -11,12 +12,18 @@ import { followingRegionalInformation } from './regionalInformationFollowing.js'
 // 旧版行为、撤回与续订、端侧库与供应商记录的边界必须在各语种同时保留。
 export const regionalInformation = {
   ...nextRegionalInformation,
+  'pt-PT': {
+    ...nextRegionalInformation['pt-PT'],
+    sections: nextRegionalInformation['pt-PT'].sections.map(section => section.id === 'withdrawal'
+      ? { ...section, paragraphs: [...section.paragraphs, 'Pode aceder ao Livro de Reclamações Eletrónico através de https://www.livroreclamacoes.pt/Inicio/. Para questões sobre o Mapvoy, contacte contact@vertex-horizon.com. A reclamação eletrónica aplicável é tratada no canal oficial e recebe resposta no prazo máximo legal de 15 dias úteis, salvo prazo inferior aplicável. O contacto com o Mapvoy não limita outros meios legais de reclamação.'], links: [...section.links, 'portugalComplaints'] }
+      : section),
+  },
   ...followingRegionalInformation,
   ...plHrLtRegionalInformation,
   ...bgRoGrRegionalInformation,
-  // 38国统一发行目标暂不含CY；GR沿原希语正文，IS单独复用。
-  // PT页面已经公开，保留既有入口不表示葡萄牙销售范围已开放。
-  is: cyIsRegionalInformation.is,
+  // CY复用已备希语差异并明确真实覆盖限制；ES/NO仍不进入当前目录。
+  ...cyIsRegionalInformation,
+  ...krRegionalInformation,
   ...lvRegionalInformation,
   ...jpRegionalInformation,
   ...siRegionalInformation,
@@ -192,6 +199,11 @@ export const regionalInformation = {
 }
 
 export const informationLinks = {
+  portugalComplaints: ['Livro de Reclamações Eletrónico', 'https://www.livroreclamacoes.pt/Inicio/'],
+  googleCloudProcessors: ['Google — processing locations', 'https://cloud.google.com/terms/subprocessors'],
+  googleDataCenters: ['Google — data-center locations', 'https://datacenters.google/locations/'],
+  optionalTransferEn: ['Optional overseas transfer (English)', 'https://www.vertex-horizon.com/charted/privacy#optional-overseas-transfer'],
+  optionalTransferFr: ['Transfert facultatif à l’étranger (français)', 'https://www.vertex-horizon.com/charted/privacy/fr#optional-overseas-transfer'],
   appleKr: ["Apple — 한국 미디어 서비스 약관", "https://www.apple.com/legal/internet-services/itunes/kr/terms.html"],
   appleKrSupport: ["Apple — 한국 구입·취소 지원", "https://support.apple.com/ko-kr/itunes"],
   koreaAuthority: ["개인정보보호위원회", "https://www.pipc.go.kr/"],
