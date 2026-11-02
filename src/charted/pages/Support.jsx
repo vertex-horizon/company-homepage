@@ -113,7 +113,7 @@ export default function Support({ navigate }) {
         <li>Open the <strong>Settings</strong> app on your iPhone</li>
         <li>Tap your <strong>name</strong> at the top</li>
         <li>Tap <strong>Subscriptions</strong></li>
-        <li>Select <strong>Mapvoy</strong> (it may still appear as Charted on older receipts)</li>
+        <li>Select <strong>Mapvoy</strong></li>
         <li>Tap <strong>Cancel Subscription</strong></li>
       </ol>
       <p>
@@ -124,7 +124,7 @@ export default function Support({ navigate }) {
       <p>
         Apple handles billing and refund requests. Visit{' '}
         <a href="https://reportaproblem.apple.com" target="_blank" rel="noreferrer">reportaproblem.apple.com</a>{' '}
-        and select your Mapvoy purchase; older receipts may say Charted. This process does not limit
+        and select your Mapvoy purchase. This process does not limit
         any consumer rights or remedies that applicable law does not allow us to exclude. Contact us
         if you need help with the App or a consumer-rights request.
       </p>
