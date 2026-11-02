@@ -3,7 +3,7 @@
 export const plHrLtRegionalInformation = {
   "pl": {
     "title": "Informacje o użytkowaniu, zakupach i prywatności",
-    "updated": "Aktualizacja: 31 października 2026 r.",
+    "updated": "Aktualizacja: 2 listopada 2026 r.",
     "intro": "Interfejs Mapvoy i zwykła pomoc techniczna są dostępne po angielsku i francusku. Tutaj podajemy po polsku istotne informacje o korzystaniu, zakupach i danych osobowych. Strona nie dodaje polskiego interfejsu aplikacji. Przyjmujemy także niezbędne pisemne reklamacje i żądania dotyczące praw po polsku; obowiązkowe prawa konsumenta i prawa językowe pozostają zachowane.",
     "full": "Dalsze szczegóły techniczne są w angielskich i francuskich informacjach o prywatności i użytkowaniu. Istotne informacje w języku polskim podano powyżej.",
     "sections": [
@@ -114,7 +114,7 @@ export const plHrLtRegionalInformation = {
   },
   "hr": {
     "title": "Informacije o uporabi, kupnji i privatnosti",
-    "updated": "Ažurirano: 31. listopada 2026.",
+    "updated": "Ažurirano: 2. studenoga 2026.",
     "intro": "Sučelje Mapvoya i uobičajena podrška dostupni su na engleskom i francuskom. Ovdje su na hrvatskom bitne informacije o uporabi, kupnji i osobnim podacima; ova stranica ne dodaje hrvatsko sučelje aplikaciji. Prihvaćamo i potrebne pisane prigovore i zahtjeve za ostvarivanje prava na hrvatskom. Obvezna potrošačka i jezična prava ostaju očuvana.",
     "full": "Dodatne tehničke pojedinosti nalaze se u engleskim i francuskim informacijama o privatnosti i uporabi. Bitne informacije na hrvatskom dostupne su iznad.",
     "sections": [
@@ -226,7 +226,7 @@ export const plHrLtRegionalInformation = {
   },
   "lt": {
     "title": "Informacija apie naudojimą, pirkimą ir privatumą",
-    "updated": "Atnaujinta: 2026 m. spalio 31 d.",
+    "updated": "Atnaujinta: 2026 m. lapkričio 2 d.",
     "intro": "Mapvoy sąsaja ir įprasta pagalba teikiamos anglų ir prancūzų kalbomis. Čia lietuviškai pateikiama esminė informacija apie naudojimą, pirkimą ir asmens duomenis; lietuviška programėlės sąsaja nepridedama. Priimame ir būtinus rašytinius vartotojų bei duomenų teisių prašymus lietuviškai. Privalomos vartotojų ir kalbinės teisės išlieka.",
     "full": "Daugiau techninių duomenų pateikta anglų ir prancūzų kalbų privatumo bei naudojimo informacijoje. Esminė informacija lietuvių kalba pateikta pirmiau.",
     "sections": [

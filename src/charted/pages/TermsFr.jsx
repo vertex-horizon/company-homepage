@@ -12,7 +12,7 @@ export default function TermsFr({ navigate }) {
       <header>
         <h1>Conditions d’utilisation</h1>
         <div className="c-doc-meta">
-          <span><strong>Dernière mise à jour :</strong> 30 octobre 2026</span>
+          <span><strong>Dernière mise à jour :</strong> 2 novembre 2026</span>
           <span><strong>Date d’entrée en vigueur :</strong> 1er octobre 2026</span>
         </div>
       </header>

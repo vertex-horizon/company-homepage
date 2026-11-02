@@ -29,7 +29,7 @@ export const regionalInformation = {
   ...siRegionalInformation,
   de: {
     title: 'Verbraucher-, Datenschutz- und Nutzungshinweise',
-    updated: 'Stand: 30. Oktober 2026',
+    updated: 'Stand: 2. November 2026',
     intro: 'Die Benutzeroberfläche von Mapvoy ist auf Englisch und Französisch verfügbar. Diese deutschsprachigen Informationen ergänzen die Nutzungs- und Datenschutzhinweise; sie fügen der App keine deutsche Oberfläche hinzu. Gesetzlich zwingende Rechte und Sprachrechte bleiben bestehen. Die Angaben gelten für Deutschland, Österreich und den deutschsprachigen Teil Belgiens.',
     full: 'Weitere technische Einzelheiten: vollständige Datenschutzhinweise und Nutzungshinweise auf Englisch und Französisch.',
     sections: [
@@ -86,7 +86,7 @@ export const regionalInformation = {
   },
   nl: {
     title: 'Informatie over gebruik, aankopen en privacy',
-    updated: 'Bijgewerkt op 30 oktober 2026',
+    updated: 'Bijgewerkt op 2 november 2026',
     intro: 'De interface van Mapvoy is beschikbaar in het Engels en Frans. Deze Nederlandstalige informatie vult de gebruiks- en privacyinformatie aan; zij voegt geen Nederlandse app-interface toe. Dwingende consumenten- en taalrechten blijven gelden. Deze informatie is ook bedoeld voor Nederlandstalige consumenten in België.',
     full: 'Meer technische details: de volledige privacy- en gebruiksinformatie is beschikbaar in het Engels en Frans.',
     sections: [
@@ -142,7 +142,7 @@ export const regionalInformation = {
   },
   et: {
     title: 'Teave kasutamise, ostude ja isikuandmete kohta',
-    updated: 'Uuendatud 30. oktoobril 2026',
+    updated: 'Uuendatud 2. novembril 2026',
     intro: 'Mapvoy kasutajaliides on inglise ja prantsuse keeles. See eestikeelne teave täiendab kasutus- ja privaatsusteavet ega lisa rakendusele eestikeelset kasutajaliidest. Kohustuslikud tarbija- ja keeleõigused jäävad kehtima. Ingliskeelse liidese kasutamine ei tähenda neist õigustest loobumist.',
     full: 'Täiendavad tehnilised üksikasjad: täielik privaatsus- ja kasutusteave inglise ning prantsuse keeles.',
     sections: [

@@ -3,7 +3,7 @@
 export const followingRegionalInformation = {
   hu: {
     title: 'Tájékoztató a használatról, vásárlásokról és adatvédelemről',
-    updated: 'Frissítve: 2026. október 31.',
+    updated: 'Frissítve: 2026. november 2.',
     intro: 'A Mapvoy kezelőfelülete és szokásos ügyfélszolgálata angol és francia nyelvű. Ez az oldal magyarul tartalmazza a szolgáltatás lényeges használati, vásárlási és adatvédelmi tudnivalóit; nem ad magyar kezelőfelületet az alkalmazáshoz. A kötelező fogyasztói és nyelvi jogokat nem korlátozza. A szlovéniai fogyasztókra az alábbi Szlovénia-kiegészítések is vonatkoznak; a magyarországi külön szabályok Magyarországra értendők. A szükséges írásbeli kérelmeket magyarul is fogadjuk, amikor a szlovén területi nyelvi jogok ezt megkövetelik.',
     full: 'További technikai részletek az angol és francia adatvédelmi és használati tájékoztatóban találhatók. A lényeges információk ezen az oldalon magyarul is rendelkezésre állnak.',
     sections: [
@@ -61,7 +61,7 @@ export const followingRegionalInformation = {
   },
   sk: {
     title: 'Informácie o používaní, nákupoch a ochrane údajov',
-    updated: 'Aktualizované: 30. októbra 2026',
+    updated: 'Aktualizované: 2. novembra 2026',
     intro: 'Rozhranie Mapvoy a bežná zákaznícka podpora sú v angličtine a francúzštine. Táto stránka poskytuje po slovensky podstatné informácie o používaní, nákupoch a osobných údajoch; nepridáva slovenské rozhranie aplikácie. Povinné spotrebiteľské a jazykové práva zostávajú zachované.',
     full: 'Ďalšie technické podrobnosti nájdete v anglickom a francúzskom oznámení o ochrane údajov a používaní. Podstatné informácie sú tu dostupné aj po slovensky.',
     sections: [

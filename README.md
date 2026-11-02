@@ -52,7 +52,7 @@ Current artwork comes from **Charted Product V2 → 10 · 商店与上线物料*
 - Product messaging follows `life-footprints/docs/growth/01-BRAND_AND_MESSAGING.md`. Prices and introductory offers are shown by the app at purchase time; the website does not hardcode them.
 - Company links point directly to `https://mapvoy.app/`; both sites retain the approved artwork credits and provenance catalogs.
 
-The product build contains real static entries for `/`, `/support/`, `/privacy/`, `/privacy/fr/`, `/terms/`, and `/terms/fr/`, each with its own canonical URL, language, title and social metadata. Both builds export `robots.txt` and `sitemap.xml`. Use a plain static HTTP server for direct-link verification; do not rely on a preview server’s SPA fallback.
+The product build contains real static entries for `/`, `/support/`, `/privacy/`, `/privacy/fr/`, `/terms/`, and `/terms/fr/`, each with its own canonical URL, language, title and social metadata. The `/info/` index links to 20 reviewed local-language information pages; each is exported as a direct static entry and through both legacy prefixes. The support page includes eight English and eight French FAQ topics. Spanish/Catalan and Norwegian draft pages remain outside the published route table. Both builds export `robots.txt` and `sitemap.xml`. Use a plain static HTTP server for direct-link verification; do not rely on a preview server’s SPA fallback.
 
 ## Product domain deployment
 

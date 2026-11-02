@@ -23,7 +23,7 @@ export default function Privacy({ navigate }) {
       <header>
         <h1>Privacy Policy</h1>
         <div className="c-doc-meta">
-          <span><strong>Last Updated:</strong> November 1, 2026</span>
+          <span><strong>Last Updated:</strong> November 2, 2026</span>
           <span><strong>Effective Date:</strong> October 1, 2026</span>
         </div>
       </header>

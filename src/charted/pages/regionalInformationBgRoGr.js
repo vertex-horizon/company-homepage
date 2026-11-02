@@ -3,7 +3,7 @@
 export const bgRoGrRegionalInformation = {
   "bg": {
     "title": "Информация за използване, покупки и поверителност",
-    "updated": "Актуализирано: 31 октомври 2026 г.",
+    "updated": "Актуализирано: 2 ноември 2026 г.",
     "intro": "Интерфейсът на Mapvoy и обичайната поддръжка са на английски и френски. Тук са основните сведения на български за използването, покупките и личните данни; страницата не добавя български интерфейс. Приемаме необходимите писмени потребителски искания и искания за права върху данните и на български. Задължителните потребителски и езикови права се запазват.",
     "full": "Допълнителни технически подробности има в информацията за поверителност и използване на английски и френски. Основните сведения на български са изложени по-горе.",
     "sections": [
@@ -115,7 +115,7 @@ export const bgRoGrRegionalInformation = {
   },
   "ro": {
     "title": "Informații despre utilizare, cumpărături și confidențialitate",
-    "updated": "Actualizat: 31 octombrie 2026",
+    "updated": "Actualizat: 2 noiembrie 2026",
     "intro": "Interfața Mapvoy și asistența obișnuită sunt în engleză și franceză. Aici găsiți în română informațiile esențiale despre utilizare, cumpărături și date; pagina nu adaugă o interfață română aplicației. Acceptăm și cererile scrise necesare ale consumatorilor și privind drepturile asupra datelor în română. Drepturile obligatorii ale consumatorului și cele lingvistice rămân valabile.",
     "full": "Alte detalii tehnice se află în informările de confidențialitate și utilizare în engleză și franceză. Informațiile esențiale în română sunt prezentate mai sus.",
     "sections": [
@@ -227,7 +227,7 @@ export const bgRoGrRegionalInformation = {
   },
   "el": {
     "title": "Πληροφορίες χρήσης, αγορών και απορρήτου",
-    "updated": "Ενημέρωση: 31 Οκτωβρίου 2026",
+    "updated": "Ενημέρωση: 2 Νοεμβρίου 2026",
     "intro": "Το περιβάλλον του Mapvoy και η συνήθης υποστήριξη είναι στα αγγλικά και γαλλικά. Εδώ παρέχονται στα ελληνικά οι βασικές πληροφορίες χρήσης, αγορών και προσωπικών δεδομένων· δεν προστίθεται ελληνικό περιβάλλον στην εφαρμογή. Δεχόμαστε και τα αναγκαία γραπτά αιτήματα καταναλωτών και άσκησης δικαιωμάτων δεδομένων στα ελληνικά. Τα υποχρεωτικά καταναλωτικά και γλωσσικά δικαιώματα διατηρούνται.",
     "full": "Περισσότερες τεχνικές λεπτομέρειες υπάρχουν στις αγγλικές και γαλλικές πληροφορίες απορρήτου και χρήσης. Οι βασικές πληροφορίες στα ελληνικά βρίσκονται παραπάνω.",
     "sections": [

@@ -17,7 +17,7 @@ export default function Terms({ navigate }) {
       <header>
         <h1>Terms of Use</h1>
         <div className="c-doc-meta">
-          <span><strong>Last Updated:</strong> October 30, 2026</span>
+          <span><strong>Last Updated:</strong> November 2, 2026</span>
           <span><strong>Effective Date:</strong> October 1, 2026</span>
         </div>
       </header>

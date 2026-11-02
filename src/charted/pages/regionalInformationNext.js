@@ -3,7 +3,7 @@
 export const nextRegionalInformation = {
   it: {
     title: 'Informazioni su utilizzo, acquisti e privacy',
-    updated: 'Aggiornato il 31 ottobre 2026',
+    updated: 'Aggiornato il 2 novembre 2026',
     intro: 'L’interfaccia di Mapvoy è disponibile in inglese e francese, secondo la versione installata. Questa pagina fornisce in italiano le informazioni su servizio, utilizzo, acquisti e dati personali. Non aggiunge un’interfaccia italiana all’app. Restano validi tutti i diritti inderogabili dei consumatori e i diritti linguistici. Per i consumatori in Slovenia valgono anche le precisazioni Slovenia qui sotto; i riferimenti specifici all’Italia restano riferiti all’Italia. Accettiamo le richieste scritte necessarie anche in italiano quando si applicano i diritti linguistici territoriali sloveni.',
     full: 'Ulteriori dettagli tecnici sono disponibili nelle informative complete in inglese e francese. Le informazioni essenziali sono riportate qui in italiano.',
     sections: [
@@ -63,7 +63,7 @@ export const nextRegionalInformation = {
   },
   cs: {
     title: 'Informace o používání, nákupech a soukromí',
-    updated: 'Aktualizováno 30. října 2026',
+    updated: 'Aktualizováno 2. listopadu 2026',
     intro: 'Rozhraní Mapvoy je podle nainstalované verze v angličtině a francouzštině. Tato stránka poskytuje české informace o službě, používání, nákupech a osobních údajích. Nepřidává české rozhraní aplikace. Zákonná práva spotřebitelů a jazyková práva zůstávají zachována.',
     full: 'Další technické podrobnosti obsahují úplné informace v angličtině a francouzštině. Podstatné informace jsou zde uvedeny česky.',
     sections: [
@@ -121,7 +121,7 @@ export const nextRegionalInformation = {
   },
   'pt-PT': {
     title: 'Informações de utilização, compras e privacidade',
-    updated: 'Atualizado em 30 de outubro de 2026',
+    updated: 'Atualizado em 2 de novembro de 2026',
     intro: 'A interface do Mapvoy está disponível em inglês e francês, consoante a versão instalada. Esta página apresenta em português informações sobre o serviço, a utilização, as compras e os dados pessoais. Não acrescenta uma interface portuguesa à aplicação. Mantêm-se todos os direitos imperativos dos consumidores e os direitos linguísticos.',
     full: 'As informações completas em inglês e francês incluem mais pormenores técnicos. As informações essenciais são apresentadas aqui em português.',
     sections: [

@@ -2,7 +2,7 @@
 export const lvRegionalInformation = {
   "lv": {
     "title": "Informācija par lietošanu, pirkumiem un privātumu",
-    "updated": "Atjaunināts: 2026. gada 31. oktobrī",
+    "updated": "Atjaunināts: 2026. gada 2. novembrī",
     "intro": "Mapvoy saskarne un ikdienas atbalsts ir angļu un franču valodā. Šeit latviski sniegta būtiskā informācija par lietošanu, pirkumiem un personas datiem; šī lapa nepievieno lietotnei latviešu saskarni. Pieņemam arī nepieciešamos rakstiskos patērētāju un datu aizsardzības tiesību pieprasījumus latviešu valodā. Obligātās patērētāju un valodas tiesības netiek ierobežotas.",
     "full": "Būtiskā informācija latviešu valodā ir sniegta iepriekš. Papildu tehniskā informācija ir privātuma un lietošanas noteikumos angļu un franču valodā.",
     "sections": [

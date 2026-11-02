@@ -25,7 +25,7 @@ export default function PrivacyFr({ navigate }) {
       <header>
         <h1>Politique de confidentialité</h1>
         <div className="c-doc-meta">
-          <span><strong>Dernière mise à jour :</strong> 1er novembre 2026</span>
+          <span><strong>Dernière mise à jour :</strong> 2 novembre 2026</span>
           <span><strong>Date d’entrée en vigueur :</strong> 1er octobre 2026</span>
         </div>
       </header>

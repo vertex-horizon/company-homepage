@@ -2,7 +2,7 @@
 export const siRegionalInformation = {
   "sl": {
     "title": "Pomembne informacije o uporabi, nakupih in zasebnosti",
-    "updated": "Posodobljeno: 31. oktober 2026",
+    "updated": "Posodobljeno: 2. november 2026",
     "intro": "Vmesnik Mapvoy in običajna podpora sta v angleščini in francoščini. Tukaj so potrebne informacije v slovenščini o uporabi, pogodbi, nakupih in osebnih podatkih. Ta stran ne dodaja slovenskega vmesnika aplikacije. Potrebne pisne reklamacije in zahteve glede pravic sprejemamo tudi v slovenščini. Obvezne potrošniške in jezikovne pravice ostanejo veljavne. Kadar veljajo teritorialne pravice italijanske ali madžarske narodne skupnosti, so na voljo tudi obstoječe italijanske in madžarske informacije z dodatki za Slovenijo.",
     "full": "Potrebne informacije v slovenščini so navedene zgoraj. Nadaljnje tehnične podrobnosti najdete tudi v angleških in francoskih informacijah o zasebnosti in uporabi.",
     "sections": [

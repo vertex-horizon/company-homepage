@@ -34,7 +34,7 @@ export const cyIsRegionalInformation = {
   el: sharedGreek,
   is: {
   "title": "Upplýsingar um notkun, kaup og persónuvernd",
-  "updated": "Uppfært: 31. október 2026",
+  "updated": "Uppfært: 2. nóvember 2026",
   "intro": "Viðmót Mapvoy og almenn aðstoð eru á ensku og frönsku. Hér eru nauðsynlegar upplýsingar á íslensku um notkun, kaup og persónuupplýsingar; síðan bætir ekki íslensku viðmóti við appið. Við tökum einnig við nauðsynlegum skriflegum neytendaerindum og beiðnum um persónuverndarréttindi á íslensku. Ófrávíkjanleg neytenda- og tungumálaréttindi haldast.",
   "full": "Frekari tæknilegar upplýsingar eru í enskum og frönskum upplýsingum um persónuvernd og notkun. Nauðsynlegar upplýsingar á íslensku eru hér að ofan.",
   "sections": [
