@@ -27,7 +27,7 @@ export default function Privacy({ navigate }) {
         </div>
       </header>
       <RegionalLinks navigate={navigate} />
-      <p><strong>App name:</strong> Charted is now Mapvoy. The provider remains Vertex Horizon Inc.</p>
+      <p><strong>App name:</strong> Mapvoy. The provider is Vertex Horizon Inc.</p>
 
       <p><NavLink to={productPath('/privacy/fr')} navigate={navigate} hrefLang="fr-CA" lang="fr-CA">Français (Canada)</NavLink></p>
 

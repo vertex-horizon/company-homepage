@@ -29,7 +29,7 @@ export default function PrivacyFr({ navigate }) {
         </div>
       </header>
       <RegionalLinks navigate={navigate} />
-      <p><strong>Nom de l’application :</strong> Charted devient Mapvoy. Le fournisseur reste Vertex Horizon Inc.</p>
+      <p><strong>Nom de l’application :</strong> Mapvoy. Le fournisseur est Vertex Horizon Inc.</p>
       <p><NavLink to={productPath('/privacy')} navigate={navigate} hrefLang="en" lang="en">English</NavLink></p>
       <p><strong>Langue de l’application :</strong> les textes disponibles dépendent de la version installée et de la langue choisie dans iOS. Cette page fournit les renseignements de confidentialité en français.</p>
       <p>
