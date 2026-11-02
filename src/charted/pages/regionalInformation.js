@@ -15,7 +15,7 @@ export const regionalInformation = {
   'pt-PT': {
     ...nextRegionalInformation['pt-PT'],
     sections: nextRegionalInformation['pt-PT'].sections.map(section => section.id === 'withdrawal'
-      ? { ...section, paragraphs: [...section.paragraphs, 'Pode aceder ao Livro de Reclamações Eletrónico através de https://www.livroreclamacoes.pt/Inicio/. Para questões sobre o Mapvoy, contacte contact@vertex-horizon.com. A reclamação eletrónica aplicável é tratada no canal oficial e recebe resposta no prazo máximo legal de 15 dias úteis, salvo prazo inferior aplicável. O contacto com o Mapvoy não limita outros meios legais de reclamação.'], links: [...section.links, 'portugalComplaints'] }
+      ? { ...section, paragraphs: [...section.paragraphs, 'Para questões ou reclamações sobre o Mapvoy, contacte contact@vertex-horizon.com. Para faturação, cancelamento e reembolsos de compras efetuadas pela Apple, pode também recorrer ao apoio Apple. Pode consultar os canais oficiais de reclamação, incluindo o Livro de Reclamações Eletrónico, quando aplicáveis. O contacto com o Mapvoy não limita os seus direitos legais nem o recurso às autoridades e tribunais competentes.'], links: [...section.links, 'portugalComplaints'] }
       : section),
   },
   ...followingRegionalInformation,
