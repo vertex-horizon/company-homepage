@@ -1,0 +1,158 @@
+[
+  {
+    "id": "photo-locations",
+    "question": {
+      "en": "Why are some photos missing from my map?",
+      "fr": "Pourquoi certaines photos n’apparaissent-elles pas sur ma carte ?"
+    },
+    "answer": {
+      "en": [
+        "Mapvoy maps photos with usable location data. Screenshots, downloaded images and copies shared through other apps may not include that data. Location recording may also have been off when a photo was taken.",
+        "Open a missing photo in Apple Photos and check its information for a location. Turning on location recording for future photos does not add missing coordinates to older photos.",
+        "In Mapvoy, open Settings → Import Center to review import status and filtered-out counts. Check photo access if Mapvoy cannot see the photos you want to include. If a photo has a location but is still missing, contact us with the app version and a description; you do not need to send your photo library."
+      ],
+      "fr": [
+        "Mapvoy place sur la carte les photos disposant de données de localisation utilisables. Les captures d’écran, les images téléchargées et les copies partagées par d’autres apps peuvent ne pas contenir ces données. L’enregistrement de la position pouvait aussi être désactivé au moment de la prise de vue.",
+        "Ouvrez une photo manquante dans Photos d’Apple et consultez ses informations pour vérifier sa localisation. Activer l’enregistrement de la position pour les prochaines photos n’ajoute pas les coordonnées manquantes aux anciennes.",
+        "Dans Mapvoy, ouvrez Réglages → Centre d’importation pour consulter l’état et le nombre de photos écartées. Vérifiez les autorisations si Mapvoy n’a pas accès aux photos souhaitées. Si une photo possède une localisation mais reste absente, indiquez-nous la version de l’app et décrivez le problème ; il n’est pas nécessaire d’envoyer votre photothèque."
+      ]
+    }
+  },
+  {
+    "id": "icloud-permissions",
+    "question": {
+      "en": "What should I check if import is incomplete or uses iCloud Photos?",
+      "fr": "Que vérifier si l’importation est incomplète ou utilise Photos iCloud ?"
+    },
+    "answer": {
+      "en": [
+        "Limited photo access includes only the photos you select; you can keep that choice and add the photos you want Mapvoy to use. In Mapvoy, open Settings → Data Controls and tap Photos under Permissions. This opens the iPhone’s app settings; the available controls depend on iOS and your permission state.",
+        "Apple Photos may need an internet connection to make an iCloud photo available for viewing or analysis. If downloads are pending, check the photo in Photos, use a reliable connection and allow time for the library to become available. You do not need to download your entire iCloud library just to begin.",
+        "Review progress in Import Center. Check for New Photos looks for newly available photos. Rebuild Library re-examines the accessible library and is not the first step for every missing photo; read its confirmation before using it. Keep your existing data while investigating rather than deleting the app or erasing your library."
+      ],
+      "fr": [
+        "L’accès limité inclut uniquement les photos que vous sélectionnez ; vous pouvez conserver ce choix et ajouter les photos que Mapvoy doit utiliser. Dans Mapvoy, ouvrez Réglages → Gestion des données, puis touchez Photos dans la section Autorisations. Cette ligne ouvre les réglages de l’app sur l’iPhone ; les options dépendent d’iOS et de l’autorisation actuelle.",
+        "Photos d’Apple peut avoir besoin d’une connexion Internet pour rendre une photo iCloud disponible à l’affichage ou à l’analyse. Si des téléchargements sont en attente, vérifiez la photo dans Photos, utilisez une connexion fiable et laissez le temps à la photothèque de devenir disponible. Il n’est pas nécessaire de télécharger toute votre photothèque iCloud pour commencer.",
+        "Consultez la progression dans le Centre d’importation. Rechercher de nouvelles photos recherche les photos nouvellement disponibles. Reconstruire la bibliothèque réexamine la photothèque accessible et n’est pas la première étape pour chaque photo manquante ; lisez sa confirmation avant de l’utiliser. Conservez vos données pendant la recherche du problème, sans supprimer l’app ni effacer votre bibliothèque."
+      ]
+    }
+  },
+  {
+    "id": "journeys-year-review",
+    "question": {
+      "en": "How are journeys and yearly reviews made from my photos?",
+      "fr": "Comment mes photos deviennent-elles des voyages et des bilans annuels ?"
+    },
+    "answer": {
+      "en": [
+        "Mapvoy groups photo locations into journeys using their dates and places. Older photos can contribute too. A journey is based on the available records, so it may miss part of a trip or group nearby travel together. Lines on the map connect recorded photo positions; they are not a recording of the exact route you took.",
+        "Open a journey to review its dates, places and photos. Its actions menu offers the corrections available in your version. Your saved titles and personal edits remain your own text when you change the app language.",
+        "The annual review is free. Open the available year cards in Atlas to explore your recorded years; available years depend on imported photo dates and your installed version. Import status and photo access are the first things to check if a year is missing. The review summarizes recorded moments rather than every place you have ever visited."
+      ],
+      "fr": [
+        "Mapvoy regroupe les lieux de vos photos en voyages à partir de leurs dates et de leurs positions. Les anciennes photos peuvent aussi y contribuer. Les voyages dépendent des enregistrements disponibles : une partie d’un séjour peut manquer ou des déplacements proches peuvent être regroupés. Les lignes de la carte relient les positions des photos ; elles n’enregistrent pas votre itinéraire exact.",
+        "Ouvrez un voyage pour consulter ses dates, ses lieux et ses photos. Son menu d’actions propose les corrections disponibles dans votre version. Vos titres et modifications personnelles conservent leur texte d’origine lorsque vous changez la langue de l’app.",
+        "Le bilan annuel est gratuit. Ouvrez les cartes des années disponibles dans Atlas pour retrouver vos années enregistrées ; les années proposées dépendent des dates des photos importées et de la version installée. Si une année manque, vérifiez d’abord l’importation et l’accès aux photos. Le bilan résume les moments enregistrés, pas tous les lieux que vous avez visités."
+      ]
+    }
+  },
+  {
+    "id": "offline-ai",
+    "question": {
+      "en": "What works offline, and do I need Apple Intelligence or Pro?",
+      "fr": "Que puis-je utiliser hors ligne ? Faut-il Apple Intelligence ou Pro ?"
+    },
+    "answer": {
+      "en": [
+        "Mapvoy builds your travel records and groups journeys on your iPhone. You can review records already stored on the device, but the app is not entirely offline: iCloud images, map and address requests, purchases, and some downloads or online services may need a connection. Images or details not already available locally may be missing while offline.",
+        "Generative journey text requires iOS 26 or later and Apple Intelligence available on a supported iPhone, with a supported language and region and ready models. Otherwise Mapvoy uses on-device template summaries. Pro does not enable Apple Intelligence or make an unsupported device compatible.",
+        "The app supports iPhone 12 or newer with iOS 17 or later. The map, imported travel records and local fallback summaries do not require an Apple Intelligence-capable iPhone. Features and Pro options shown in the app remain subject to their stated requirements."
+      ],
+      "fr": [
+        "Mapvoy crée vos données de voyage et regroupe les voyages sur votre iPhone. Vous pouvez consulter les enregistrements déjà conservés sur l’appareil, mais l’app n’est pas entièrement hors ligne : les images iCloud, les demandes de cartes et d’adresses, les achats et certains téléchargements ou services en ligne peuvent nécessiter une connexion. Les images ou informations qui ne sont pas déjà disponibles localement peuvent manquer hors ligne.",
+        "La génération de récits nécessite iOS 26 ou une version ultérieure et Apple Intelligence disponible sur un iPhone compatible, dans une langue et une région prises en charge, avec des modèles prêts à l’emploi. Sinon, Mapvoy utilise des résumés à partir de modèles sur l’appareil. Pro n’active pas Apple Intelligence et ne change pas la compatibilité de votre iPhone.",
+        "L’app prend en charge l’iPhone 12 et les modèles plus récents sous iOS 17 ou une version ultérieure. La carte, les données de voyage importées et les résumés locaux de remplacement ne nécessitent pas un iPhone compatible avec Apple Intelligence. Les fonctions et options Pro affichées restent soumises aux conditions indiquées dans l’app."
+      ]
+    }
+  },
+  {
+    "id": "regional-formats",
+    "question": {
+      "en": "Can I use English or French with my own dates and units?",
+      "fr": "Puis-je utiliser l’anglais ou le français avec mes formats de date et mes unités ?"
+    },
+    "answer": {
+      "en": [
+        "The interface supports English and French. The app language, regional formats, Home Country and Apple storefront serve different purposes. Open Settings → Region & Units for the app-language link and available distance, time and week-start preferences. The language link opens iPhone settings; where Auto is available, it follows system preferences.",
+        "Changing the interface language does not translate your saved personal text or move a photo to another place or date. Photo dates use the recorded time-zone information where available; missing time-zone information may be shown with a UTC fallback. A label that looks wrong is worth reporting with the app version and the expected date, without sharing private coordinates.",
+        "Season labels are calendar groupings, not weather reports; southern-hemisphere travel and tropical climates should not be read as having the same weather as your home. Prices and currency come from Apple’s storefront, not the app language or Home Country. Check the actual offer before confirming a purchase."
+      ],
+      "fr": [
+        "L’interface est disponible en anglais et en français. La langue de l’app, les formats régionaux, le pays de résidence et la boutique Apple ont des rôles différents. Ouvrez Réglages → Région et unités pour accéder au lien de langue de l’app et aux préférences disponibles pour la distance, l’heure et le premier jour de la semaine. Le lien de langue ouvre les réglages de l’iPhone ; lorsqu’une option Auto est proposée, elle suit les préférences du système.",
+        "Changer la langue de l’interface ne traduit pas vos textes personnels enregistrés et ne déplace pas une photo vers un autre lieu ou une autre date. Les dates utilisent le fuseau horaire enregistré lorsqu’il est disponible ; en son absence, une date de remplacement peut être indiquée en UTC. Si un libellé semble incorrect, indiquez-nous la version de l’app et la date attendue, sans communiquer de coordonnées privées.",
+        "Les saisons sont des regroupements du calendrier, pas des prévisions météo ; un voyage dans l’hémisphère sud ou sous un climat tropical ne décrit pas nécessairement la même météo que chez vous. Les prix et la devise viennent de la boutique Apple, pas de la langue de l’app ni du pays de résidence. Vérifiez l’offre réelle avant de confirmer un achat."
+      ]
+    }
+  },
+  {
+    "id": "counts-location-errors",
+    "question": {
+      "en": "Why do counts differ, and what if a location looks wrong?",
+      "fr": "Pourquoi les chiffres diffèrent-ils et que faire si un lieu est incorrect ?"
+    },
+    "answer": {
+      "en": [
+        "One imported photo with location data is one photo record. Map clusters, cities, countries and collection progress summarize those records differently, so their totals are not expected to match. Missing location data, limited photo access and unavailable photos can affect what is included or visible.",
+        "Photo coordinates and place lookup can be imprecise, especially near borders or when location signals were weak. A nearby point does not prove that you entered a park, visited a site or climbed a summit. Collection coverage and availability also vary; a curated list is not a list of every place in a country.",
+        "Check the photo’s location in Apple Photos, then review Data Health or Hidden Memories in Mapvoy Settings → Data Controls if those options are available. Journey grouping corrections are in the journey’s actions menu; do not erase your library to fix one location or journey. If needed, contact support with a description and app version rather than sending your full travel history."
+      ],
+      "fr": [
+        "Chaque photo importée avec une localisation constitue un enregistrement photo. Les regroupements sur la carte, les villes, les pays et la progression des collections résument ces enregistrements différemment ; leurs totaux ne sont donc pas censés être identiques. L’absence de localisation, l’accès limité et les photos indisponibles peuvent modifier les éléments inclus ou visibles.",
+        "Les coordonnées des photos et la recherche de lieux peuvent être imprécises, notamment près des frontières ou lorsque le signal était faible. Un point à proximité ne prouve pas que vous êtes entré dans un parc, avez visité un site ou atteint un sommet. La couverture et la disponibilité des collections varient aussi ; une sélection ne répertorie pas tous les lieux d’un pays.",
+        "Vérifiez la localisation de la photo dans Photos d’Apple, puis consultez État des données ou Souvenirs masqués dans Réglages → Gestion des données de Mapvoy si ces options sont proposées. Les corrections de regroupement se trouvent dans le menu d’actions du voyage ; n’effacez pas votre bibliothèque pour corriger un lieu ou un voyage. Si besoin, décrivez le problème et précisez la version à l’assistance, sans envoyer tout votre historique de voyage."
+      ]
+    }
+  },
+  {
+    "id": "sharing-privacy",
+    "question": {
+      "en": "What is shared, and how can I check it first?",
+      "fr": "Qu’est-ce qui est partagé et comment le vérifier avant l’envoi ?"
+    },
+    "answer": {
+      "en": [
+        "Check the finished preview and the controls offered for the selected export. A card, image or video may show locations, dates, titles, photos or statistics. Available controls depend on the export and app version; do not assume every format hides the same details or that a home area is always hidden. Share only a result you are comfortable making visible.",
+        "Mapvoy does not upload your photo library or local trip database to our servers or a cloud AI service. Apple Photos may download iCloud images when needed. When you choose to share or export, the result can go to the app or service you select.",
+        "Map and address requests, purchases and optional diagnostics or analytics use the services described in the Privacy Policy. These are separate from sharing a travel card. Optional crash-report and usage-analytics choices are in Settings → Privacy & Security and can be withdrawn there. For a support request, start with your device model, iOS and Mapvoy versions and a description; leave private photos and coordinates out unless you choose to provide them."
+      ],
+      "fr": [
+        "Vérifiez l’aperçu final et les réglages proposés pour l’export choisi. Une carte, une image ou une vidéo peut afficher des lieux, des dates, des titres, des photos ou des statistiques. Les réglages dépendent de l’export et de la version ; ne supposez pas que tous les formats masquent les mêmes détails ou que votre domicile est toujours masqué. Partagez uniquement un résultat que vous souhaitez rendre visible.",
+        "Mapvoy n’envoie pas votre photothèque ni votre base de données locale de voyages vers nos serveurs ou un service d’IA dans le cloud. Photos d’Apple peut télécharger des images iCloud si nécessaire. Lorsque vous choisissez de partager ou d’exporter, le résultat peut être transmis à l’app ou au service sélectionné.",
+        "Les demandes de cartes et d’adresses, les achats et les diagnostics ou analyses facultatifs utilisent les services décrits dans la Politique de confidentialité. Ils sont distincts du partage d’une carte de voyage. Les choix facultatifs concernant les rapports de plantage et les statistiques d’utilisation se trouvent dans Réglages → Confidentialité et sécurité ; vous pouvez les retirer à cet endroit. Pour contacter l’assistance, commencez par le modèle d’iPhone, les versions d’iOS et de Mapvoy et une description ; omettez les photos et coordonnées privées, sauf si vous choisissez de les communiquer."
+      ]
+    }
+  },
+  {
+    "id": "subscriptions-backups",
+    "question": {
+      "en": "How do cancellation, Restore Purchases and backups differ?",
+      "fr": "Quelle est la différence entre résilier, restaurer les achats et sauvegarder ?"
+    },
+    "answer": {
+      "en": [
+        "The app and Apple’s purchase confirmation show the available plans, local prices, renewal terms and any offer for which you are eligible. A fixed trial is not guaranteed for everyone. To manage or cancel an Apple-billed subscription, open iPhone Settings, tap your name and then Subscriptions, and select Mapvoy; an older entry may say Charted. Follow the cancellation option shown there.",
+        "Deleting the app or its data does not cancel a subscription. If you cannot find the subscription, use Apple’s subscription help. Apple handles refund requests through reportaproblem.apple.com; contact us for help with the app or a consumer-rights request. These routes do not limit rights that applicable law does not allow us to exclude.",
+        "Restore Purchases on the Mapvoy Pro or subscription screen checks Apple’s purchase records for an active entitlement. It does not restore your travel records, personal edits or photo originals. A gifted lifetime entitlement is not a recurring subscription and does not cancel an existing subscription.",
+        "Export Data in Settings → Data Controls can produce JSON, CSV or GPX, depending on the selected options. These ordinary exports are not restorable Mapvoy backups and do not include photo originals.",
+        "If your version offers Backup & Restore, its separate personal-backup file contains precise locations and personal records. It has no password or content encryption, and share-privacy settings do not filter it. Photo originals are not included, and photo links may not match another Photos library. A first restore requires an empty Mapvoy library. Inspect the restore preview and keep the file private. Contact support before erasing existing records if you are unsure how to preserve them."
+      ],
+      "fr": [
+        "L’app et la confirmation d’achat Apple présentent les offres disponibles, les prix locaux, le renouvellement et les éventuelles offres auxquelles vous êtes admissible. Une durée d’essai fixe n’est pas garantie pour tous. Pour gérer ou résilier un abonnement facturé par Apple, ouvrez les Réglages de l’iPhone, touchez votre nom, puis Abonnements et sélectionnez Mapvoy ; une ancienne entrée peut porter le nom Charted. Utilisez l’option d’annulation affichée.",
+        "Supprimer l’app ou ses données ne résilie pas un abonnement. Si vous ne le trouvez pas, consultez l’aide d’Apple sur les abonnements. Les demandes de remboursement passent par reportaproblem.apple.com ; contactez-nous pour un problème avec l’app ou une demande relative à vos droits de consommateur. Ces démarches ne limitent pas les droits que la loi applicable interdit d’exclure.",
+        "Restaurer les achats, sur l’écran Mapvoy Pro ou d’abonnement, vérifie les achats enregistrés par Apple pour retrouver un droit d’accès actif. Cette action ne restaure pas vos données de voyage, vos modifications personnelles ni vos photos originales. Un accès à vie reçu en cadeau n’est pas un abonnement renouvelable et ne résilie pas un abonnement existant.",
+        "Exporter les données, dans Réglages → Gestion des données, peut produire des fichiers JSON, CSV ou GPX selon les options choisies. Ces exports ordinaires ne sont pas des sauvegardes Mapvoy restaurables et n’incluent pas les photos originales.",
+        "Si votre version propose Sauvegarde et restauration, son fichier de sauvegarde personnel est distinct et contient des positions précises et des données personnelles. Son contenu n’est protégé ni par un mot de passe ni par un chiffrement, et les réglages de confidentialité du partage ne le filtrent pas. Les photos originales ne sont pas incluses et les liens vers les photos peuvent ne pas correspondre à une autre photothèque. Une première restauration nécessite une bibliothèque Mapvoy vide. Consultez l’aperçu de restauration et conservez le fichier dans un endroit privé. En cas de doute, contactez l’assistance avant d’effacer des données existantes."
+      ]
+    }
+  }
+]
