@@ -1,7 +1,7 @@
 import { RegionalLinks } from './RegionalInfo.jsx'
 import { productPath } from '../config.js'
 import { NavLink } from '../ChartedApp.jsx'
-import { SUPPORT_EMAIL, APP_STORE_URL } from '../config.js'
+import { SUPPORT_EMAIL, APP_STORE_URL, PARENT_SITE } from '../config.js'
 
 /**
  * Support page.
@@ -187,7 +187,7 @@ export default function Support({ navigate }) {
         <li><a href={APP_STORE_URL} target="_blank" rel="noreferrer">Mapvoy on the App Store</a></li>
         <li><NavLink to={productPath('/privacy')} navigate={navigate}>Privacy Policy</NavLink></li>
         <li><NavLink to={productPath('/terms')} navigate={navigate}>Terms of Use</NavLink></li>
-        <li><a href="/">Vertex Horizon (parent company)</a></li>
+        <li><a href={PARENT_SITE}>Vertex Horizon (parent company)</a></li>
       </ul>
 
       <div className="c-doc-footer">
