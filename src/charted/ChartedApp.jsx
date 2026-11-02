@@ -12,21 +12,7 @@ import { Stars, CursorGlow } from './effects.jsx'
 import { APP_STORE_URL, SUPPORT_EMAIL, PARENT_SITE, PRODUCT_ORIGIN, productPath } from './config.js'
 import { CHARTED_ROUTE_META, routeLanguageAlternates } from './routeMetadata.js'
 
-/**
- * Mapvoy sub-brand site.
- * 旧 /charted 路径仍被已发布 App 和分享链接使用；改品牌不改这些入口。
- *
- * Internal routing without react-router (kept lightweight).
- * Listens to popstate for back/forward; pushes state for in-app links.
- *
- * Routes (relative to /charted prefix):
- *   /charted            → <Home />
- *   /charted/privacy    → <Privacy />
- *   /charted/terms      → <Terms />
- *   /charted/privacy/fr → <PrivacyFr />
- *   /charted/terms/fr   → <TermsFr />
- *   /charted/support    → <Support />
- */
+/** Mapvoy product site. Public routes are rooted at mapvoy.app. */
 
 function getRoute() {
   const path = window.location.pathname.replace(/\/+$/, '') || '/' // strip trailing slash
@@ -269,10 +255,7 @@ function Footer({ navigate }) {
             <NavLink to={productPath('/info/ro')} navigate={navigate} lang="ro">Română</NavLink>
             <NavLink to={productPath('/info/cy')} navigate={navigate} lang="el-CY">Ελληνικά (Κύπρος)</NavLink>
             <NavLink to={productPath('/info/is')} navigate={navigate} lang="is">Íslenska</NavLink>
-            <NavLink to={productPath('/info/es')} navigate={navigate} lang="es">Español</NavLink>
-            <NavLink to={productPath('/info/ca')} navigate={navigate} lang="ca">Català</NavLink>
             <NavLink to={productPath('/info/lv')} navigate={navigate} lang="lv">Latviešu</NavLink>
-            <NavLink to={productPath('/info/nb')} navigate={navigate} lang="nb">Norsk bokmål</NavLink>
             <NavLink to={productPath('/info/ja')} navigate={navigate} lang="ja">日本語</NavLink>
             <NavLink to={productPath('/info/sl')} navigate={navigate} lang="sl">Slovenščina</NavLink>
             <NavLink to={productPath('/info/ko')} navigate={navigate} lang="ko">한국어</NavLink>

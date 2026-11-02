@@ -36,7 +36,7 @@ export const regionalInformation = {
       { id: 'provider', title: '1. Anbieter und Kontakt', paragraphs: [
         'Anbieter und datenschutzrechtlich Verantwortlicher ist Vertex Horizon Inc., 3405 Montgomery Dr Apt 255, Santa Clara, CA 95054-3080, USA. E-Mail für Hilfe, Beschwerden und Datenschutzrechte: contact@vertex-horizon.com. Telefon: +1 608-895-1157. Dies ist unsere veröffentlichte Kontaktanschrift.',
         'Vertex Horizon Inc. ist eine am 17. Februar 2026 in Delaware, USA, gegründete Corporation. Registrierungsbehörde: Delaware Secretary of State, Division of Corporations. Delaware-Aktennummer: 10514361. Vertreten durch Guikai Huang, President und Chief Executive Officer.',
-        'Charted heißt jetzt Mapvoy. Der Anbieter bleibt derselbe. Diese Hinweise ergänzen Apples Standard-EULA, sie sind keine eigene Softwarelizenz. Für über Apple abgerechnete Käufe gelten außerdem die im Kaufvorgang angezeigten Apple-Bedingungen. Apple ist für seine Konto- und Zahlungsdienste eigenständig verantwortlich; dadurch entfallen unsere eigenen Pflichten nicht.',
+        'Die App heißt Mapvoy. Der Anbieter bleibt derselbe. Diese Hinweise ergänzen Apples Standard-EULA, sie sind keine eigene Softwarelizenz. Für über Apple abgerechnete Käufe gelten außerdem die im Kaufvorgang angezeigten Apple-Bedingungen. Apple ist für seine Konto- und Zahlungsdienste eigenständig verantwortlich; dadurch entfallen unsere eigenen Pflichten nicht.',
       ] },
       { id: 'use', title: '2. Voraussetzungen und grundlegende Bedienung', paragraphs: [
         'Mapvoy erstellt aus Fotos mit GPS-Daten eine Reisekarte auf dem iPhone. Erforderlich sind mindestens iOS 17 und ein unterstütztes iPhone, ab iPhone 12. Im App Store sehen Sie die aktuelle Kompatibilität. Für Käufe, Karten, Ortsabfragen und öffentliche Bild-/Geländeressourcen ist eine Internetverbindung nötig; Ihr Anbieter kann Gebühren berechnen.',
@@ -92,7 +92,7 @@ export const regionalInformation = {
     sections: [
       { id: 'provider', title: '1. Aanbieder en contact', paragraphs: [
         'Vertex Horizon Inc. is de aanbieder en verwerkingsverantwoordelijke: 3405 Montgomery Dr Apt 255, Santa Clara, CA 95054-3080, Verenigde Staten. Voor hulp, klachten en privacyrechten: contact@vertex-horizon.com, telefoon +1 608-895-1157. Dit is ons gepubliceerde contactadres.',
-        'Charted heet nu Mapvoy; de aanbieder blijft dezelfde. Deze informatie vult Apples standaardlicentie (Standard EULA) aan en is geen afzonderlijke softwarelicentie. Voor Apple-aankopen gelden ook de Apple-voorwaarden die bij de aankoop worden getoond. Apple is zelfstandig verantwoordelijk voor zijn account- en betaaldiensten; onze eigen verantwoordelijkheden blijven bestaan.',
+        'De app heet Mapvoy; de aanbieder blijft dezelfde. Deze informatie vult Apples standaardlicentie (Standard EULA) aan en is geen afzonderlijke softwarelicentie. Voor Apple-aankopen gelden ook de Apple-voorwaarden die bij de aankoop worden getoond. Apple is zelfstandig verantwoordelijk voor zijn account- en betaaldiensten; onze eigen verantwoordelijkheden blijven bestaan.',
       ] },
       { id: 'use', title: '2. Vereisten en basisgebruik', paragraphs: [
         'Mapvoy maakt op uw iPhone een reiskaart van foto’s met GPS-gegevens. U hebt minimaal iOS 17 en een ondersteunde iPhone vanaf iPhone 12 nodig. Raadpleeg de actuele compatibiliteit in de App Store. Aankopen, kaarten, plaatsopzoekingen en openbare beeld-/terreinbestanden vereisen internet; uw provider kan kosten rekenen.',
@@ -148,7 +148,7 @@ export const regionalInformation = {
     sections: [
       { id: 'provider', title: '1. Teenuseosutaja ja kontakt', paragraphs: [
         'Rakenduse pakkuja ja vastutav töötleja on Vertex Horizon Inc., 3405 Montgomery Dr Apt 255, Santa Clara, CA 95054-3080, USA. Abi, kaebused ja andmekaitseõigused: contact@vertex-horizon.com; telefon +1 608-895-1157. See on meie avaldatud kontaktaadress.',
-        'Chartedi uus nimi on Mapvoy; pakkuja ei muutu. See teave täiendab Apple’i standardset litsentsilepingut (Standard EULA) ega ole eraldi tarkvaralitsents. Apple’i kaudu tehtud ostudele kehtivad ka ostmisel kuvatud Apple’i tingimused. Apple vastutab oma konto- ja makseteenuste eest iseseisvalt; see ei kõrvalda meie enda kohustusi.',
+        'Rakenduse nimi on Mapvoy; pakkuja ei muutu. See teave täiendab Apple’i standardset litsentsilepingut (Standard EULA) ega ole eraldi tarkvaralitsents. Apple’i kaudu tehtud ostudele kehtivad ka ostmisel kuvatud Apple’i tingimused. Apple vastutab oma konto- ja makseteenuste eest iseseisvalt; see ei kõrvalda meie enda kohustusi.',
       ] },
       { id: 'use', title: '2. Nõuded ja põhilised kasutusjuhised', paragraphs: [
         'Mapvoy koostab GPS-andmetega fotodest teie iPhone’is reisikaardi. Vajalik on vähemalt iOS 17 ja toetatud iPhone alates iPhone 12-st. Ajakohane ühilduvus on App Store’is. Ostud, kaardid, kohapäringud ning avalikud pildi-/maastikufailid vajavad internetti; sideoperaator võib võtta tasu.',

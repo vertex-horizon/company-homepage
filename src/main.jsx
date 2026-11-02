@@ -70,31 +70,20 @@ class ErrorBoundary extends Component {
   }
 }
 
-/**
- * Path-based router.
- *
- * Why no react-router? — One dependency, one entry, one decision.
- * For a 2-app monorepo (VH parent + Charted sub-brand) plus a few static
- * pages (privacy/terms/support), pathname matching beats a 50KB lib.
- *
- * Routes:
- *   /                    → Vertex Horizon home
- *   /charted             → Charted marketing landing
- *   /charted/privacy     → Privacy Policy
- *   /charted/terms       → Terms of Use
- *   /charted/support     → Support
- *
- * Anything not matching falls back to VH home.
- */
-
+// 产品官网只在 mapvoy.app 根路径运行。公司站保留品牌别名与旧链接的跳转，
+// query / hash 原样带走，避免已发布 App 的政策入口及推广链接失效。
 const path = window.location.pathname
 
 const VHApp = lazy(() => import('./App.jsx'))
 const ChartedApp = lazy(() => import('./charted/ChartedApp.jsx'))
 
-const isCharted = IS_PRODUCT_SITE || path === '/charted' || path.startsWith('/charted/')
+const alias = path.match(/^\/(?:charted|mapvoy)(?=\/|$)(.*)/)
+if (alias) {
+  window.location.replace(`https://mapvoy.app${alias[1] || '/'}${window.location.search}${window.location.hash}`)
+}
+const isCharted = IS_PRODUCT_SITE
 
-createRoot(document.getElementById('root')).render(
+if (!alias) createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>
       <Suspense fallback={null}>
